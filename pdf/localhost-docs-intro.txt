@@ -1,0 +1,10 @@
+http://localhost:3000/docs/category/tutorial---basics
+http://localhost:3000/docs/tutorial-basics/create-a-page
+http://localhost:3000/docs/tutorial-basics/create-a-document
+http://localhost:3000/docs/tutorial-basics/create-a-blog-post
+http://localhost:3000/docs/tutorial-basics/markdown-features
+http://localhost:3000/docs/tutorial-basics/deploy-your-site
+http://localhost:3000/docs/tutorial-basics/congratulations
+http://localhost:3000/docs/category/tutorial---extras
+http://localhost:3000/docs/tutorial-extras/manage-docs-versions
+http://localhost:3000/docs/tutorial-extras/translate-your-site
