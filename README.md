@@ -28,6 +28,8 @@ This command generates static content into the `build` directory and can be serv
 
 ## Generate PDF
 
+Required [Prince XML](https://www.princexml.com/).
+
 Build and serve docs locally before generating PDF:
 
 ```bash
