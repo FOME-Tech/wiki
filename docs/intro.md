@@ -6,9 +6,9 @@ sidebar_position: 1
 
 You're a big enough **schmuck** to come to Big Bill Hell's Cars!
 
--Bad deals!
--Cars that break down!
--Thieves!
+- Bad deals!
+- Cars that break down!
+- Thieves!
 
 
 
