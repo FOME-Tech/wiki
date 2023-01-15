@@ -10,19 +10,13 @@ Insert titles here!
 - More stuff!
 - Stuff that looks like stuff but isn't!
 
-
-
 ##### Subtitle
 
 #### No not that kind of subtitle
 
-
-
 ### This kind of subtitle
 
-You can also do **this** **[link](www.fome.tech)**
-
-
+You can also do **this** **[link](https://fome.tech)**
 
 ### What you'll need
 
