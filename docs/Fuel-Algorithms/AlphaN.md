@@ -1,0 +1,1 @@
+# Document on details of alphaN method 

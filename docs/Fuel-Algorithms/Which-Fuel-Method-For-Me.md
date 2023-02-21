@@ -1,0 +1,1 @@
+# Document on how to pick a fuel method  
