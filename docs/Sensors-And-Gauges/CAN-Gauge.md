@@ -1,0 +1,3 @@
+# BeerMoneyMotorsport CAN Gauge  
+
+This is a page for discussing the setup of the CAN gauge, Installation information and hardware details can be found in the Hardware section at ...linky...
