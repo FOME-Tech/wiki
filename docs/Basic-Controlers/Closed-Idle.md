@@ -1,1 +1,0 @@
-# Closed Loop Idle Control  
