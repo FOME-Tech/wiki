@@ -1,3 +1,3 @@
 # Ignition Mode
 
-## See Ignition Types Section? 
+## See Ignition Types Section?  

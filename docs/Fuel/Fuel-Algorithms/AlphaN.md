@@ -1,1 +1,1 @@
-# Document on details of alphaN method 
+# AlphaN fuel 

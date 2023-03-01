@@ -1,5 +1,5 @@
-# How to test inputs and outputs 
+# How to test inputs and outputs
 
 ## Input tests
 
-## Output tests 
+## Output tests
