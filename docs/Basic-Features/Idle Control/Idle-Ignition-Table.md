@@ -1,0 +1,1 @@
+# Idle specific ignition table
