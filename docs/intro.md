@@ -234,7 +234,7 @@ The first page to view should probably be the FOME overview.
 - Good ignition coils  
 - Smart vs Dumb coils  
 
-#### Igntion Settings
+#### Ignition Settings
 
 - Dwell  
 - Firing Order  
