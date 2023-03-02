@@ -13,6 +13,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  noIndex: true, // adds <meta name="robots" content="noindex, nofollow"> to every page
   // staticDirectories: ['public', 'static'],
 
   // GitHub pages deployment config.
