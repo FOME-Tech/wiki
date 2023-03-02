@@ -1,6 +1,6 @@
 {
   "label": "Sensors And Gauges",
-  "position": 6,
+  "position": 4,
   "link": {
     "type": "generated-index",
     "description": "Information on all sensor inputs and data outputs"
