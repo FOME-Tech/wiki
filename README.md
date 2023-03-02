@@ -20,6 +20,12 @@ This command starts a local development server and opens up a browser window. Mo
 
 Docusaurus guides: [https://docusaurus.io/docs/category/guides](https://docusaurus.io/docs/category/guides)
 
+### Lint code
+
+```bash
+npm run lint
+```
+
 ## Build
 
 ```bash
