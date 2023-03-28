@@ -28,7 +28,7 @@
     "@docusaurus/module-type-aliases": "^2.3.1",
     "@tsconfig/docusaurus": "^1.0.6",
     "docusaurus-prince-pdf": "^1.1.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.2"
   },
   "browserslist": {
     "production": [
