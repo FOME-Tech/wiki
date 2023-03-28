@@ -14,7 +14,7 @@ So you've just got yourself a shiny new BMM Miata ECU for your NA or NB, nice! I
 - 22mm wrench or 22mm oxygen sensor socket
 - Timing light
 - USB cable (included with ECU)
-- Windows, Mac or Linux laptop with an installed copy of [EFI Analytics TunerStudio] (<https://www.tunerstudio.com/index.php/tuner-studio>)
+- Windows, Mac or Linux laptop with an installed copy of [EFI Analytics TunerStudio](<https://www.tunerstudio.com/index.php/tuner-studio>)
 
 ## Removing Original ECU
 
@@ -51,10 +51,10 @@ Using the MAP line combined with an intake air temperature (IAT) sensor, the BMM
 The NA6 1.6L vehicles which use an AFM instead of a MAF require a few additional modifications to run with a BMM ECU. These vehicles do not have a variable throttle position sensor (TPS) or an intake air temperature (IAT) sensor like the rest of the later model NAs and all NBs. They also require a jumper for the ECU to control the fuel pump which was previously the job of the air flow meter.
 
 The first step is to disconnect the factory TPS sensor. **This is very important or it will cause a short circuit later.** The BMM ECUs for this vehicle include a KIA TPS and adapter. The KIA TPS can be wired straight to the OEM TPS plug as per the wiring diagram below: 
-(<http://sadfab.com/16%20VTPS%20bracket.html>) (<https://trubokitty.com/#tps>)
+[TPS Adapter](<http://sadfab.com/16%20VTPS%20bracket.html>),  [Diagram](<https://trubokitty.com/#tps>)
 
 The next step is to wire up the IAT sensor and to add a jumper wire to the AFM connector as per the wiring diagram below:
-(<https://trubokitty.com/#ait>)
+[Diagram](<https://trubokitty.com/#ait>)
 
 ## Connecting the ECU
 
@@ -62,7 +62,7 @@ Now that the MAP line and wideband are connected to the ECU, the remaining wirin
 
 ## Tuner Studio Setup
 
-Make sure that you have downloaded the latest version of TunerStudio (TS) from [here] (<https://www.tunerstudio.com/index.php/tuner-studio>). Although the base version of the software is free, it is strongly recommended to buy a license for the additional features including auto-tuning. 
+Make sure that you have downloaded the latest version of TunerStudio (TS) from [here](<https://www.tunerstudio.com/index.php/tuner-studio>). Although the base version of the software is free, it is strongly recommended to buy a license for the additional features including auto-tuning. 
 
 Plug the ECU into the laptop and open TS. Create a new project and click *detect* under firmware. Select the COM port corresponding to the FOME ECU and click *next*. 
 
