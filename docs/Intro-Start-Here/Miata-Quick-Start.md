@@ -1,6 +1,6 @@
 # Miata/MX5 Quick Start Guide
 
-So you've just got yourself a shiny new BMM Miata ECU for your NA or NB, nice! If you're wondering how to install and get it running, you've come to the right place. This guide will cover how to install the ECU to the car with a Bosch LSU 4.9 wideband oxygen sensor and a mass air pressure (MAP) line. Installation of additional sensors or peripherals is covered in the advanced guides.
+So, you've just got yourself a shiny new BMM Miata ECU for your NA or NB, nice! If you're wondering how to install and get it running, you've come to the right place. This guide will cover how to install the ECU to the car with a Bosch LSU 4.9 wideband oxygen sensor and a mass air pressure (MAP) line. Installation of additional sensors or peripherals is covered in the advanced guides.
 
 > **_NOTE:_**  Before commencing the ECU installation, it is recommended to jack up the car or drive it onto ramps in the case when the oxygen sensor location is under the vehicle.
 
@@ -31,7 +31,7 @@ The ECU can be found under the carpet in the passenger side footwell. To access 
 
 ### 94-97 Right Hand Drive NA
 
-The ECU can be found behind the passengers seat, under the carpet. Move the seat forwards all the way. Next, the passenger door sill needs to be removed with a philips head screwdriver so that the carpet towards the back of the seat can be pulled back to reveal the ECU.
+The ECU can be found behind the passenger's seat, under the carpet. Move the seat forwards all the way. Next, the passenger door sill needs to be removed with a philips head screwdriver so that the carpet towards the back of the seat can be pulled back to reveal the ECU.
 
 Once the ECU has been located on your Miata, disconnect the car battery then remove all electrical plugs to the ECU. Un-bolt any remaining ECU mounting brackets from the car with a 10mm socket and the ECU should now be free from the car. The last step is to use a philips head to remove the factory ECU mounting brackets from the stock ECU case for these will be needed to mount the BMM ECU.
 
@@ -63,11 +63,17 @@ The first step is to disconnect the factory TPS sensor. **This is very important
 
 ![image](Miata-Quick-Start-Images/tps.jpg)
 
-The BMM ECUs for this vehicle include a KIA TPS and adapter. The KIA TPS can be wired straight to the OEM TPS plug as per the wiring diagram below: 
-[TPS Adapter](<http://sadfab.com/16%20VTPS%20bracket.html>),  [Diagram](<https://trubokitty.com/#tps>)
+The BMM ECUs for this vehicle include a KIA TPS and adapter. The KIA TPS will plug straight to the OEM TPS plug without any additional wiring. If using another variable TPS that requires re-wiring, the NA6 TPS connector pinout is as follows:
 
-The next step is to wire up the IAT sensor and to add a jumper wire to the AFM connector as per the wiring diagram below. Any IAT sensor with two wires can be used although a GM IAT sensor is recommended as FOME already has a configuration for it. As the IAT is a resistance based sensor, the orientation of the wires does not matter.
-[Diagram](<https://trubokitty.com/#ait>)
+| **Function** | **Cable Colour** |
+|--------------|------------------|
+| Signal       | Green/White      |
+| Ground       | Black/Green      |
+| 5V Reference | Red              |
+
+The next step is to wire up the IAT sensor and to add a jumper wire to the AFM connector as per the wiring diagram below. Any IAT sensor with two wires can be used although a GM IAT sensor is recommended as FOME already has a configuration for it. As the IAT is a resistance-based sensor, the orientation of the wires does not matter.
+
+![image](Miata-Quick-Start-Images/NA6IAT2.png)
 
 ## Connecting the ECU
 
@@ -85,7 +91,7 @@ In the final dialog box, select the default gauge layout (you can change this la
 
 ## Set Base Timing
 
-The car should start on the base map although once it is running, the base timing needs to be set up. This syncs the timing between the ECU and the car so that they are both reading the same values. Typically the base timing will be a few degrees out from the base map as it varies slightly from car to car.
+The car should start on the base map although once it is running, the base timing needs to be set up. This syncs the timing between the ECU and the car so that they are both reading the same values. Typically. the base timing will be a few degrees out from the base map as it varies slightly from car to car.
 
 To set the base timing, connect the timing light power to a spare 12V battery and the inductive clamp onto the cylinder 1 spark plug lead (the closest spark plug to the front of the engine bay). Ensure that the arrow on the inductive clamp is pointing along the wire towards the spark plug, not towards the coil pack.
 
@@ -115,7 +121,7 @@ The general way to tune the VE table is to go through all the cells which the en
 
 ![image](Miata-Quick-Start-Images/targetlam.jpg)
 
-There are three ways of tuning the VE table. The first way is to drive the car around smoothly as a mate in the passenger seat goes through and changes the VE values until the lambda gauge matches the target lambda. The second and easier way is to use the TS autotuner which is only available in the full version of TS but absolutely worth it. To tune this way, you first need to disable some parameters. Under _Fuel_, open _Closed loop fuel correction_ and _Deceleration fuel cutoff (DFCO)_, set them both to false and click _burn_ with the engine off. The third and easiest (yet most expensive option) is to take the car to a dyno for tuning where they will do either the first or second option themselves. The advantage of a dyno is that they can set it to bring the engine into any state they wish to perfectly configure the VE table.
+There are three ways of tuning the VE table. The first way is to drive the car around smoothly as a mate in the passenger seat goes through and changes the VE values until the lambda gauge matches the target lambda. The second and easier way is to use the TS autotuner which is only available in the full version of TS but absolutely worth it. To tune this way, you first need to disable some parameters. Under _Fuel_, open _Closed loop fuel correction_ and _Deceleration fuel cut off (DFCO)_, set them both to false and click _burn_ with the engine off. The third and easiest (yet most expensive option) is to take the car to a dyno for tuning where they will do either the first or second option themselves. The advantage of a dyno is that they can set it to bring the engine into any state they wish to perfectly configure the VE table.
 
 ![image](Miata-Quick-Start-Images/dfco_cl_off.jpg)
 
@@ -123,6 +129,6 @@ Next, click the tab labelled _Tune Analyze Live! - Tune For You_ to bring up the
 
 ![image](Miata-Quick-Start-Images/autotune.jpg)
 
-Now that the autotuner is set up, start the car and click _Start Auto Tune_ on the autotuner. Let the car idle in park whilst it gets up to the minimum temperature. While this happens, you can attempt to change the idle cells in the VE table to get them to a lambda of 1. Once the car has warmed up, **smoothly** drive it around going through the gears and all the way through the rev range. A mix of flat, uphill and downhill driving in different gears is optimal to tune the majority of the engine's operating range. After you are sufficiently happy, click _Stop Auto Tune_, turn the engine off and click _Save on ECU_. You will want to repeat this process several more times, every time dropping the _Cell Change Resistance_ and _Authority Limits_ to slowly refine your VE table. 
+Now that the autotuner is set up, start the car and click _Start Auto Tune_ on the autotuner. Let the car idle in park whilst it gets up to the minimum temperature. While this happens, you can attempt to change the idle cells in the VE table to get them to a lambda of 1. Once the car has warmed up, **smoothly** drive it around going through the gears and all the way through the rev range. A mix of flat, uphill and downhill driving in different gears is optimal to tune the majority of the engine's operating range. After you are sufficiently happy, click _Stop Auto Tune_, turn the engine off and click _Save on ECU_. You will want to repeat this process several more times, every time dropping the _Cell Change Resistance_ and _Authority Limits_ to slowly refine your VE table.
 
-When you are satisfied with your VE table, turn Closed loop fuel correction_ and _Deceleration fuel cutoff (DFCO)_ back to true. Your Miata should now be relatively safe to drive around and have fun with but this is only the start of the tuning journey. As you read through the more advanced guides in this wiki, you will learn about all of the different ways the ECU can be configured to squeeze every drop of performance out of your Miata.
+When you are satisfied with your VE table, turn closed loop fuel correction and _Deceleration fuel cut off (DFCO)_ back to true. You don't actually need DFCO to be enabled although it will save fuel by turning the injectors off when the car is rolling in gear. Your Miata should now be relatively safe to drive but this is only the start of the tuning journey. As you read through the more advanced guides in this wiki, you will learn about all of the different ways the ECU can be configured to improve the drivability and squeeze every drop of performance out of your Miata.
