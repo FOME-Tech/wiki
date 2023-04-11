@@ -44,7 +44,9 @@ In both of these zones, their target AFRs do not matter a whole lot. The dead zo
 
 ### Merging the zones
 
-On the AFR target diagram you will notice that there are gaps in the operating zones. The best way of choosing targets for these zones is to interpolate and smooth their values between the configured parts of the map. Ideally the AFR target map should be smooth with no sudden changes as smooth variations in AFR are required for an engine to operate well.
+On the AFR target diagram, certain operating zones have missing values. To properly select targets for these zones, it's recommended to interpolate and smooth out the values between the defined sections of the map. It's important to create a smooth AFR target map that avoids abrupt changes, as the engine requires gradual variations in AFR to function optimally. To smooth the map in Tuner Studio there are four buttons in the map shown below. From left to right, these buttons interpolate across the entire selected zone, interpolate horizontally only, interpolate vertically only, and smooths out changes between selected cells.
+
+![image](AFR/targetinterp.png)
 
 ## AFR For Different Fuels
 

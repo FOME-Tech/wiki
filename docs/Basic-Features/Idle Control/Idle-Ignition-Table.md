@@ -1,1 +1,7 @@
-# Idle specific ignition table
+# Idle Specific Ignition Table
+
+The idle ignition table acts much like the open loop idle control in the regard that it is another open loop system contributing to the idle of the vehicle. Adjusting the engine ignition timing at idle changes the engine torque output where an increase in timing produces more torque and a reduction reduces the torque. This change in torque can be used to adjust the engine speed and achieve a stable idle by reducing the timing above the idle RPM target and increasing it below the target.
+
+Before tuning the ignition table, make sure to have your base open loop idle position set.
+
+To tune the ignition table, start by setting the maximum and minimum values about 500RPM above and below your target idle speed. At your target idle speed, put in your desired timing angle. 10 degrees is a good starting point but a higher timing angle such as 14 degrees will give the engine a bit more torque at idle which helps the engine to quickly rev up from idle. Start by making a linear curve between the maximum and minimum RPM values in the table with values in the range of 20 to 5 degrees. As all engines respond differently, you may want to use different starting values but these are good generalizations. Run the car with your values and see how well it maintains idle. Start to adjust the timing values so that the timing pushes and pulls the engine RPM to the target. You may need to change the shape of the curve so that only small timing adjustments are made near target and large corrections are made if the RPM significantly deviates.
