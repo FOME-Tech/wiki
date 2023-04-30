@@ -1,6 +1,6 @@
 # Idle settings
 
- ## What is this for?
+ The idle settings menu can look daunting at first but this guide will help to decode the mystery of all the various idle settings.
 
  ## Idle target RPM
 
