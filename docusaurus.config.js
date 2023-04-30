@@ -36,14 +36,12 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/FOME-Tech/wiki/tree/master',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/FOME-Tech/wiki/tree/master',
@@ -71,7 +69,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          // { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/FOME-Tech',
             label: 'GitHub',
@@ -96,20 +94,24 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/fome',
+                href: 'https://discord.gg/5FQj4DMz',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/fome',
+                label: 'Facebook',
+                href: 'https://www.facebook.com/profile.php?id=100088049271157',
               },
             ],
           },
           {
             title: 'More',
             items: [
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'FOME.tech',
+                href: 'https://www.fome.tech',
               },
               {
                 label: 'GitHub',

@@ -1,16 +1,22 @@
 # Wiki
 
-FOME Wiki built using [Docusaurus 2](https://docusaurus.io/).
+This is the source code for the FOME Wiki - [wiki.fome.tech](https://wiki.fome.tech).
 
-## Installation
+## Development
 
-Required [Node.js](https://nodejs.dev/) version: 16 or higher.
+FOME Wiki is built using [Docusaurus 2](https://docusaurus.io/).
+
+### Installation
+
+Required [Node.js](https://nodejs.dev/) is defined in [.nvmrc](/.nvmrc). If you use [nvm](https://github.com/nvm-sh/nvm), run `nvm use` to switch to the correct version.
+
+To install dependencies, run:
 
 ```bash
 npm install
 ```
 
-## Local Development
+### Local Development
 
 ```bash
 npm start
@@ -20,13 +26,13 @@ This command starts a local development server and opens up a browser window. Mo
 
 Docusaurus guides: [https://docusaurus.io/docs/category/guides](https://docusaurus.io/docs/category/guides)
 
-### Lint code
+#### Lint code
 
 ```bash
 npm run lint
 ```
 
-## Build
+### Build
 
 ```bash
 npm build
@@ -34,7 +40,7 @@ npm build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## Generate PDF
+### Generate PDF
 
 Required [Prince XML](https://www.princexml.com/).
 
@@ -45,7 +51,7 @@ npm run build
 npm run serve
 ```
 
-In another terminal run this to generate PDF:
+In another terminal, run this to generate PDF:
 
 ```bash
 npm run pdf
