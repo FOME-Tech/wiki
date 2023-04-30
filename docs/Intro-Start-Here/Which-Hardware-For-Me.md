@@ -35,7 +35,7 @@ Whether youre cruising a highways, crushing that 1/4 mile, or just want more pow
 
 **Universal** 
 
-Sometimes you dont know what car your engine is going in, or you want to do a swap. Regarless, a universal option is always good to have. It uses the common and reliable VAG (not that VAG, but Volkswagen Audi Gruppe) plugs with a nice 120 pins. This means 8 cylinders of sequential fueling (up to 12 batch), plenty of inputs and outputs. It should be able to handle 95% of projects out there.
+Sometimes you dont know what car your engine is going in, or you want to do a swap. Regarless, a universal option is always good to have. It uses the common and reliable VAG (not that VAG, but Volkswagen Audi Gruppe) plugs with a nice 120 pins. This means 8 cylinders of sequential fueling (up to 12 batch), plenty of inputs and outputs. (20 lowside, 4 highside, CANBUS, SD Card) It should be able to handle 95% of projects out there.
 
 **Honda**
 
