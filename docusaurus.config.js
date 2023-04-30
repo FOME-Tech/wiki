@@ -13,8 +13,8 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  noIndex: false, // adds <meta name="robots" content="noindex, nofollow"> to every page
   favicon: 'img/icons/favicon.ico',
-  noIndex: true, // adds <meta name="robots" content="noindex, nofollow"> to every page
   // staticDirectories: ['public', 'static'],
 
   // GitHub pages deployment config.
