@@ -7,15 +7,15 @@ sidebar_position: 0
 ## Best way to edit and add pages
 
 Get this:
-https://github.com/FOME-Tech/FOME-Baseline/issues/labels
+[https://github.com/FOME-Tech/FOME-Baseline/issues/labels](https://github.com/FOME-Tech/FOME-Baseline/issues/labels)
 
 Clone the wiki repo
-https://github.com/FOME-Tech/wiki
+[https://github.com/FOME-Tech/wiki](https://github.com/FOME-Tech/wiki)
 
 ![image](Clone.JPG)
 
 Get VScode:
-https://code.visualstudio.com
+[https://code.visualstudio.com](https://code.visualstudio.com)
 
 Open Wiki in VScode from github desktop
 ![image](VScode.JPG)
@@ -32,7 +32,7 @@ To make images work the images need to be in the same folder as the .md, they ar
 
 This markdown cheat sheet will tell you everything you need to format pages
 
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 Save your work in VScode and go to github desktop
 
@@ -65,15 +65,28 @@ You can also do **this** **[link](https://fome.tech)**
 
 ## Start your site
 
+Change directory:
+
+```bash
+cd wiki
+```
+
+Install NodeJS dependencies:
+
+```bash
+npm install
+```
+
 Run the development server:
 
 ```bash
-cd my-website
-npm run start
+npm start
 ```
 
 The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+The `npm install` installs all the dependencies for your site. You'll need to run this command once when you first download the project, and again only if you `package-lock.json` file changes.
+
+The `npm start` command builds your website locally and serves it through a development server, ready for you to view at [http://localhost:3000](http://localhost:3000).
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
