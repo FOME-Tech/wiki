@@ -8,7 +8,7 @@ Any change that you make to the tune or ecu should be followed by a power cycle 
 
 The main relay is an essential component of the FOME ECU system. It is responsible for delivering power to the ECU when the key is turned on. Without the main relay, the ECU would not receive any power and would not be able to function properly.
 
-#### Why use a main relay? 
+### Why use a main relay?
 
 Using a main relay has several benefits. First, it helps to protect the ECU from power surges and voltage spikes that can occur when the engine is starting. Second, it allows for a more secure and stable connection between the ECU and the power source, which can help to prevent electrical interference and noise.
 
