@@ -26,7 +26,7 @@ You love big hair, short shorts, and tops off 24/7 (and stereotypes too). Luckil
 
 ### Harley
 
-Whether you're cruising a highways, crushing that 1/4 mile, or just want more power, the Harley FOME ECU (designed for 2021+ bikes) is an excellent choice. [NMSTEC](https://www.nmstec.ca/product/hdrevb/) has them available ready to go, also in a very nice *billet* case.
+Whether you're cruising the highways, crushing that 1/4 mile, or just want more power, the Harley FOME ECU (designed for 2021+ bikes) is an excellent choice. [NMSTEC](https://www.nmstec.ca/product/hdrevb/) has them available ready to go, also in a very nice *billet* case.
 
 ![image](./Which-Hardware-For-Me-Images/Harley-FOME.png)
 
@@ -34,7 +34,7 @@ Whether you're cruising a highways, crushing that 1/4 mile, or just want more po
 
 ### Universal
 
-Sometimes you don't know what car your engine is going in, or you want to do a swap. Regardless, a universal option is always good to have. It uses the common and reliable VAG (not that VAG, but Volkswagen Audi Gruppe) plugs with a nice 120 pins. This means 8 cylinders of sequential fueling (up to 12 batch), plenty of inputs and outputs. (20 lowside, 4 highside, CANBUS, SD Card) It should be able to handle 95% of projects out there.
+Sometimes you don't know what car your engine is going in, or you want to do a swap. Regardless, a universal option is always good to have. It uses the common and reliable VAG (not that VAG, but Volkswagen Audi Group) plugs with a nice 120 pins. This means 8 cylinders of sequential fueling (up to 12 batch), plenty of inputs and outputs. (20 lowside, 4 highside, CANBUS, SD Card) It should be able to handle 95% of projects out there.
 
 ### Honda
 
