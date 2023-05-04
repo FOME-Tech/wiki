@@ -65,12 +65,11 @@ http://localhost:3000/docs/Basic-Features/Fan-Control
 http://localhost:3000/docs/Basic-Features/Fuel-Pump-Relay
 http://localhost:3000/docs/Basic-Features/GPPWM
 http://localhost:3000/docs/Basic-Features/Idle Control/Advanced-Idle
-http://localhost:3000/docs/Basic-Features/Idle Control/Closed-Loop_Idle_Control
 http://localhost:3000/docs/Basic-Features/Idle Control/Idle-Hardware
 http://localhost:3000/docs/Basic-Features/Idle Control/Idle-Ignition-Table
 http://localhost:3000/docs/Basic-Features/Idle Control/Idle-Settings
+http://localhost:3000/docs/Basic-Features/Idle Control/Idle-Tuning
 http://localhost:3000/docs/Basic-Features/Idle Control/Idle-VE-Table
-http://localhost:3000/docs/Basic-Features/Idle Control/Open-Loop-Idle-Control
 http://localhost:3000/docs/Basic-Features/Main-Relay
 http://localhost:3000/docs/category/advanced-features
 http://localhost:3000/docs/Advanced-Features/CAN-Settings
