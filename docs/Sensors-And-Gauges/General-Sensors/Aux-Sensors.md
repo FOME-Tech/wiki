@@ -4,4 +4,4 @@
 
 ## Aux linear sensor
 
-## Aux sensor serial coms settings
+## Aux sensor serial comms settings

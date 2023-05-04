@@ -6,19 +6,19 @@ Air fuel ratio or AFR refers to the mass ratio of air to fuel involved in a comb
 
 An engine operates most efficiently and cleanly when the air-fuel ratio is at a specific value called the stoichiometric ratio. This ratio depends on the type of fuel being used, but for gasoline, it is approximately 14.7 parts air to 1 part fuel (14.7:1). When the air-fuel ratio is at the stoichiometric value, all of the fuel is burned, and there is no excess oxygen or unburned fuel left in the exhaust. This results in the least amount of emissions and the highest fuel efficiency. If the air-fuel ratio is too lean (excess air), there is not enough fuel to burn, and the engine may misfire or stall. If the air-fuel ratio is too rich (excess fuel), there is not enough oxygen to burn all the fuel, and the engine may emit more pollutants, have reduced fuel efficiency, and may even cause damage to the engine over time. Therefore, maintaining the proper air-fuel ratio is essential for optimal engine performance, fuel efficiency, exhaust gas temperature, engine knock and emission control in a car engine.
 
-## What is Lambda and Why it is a Superior Metric  
+## What is Lambda and Why it is a Superior Metric
 
 Lambda, is a dimensionless ratio of the actual air-fuel ratio to the stoichiometric air-fuel ratio. In other words, it is the ratio of the AFR to the stoichiometric AFR (or the measured AFR divided by the stoichiometric AFR). Lambda is a more universal measure of the air-fuel ratio, as it is not affected by the specific fuel being used. The stoichiometric lambda value for any fuel is always 1.0, regardless of the fuel type. For example, if the actual AFR in an engine is 14.7:1 (stoichiometric AFR), then the lambda value is 1.0. If the actual AFR is leaner than 14.7:1, then the lambda value is greater than 1.0, and if it is richer than 14.7:1, then the lambda value is less than 1.0.
 
 Lambda is preferred in engine tuning because it allows for a more precise control of the air-fuel ratio across different fuels and is generally easier to comprehend. For example, if a gasoline car is running 10% lean, the AFR would be 16.17 and lambda would be 1.1. If the car is 10% rich, AFR would be 13.36 and lambda would be 0.9. Looking at lambda, it is instantly obvious what percentage rich or lean the engine is running but with AFR, it requires more effort.
 
-## AFR Targets - When to Run Rich, Lean and Stoich  
+## AFR Targets - When to Run Rich, Lean and Stoich
 
-The ideal AFR targets will vary for every engine however there are guidelines for what the targets should be for each operating zone of the engine. These targets will be represented on an AFR target table or map, shown below, which characterizes the various engine operating conditions for their respective engine RPM and MAP. Generally speaking, running richer will decrease engine response at a gain of extra combustion chamber cooling and slightly higher power to a point. Inversely, running leaner will increase engine response at a loss running hotter and reducing power. 
+The ideal AFR targets will vary for every engine however there are guidelines for what the targets should be for each operating zone of the engine. These targets will be represented on an AFR target table or map, shown below, which characterizes the various engine operating conditions for their respective engine RPM and MAP. Generally speaking, running richer will decrease engine response at a gain of extra combustion chamber cooling and slightly higher power to a point. Inversely, running leaner will increase engine response at a loss running hotter and reducing power.
 
 ![image](AFR/AFRTarget.png)
 
-### Idle and Cruising 
+### Idle and Cruising
 
 For idle, a lambda of 1.0 is generally recommended to achieve a stable idle. When cruising, a lambda of 1.0 is also recommended however this can be raised up to about 1.05 to improve the fuel efficiency of the vehicle on the freeway or traveling a constant speed for long periods of time.
 
@@ -52,7 +52,7 @@ On the AFR target diagram, certain operating zones have missing values. To prope
 
 Fundamentally, an oxygen sensor works in lambda. It measures the oxygen content in the exhaust relative to the open air and outputs a voltage which the ECU or wideband controller can directly convert to lambda. The ECU then converts this to AFR if required by multiplying the lambda by the stoichiometric value of the fuel (typically 14.7 for unleaded). Regardless of the fuel, the oxygen sensor will read the same lambda for any fuel that is burning at its stoichiometric point. A table is shown below comparing the stoichiometric AFR values of common fuels.
 
-| **Fuel Type**     | **Stochiometric AFR** |
+| **Fuel Type**     | **Stoichiometric AFR** |
 |-------------------|-----------------------|
 | Unleaded Gasoline | 14.7                  |
 | E85               | 9.76                  |

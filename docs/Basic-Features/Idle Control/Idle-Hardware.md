@@ -11,10 +11,13 @@
 ## Stepper Motors
 
 ### Dedicated stepper hardware
-Step pin, direction, mode, enable etc  
+
+Step pin, direction, mode, enable etc
 
 ### Dual H bridge
-Direction 1/2, disable etc  
+
+Direction 1/2, disable etc
 
 ### PushPull outputs
-Stepper a+,b+,a-,b- etc  
+
+Stepper a+,b+,a-,b- etc
