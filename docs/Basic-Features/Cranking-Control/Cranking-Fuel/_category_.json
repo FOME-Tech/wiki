@@ -1,0 +1,8 @@
+{
+  "label": "Cranking fuel",
+  "position": 0,
+  "link": {
+    "type": "generated-index",
+    "description": "Cranking fuel"
+  }
+}
