@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/icons/favicon.ico',
   noIndex: true, // adds <meta name="robots" content="noindex, nofollow"> to every page
   // staticDirectories: ['public', 'static'],
 
@@ -35,17 +35,13 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: require.resolve('./sidebars.js'),
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/FOME-Tech/wiki/tree/master',
         },
-        blog: {
-          showReadingTime: true,
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/FOME-Tech/wiki/tree/master',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -56,23 +52,38 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/icons/android-chrome-512x512.png',
+      colorMode: {
+        defaultMode: 'dark',
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: '',
         logo: {
           alt: 'FOME Logo',
-          src: 'img/logo.png',
+          src: 'img/logo-transparent.png',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Docs',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'Docs',
+          // },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/FOME-Tech',
+            to: '/pdf/docs.pdf',
+            label: 'PDF',
+            position: 'right',
+            target: '_blank',
+          },
+          {
+            href: 'https://github.com/FOME-Tech/wiki',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            type: 'search',
             position: 'right',
           },
         ],
@@ -80,15 +91,15 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
+          // {
+          //   title: 'Docs',
+          //   items: [
+          //     {
+          //       label: 'Tutorial',
+          //       to: '/docs/intro',
+          //     },
+          //   ],
+          // },
           {
             title: 'Community',
             items: [
