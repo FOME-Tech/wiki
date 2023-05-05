@@ -13,7 +13,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "pdf": "docusaurus-prince-pdf -u http://localhost:3000 -o static/pdf/docs.pdf"
+    "pdf": "docusaurus-prince-pdf -u http://localhost:3000 -o static/pdf/wiki.fome.pdf"
   },
   "dependencies": {
     "@docusaurus/core": "2.4.0",

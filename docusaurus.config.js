@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const pdfUrl = '/pdf/wiki.fome.pdf';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -62,17 +63,14 @@ const config = {
         logo: {
           alt: 'FOME Logo',
           src: 'img/logo-transparent.png',
+          style: {
+            height: 30,
+            marginTop: -2,
+          }
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: 'Docs',
-          // },
-          // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            to: '/pdf/docs.pdf',
+            to: pdfUrl,
             label: 'PDF',
             position: 'right',
             target: '_blank',
@@ -91,15 +89,6 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     {
-          //       label: 'Tutorial',
-          //       to: '/docs/intro',
-          //     },
-          //   ],
-          // },
           {
             title: 'Community',
             items: [
@@ -116,10 +105,11 @@ const config = {
           {
             title: 'More',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
+              {
+                to: pdfUrl,
+                label: 'PDF version',
+                target: '_blank',
+              },
               {
                 label: 'FOME.tech',
                 href: 'https://www.fome.tech',
