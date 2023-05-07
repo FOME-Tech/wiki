@@ -15,6 +15,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   noIndex: false, // adds <meta name="robots" content="noindex, nofollow"> to every page
   favicon: 'img/icons/favicon.ico',
+  trailingSlash: true, // adds trailing slash to all links since we are using Cloudflare Pages
   // staticDirectories: ['public', 'static'],
 
   // GitHub pages deployment config.
