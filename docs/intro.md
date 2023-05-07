@@ -117,13 +117,13 @@ The first page to view should probably be the FOME overview.
 
 #### Idle control
 
-- [Advanced Idle control](Basic-Features/Idle%20Control/Advanced-Idle)
-- [Closed loop idle control](Basic-Features/Idle%20Control/Advanced-Idle)
-- [Idle hardware](Basic-Features/Idle%20Control/Idle-Hardware)
-- [Idle ignition table](Basic-Features/Idle%20Control/Idle-Ignition-Table)
-- [Idle settings](Basic-Features/Idle%20Control/Idle-Settings)
-- [Idle VE Table](Basic-Features/Idle%20Control/Idle-VE-Table)
-- [Open loop Idle control](Basic-Features/Idle%20Control/Open-Loop-Idle-Control)
+- [Advanced Idle control](Basic-Features/Idle-Control/Advanced-Idle)
+- [Closed loop idle control](Basic-Features/Idle-Control/Advanced-Idle)
+- [Idle hardware](Basic-Features/Idle-Control/Idle-Hardware)
+- [Idle ignition table](Basic-Features/Idle-Control/Idle-Ignition-Table)
+- [Idle settings](Basic-Features/Idle-Control/Idle-Settings)
+- [Idle VE Table](Basic-Features/Idle-Control/Idle-VE-Table)
+- [Idle tuning](Basic-Features/Idle-Control/Idle-tuning)
 
 ---
 
@@ -170,9 +170,9 @@ The first page to view should probably be the FOME overview.
 
 #### Variable cam timing
 
-- [On/Off VVT](Advanced-Features/Variable%20Cam%20Timing/On-Off-VVT)
-- [VVT PID](Advanced-Features/Variable%20Cam%20Timing/VVT-PID)
-- [VVT target tables](Advanced-Features/Variable%20Cam%20Timing/VVT-Target-Tables)
+- [On/Off VVT](Advanced-Features/Variable-Cam-Timing/On-Off-VVT)
+- [VVT PID](Advanced-Features/Variable-Cam-Timing/VVT-PID)
+- [VVT target tables](Advanced-Features/Variable-Cam-Timing/VVT-Target-Tables)
 
 ---
 
