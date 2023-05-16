@@ -16,8 +16,8 @@
     "pdf": "docusaurus-prince-pdf -u http://localhost:3000 -o static/pdf/wiki.fome.pdf"
   },
   "dependencies": {
-    "@docusaurus/core": "2.4.0",
-    "@docusaurus/preset-classic": "2.4.0",
+    "@docusaurus/core": "2.4.1",
+    "@docusaurus/preset-classic": "2.4.1",
     "@easyops-cn/docusaurus-search-local": "^0.35.0",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.2.1",
@@ -26,7 +26,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.4.0",
+    "@docusaurus/module-type-aliases": "^2.4.1",
     "@tsconfig/docusaurus": "^1.0.7",
     "docusaurus-prince-pdf": "^1.1.1",
     "typescript": "^5.0.4"
