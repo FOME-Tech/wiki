@@ -1,3 +1,7 @@
+---
+sidebar_position: 8
+---
+
 # Tips and Tricks
 
 ## Power cycle ECU

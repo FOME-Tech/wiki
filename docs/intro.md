@@ -14,16 +14,17 @@ The first page to view should probably be the FOME overview.
 
 ### Intro - Start here
 
-- [Tips and Tricks](Intro-Start-Here/Tips-and-Tricks)
-- [First Checks, enabling and loading firmware](Intro-Start-Here/HT-First-Activate)
+- [FOME Overview](Intro-Start-Here/Overview)
+- [Which FOME hardware to choose](Intro-Start-Here/Which-Hardware-For-Me)
+- [Where to get firmware](Intro-Start-Here/Where-To-Get-Firmware)
+- [Flashing the firmware](Intro-Start-Here/HT-Flashing-The-Firmware)
 - [Performing a safe first start](Intro-Start-Here/HT-First-Start-Safely)
-- [Guide to ETB and VVT PIDs](Intro-Start-Here/HT-PID-ETB-And-VVT)
 - [How to setup a board for first use](Intro-Start-Here/HT-Set-Up)
 - [How to test inputs and outputs](Intro-Start-Here/HT-Test-IO)
-- [FOME Overview](Intro-Start-Here/Overview)
-- [Where to get firmware](Intro-Start-Here/Where-To-Get-Firmware)
+- [Tips and Tricks](Intro-Start-Here/Tips-and-Tricks)
 - [How to pick the right fueling method](Intro-Start-Here/Which-Fuel-Method-For-Me)
-- [Which FOME hardware to choose](Intro-Start-Here/Which-Hardware-For-Me)
+- [Guide to ETB and VVT PIDs](Intro-Start-Here/HT-PID-ETB-And-VVT)
+- [Miata MX5 Quick Start Guide](Intro-Start-Here/Miata-MX5-Quick-Start)
 
 ---
 
