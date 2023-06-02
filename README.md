@@ -40,6 +40,18 @@ npm run build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+### Redirection
+
+Some addresses have client-side redirection set up here: [docusaurus.config.js](/docusaurus.config.js) (section `redirects: [...]`).
+
+Those addresses come from the INI files (TS & HT). This gives more flexibility when wiki pages are moved or renamed.
+
+Example:
+
+```bash
+https://wiki.fome.tech/r/fuel -> https://wiki.fome.tech/category/fuel/
+```
+
 ### Generate PDF
 
 Required [Prince XML](https://www.princexml.com/).

@@ -62,6 +62,46 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          // Client side redirect addresses specified in INI files (HT & TS)
+          // eg. https://wiki.fome.tech/r/fuel -> https://wiki.fome.tech/category/fuel/
+          {
+            from: '/r/fuel',
+            to: '/category/fuel/',
+          },
+          {
+            from: '/r/vvt',
+            to: '/category/vvt/',
+          },
+          {
+            from: '/r/debugmode',
+            to: '/Advanced-Features/Debug-Mode/',
+          },
+          {
+            from: '/r/trigger',
+            to: '/category/general-sensors/',
+          },
+          {
+            from: '/r/etb',
+            to: '/category/etb/',
+          },
+          {
+            from: '/r/tsptsp',
+            to: '/Fuel/Acceleration/TPS-Based/',
+          },
+          {
+            from: '/r/lua',
+            to: '/Advanced-Features/LUA-Scripting/',
+          },
+        ],
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
