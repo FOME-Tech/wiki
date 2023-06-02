@@ -90,7 +90,7 @@ const config = {
             to: '/category/etb/',
           },
           {
-            from: '/r/tsptsp',
+            from: '/r/tpstps',
             to: '/Fuel/Acceleration/TPS-Based/',
           },
           {
