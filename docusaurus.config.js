@@ -97,6 +97,10 @@ const config = {
             from: '/r/lua',
             to: '/Advanced-Features/LUA-Scripting/',
           },
+          {
+            from: '/r/vr',
+            to: '/Hardware/Hardware-Circuits/Discrete-VR/',
+          },
         ],
       },
     ],
