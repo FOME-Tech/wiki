@@ -11,4 +11,9 @@ u(t) = K_\text{p}\left(e(t) + \frac{1}{T_\text{i}} \int_0^t e(\tau) \,\mathrm{d}
 \frac{\mathrm{d}e(t)}{\mathrm{d}t}\right)
 $$
 
-Write something here about the ETB setup and the VVT PIDs
+TODO: Write something here about the ETB setup and the VVT PIDs
+
+More details about ETB PID control are found in the Advanced Features section's page [ETB
+PID](/Advanced-Features/ETB/ETB-PID.md).
+
+More details about VVT PID control are found in the Advanced Features section's page [VVT PID Control](/Advanced-Features/Variable-Cam-Timing/VVT-PID.md).
