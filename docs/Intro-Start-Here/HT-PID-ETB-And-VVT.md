@@ -13,7 +13,6 @@ $$
 ## More Details
 Wikipedia's PID Controller page's [operational description](https://en.wikipedia.org/wiki/PID_controller#Fundamental_operation).
 
-More details about ETB PID control are found in the Advanced Features section's page [ETB
-PID](/Advanced-Features/ETB/ETB-PID.md).
+More details about ETB PID control are found in the Advanced Features section's page [ETB PID and Autotune](/Advanced-Features/ETB/ETB-PID.md).
 
 More details about VVT PID control are found in the Advanced Features section's page [VVT PID Control](/Advanced-Features/Variable-Cam-Timing/VVT-PID.md).
