@@ -2,13 +2,30 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const pdfUrl = '/pdf/wiki.fome.pdf';
+
+const fs = require('fs');
+const crypto = require('crypto');
+
+const url = 'https://wiki.fome.tech';
+const isBuild = process.env.NODE_ENV === 'production';
+const pdfName = 'wiki.fome.pdf';
+
+const pdfChecksum = () => {
+  const data = fs.readFileSync(`static/pdf/${pdfName}`, 'utf8');
+
+  return crypto
+    .createHash('md5')
+    .update(data, 'utf8')
+    .digest('hex');
+}
+
+const pdfUrl = `${isBuild ? url : 'http://localhost:3000'}/pdf/${pdfName}?v=${pdfChecksum()}`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'FOME Wiki',
   tagline: 'Free Open Motorsports ECU',
-  url: 'https://wiki.fome.tech',
+  url,
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -41,6 +58,10 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/FOME-Tech/wiki/tree/master',
+          remarkPlugins: [require('remark-math')],
+          rehypePlugins: [
+            [require('rehype-katex'), { output: 'mathml' }]
+          ],
         },
         blog: false,
         theme: {
@@ -48,6 +69,16 @@ const config = {
         },
       }),
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
 
   themes: [
@@ -126,7 +157,7 @@ const config = {
         },
         items: [
           {
-            to: pdfUrl,
+            href: pdfUrl,
             label: 'PDF',
             position: 'right',
             target: '_blank',
