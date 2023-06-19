@@ -3,9 +3,23 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const fs = require('fs');
+const crypto = require('crypto');
+
 const url = 'https://wiki.fome.tech';
 const isBuild = process.env.NODE_ENV === 'production';
-const pdfUrl = `${isBuild ? url : 'http://localhost:3000'}/pdf/wiki.fome.pdf`;
+const pdfName = 'wiki.fome.pdf';
+
+const pdfChecksum = () => {
+  const data = fs.readFileSync(`static/pdf/${pdfName}`, 'utf8');
+
+  return crypto
+    .createHash('md5')
+    .update(data, 'utf8')
+    .digest('hex');
+}
+
+const pdfUrl = `${isBuild ? url : 'http://localhost:3000'}/pdf/${pdfName}?v=${pdfChecksum()}`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -46,7 +60,7 @@ const config = {
             'https://github.com/FOME-Tech/wiki/tree/master',
           remarkPlugins: [require('remark-math')],
           rehypePlugins: [
-            [require('rehype-katex'), {output: 'mathml'}]
+            [require('rehype-katex'), { output: 'mathml' }]
           ],
         },
         blog: false,
