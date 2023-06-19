@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Flashing the firmware
 
-Flashing the firmware is easy to do however it is important to do it correctly to prevent errors or board misconfiguration. If you haven't already, read the guide on downloading the firmware and setting up TunerStudio [here](https://wiki.fome.tech/Intro-Start-Here/Where-To-Get-Firmware/).
+Flashing the firmware is easy to do however it is important to do it correctly to prevent errors or board misconfiguration. If you haven't already, read the guide on downloading the firmware and setting up TunerStudio [here](/Intro-Start-Here/Where-To-Get-Firmware/).
 
 ## Load the firmware onto the ECU
 
