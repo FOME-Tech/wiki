@@ -2,13 +2,16 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const pdfUrl = '/pdf/wiki.fome.pdf';
+
+const url = 'https://wiki.fome.tech';
+const isBuild = process.env.NODE_ENV === 'production';
+const pdfUrl = `${isBuild ? url : 'http://localhost:3000'}/pdf/wiki.fome.pdf`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'FOME Wiki',
   tagline: 'Free Open Motorsports ECU',
-  url: 'https://wiki.fome.tech',
+  url,
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -140,7 +143,7 @@ const config = {
         },
         items: [
           {
-            to: pdfUrl,
+            href: pdfUrl,
             label: 'PDF',
             position: 'right',
             target: '_blank',
