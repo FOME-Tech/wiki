@@ -3,5 +3,6 @@
   "line-length": false,
   "no-trailing-spaces": false,
   "single-trailing-newline": false,
-  "heading-start-left": false
+  "heading-start-left": false,
+  "first-line-heading": false
 }
