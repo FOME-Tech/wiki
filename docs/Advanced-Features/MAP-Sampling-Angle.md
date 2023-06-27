@@ -1,2 +1,1 @@
 # MAP Sampling Angle
-
