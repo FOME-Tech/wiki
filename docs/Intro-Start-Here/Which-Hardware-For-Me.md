@@ -8,7 +8,7 @@ Currently there are a few sweet options for hardware, all have the same brain, b
 
 ## BRAIN
 
-### Polygonus :brain:
+### Polygonus 🧠
 
 This is where the real action happens. Designed to be consistent across different base board applications to simplify design, ensure repeatability, and reduce cost. The Polygonus (said Puh-LIG-on-us) Brain is on all FOME ECUs.
 

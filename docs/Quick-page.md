@@ -50,9 +50,11 @@ Once that is done you can push your changes and they will get automatically upda
 - More stuff!
 - Stuff that looks like stuff but isn't!
 
-##### Subtitle
+### Subtitle 1
 
-#### No not that kind of subtitle
+#### Subtitle 2
+
+##### Subtitle 3
 
 ### This kind of subtitle
 

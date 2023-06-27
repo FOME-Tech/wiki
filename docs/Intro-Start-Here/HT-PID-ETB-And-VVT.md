@@ -11,6 +11,7 @@ u(t) = K_\text{p} e(t) + K_\text{i} \int_0^t e(\tau) \,\mathrm{d}\tau + K_\text{
 $$
 
 ## More Details
+
 Wikipedia's PID Controller page's [operational description](https://en.wikipedia.org/wiki/PID_controller#Fundamental_operation).
 
 More details about ETB PID control are found in the Advanced Features section's page [ETB PID and Autotune](/Advanced-Features/ETB/ETB-PID.md).
