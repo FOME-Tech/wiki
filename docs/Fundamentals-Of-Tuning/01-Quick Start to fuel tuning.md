@@ -1,7 +1,7 @@
 These instructions make some pretty serious assumptions:
 1. You have a setup that isn't going to grenade if you get things wrong for a few seconds
 2. You know to lift off the throttle quickly if things are wrong
-3. Your ignition maps are sane
+3. Your ignition maps are safe.  THIS IS A BIG ASSUMPTION.
 4. These instructions are oriented towards a naturally aspirated engine.  Tuning a boosted engine this way is probably too risky, although it will work.  Consider popping wastegate open with shop air, zip tie-ing bypass valve, popping a charge pipe (which has its own risks) or similar method to limit boost to minimal levels
 
   If you are not sure about your ignition maps, have a high-strung engine likely to blow up and hurt things, DO NOT DO THIS.  These instructions assume a certain degree of forgiveness, which all engines are not necessarily going to give you.
