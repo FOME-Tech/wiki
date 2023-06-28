@@ -58,4 +58,5 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: wiki
           directory: build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }} # GitHub Deployments
           wranglerVersion: '3'
