@@ -2,12 +2,12 @@
 
  The idle settings menu can look daunting at first but this guide will help to decode the mystery of all the various idle settings.
 
- ## Idle target RPM
+## Idle target RPM
 
- ## TPS threshold
+## TPS threshold
 
- ## RPM upper limit
+## RPM upper limit
 
- ## RPM deadzone
+## RPM deadzone
 
- ## Max Vehicle speed for idle
+## Max Vehicle speed for idle
