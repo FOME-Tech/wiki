@@ -11,7 +11,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    if: github.repository_owner == 'FOME-Tech' && github.actor != 'dependabot[bot]'
 
     permissions:
       contents: read
