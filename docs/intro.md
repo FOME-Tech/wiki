@@ -17,7 +17,7 @@ The first page to view should probably be the FOME overview.
 - [FOME Overview](Intro-Start-Here/Overview)
 - [Which FOME hardware to choose](Intro-Start-Here/Which-Hardware-For-Me)
 - [Where to get firmware](Intro-Start-Here/Where-To-Get-Firmware)
-- [Flashing the firmware](Intro-Start-Here/HT-Flashing-The-Firmware)
+- [Updating the firmware](Intro-Start-Here/HT-Updating-The-Firmware)
 - [Performing a safe first start](Intro-Start-Here/HT-First-Start-Safely)
 - [How to setup a board for first use](Intro-Start-Here/HT-Set-Up)
 - [How to test inputs and outputs](Intro-Start-Here/HT-Test-IO)

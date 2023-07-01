@@ -2,16 +2,19 @@
 sidebar_position: 4
 ---
 
-# Flashing the firmware
+# Updating the Firmware
 
-Flashing the firmware is easy to do, however it is important to do it correctly to prevent errors or board
+Updating the firmware is easy to do, however it is important to do it correctly to prevent errors or board
 misconfiguration.  A guide to downloading FOME firmware and setting up TunerStudio can be found
 [here](/Intro-Start-Here/Where-To-Get-Firmware/).
 
-## Flashing the firmware onto the ECU with FOME console
+Updating firmware involves a process sometimes called "flashing" or even "programming" the ECU.  Generally, these all
+refer to the same thing: taking the compiled FOME firmware and putting it into the non-volatile flash memory on the ECU.
+
+## Updating the Firmware with FOME Console
 
 After confirming the firmware to flash to the ECU, software to do so must be used.  FOME provides a utility, the **FOME
-console**, which is capable of flashing firmware to supported ECUs and is the recommended way to flash FOME firmware..
+console**, which is capable of flashing firmware to supported ECUs and is the recommended way to update FOME firmware.
 The FOME console is included with each firmware release, and bundles can be downloaded from [the release
 page](https://github.com/FOME-Tech/fome-fw/releases).  As problems can arise during flashing, other tools and mechanisms
 that are available for this procedure are documented below in [Other firmware flashing
@@ -21,13 +24,13 @@ After extracting the bundle contents, navigate to the `console/` directory and r
 `fome_console.exe` if using Windows).  After first confirming **TunerStudio is not running**, connect the ECU to the
 computer.  FOME console will automatically detect the board and present similar to the display below:
 
-![image](Flashing-FW/fomeconsole.png)
+![image](Updating-FW/fomeconsole.png)
 
 Next, click *Update Firmware* and leave the board connected until the display notifies that the update was successful.
 Only once the console has presented the success message, disconnected and re-connect the ECU into the computer to reboot
 it with the new firmware.
 
-If the flashing does not complete successfully, the firmware may need to be loaded using another mechanism documented
+If the update does not complete successfully, the firmware may need to be loaded using another mechanism documented
 below in [Other firmware flashing tools](#other-firmware-flashing-tools).
 
 ## Setting up TunerStudio
@@ -38,26 +41,25 @@ definition is out of date and display a prompt to download or supply the new def
 Next, under the *Controller* tab, open the *Popular Vehicles* menu and click the top button to load the preset for your
 vehicle (**not the button to *Reset firmware settings***).
 
-![image](Flashing-FW/popularvehicles.png)
+![image](Updating-FW/popularvehicles.png)
 
 Once the preset has been loaded, you can either start tuning or load your tune from the older firmware versions under
 *File > Load Tune (msq)*. After that, the update is complete!
 
-## Other firmware flashing tools
+## Other Firmware Flashing Tools
 
 :::note
 
 Some boards, notably those with processors utilizing certain dual bank memory layout, like the STM32F7, suffer from an
 issue such that flashing does not succeed correctly, due to an error with the erasure mechanism.  For these situations,
-manually erase the flash before flashing; i.e. perform a full/mass erase procedure first.
+manually erase the flash memory before flashing; i.e. perform a full/mass erase procedure first.
 
 :::
 
-In the event of a firmware flashing failure, or some other firmware corruption issue, such that FOME console nor
-TunerStudio recognize the ECU when connected, the firmware needs to be flashed to the ECU using another tool.  In these
+In the event of a firmware update/flash failure, or some other firmware corruption issue, such that FOME console nor
+TunerStudio recognize the ECU when connected, the firmware needs to be loaded to the ECU using another tool.  In these
 situations, the FOME console cannot communicate with the firmware and so is unable to configure it into bootloader (or
-DFU) mode for updating.  To flash the firmware, the ECU must be manually entered into the bootloader/DFU mode for
-flashing.
+DFU) mode for updating.  To flash the firmware, the ECU must be manually entered into the bootloader/DFU mode.
 
 ### STM32CubeProgrammer
 
@@ -87,7 +89,7 @@ dfu-util is a free software tool to flash Device Firmware Upgrade (DFU) compatib
 It supports most popular operating systems, including MacOS and Linux.  Information about dfu-util can be found on [the
 dfu-util website](https://dfu-util.sourceforge.net/).
 
-Flashing with dfu-util is as straight-forward as invoking it like so:
+Updating with dfu-util is as straight-forward as invoking it like so:
 
 ```sh
 dfu-util -v -d 0483:df11 -a 0 -D fome.dfu -s :leave
