@@ -207,6 +207,8 @@ The first page to view should probably be the FOME overview.
 
 ### Hardware
 
+- [Flashing Software Notes](Hardware/Flashing-Software-Notes)
+
 #### Hardware Circuits
 
 - [High/Low circuits](Hardware/Hardware-Circuits/High-Low)
