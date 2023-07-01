@@ -61,17 +61,17 @@ TunerStudio recognize the ECU when connected, the firmware needs to be loaded to
 situations, the FOME console cannot communicate with the firmware and so is unable to configure it into bootloader (or
 DFU) mode for updating.  To flash the firmware, the ECU must be manually entered into the bootloader/DFU mode.
 
-### STM32CubeProgrammer
-
-STM32CubeProgrammer is an officially STMicroelectronics supported tool to flash STM32 processors.  Information about
-and how to download and install the tool can be found on [the STM
-wiki](https://wiki.st.com/stm32mpu/wiki/STM32CubeProgrammer).
-
 For the ECU, you will need to access buttons or pins on the main board to force the processor into bootloader/DFU mode.
 Some boards use a momentary button, likely near to the reset button, to force this mode during power-up.  Others might
 use a set of pins or pads that need shorted to force this mode during power-up.  Press the button or short the pins with
 the ECU disconnected from the computer, then simultaneously connect the ECU into the computer.  Once connected, the
 button can be released or the short removed.
+
+### STM32CubeProgrammer
+
+STM32CubeProgrammer is an officially STMicroelectronics supported tool to flash STM32 processors.  Information about
+and how to download and install the tool can be found on [the STM
+wiki](https://wiki.st.com/stm32mpu/wiki/STM32CubeProgrammer).
 
 In STM32CubeProgrammer, select the *USB* tab on the right and refresh the port in the right side menu until a DFU is
 detected. Click *Connect* to connect the ECU to the programmer. Click the *Read* button to read the device memory and to
