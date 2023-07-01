@@ -46,9 +46,11 @@ Once the preset has been loaded, you can either start tuning or load your tune f
 ## Other firmware flashing tools
 
 :::note
+
 Some boards, notably those with processors utilizing certain dual bank memory layout, like the STM32F7, suffer from an
 issue such that flashing does not succeed correctly, due to an error with the erasure mechanism.  For these situations,
 manually erase the flash before flashing; i.e. perform a full/mass erase procedure first.
+
 :::
 
 In the event of a firmware flashing failure, or some other firmware corruption issue, such that FOME console nor
@@ -58,6 +60,7 @@ DFU) mode for updating.  To flash the firmware, the ECU must be manually entered
 flashing.
 
 ### STM32CubeProgrammer
+
 STM32CubeProgrammer is an officially STMicroelectronics supported tool to flash STM32 processors.  Information about
 and how to download and install the tool can be found on [the STM
 wiki](https://wiki.st.com/stm32mpu/wiki/STM32CubeProgrammer).
@@ -79,11 +82,13 @@ from the programmer then unplug the ECU and plug it back in. The ECU should now 
 again.
 
 ### dfu-util
+
 dfu-util is a free software tool to flash Device Firmware Upgrade (DFU) compatible devices, including STM32 processors.
 It supports most popular operating systems, including MacOS and Linux.  Information about dfu-util can be found on [the
 dfu-util website](https://dfu-util.sourceforge.net/).
 
 Flashing with dfu-util is as straight-forward as invoking it like so:
+
 ```sh
 dfu-util -v -d 0483:df11 -a 0 -D fome.dfu -s :leave
 ```
@@ -92,6 +97,7 @@ Note that the `:leave` option does not always work, which would otherwise automa
 DFU mode and load the firmware; the board must be manually reset to load the flashed firmware.
 
 To erase a device, use the following invocation:
+
 ```sh
 dfu-util -v -d 0483:df11 -a 0 -s :mass-erase:force
 ```
