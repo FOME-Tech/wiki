@@ -1,3 +1,9 @@
+# Validate typescript files, links and markdown
+#
+# Configuration files:
+# - typescript: tsconfig.json
+# - links: scripts/linkValidator.js
+# - makrdown: .markdownlint.jsonc
 name: Lint
 
 concurrency:
