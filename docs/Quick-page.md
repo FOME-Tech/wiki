@@ -7,15 +7,15 @@ sidebar_position: 0
 ## Best way to edit and add pages
 
 Get this:
-[https://github.com/FOME-Tech/FOME-Baseline/issues/labels](https://github.com/FOME-Tech/FOME-Baseline/issues/labels)
+[Github Desktop](https://desktop.github.com)
 
 Clone the wiki repo
-[https://github.com/FOME-Tech/wiki](https://github.com/FOME-Tech/wiki)
+[Wiki Repo](https://github.com/FOME-Tech/wiki)
 
 ![image](Clone.JPG)
 
 Get VScode:
-[https://code.visualstudio.com](https://code.visualstudio.com)
+[VSCode](https://code.visualstudio.com)
 
 Open Wiki in VScode from github desktop
 ![image](VScode.JPG)
