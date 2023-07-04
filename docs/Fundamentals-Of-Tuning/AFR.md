@@ -1,6 +1,6 @@
 # Air Fuel Ratio
 
-Air fuel ratio or AFR refers to the mass ratio of air to fuel involved in a combustion cycle. The AFR is important as the amount of fuel injected into the engine is the most significant combustion parameter that the ECU can control. The ECU takes the target AFR and determines the correct mass of fuel to inject based on the mass of air approximated using the temperature and pressure.
+Air fuel ratio or AFR refers to the mass ratio of air to fuel involved in a combustion cycle. The AFR is important as the amount of fuel injected into the engine is one of the most significant combustion parameters that the ECU can control.  The ECU takes the target AFR and determines the correct mass of fuel to inject based on the mass of air approximated using the temperature and pressure.
 
 ## Why AFR Matters
 
