@@ -1,6 +1,6 @@
 # FOME fault codes and how to read them
 
-The FOME ECU is able to provide a number of fault codes,   the meanings of these are listed below: 
+The FOME ECU is able to provide a number of fault codes,   the meanings of these are listed below:
 
 <details><h1><h1>Unused</h1></h1>  
 //P0001 Fuel Volume Regulator Control Circuit/Open
@@ -97,9 +97,9 @@ The FOME ECU is able to provide a number of fault codes,   the meanings of these
 //P0087 Fuel Rail/System Pressure - Too Low
 //P0088 Fuel Rail/System Pressure - Too High
 //P0089 Fuel Pressure Regulator 1 Performance
-</Details>
+</details>
 
-OBD_Fuel_Pressure_Sensor_Missing = 90,    
+OBD_Fuel_Pressure_Sensor_Missing = 90,
 
 <details><h1>Unused</h1>
 //P0091 Fuel Pressure Regulator 1 Control Circuit Low
@@ -120,9 +120,9 @@ OBD_Manifold_Absolute_Pressure_Circuit_Malfunction = 105,
 //P0106 Manifold Absolute Pressure/Barometric Pressure Circuit Range/Performance Problem
 </details>
 
-OBD_Map_Timeout = 106,    
-OBD_Map_Low = 107,    
-OBD_Map_High = 108,    
+OBD_Map_Timeout = 106,
+OBD_Map_Low = 107,
+OBD_Map_High = 108,
 
 <details><h1>Unused</h1>
 //P0107 Manifold Absolute Pressure/Barometric Pressure Circuit Low Input
@@ -130,10 +130,10 @@ OBD_Map_High = 108,
 //P0109 Manifold Absolute Pressure/Barometric Pressure Circuit Intermittent
 </details>
 
-OBD_ThermistorConfig = 111,    
-OBD_Iat_Timeout = 110,    
-OBD_Iat_Low = 112,    
-OBD_Iat_High = 113,    
+OBD_ThermistorConfig = 111,
+OBD_Iat_Timeout = 110,
+OBD_Iat_Low = 112,
+OBD_Iat_High = 113,
 
 <details><h1>Unused</h1>
 //P0111 Intake Air Temperature Circuit Range/Performance Problem
@@ -142,9 +142,9 @@ OBD_Iat_High = 113,
 //P0114 Intake Air Temperature Circuit Intermittent
 </details>
 
-OBD_Clt_Timeout = 115,    
-OBD_Clt_Low = 117,    
-OBD_Clt_High = 118,    
+OBD_Clt_Timeout = 115,
+OBD_Clt_Low = 117,
+OBD_Clt_High = 118,
 
 <details><h1>Unused</h1>
 //P0116 Engine Coolant Temperature Circuit Range/Performance Problem
@@ -153,10 +153,10 @@ OBD_Clt_High = 118,
 //P0119 Engine Coolant Temperature Circuit Intermittent
 </details>
 
-OBD_TPS_Configuration = 121,    
-OBD_TPS1_Primary_Timeout = 120,    
-OBD_TPS1_Primary_Low = 122,    
-OBD_TPS1_Primary_High = 123,    
+OBD_TPS_Configuration = 121,
+OBD_TPS1_Primary_Timeout = 120,
+OBD_TPS1_Primary_Low = 122,
+OBD_TPS1_Primary_High = 123,
 
 <details><h1>Unused</h1>
 //P0122 Throttle Position Sensor/Switch A Circuit Low Input
@@ -209,9 +209,9 @@ OBD_TPS1_Primary_High = 123,
 /P0175 System too Rich (Bank 2)
 </details>
 
-OBD_FlexSensor_Timeout = 176,    
-OBD_FlexSensor_Low = 178,    
-OBD_FlexSensor_High = 179,    
+OBD_FlexSensor_Timeout = 176,
+OBD_FlexSensor_Low = 178,
+OBD_FlexSensor_High = 179,
 
 <details><h1>Unused</h1>
 //P0176 Fuel Composition Sensor Circuit Malfunction
@@ -243,19 +243,18 @@ OBD_FlexSensor_High = 179,
 //P0200 Injector Circuit Malfunction
 </details>
 
-
-OBD_Injector_Circuit_1 = 201,    
-OBD_Injector_Circuit_2 = 202,    
-OBD_Injector_Circuit_3 = 203,    
-OBD_Injector_Circuit_4 = 204,    
-OBD_Injector_Circuit_5 = 205,    
-OBD_Injector_Circuit_6 = 206,    
-OBD_Injector_Circuit_7 = 207,    
-OBD_Injector_Circuit_8 = 208,    
-OBD_Injector_Circuit_9 = 209,    
-OBD_Injector_Circuit_10 = 210,    
-OBD_Injector_Circuit_11 = 211,    
-OBD_Injector_Circuit_12 = 212,    
+OBD_Injector_Circuit_1 = 201,
+OBD_Injector_Circuit_2 = 202,
+OBD_Injector_Circuit_3 = 203,
+OBD_Injector_Circuit_4 = 204,
+OBD_Injector_Circuit_5 = 205,
+OBD_Injector_Circuit_6 = 206,
+OBD_Injector_Circuit_7 = 207,
+OBD_Injector_Circuit_8 = 208,
+OBD_Injector_Circuit_9 = 209,
+OBD_Injector_Circuit_10 = 210,
+OBD_Injector_Circuit_11 = 211,
+OBD_Injector_Circuit_12 = 212,
 
 <details><h1>Unused</h1>
 //P0213 Cold Start Injector 1 Malfunction
@@ -269,12 +268,12 @@ OBD_Injector_Circuit_12 = 212,
 //P0221 Throttle/Petal Position Sensor/Switch B Circuit Range/Performance Problem
 </details>
 
-OBD_TPS1_Secondary_Timeout = 220,    
-OBD_TPS1_Secondary_Low = 222,    
-OBD_TPS1_Secondary_High = 223,    
-OBD_TPS2_Primary_Timeout = 225,    
-OBD_TPS2_Primary_Low = 227,    
-OBD_TPS2_Primary_High = 228,    
+OBD_TPS1_Secondary_Timeout = 220,
+OBD_TPS1_Secondary_Low = 222,
+OBD_TPS1_Secondary_High = 223,
+OBD_TPS2_Primary_Timeout = 225,
+OBD_TPS2_Primary_Low = 227,
+OBD_TPS2_Primary_High = 228,
 
 <details><h1>Unused</h1>
 //P0222 Throttle/Petal Position Sensor/Switch B Circuit Low Input
@@ -392,7 +391,7 @@ OBD_TPS2_Primary_High = 228,
 //P0334 Knock Sensor 2 Circuit Intermittent (Bank 2)
 </details>
 
-OBD_Crankshaft_Position_Sensor_A_Circuit_Malfunction = 335,    
+OBD_Crankshaft_Position_Sensor_A_Circuit_Malfunction = 335,
 
 <details><h1>Unused</h1>
 //P0336 Crankshaft Position Sensor A Circuit Range/Performance
@@ -402,7 +401,7 @@ OBD_Crankshaft_Position_Sensor_A_Circuit_Malfunction = 335,
 //P0340 Camshaft Position Sensor Circuit Malfunction
 </details>
 
-OBD_Camshaft_Position_Sensor_Circuit_Range_Performance = 341,    
+OBD_Camshaft_Position_Sensor_Circuit_Range_Performance = 341,
 
 <details><h1>Unused</h1>
 //P0342 Camshaft Position Sensor Circuit Low Input
@@ -416,18 +415,18 @@ OBD_Camshaft_Position_Sensor_Circuit_Range_Performance = 341,
 //P0350 Ignition Coil Primary/Secondary Circuit Malfunction
 </details>
 
-OBD_Ignition_Circuit_1 = 351,    
-OBD_Ignition_Circuit_2 = 352,    
-OBD_Ignition_Circuit_3 = 353,    
-OBD_Ignition_Circuit_4 = 354,    
-OBD_Ignition_Circuit_5 = 355,    
-OBD_Ignition_Circuit_6 = 356,    
-OBD_Ignition_Circuit_7 = 357,    
-OBD_Ignition_Circuit_8 = 358,    
-OBD_Ignition_Circuit_9 = 359,    
-OBD_Ignition_Circuit_10 = 360,    
-OBD_Ignition_Circuit_11 = 361,    
-OBD_Ignition_Circuit_12 = 362,    
+OBD_Ignition_Circuit_1 = 351,
+OBD_Ignition_Circuit_2 = 352,
+OBD_Ignition_Circuit_3 = 353,
+OBD_Ignition_Circuit_4 = 354,
+OBD_Ignition_Circuit_5 = 355,
+OBD_Ignition_Circuit_6 = 356,
+OBD_Ignition_Circuit_7 = 357,
+OBD_Ignition_Circuit_8 = 358,
+OBD_Ignition_Circuit_9 = 359,
+OBD_Ignition_Circuit_10 = 360,
+OBD_Ignition_Circuit_11 = 361,
+OBD_Ignition_Circuit_12 = 362,
 
 <details><h1>Unused</h1>
 //P0363 Misfire Detected - Fueling Disabled
@@ -588,7 +587,7 @@ OBD_Ignition_Circuit_12 = 362,
 //P0520 Engine Oil Pressure Sensor/Switch Circuit Malfunction
 </details>
 
-OBD_Oil_Pressure_Sensor_Malfunction = 520,    
+OBD_Oil_Pressure_Sensor_Malfunction = 520,
 
 <details><h1>Unused</h1>
 //P0521 Engine Oil Pressure Sensor/Switch Circuit Range/Performance
@@ -632,7 +631,7 @@ OBD_Oil_Pressure_Sensor_Malfunction = 520,
 //P0559 Brake Booster Pressure Sensor Circuit Intermittent
 </details>
 
-OBD_System_Voltage_Malfunction = 560,    
+OBD_System_Voltage_Malfunction = 560,
 
 <details><h1>Unused</h1>
 //P0561 System Voltage Unstable
@@ -682,7 +681,7 @@ OBD_System_Voltage_Malfunction = 560,
 //P0605 Internal Control Module Read Only Memory (ROM) Error
 </details>
 
-OBD_PCM_Processor_Fault = 606,    
+OBD_PCM_Processor_Fault = 606,
 
 <details><h1>Unused</h1>
 //P0607 Control Module Performance
@@ -718,7 +717,7 @@ OBD_PCM_Processor_Fault = 606,
 //P0637 Power Steering Control Circuit High
 </details>
 
-OBD_Throttle_Actuator_Control_Range_Performance_Bank_1 = 638,    
+OBD_Throttle_Actuator_Control_Range_Performance_Bank_1 = 638,
 
 <details><h1>Unused</h1>
 //P0639 Throttle Actuator Control Range/Performance (Bank 2)
@@ -1103,15 +1102,15 @@ OBD_Throttle_Actuator_Control_Range_Performance_Bank_1 = 638,
 //P2119 Throttle Actuator Ctrl Throttle Body Range/Perf
 </details>
 
-OBD_TPS2_Secondary_Timeout = 2120,    
-OBD_TPS2_Secondary_Low = 2122,    
-OBD_TPS2_Secondary_High = 2123,    
-OBD_PPS_Primary_Timeout = 2125,    
-OBD_PPS_Primary_Low = 2127,    
-OBD_PPS_Primary_High = 2128,    
-OBD_PPS_Secondary_Timeout = 2130,    
-OBD_PPS_Secondary_Low = 2132,    
-OBD_PPS_Secondary_High = 2133,    
+OBD_TPS2_Secondary_Timeout = 2120,
+OBD_TPS2_Secondary_Low = 2122,
+OBD_TPS2_Secondary_High = 2123,
+OBD_PPS_Primary_Timeout = 2125,
+OBD_PPS_Primary_Low = 2127,
+OBD_PPS_Primary_High = 2128,
+OBD_PPS_Secondary_Timeout = 2130,
+OBD_PPS_Secondary_Low = 2132,
+OBD_PPS_Secondary_High = 2133,
 
 <details><h1>Unused</h1>
 //P2120 Throttle/Pedal Pos Sensor/Switch D Circ
@@ -1131,9 +1130,9 @@ OBD_PPS_Secondary_High = 2133,
 //P2134 Throttle/Pedal Pos Sensor/Switch F Circ Interm
 </details>
 
-OBD_TPS1_Correlation = 2135,    
-OBD_TPS2_Correlation = 2136,    
-OBD_PPS_Correlation = 2137,    
+OBD_TPS1_Correlation = 2135,
+OBD_TPS2_Correlation = 2136,
+OBD_PPS_Correlation = 2137,
 
 <details><h1>Unused</h1>
 //P2135 Throttle/Pedal Pos Sensor/Switch A / B Voltage Correlation
@@ -1161,7 +1160,7 @@ OBD_PPS_Correlation = 2137,
 //P2157 Fuel Injector Group D Supply Voltage Circ High
 </details>
 
-OBD_Vehicle_Speed_SensorB = 2158,    
+OBD_Vehicle_Speed_SensorB = 2158,
 
 <details><h1>Unused</h1>
 //P2158 Vehicle Speed SensorB
@@ -1234,8 +1233,8 @@ OBD_Vehicle_Speed_SensorB = 2158,
 //P2225 NOx Sensor Heater Sense Circ Interm Bank2
 </details>
 
-OBD_Barometric_Press_Circ = 2226,    
-OBD_Barometric_Press_Circ_Range_Perf = 2227,    
+OBD_Barometric_Press_Circ = 2226,
+OBD_Barometric_Press_Circ_Range_Perf = 2227,
 
 <details><h1>Unused</h1>
 //P2228 Barometric Press Circ Low
@@ -1660,8 +1659,8 @@ OBD_WB_FW_Mismatch = 2133,  // actually: P2231 O2 Sensor Signal Circ Shorted to 
 //P2795 Gear Shift Direction Circ High
 </details>
 
-Wideband_1_Fault = 2900,    
-Wideband_2_Fault = 2901,    
+Wideband_1_Fault = 2900,
+Wideband_2_Fault = 2901,
 
 <details><h1>Unused</h1>
 //P2A00 O2 Sensor Circ Range/Perf Bank1 Sensor 1
@@ -1767,133 +1766,133 @@ Wideband_2_Fault = 2901,
 //P3493 Cyl12 Exhaust Valve Ctrl Circ/Open
 </details>
 
-CUSTOM_NAN_ENGINE_LOAD = 6000,    
-CUSTOM_WRONG_ALGORITHM = 6001,    
-CUSTOM_NAN_ENGINE_LOAD_2 = 6002,    
-CUSTOM_OBD_6003 = 6003,    
-CUSTOM_OBD_6004 = 6004,    
-CUSTOM_6005 = 6005,    
-CUSTOM_6006 = 6006,    
-CUSTOM_6007 = 6007,    
-CUSTOM_6008 = 6008,    
-CUSTOM_6009 = 6009,    
+CUSTOM_NAN_ENGINE_LOAD = 6000,
+CUSTOM_WRONG_ALGORITHM = 6001,
+CUSTOM_NAN_ENGINE_LOAD_2 = 6002,
+CUSTOM_OBD_6003 = 6003,
+CUSTOM_OBD_6004 = 6004,
+CUSTOM_6005 = 6005,
+CUSTOM_6006 = 6006,
+CUSTOM_6007 = 6007,
+CUSTOM_6008 = 6008,
+CUSTOM_6009 = 6009,
 
-CUSTOM_6010 = 6010,    
-CUSTOM_6011 = 6011,    
-CUSTOM_INTEPOLATE_ERROR = 6012,    
-CUSTOM_INTEPOLATE_ERROR_2 = 6013,    
-CUSTOM_INTEPOLATE_ERROR_3 = 6014,    
-CUSTOM_INTEPOLATE_ERROR_4 = 6015,    
-CUSTOM_PARAM_RANGE = 6016,    
-CUSTOM_MAF_NEEDED = 6017,    
-CUSTOM_UNKNOWN_ALGORITHM = 6018,    
-CUSTOM_6019 = 6019,    
+CUSTOM_6010 = 6010,
+CUSTOM_6011 = 6011,
+CUSTOM_INTEPOLATE_ERROR = 6012,
+CUSTOM_INTEPOLATE_ERROR_2 = 6013,
+CUSTOM_INTEPOLATE_ERROR_3 = 6014,
+CUSTOM_INTEPOLATE_ERROR_4 = 6015,
+CUSTOM_PARAM_RANGE = 6016,
+CUSTOM_MAF_NEEDED = 6017,
+CUSTOM_UNKNOWN_ALGORITHM = 6018,
+CUSTOM_6019 = 6019,
 
-CUSTOM_6020 = 6020,    
-CUSTOM_6021 = 6021,    
-CUSTOM_6022 = 6022,    
-CUSTOM_OBD_UNKNOWN_FIRING_ORDER = 6023,    
-CUSTOM_OBD_WRONG_FIRING_ORDER = 6024,    
-CUSTOM_OBD_IGNITION_MODE = 6025,    
-CUSTOM_OBD_26 = 6026,    
-CUSTOM_UNEXPECTED_ENGINE_TYPE = 6027,    
-CUSTOM_INVALID_TPS_SETTING = 6028,    
+CUSTOM_6020 = 6020,
+CUSTOM_6021 = 6021,
+CUSTOM_6022 = 6022,
+CUSTOM_OBD_UNKNOWN_FIRING_ORDER = 6023,
+CUSTOM_OBD_WRONG_FIRING_ORDER = 6024,
+CUSTOM_OBD_IGNITION_MODE = 6025,
+CUSTOM_OBD_26 = 6026,
+CUSTOM_UNEXPECTED_ENGINE_TYPE = 6027,
+CUSTOM_INVALID_TPS_SETTING = 6028,
 
-CUSTOM_OBD_NAN_INJECTION = 6030,    
-CUSTOM_OBD_NEG_INJECTION = 6031,    
-CUSTOM_ZERO_DWELL = 6032,    
-CUSTOM_DWELL_TOO_LONG = 6033,    
-CUSTOM_SKIPPING_STROKE = 6034,    
+CUSTOM_OBD_NAN_INJECTION = 6030,
+CUSTOM_OBD_NEG_INJECTION = 6031,
+CUSTOM_ZERO_DWELL = 6032,
+CUSTOM_DWELL_TOO_LONG = 6033,
+CUSTOM_SKIPPING_STROKE = 6034,
 CUSTOM_6037 = 6037,   This error happens if some pinout configuration changes were applied but ECU was not reset afterwards.  
 
-CUSTOM_OBD_ANALOG_INPUT_NOT_CONFIGURED = 6038,    
-CUSTOM_OBD_WRONG_ADC_MODE = 6039,    
+CUSTOM_OBD_ANALOG_INPUT_NOT_CONFIGURED = 6038,
+CUSTOM_OBD_WRONG_ADC_MODE = 6039,
 
-CUSTOM_OBD_6040 = 6040,    
-CUSTOM_OBD_KNOCK_PROCESSOR = 6041,    
-CUSTOM_OBD_LOCAL_FREEZE = 6042,    
-CUSTOM_6043 = 6043,    
-CUSTOM_LOGGING_BUFFER_OVERFLOW = 6044,    
-CUSTOM_OBD_6045 = 6045,    
-CUSTOM_OBD_6046 = 6046,    
-CUSTOM_OBD_6047 = 6047,    
-CUSTOM_OBD_PIN_CONFLICT = 6048,    
-CUSTOM_OBD_LOW_FREQUENCY = 6049,    
+CUSTOM_OBD_6040 = 6040,
+CUSTOM_OBD_KNOCK_PROCESSOR = 6041,
+CUSTOM_OBD_LOCAL_FREEZE = 6042,
+CUSTOM_6043 = 6043,
+CUSTOM_LOGGING_BUFFER_OVERFLOW = 6044,
+CUSTOM_OBD_6045 = 6045,
+CUSTOM_OBD_6046 = 6046,
+CUSTOM_OBD_6047 = 6047,
+CUSTOM_OBD_PIN_CONFLICT = 6048,
+CUSTOM_OBD_LOW_FREQUENCY = 6049,
 
-CUSTOM_6051 = 6051,    
-CUSTOM_OBD_TS_PAGE_MISMATCH = 6052,    
-CUSTOM_OBD_TS_OUTPUT_MISMATCH = 6053,    
-CUSTOM_TOO_LONG_CRANKING_FUEL_INJECTION = 6054,    
-CUSTOM_INTERPOLATE_NAN = 6055,    
-ERROR_HISTO_NAME = 6056,    
-CUSTOM_6057 = 6057,    
-CUSTOM_OBD_HIGH_FREQUENCY = 6058,    
-CUSTOM_OBD_59 = 6059,    
+CUSTOM_6051 = 6051,
+CUSTOM_OBD_TS_PAGE_MISMATCH = 6052,
+CUSTOM_OBD_TS_OUTPUT_MISMATCH = 6053,
+CUSTOM_TOO_LONG_CRANKING_FUEL_INJECTION = 6054,
+CUSTOM_INTERPOLATE_NAN = 6055,
+ERROR_HISTO_NAME = 6056,
+CUSTOM_6057 = 6057,
+CUSTOM_OBD_HIGH_FREQUENCY = 6058,
+CUSTOM_OBD_59 = 6059,
 
-CUSTOM_OBD_MMC_START1 = 6060,    
-CUSTOM_OBD_MMC_START2 = 6061,    
-CUSTOM_OBD_62 = 6062,    
-CUSTOM_OBD_63 = 6063,    
-CUSTOM_OBD_64 = 6064,    
-CUSTOM_OBD_65 = 6065,    
-CUSTOM_OBD_66 = 6066,    
-CUSTOM_OBD_67 = 6067,    
-CUSTOM_OBD_68 = 6068,    
-CUSTOM_OBD_69 = 6069,    
+CUSTOM_OBD_MMC_START1 = 6060,
+CUSTOM_OBD_MMC_START2 = 6061,
+CUSTOM_OBD_62 = 6062,
+CUSTOM_OBD_63 = 6063,
+CUSTOM_OBD_64 = 6064,
+CUSTOM_OBD_65 = 6065,
+CUSTOM_OBD_66 = 6066,
+CUSTOM_OBD_67 = 6067,
+CUSTOM_OBD_68 = 6068,
+CUSTOM_OBD_69 = 6069,
 
-CUSTOM_OBD_70 = 6070,    
-CUSTOM_OBD_71 = 6071,    
-CUSTOM_OBD_72 = 6072,    
-CUSTOM_OBD_73 = 6073,    
-CUSTOM_OBD_74 = 6074,    
-CUSTOM_OBD_75 = 6075,    
-CUSTOM_OBD_76 = 6076,    
-CUSTOM_OBD_77 = 6077,    
-CUSTOM_OBD_78 = 6078,    
-CUSTOM_OBD_79 = 6079,    
+CUSTOM_OBD_70 = 6070,
+CUSTOM_OBD_71 = 6071,
+CUSTOM_OBD_72 = 6072,
+CUSTOM_OBD_73 = 6073,
+CUSTOM_OBD_74 = 6074,
+CUSTOM_OBD_75 = 6075,
+CUSTOM_OBD_76 = 6076,
+CUSTOM_OBD_77 = 6077,
+CUSTOM_OBD_78 = 6078,
+CUSTOM_OBD_79 = 6079,
 
-CUSTOM_OBD_81 = 6081,    
-CUSTOM_OBD_82 = 6082,    
-CUSTOM_OBD_83 = 6083,    
-CUSTOM_OBD_84 = 6084,    
-CUSTOM_OBD_85 = 6085,    
-CUSTOM_OBD_86 = 6086,    
-CUSTOM_OBD_87 = 6087,    
-CUSTOM_OBD_88 = 6088,    
-CUSTOM_OBD_89 = 6089,    
+CUSTOM_OBD_81 = 6081,
+CUSTOM_OBD_82 = 6082,
+CUSTOM_OBD_83 = 6083,
+CUSTOM_OBD_84 = 6084,
+CUSTOM_OBD_85 = 6085,
+CUSTOM_OBD_86 = 6086,
+CUSTOM_OBD_87 = 6087,
+CUSTOM_OBD_88 = 6088,
+CUSTOM_OBD_89 = 6089,
 
-CUSTOM_OBD_90 = 6090,    
-CUSTOM_OBD_91 = 6091,    
-CUSTOM_OBD_92 = 6092,    
-CUSTOM_OBD_93 = 6093,    
-CUSTOM_OBD_94 = 6094,    
-CUSTOM_OBD_95 = 6095,    
-CUSTOM_OBD_96 = 6096,    
-CUSTOM_PID_DTERM = 6097,    
-CUSTOM_DWELL = 6098,    
-CUSTOM_TS_OVERFLOW = 6099,    
+CUSTOM_OBD_90 = 6090,
+CUSTOM_OBD_91 = 6091,
+CUSTOM_OBD_92 = 6092,
+CUSTOM_OBD_93 = 6093,
+CUSTOM_OBD_94 = 6094,
+CUSTOM_OBD_95 = 6095,
+CUSTOM_OBD_96 = 6096,
+CUSTOM_PID_DTERM = 6097,
+CUSTOM_DWELL = 6098,
+CUSTOM_TS_OVERFLOW = 6099,
 
-CUSTOM_ERR_OP_MODE = 6100,    
-CUSTOM_ERR_TRIGGER_ZERO = 6101,    
-CUSTOM_ERR_6102 = 6102,    
-CUSTOM_ERR_2ND_WATCHDOG = 6103,    
-CUSTOM_ERR_INVALID_INJECTION_MODE = 6104,    
-CUSTOM_ERR_WAVE_1 = 6105,    
-CUSTOM_ERR_WAVE_2 = 6106,    
-CUSTOM_ERR_TEST_ERROR = 6107,    
-CUSTOM_ERR_IGNITION_MODE = 6108,    
-CUSTOM_ERR_CAN_CONFIGURATION = 6109,    
+CUSTOM_ERR_OP_MODE = 6100,
+CUSTOM_ERR_TRIGGER_ZERO = 6101,
+CUSTOM_ERR_6102 = 6102,
+CUSTOM_ERR_2ND_WATCHDOG = 6103,
+CUSTOM_ERR_INVALID_INJECTION_MODE = 6104,
+CUSTOM_ERR_WAVE_1 = 6105,
+CUSTOM_ERR_WAVE_2 = 6106,
+CUSTOM_ERR_TEST_ERROR = 6107,
+CUSTOM_ERR_IGNITION_MODE = 6108,
+CUSTOM_ERR_CAN_CONFIGURATION = 6109,
 
-CUSTOM_ERR_INTERPOLATE = 6110,    
-CUSTOM_ERR_NOT_INITIALIZED_TRIGGER = 6111,    
-CUSTOM_ERR_MAP_TYPE = 6112,    
-CUSTOM_ERR_THERM = 6113,    
-CUSTOM_ERR_NATURAL_LOGARITHM_ERROR = 6114,    
-CUSTOM_ERR_LOOPED_QUEUE = 6115,    
-CUSTOM_ERR_PWM_1 = 6116,    
-CUSTOM_ERR_PWM_2 = 6117,    
-CUSTOM_ERR_DWELL_DURATION = 6118,    
-CUSTOM_ERR_NO_SHAPE = 6119,    
+CUSTOM_ERR_INTERPOLATE = 6110,
+CUSTOM_ERR_NOT_INITIALIZED_TRIGGER = 6111,
+CUSTOM_ERR_MAP_TYPE = 6112,
+CUSTOM_ERR_THERM = 6113,
+CUSTOM_ERR_NATURAL_LOGARITHM_ERROR = 6114,
+CUSTOM_ERR_LOOPED_QUEUE = 6115,
+CUSTOM_ERR_PWM_1 = 6116,
+CUSTOM_ERR_PWM_2 = 6117,
+CUSTOM_ERR_DWELL_DURATION = 6118,
+CUSTOM_ERR_NO_SHAPE = 6119,
 
 CUSTOM_ERR_SGTP_ARGUMENT = 6121,  
 CUSTOM_ERR_6122 = 6122,  
@@ -2203,23 +2202,8 @@ CUSTOM_PRIMARY_DOUBLED_EDGE = 9006,
 
 // A trigger tooth arrived at an unexpected time
 CUSTOM_PRIMARY_BAD_TOOTH_TIMING = 9007,  
-
-	/**
-	 * This is not engine miss detection - this is only internal scheduler state validation
-	 * Should not happen
-	 */
 CUSTOM_OBD_SKIPPED_SPARK = 9009,  
-	/**
-	 * This is not engine miss detection - this is only internal scheduler state validation
-	 * Should not happen
-	 */
 CUSTOM_OBD_SKIPPED_FUEL = 9010,  
 CUSTOM_RE_ADDING_INTO_EXECUTION_QUEUE = 9011,  
-	/**
-	 * This indicates an issue with coil control - pin was not high when we were trying to set it low.
-	 */
 CUSTOM_OUT_OF_ORDER_COIL = 9012,  
-	/**
-	 * Commanded fuel exceeds your fuel injector flow
-	 */
 CUSTOM_TOO_LONG_FUEL_INJECTION = 9013,  
