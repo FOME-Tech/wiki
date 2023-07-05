@@ -97,7 +97,7 @@ The FOME ECU is able to provide a number of fault codes,   the meanings of these
 //P0087 Fuel Rail/System Pressure - Too Low
 //P0088 Fuel Rail/System Pressure - Too High
 //P0089 Fuel Pressure Regulator 1 Performance
-</Details>
+</details>
 
 OBD_Fuel_Pressure_Sensor_Missing = 90,
 
