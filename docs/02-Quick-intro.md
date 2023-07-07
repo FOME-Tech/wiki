@@ -1,8 +1,4 @@
----
-sidebar_position: 0
----
-
-# Quick page to show how to make one in the wiki
+# Quick intro to show how to make a page in the wiki
 
 ## Best way to edit and add pages
 
