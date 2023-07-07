@@ -2,8 +2,7 @@
 
 The FOME ECU is providing a number of OBD fault codes,  they are either standard OBD fault codes or FOME custom fault codes.
 
-
-## FOME specific custom codes are listed below:
+## FOME specific custom codes are listed below
 
 Meaning|Fault Code
 ---|---
@@ -337,7 +336,7 @@ CUSTOM_RE_ADDING_INTO_EXECUTION_QUEUE|9011,
 CUSTOM_OUT_OF_ORDER_COIL|9012,  
 CUSTOM_TOO_LONG_FUEL_INJECTION|9013,  
 
-##  Standard OBC fault codes used by FOME
+## Standard OBC fault codes used by FOME
 
 the meanings of standard OBD codes is available on http:www.obd-codes.com/faq/obd2-codes-explained.php
  
@@ -418,7 +417,7 @@ OBD_WB_FW_Mismatch|2133,   actually: P2231 O2 Sensor Signal Circ Shorted to Heat
 Wideband_1_Fault|2900,
 Wideband_2_Fault|2901,
 
-##  Standard OBD fault codes not used by FOME
+## Standard OBD fault codes not used by FOME
 
 Code and Meaning|
 ---|
