@@ -90,4 +90,4 @@ The `npm install` installs all the dependencies for your site. You'll need to ru
 
 The `npm start` command builds your website locally and serves it through a development server, ready for you to view at [http://localhost:3000](http://localhost:3000).
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Open `docs/01-Quick-intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
