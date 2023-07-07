@@ -1,8 +1,11 @@
-# FOME fault codes and how to read them
+# FOME OBD fault codes and how to read them
 
-The FOME ECU is able to provide a number of fault codes,   the meanings of these are listed below:
+The FOME ECU is providing a number of OBD fault codes,  the meanings of standart OBD codes is available on 
+ http://www.obd-codes.com/faq/obd2-codes-explained.php
 
-<details><h1><h1>Unused</h1></h1>  
+FOME specific custom codes are listed below:
+
+<unused><h1><h1>Unused</h1></h1>  
 //P0001 Fuel Volume Regulator Control Circuit/Open
 //P0002 Fuel Volume Regulator Control Circuit Range/Performance
 //P0003 Fuel Volume Regulator Control Circuit Low
@@ -97,11 +100,11 @@ The FOME ECU is able to provide a number of fault codes,   the meanings of these
 //P0087 Fuel Rail/System Pressure - Too Low
 //P0088 Fuel Rail/System Pressure - Too High
 //P0089 Fuel Pressure Regulator 1 Performance
-</details>
+</unused>
 
 OBD_Fuel_Pressure_Sensor_Missing = 90,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0091 Fuel Pressure Regulator 1 Control Circuit Low
 //P0092 Fuel Pressure Regulator 1 Control Circuit High
 //P0093 Fuel System Leak Detected - Large Leak
@@ -118,47 +121,47 @@ OBD_Mass_or_Volume_Air_Flow_Circuit_Malfunction = 100,
 //P0104 Mass or Volume Air Flow Circuit Intermittent
 OBD_Manifold_Absolute_Pressure_Circuit_Malfunction = 105,  
 //P0106 Manifold Absolute Pressure/Barometric Pressure Circuit Range/Performance Problem
-</details>
+</unused>
 
 OBD_Map_Timeout = 106,
 OBD_Map_Low = 107,
 OBD_Map_High = 108,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0107 Manifold Absolute Pressure/Barometric Pressure Circuit Low Input
 //P0108 Manifold Absolute Pressure/Barometric Pressure Circuit High Input
 //P0109 Manifold Absolute Pressure/Barometric Pressure Circuit Intermittent
-</details>
+</unused>
 
 OBD_ThermistorConfig = 111,
 OBD_Iat_Timeout = 110,
 OBD_Iat_Low = 112,
 OBD_Iat_High = 113,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0111 Intake Air Temperature Circuit Range/Performance Problem
 //P0112 Intake Air Temperature Circuit Low Input
 //P0113 Intake Air Temperature Circuit High Input
 //P0114 Intake Air Temperature Circuit Intermittent
-</details>
+</unused>
 
 OBD_Clt_Timeout = 115,
 OBD_Clt_Low = 117,
 OBD_Clt_High = 118,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0116 Engine Coolant Temperature Circuit Range/Performance Problem
 //P0117 Engine Coolant Temperature Circuit Low Input
 //P0118 Engine Coolant Temperature Circuit High Input
 //P0119 Engine Coolant Temperature Circuit Intermittent
-</details>
+</unused>
 
 OBD_TPS_Configuration = 121,
 OBD_TPS1_Primary_Timeout = 120,
 OBD_TPS1_Primary_Low = 122,
 OBD_TPS1_Primary_High = 123,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0122 Throttle Position Sensor/Switch A Circuit Low Input
 //P0123 Throttle Position Sensor/Switch A Circuit High Input
 //P0124 Throttle Position Sensor/Switch A Circuit Intermittent
@@ -207,13 +210,13 @@ OBD_TPS1_Primary_High = 123,
 //P0173 Fuel Trim Malfunction (Bank 2)
 //P0174 System too Lean (Bank 2)
 /P0175 System too Rich (Bank 2)
-</details>
+</unused>
 
 OBD_FlexSensor_Timeout = 176,
 OBD_FlexSensor_Low = 178,
 OBD_FlexSensor_High = 179,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0176 Fuel Composition Sensor Circuit Malfunction
 //P0177 Fuel Composition Sensor Circuit Range/Performance
 //P0178 Fuel Composition Sensor Circuit Low Input
@@ -241,7 +244,7 @@ OBD_FlexSensor_High = 179,
 
 //DTC Codes - P0200-P0299 - Fuel and Air Metering (Injector Circuit)
 //P0200 Injector Circuit Malfunction
-</details>
+</unused>
 
 OBD_Injector_Circuit_1 = 201,
 OBD_Injector_Circuit_2 = 202,
@@ -256,7 +259,7 @@ OBD_Injector_Circuit_10 = 210,
 OBD_Injector_Circuit_11 = 211,
 OBD_Injector_Circuit_12 = 212,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0213 Cold Start Injector 1 Malfunction
 //P0214 Cold Start Injector 2 Malfunction
 //P0215 Engine Shutoff Solenoid Malfunction
@@ -266,7 +269,7 @@ OBD_Injector_Circuit_12 = 212,
 //P0219 Engine Overspeed Condition
 //P0220 Throttle/Petal Position Sensor/Switch B Circuit Malfunction
 //P0221 Throttle/Petal Position Sensor/Switch B Circuit Range/Performance Problem
-</details>
+</unused>
 
 OBD_TPS1_Secondary_Timeout = 220,
 OBD_TPS1_Secondary_Low = 222,
@@ -275,7 +278,7 @@ OBD_TPS2_Primary_Timeout = 225,
 OBD_TPS2_Primary_Low = 227,
 OBD_TPS2_Primary_High = 228,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0222 Throttle/Petal Position Sensor/Switch B Circuit Low Input
 //P0223 Throttle/Petal Position Sensor/Switch B Circuit High Input
 //P0224 Throttle/Petal Position Sensor/Switch B Circuit Intermittent
@@ -389,21 +392,21 @@ OBD_TPS2_Primary_High = 228,
 //P0332 Knock Sensor 2 Circuit Low Input (Bank 2)
 //P0333 Knock Sensor 2 Circuit High Input (Bank 2)
 //P0334 Knock Sensor 2 Circuit Intermittent (Bank 2)
-</details>
+</unused>
 
 OBD_Crankshaft_Position_Sensor_A_Circuit_Malfunction = 335,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0336 Crankshaft Position Sensor A Circuit Range/Performance
 //P0337 Crankshaft Position Sensor A Circuit Low Input
 //P0338 Crankshaft Position Sensor A Circuit High Input
 //P0339 Crankshaft Position Sensor A Circuit Intermittent
 //P0340 Camshaft Position Sensor Circuit Malfunction
-</details>
+</unused>
 
 OBD_Camshaft_Position_Sensor_Circuit_Range_Performance = 341,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0342 Camshaft Position Sensor Circuit Low Input
 //P0343 Camshaft Position Sensor Circuit High Input
 //P0344 Camshaft Position Sensor Circuit Intermittent
@@ -413,7 +416,7 @@ OBD_Camshaft_Position_Sensor_Circuit_Range_Performance = 341,
 //P0348 Camshaft Position Sensor A Circuit High Input (Bank 2)
 //P0349 Camshaft Position Sensor A Circuit Intermittent (Bank 2)
 //P0350 Ignition Coil Primary/Secondary Circuit Malfunction
-</details>
+</unused>
 
 OBD_Ignition_Circuit_1 = 351,
 OBD_Ignition_Circuit_2 = 352,
@@ -428,7 +431,7 @@ OBD_Ignition_Circuit_10 = 360,
 OBD_Ignition_Circuit_11 = 361,
 OBD_Ignition_Circuit_12 = 362,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0363 Misfire Detected - Fueling Disabled
 //P0364 Reserved
 //P0365 Camshaft Position Sensor "B" Circuit (Bank 1)
@@ -585,11 +588,11 @@ OBD_Ignition_Circuit_12 = 362,
 //P0518 Idle Air Control Circuit Intermittent
 //P0519 Idle Air Control System Performance
 //P0520 Engine Oil Pressure Sensor/Switch Circuit Malfunction
-</details>
+</unused>
 
 OBD_Oil_Pressure_Sensor_Malfunction = 520,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0521 Engine Oil Pressure Sensor/Switch Circuit Range/Performance
 //P0522 Engine Oil Pressure Sensor/Switch Circuit Low Voltage
 //P0523 Engine Oil Pressure Sensor/Switch Circuit High Voltage
@@ -629,11 +632,11 @@ OBD_Oil_Pressure_Sensor_Malfunction = 520,
 //P0557 Brake Booster Pressure Sensor Circuit Low
 //P0558 Brake Booster Pressure Sensor Circuit High
 //P0559 Brake Booster Pressure Sensor Circuit Intermittent
-</details>
+</unused>
 
 OBD_System_Voltage_Malfunction = 560,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0561 System Voltage Unstable
 //P0562 System Voltage Low
 //P0563 System Voltage High
@@ -679,11 +682,11 @@ OBD_System_Voltage_Malfunction = 560,
 //P0603 Internal Control Module Keep Alive Memory (KAM) Error
 //P0604 Internal Control Module Random Access Memory (RAM) Error
 //P0605 Internal Control Module Read Only Memory (ROM) Error
-</details>
+</unused>
 
 OBD_PCM_Processor_Fault = 606,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0607 Control Module Performance
 //P0608 Control Module VSS Output "A" Malfunction
 //P0609 Control Module VSS Output "B" Malfunction
@@ -715,11 +718,11 @@ OBD_PCM_Processor_Fault = 606,
 //P0635 Power Steering Control Circuit
 //P0636 Power Steering Control Circuit Low
 //P0637 Power Steering Control Circuit High
-</details>
+</unused>
 
 OBD_Throttle_Actuator_Control_Range_Performance_Bank_1 = 638,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P0639 Throttle Actuator Control Range/Performance (Bank 2)
 //P0640 Intake Air Heater Control Circuit
 //P0641 Sensor Reference Voltage &ldquo;A&rdquo; Circuit/Open
@@ -1100,7 +1103,7 @@ OBD_Throttle_Actuator_Control_Range_Performance_Bank_1 = 638,
 //P2117 Throttle/Pedal Pos Sensor F Minimum Stop Perf
 //P2118 Throttle Actuator Ctrl Motor Current Range/Perf
 //P2119 Throttle Actuator Ctrl Throttle Body Range/Perf
-</details>
+</unused>
 
 OBD_TPS2_Secondary_Timeout = 2120,
 OBD_TPS2_Secondary_Low = 2122,
@@ -1112,7 +1115,7 @@ OBD_PPS_Secondary_Timeout = 2130,
 OBD_PPS_Secondary_Low = 2132,
 OBD_PPS_Secondary_High = 2133,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P2120 Throttle/Pedal Pos Sensor/Switch D Circ
 //P2121 Throttle/Pedal Pos Sensor/Switch D Circ Range/Perf
 //P2122 Throttle/Pedal Pos Sensor/Switch D Circ Low Input
@@ -1128,13 +1131,13 @@ OBD_PPS_Secondary_High = 2133,
 //P2132 Throttle/Pedal Pos Sensor/Switch F Circ Low Input
 //P2133 Throttle/Pedal Pos Sensor/Switch F Circ High Input
 //P2134 Throttle/Pedal Pos Sensor/Switch F Circ Interm
-</details>
+</unused>
 
 OBD_TPS1_Correlation = 2135,
 OBD_TPS2_Correlation = 2136,
 OBD_PPS_Correlation = 2137,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P2135 Throttle/Pedal Pos Sensor/Switch A / B Voltage Correlation
 //P2136 Throttle/Pedal Pos Sensor/Switch A / C Voltage Correlation
 //P2137 Throttle/Pedal Pos Sensor/Switch B / C Voltage Correlation
@@ -1158,11 +1161,11 @@ OBD_PPS_Correlation = 2137,
 //P2155 Fuel Injector Group D Supply Voltage Circ/Open
 //P2156 Fuel Injector Group D Supply Voltage Circ Low
 //P2157 Fuel Injector Group D Supply Voltage Circ High
-</details>
+</unused>
 
 OBD_Vehicle_Speed_SensorB = 2158,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P2158 Vehicle Speed SensorB
 //P2159 Vehicle Speed SensorB Range/Perf
 //P2160 Vehicle Speed SensorB Circ Low
@@ -1231,20 +1234,20 @@ OBD_Vehicle_Speed_SensorB = 2158,
 //P2223 NOx Sensor Heater Sense Circ Low Bank2
 //P2224 NOx Sensor Heater Sense Circ High Bank2
 //P2225 NOx Sensor Heater Sense Circ Interm Bank2
-</details>
+</unused>
 
 OBD_Barometric_Press_Circ = 2226,
 OBD_Barometric_Press_Circ_Range_Perf = 2227,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P2228 Barometric Press Circ Low
 //P2229 Barometric Press Circ High
 //P2230 Barometric Press Circ Interm
-</details>
+</unused>
 
 OBD_WB_FW_Mismatch = 2133,  // actually: P2231 O2 Sensor Signal Circ Shorted to Heater Circ Bank1 Sensor 1  
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P2232 O2 Sensor Signal Circ Shorted to Heater Circ Bank1 Sensor 2
 //P2233 O2 Sensor Signal Circ Shorted to Heater Circ Bank1 Sensor 3
 //P2234 O2 Sensor Signal Circ Shorted to Heater Circ Bank2 Sensor 1
@@ -1657,12 +1660,12 @@ OBD_WB_FW_Mismatch = 2133,  // actually: P2231 O2 Sensor Signal Circ Shorted to 
 //P2793 Gear Shift Direction Circ
 //P2794 Gear Shift Direction Circ Low
 //P2795 Gear Shift Direction Circ High
-</details>
+</unused>
 
 Wideband_1_Fault = 2900,
 Wideband_2_Fault = 2901,
 
-<details><h1>Unused</h1>
+<unused><h1>Unused</h1>
 //P2A00 O2 Sensor Circ Range/Perf Bank1 Sensor 1
 //P2A01 O2 Sensor Circ Range/Perf Bank1 Sensor 2
 //P2A02 O2 Sensor Circ Range/Perf Bank1 Sensor 3
@@ -1764,7 +1767,7 @@ Wideband_2_Fault = 2901,
 //P3491 Cyl12 Deactivation/Intake Valve Ctrl Circ Low
 //P3492 Cyl12 Deactivation/Intake Valve Ctrl Circ High
 //P3493 Cyl12 Exhaust Valve Ctrl Circ/Open
-</details>
+</unused>
 
 CUSTOM_NAN_ENGINE_LOAD = 6000,
 CUSTOM_WRONG_ALGORITHM = 6001,
