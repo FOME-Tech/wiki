@@ -117,7 +117,7 @@ The first page to view should probably be [the FOME Overview page](01-Intro-Star
 - [Idle ignition table](Basic-Features/Idle-Control/Idle-Ignition-Table)
 - [Idle settings](Basic-Features/Idle-Control/Idle-Settings)
 - [Idle VE Table](Basic-Features/Idle-Control/Idle-VE-Table)
-- [Idle tuning](Basic-Features/Idle-Control/Idle-tuning)
+- [Idle tuning](Basic-Features/Idle-Control/Idle-Tuning)
 
 ### Advanced Features
 
