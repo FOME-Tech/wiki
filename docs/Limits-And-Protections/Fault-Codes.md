@@ -26,90 +26,11 @@ OBD_TPS1_Primary_Timeout = 120,
 OBD_TPS1_Primary_Low = 122,
 OBD_TPS1_Primary_High = 123,
 
-<unused><h1>Unused</h1>
-//P0122 Throttle Position Sensor/Switch A Circuit Low Input
-//P0123 Throttle Position Sensor/Switch A Circuit High Input
-//P0124 Throttle Position Sensor/Switch A Circuit Intermittent
-//P0125 Insufficient Coolant Temperature for Closed Loop Fuel Control
-//P0126 Insufficient Coolant Temperature for Stable Operation
-//P0128 Coolant Thermostat (Coolant Temperature Below Thermostat Regulating Temperature)
-//P0130 02 Sensor Circuit Malfunction (Bank I Sensor 1)
-//P0131 02 Sensor Circuit Low Voltage (Bank I Sensor I)
-//P0132 02 Sensor Circuit High Voltage (Bank I Sensor 1)
-//P0133 02 Sensor Circuit Slow Response (Bank 1 Sensor 1)
-//P0134 02 Sensor Circuit No Activity Detected (Bank I Sensor 1)
-//P0135 02 Sensor Heater Circuit Malfunction (Bank 1 Sensor 1)
-//P0136 02 Sensor Circuit Malfunction (Bank I Sensor 2)
-//P0137 02 Sensor Circuit Low Voltage (Bank I Sensor 2)
-//P0138 02 Sensor Circuit High Voltage (Bank I Sensor 2)
-//P0139 02 Sensor Circuit Slow Response (Bank 1 Sensor 2)
-//P0140 02 Sensor Circuit No Activity Detected (Bank 1 Sensor 2)
-//P0141 02 Sensor Heater Circuit Malfunction (Bank 1 Sensor 2)
-//P0142 02 Sensor Circuit Malfunction (Bank I Sensor 3)
-//P0143 02 Sensor Circuit Low Voltage (Bank I Sensor 3)
-//P0144 02 Sensor Circuit High Voltage (Bank I Sensor 3)
-//P0145 02 Sensor Circuit Slow Response (Bank 1 Sensor 3)
-//P0146 02 Sensor Circuit No Activity Detected (Bank I Sensor 3)
-//P0147 02 Sensor Heater Circuit Malfunction (Bank I Sensor 3)
-//P0150 02 Sensor Circuit Malfunction (Bank 2 Sensor I)
-//P0151 02 Sensor Circuit Low Voltage (Bank 2 Sensor I)
-//P0152 02 Sensor Circuit High Voltage (Bank 2 Sensor 1)
-//P0153 02 Sensor Circuit Slow Response (Bank 2 Sensor 1)
-//P0154 02 Sensor Circuit No Activity Detected (Bank 2 Sensor 1)
-//P0155 02 Sensor Heater Circuit Malfunction (Bank 2 Sensor 1)
-//P0156 02 Sensor Circuit Malfunction (Bank 2 Sensor 2)
-//P0157 02 Sensor Circuit Low Voltage (Bank 2 Sensor 2)
-//P0158 02 Sensor Circuit High Voltage (Bank 2 Sensor 2)
-//P0159 02 Sensor Circuit Slow Response (Bank 2 Sensor 2)
-//P0160 02 Sensor Circuit No Activity Detected (Bank 2 Sensor 2)
-//P0161 02 Sensor Heater Circuit Malfunction (Bank 2 Sensor 2)
-//P0162 02 Sensor Circuit Malfunction (Bank 2 Sensor 3)
-//P0163 02 Sensor Circuit Low Voltage (Bank 2 Sensor 3)
-//P0164 02 Sensor Circuit High Voltage (Bank 2 Sensor 3)
-//P0165 02 Sensor Circuit Slow Response (Bank 2 Sensor 3)
-//P0166 02 Sensor Circuit No Activity Detected (Bank 2 Sensor 3)
-//P0167 02 Sensor Heater Circuit Malfunction (Bank 2 Sensor 3)
-//P0170 Fuel Trim Malfunction (Bank 1)
-//P0171 System too Lean (Bank 1)
-//P0172 System too Rich (Bank 1)
-//P0173 Fuel Trim Malfunction (Bank 2)
-//P0174 System too Lean (Bank 2)
-/P0175 System too Rich (Bank 2)
-</unused>
+
 
 OBD_FlexSensor_Timeout = 176,
 OBD_FlexSensor_Low = 178,
 OBD_FlexSensor_High = 179,
-
-<unused><h1>Unused</h1>
-//P0176 Fuel Composition Sensor Circuit Malfunction
-//P0177 Fuel Composition Sensor Circuit Range/Performance
-//P0178 Fuel Composition Sensor Circuit Low Input
-//P0179 Fuel Composition Sensor Circuit High Input
-//P0180 Fuel Temperature Sensor A Circuit Malfunction
-//P0181 Fuel Temperature Sensor A Circuit Range/Performance
-//P0182 Fuel Temperature Sensor A Circuit Low Input
-//P0183 Fuel Temperature Sensor A Circuit High Input
-//P0184 Fuel Temperature Sensor A Circuit Intermittent
-//P0185 Fuel Temperature Sensor B Circuit Malfunction
-//P0186 Fuel Temperature Sensor B Circuit Range/Performance
-//P0187 Fuel Temperature Sensor B Circuit Low Input
-//P0188 Fuel Temperature Sensor B Circuit High Input
-//P0189 Fuel Temperature Sensor B Circuit Intermittent
-//P0190 Fuel Rail Pressure Sensor Circuit Malfunction
-//P0191 Fuel Rail Pressure Sensor Circuit Range/Performance
-//P0192 Fuel Rail Pressure Sensor Circuit Low Input
-//P0193 Fuel Rail Pressure Sensor Circuit High Input
-//P0194 Fuel Rail Pressure Sensor Circuit Intermittent
-//P0195 Engine Oil Temperature Sensor Malfunction
-//P0196 Engine Oil Temperature Sensor Range/Performance
-//P0197 Engine Oil Temperature Sensor Low
-//P0198 Engine Oil Temperature Sensor High
-//P0199 Engine Oil Temperature Sensor Intermittent
-
-//DTC Codes - P0200-P0299 - Fuel and Air Metering (Injector Circuit)
-//P0200 Injector Circuit Malfunction
-</unused>
 
 OBD_Injector_Circuit_1 = 201,
 OBD_Injector_Circuit_2 = 202,
@@ -124,18 +45,6 @@ OBD_Injector_Circuit_10 = 210,
 OBD_Injector_Circuit_11 = 211,
 OBD_Injector_Circuit_12 = 212,
 
-<unused><h1>Unused</h1>
-//P0213 Cold Start Injector 1 Malfunction
-//P0214 Cold Start Injector 2 Malfunction
-//P0215 Engine Shutoff Solenoid Malfunction
-//P0216 Injection Timing Control Circuit Malfunction
-//P0217 Engine Overtemp Condition
-//P0218 Transmission Over Temperature Condition
-//P0219 Engine Overspeed Condition
-//P0220 Throttle/Petal Position Sensor/Switch B Circuit Malfunction
-//P0221 Throttle/Petal Position Sensor/Switch B Circuit Range/Performance Problem
-</unused>
-
 OBD_TPS1_Secondary_Timeout = 220,
 OBD_TPS1_Secondary_Low = 222,
 OBD_TPS1_Secondary_High = 223,
@@ -143,145 +52,9 @@ OBD_TPS2_Primary_Timeout = 225,
 OBD_TPS2_Primary_Low = 227,
 OBD_TPS2_Primary_High = 228,
 
-<unused><h1>Unused</h1>
-//P0222 Throttle/Petal Position Sensor/Switch B Circuit Low Input
-//P0223 Throttle/Petal Position Sensor/Switch B Circuit High Input
-//P0224 Throttle/Petal Position Sensor/Switch B Circuit Intermittent
-//P0225 Throttle/Petal Position Sensor/Switch C Circuit Malfunction
-//P0226 Throttle/Petal Position Sensor/Switch C Circuit Range/Performance Problem
-//P0227 Throttle/Petal Position Sensor/Switch C Circuit Low Input
-//P0228 Throttle/Petal Position Sensor/Switch C Circuit High Input
-//P0229 Throttle/Petal Position Sensor/Switch C Circuit Intermittent
-//P0230 Fuel Pump Primary Circuit Malfunction
-//P0231 Fuel Pump Secondary Circuit Low
-//P0232 Fuel Pump Secondary Circuit High
-//P0233 Fuel Pump Secondary Circuit Intermittent
-//P0234 Engine Turbocharger/Supercharger Overboost Condition
-//P0235 Turbocharger Boost Sensor A Circuit Malfunction
-//P0236 Turbocharger Boost Sensor A Circuit Range/Performance
-//P0237 Turbocharger Boost Sensor A Circuit Low
-//P0238 Turbocharger Boost Sensor A Circuit High
-//P0239 Turbocharger Boost Sensor B Malfunction
-//P0240 Turbocharger Boost Sensor B Circuit Range/Performance
-//P0241 Turbocharger Boost Sensor B Circuit Low
-//P0242 Turbocharger Boost Sensor B Circuit High
-//P0243 Turbocharger Wastegate Solenoid A Malfunction
-//P0244 Turbocharger Wastegate Solenoid A Range/Performance
-//P0245 Turbocharger Wastegate Solenoid A Low
-//P0246 Turbocharger Wastegate Solenoid A High
-//P0247 Turbocharger Wastegate Solenoid B Malfunction
-//P0248 Turbocharger Wastegate Solenoid B Range/Performance
-//P0249 Turbocharger Wastegate Solenoid B Low
-//P0250 Turbocharger Wastegate Solenoid B High
-//P0251 Injection Pump Fuel Metering Control "A" Malfunction (Cam/Rotor/Injector)
-//P0252 Injection Pump Fuel Metering Control "A" Range/Performance (Cam/Rotor/Injector)
-//P0253 Injection Pump Fuel Metering Control "A" Low (Cam/Rotor/Injector)
-//P0254 Injection Pump Fuel Metering Control "A" High (Cam/Rotor/Injector)
-//P0255 Injection Pump Fuel Metering Control "A" Intermittent (Cam/Rotor/Injector)
-//P0256 Injection Pump Fuel Metering Control "B" Malfunction (Cam/Rotor/Injector)
-//P0257 Injection Pump Fuel Metering Control "B" Range/Performance Injector)
-//P0258 Injection Pump Fuel Metering Control "B" Low (Cam/R
-//P0259 Injection Pump Fuel Metering Control "B" High (Cam/R
-//P0260 Injection Pump Fuel Metering Control "B" Intermittent Injector)
-//P0261 Cylinder I Injector Circuit Low
-//P0262 Cylinder I Injector Circuit High
-//P0263 Cylinder I Contribution/Balance Fault
-//P0264 Cylinder 2 Injector Circuit Low
-//P0265 Cylinder 2 Injector Circuit High
-//P0266 Cylinder 2 Contribution/Balance Fault
-//P0267 Cylinder 3 Injector Circuit Low
-//P0268 Cylinder 3 Injector Circuit High
-//P0269 Cylinder 3 Contribution/Balance Fault
-//P0270 Cylinder 4 Injector Circuit Low
-//P0271 Cylinder 4 Injector Circuit High
-//P0272 Cylinder 4 Contribution/Balance Fault
-//P0273 Cylinder 5 Injector Circuit Low
-//P0274 Cylinder 5 Injector Circuit High
-//P0275 Cylinder S Contribution/Balance Fault
-//P0276 Cylinder 6 Injector Circuit Low
-//P0277 Cylinder 6 Injector Circuit High
-//P0278 Cylinder 6 Contribution/Balance Fault
-//P0279 Cylinder 7 Injector Circuit Low
-//P0280 Cylinder 7 Injector Circuit High
-//P0281 Cylinder 7 Contribution/Balance Fault
-//P0282 Cylinder 8 Injector Circuit Low
-//P0283 Cylinder 8 Injector Circuit High
-//P0284 Cylinder 8 Contribution/Balance Fault
-//P0285 Cylinder 9 Injector Circuit Low
-//P0286 Cylinder 9 Injector Circuit High
-//P0287 Cylinder 9 Contribution/Balance Fault
-//P0288 Cylinder 10 Injector Circuit Low
-//P0289 Cylinder 10 Injector Circuit High
-//P0290 Cylinder 10 Contribution/Balance Fault
-//P0291 Cylinder 11 Injector Circuit Low
-//P0292 Cylinder 11 Injector Circuit High
-//P0293 Cylinder 11 Contribution/Balance Fault
-//P0294 Cylinder 12 Injector Circuit Low
-//P0295 Cylinder 12 Injector Circuit High
-//P0296 Cylinder 12 Contribution/Range Fault
-//P0297 Vehicle Overspeed Condition
-//P0298 Engine Oil Over Temperature Condition
-//P0299 Turbocharger/Supercharger "A" Underboost Condition
-//P0300 Random/Multiple Cylinder Misfire Detected
-//P0301 Cylinder 1 Misfire Detected
-//P0302 Cylinder 2 Misfire Detected
-//P0303 Cylinder 3 Misfire Detected
-//P0304 Cylinder 4 Misfire Detected
-//P0305 Cylinder 5 Misfire Detected
-//P0306 Cylinder 6 Misfire Detected
-//P0307 Cylinder 7 Misfire Detected
-//P0308 Cylinder 8 Misfire Detected
-//P0309 Cylinder 9 Misfire Detected
-//P0310 Cylinder 10 Misfire Detected
-//P0311 Cylinder 11 Misfire Detected
-//P0312 Cylinder 12 Misfire Detected
-//P0313 Misfire Detected with Low Fuel
-//P0314 Single Cylinder Misfire (Cylinder not Specified)
-//P0315 Crankshaft Position System Variation Not Learned
-//P0316 Misfire Detected On Startup (First 1000 Revolutions)
-//P0317 Rough Road Hardware Not Present
-//P0318 Rough Road Sensor A Signal Circuit
-//P0319 Rough Road Sensor B Signal Circuit
-//P0320 Ignition/Distributor Engine Speed Input Circuit Malfunction
-//P0321 Ignition/Distributor Engine Speed Input Circuit Range/Performance
-//P0322 Ignition/Distributor Engine Speed Input Circuit No Signal
-//P0323 Ignition/Distributor Engine Speed Input Circuit Intermittent
-//P0324 Knock Control System Error
-//P0325 Knock Sensor 1 Circuit Malfunction (Bank I or Single Sensor)
-//P0326 Knock Sensor 1 Circuit Range/Performance (Bank 1 or Single Sensor)
-//P0327 Knock Sensor 1 Circuit Low Input (Bank I or Single Sensor)
-//P0328 Knock Sensor 1 Circuit High Input (Bank I or Single Sensor)
-//P0329 Knock Sensor 1 Circuit Intermittent (Bank 1 or Single Sensor)
-//P0330 Knock Sensor 2 Circuit Malfunction (Bank 2)
-//P0331 Knock Sensor 2 Circuit Range/Performance (Bank 2)
-//P0332 Knock Sensor 2 Circuit Low Input (Bank 2)
-//P0333 Knock Sensor 2 Circuit High Input (Bank 2)
-//P0334 Knock Sensor 2 Circuit Intermittent (Bank 2)
-</unused>
-
 OBD_Crankshaft_Position_Sensor_A_Circuit_Malfunction = 335,
 
-<unused><h1>Unused</h1>
-//P0336 Crankshaft Position Sensor A Circuit Range/Performance
-//P0337 Crankshaft Position Sensor A Circuit Low Input
-//P0338 Crankshaft Position Sensor A Circuit High Input
-//P0339 Crankshaft Position Sensor A Circuit Intermittent
-//P0340 Camshaft Position Sensor Circuit Malfunction
-</unused>
-
 OBD_Camshaft_Position_Sensor_Circuit_Range_Performance = 341,
-
-<unused><h1>Unused</h1>
-//P0342 Camshaft Position Sensor Circuit Low Input
-//P0343 Camshaft Position Sensor Circuit High Input
-//P0344 Camshaft Position Sensor Circuit Intermittent
-//P0345 Camshaft Position Sensor A Circuit Malfunction (Bank 2)
-//P0346 Camshaft Position Sensor A Circuit Range/Performance (Bank 2)
-//P0347 Camshaft Position Sensor A Circuit Low Input (Bank 2)
-//P0348 Camshaft Position Sensor A Circuit High Input (Bank 2)
-//P0349 Camshaft Position Sensor A Circuit Intermittent (Bank 2)
-//P0350 Ignition Coil Primary/Secondary Circuit Malfunction
-</unused>
 
 OBD_Ignition_Circuit_1 = 351,
 OBD_Ignition_Circuit_2 = 352,
@@ -296,166 +69,11 @@ OBD_Ignition_Circuit_10 = 360,
 OBD_Ignition_Circuit_11 = 361,
 OBD_Ignition_Circuit_12 = 362,
 
-<unused><h1>Unused</h1>
-//P0363 Misfire Detected - Fueling Disabled
-//P0364 Reserved
-//P0365 Camshaft Position Sensor "B" Circuit (Bank 1)
-//P0366 Camshaft Position Sensor "B" Circuit Range/Performance (Bank 1)
-//P0367 Camshaft Position Sensor "B" Circuit Low (Bank 1)
-//P0368 Camshaft Position Sensor "B" Circuit High (Bank 1)
-//P0369 Camshaft Position Sensor "B" Circuit Intermittent (Bank 1)
-//P0370 Timing Reference High Resolution Signal A Malfunction
-//P0371 Timing Reference High Resolution Signal A Too Many Pulses
-//P0372 Timing Reference High Resolution Signal A Too Few Pulses
-//P0373 Timing Reference High Resolution Signal A Intermittent/Erratic Pulses
-//P0374 Timing Reference High Resolution Signal A No Pulses
-//P0375 Timing Reference High Resolution Signal B Malfunction
-//P0376 Timing Reference High Resolution Signal B Too Many Pulses
-//P0377 Timing Reference High Resolution Signal B Too Few Pulses
-//P0378 Timing Reference High Resolution Signal B Intermittent/Erratic Pulses
-//P0379 Timing Reference High Resolution Signal B No Pulses
-//P0380 Glow Plug/Heater Circuit "A" Malfunction
-//P0381 Glow Plug/Heater Indicator Circuit Malfunction
-//P0382 Exhaust Gas Recirculation Flow Malfunction
-//P0383 Glow Plug Control Module Control Circuit Low
-//P0384 Glow Plug Control Module Control Circuit High
-//P0385 Crankshaft Position Sensor B Circuit Malfunction
-//P0386 Crankshaft Position Sensor B Circuit Range/Performance
-//P0387 Crankshaft Position Sensor B Circuit Low Input
-//P0388 Crankshaft Position Sensor B Circuit High Input
-//P0389 Crankshaft Position Sensor B Circuit Intermittent
-//P0390 Camshaft Position Sensor "B" Circuit (Bank 2)
-//P0391 Camshaft Position Sensor "B" Circuit Range/Performance (Bank 2)
-//P0392 Camshaft Position Sensor "B" Circuit Low (Bank 2)
-//P0393 Camshaft Position Sensor "B" Circuit High (Bank 2)
-//P0394 Camshaft Position Sensor "B" Circuit Intermittent (Bank 2)
-//DTC Codes - P0400-P0499 - Auxiliary Emissions Controls
-//P0400 Exhaust Gas Recirculation Flow Malfunction
-//P0401 Exhaust Gas Recirculation Flow Insufficient Detected
-//P0402 Exhaust Gas Recirculation Flow Excessive Detected
-//P0403 Exhaust Gas Recirculation Circuit Malfunction
-//P0404 Exhaust Gas Recirculation Circuit Range/Performance
-//P0405 Exhaust Gas Recirculation Sensor A Circuit Low
-//P0406 Exhaust Gas Recirculation Sensor A Circuit High
-//P0407 Exhaust Gas Recirculation Sensor B Circuit Low
-//P0408 Exhaust Gas Recirculation Sensor B Circuit High
-//P0409 Exhaust Gas Recirculation Sensor "A" Circuit
-//P0410 Secondary Air Injection System Malfunction
-//P0411 Secondary Air Injection System Incorrect Flow Detected
-//P0412 Secondary Air Injection System Switching Valve A Circuit Malfunction
-//P0413 Secondary Air Injection System Switching Valve A Circuit Open
-//P0414 Secondary Air Injection System Switching Valve A Circuit Shorted
-//P0415 Secondary Air Injection System Switching Valve B Circuit Malfunction
-//P0416 Secondary Air Injection System Switching Valve B Circuit Open
-//P0417 Secondary Air Injection System Switching Valve B Circuit Shorted
-//P0418 Secondary Air Injection System Relay "A" Circuit Malfunction
-//P0419 Secondary Air Injection System Relay "B" Circuit Malfunction
-//P0420 Catalyst System Efficiency Below Threshold (Bank 1)
-//P0421 Warm Up Catalyst Efficiency Below Threshold (Bank 1)
-//P0422 Main Catalyst Efficiency Below Threshold (Bank 1)
-//P0423 Heated Catalyst Efficiency Below Threshold (Bank 1)
-//P0424 Heated Catalyst Temperature Below Threshold (Bank 1)
-//P0424 Heated Catalyst Temperature Below Threshold (Bank 1)
-//P0425 Catalyst Temperature Sensor (Bank 1)
-//P0426 Catalyst Temperature Sensor Range/Performance (Bank 1)
-//P0427 Catalyst Temperature Sensor Low (Bank 1)
-//P0428 Catalyst Temperature Sensor High (Bank 1)
-//P0429 Catalyst Heater Control Circuit
-//P0430 Catalyst System Efficiency Below Threshold (Bank 2)
-//P0431 Warm Up Catalyst Efficiency Below Threshold (Bank 2)
-//P0432 Main Catalyst Efficiency Below Threshold (Bank 2)
-//P0433 Heated Catalyst Efficiency Below Threshold (Bank 2)
-//P0434 Heated Catalyst Temperature Below Threshold (Bank 2)
-//P0435 Catalyst Temperature Sensor (Bank 2)
-//P0436 Catalyst Temperature Sensor Range/Performance (Bank 2)
-//P0437 Catalyst Temperature Sensor Low (Bank 2)
-//P0438 Catalyst Temperature Sensor High (Bank 2)
-//P0439 Catalyst Heater Control Circuit
-//P0440 Evaporative Emission Control System Malfunction
-//P0441 Evaporative Emission Control System Incorrect Purge Flow
-//P0442 Evaporative Emission Control System Leak Detected (small leak)
-//P0443 Evaporative Emission Control System Purge Control Valve Circuit
-//P0444 Evaporative Emission Control System Purge Control Valve Circuit Open
-//P0445 Evaporative Emission Control System Purge Control Valve Circuit Shorted
-//P0446 Evaporative Emission Control System Vent Control Circuit Malfunction
-//P0447 Evaporative Emission Control System Vent Control Circuit Open
-//P0448 Evaporative Emission Control System Vent Control Circuit Shorted
-//P0449 Evaporative Emission Control System Vent Valve/Solenoid Circuit Malfunction
-//P0450 Evaporative Emission Control System Pressure Sensor Malfunction
-//P0451 Evaporative Emission Control System Pressure Sensor Range/Performance
-//P0452 Evaporative Emission Control System Pressure Sensor Low Input
-//P0453 Evaporative Emission Control System Pressure Sensor High Input
-//P0454 Evaporative Emission Control System Pressure Sensor Intermittent
-//P0455 Evaporative Emission Control System Leak Detected (gross leak)
-//P0456 Evaporative Emissions System Small Leak Detected
-//P0457 Evaporative Emission Control System Leak Detected
-//P0458 Evaporative Emission System Purge Control Valve Circuit Low
-//P0459 Evaporative Emission System Purge Control Valve Circuit High
-//P0460 Fuel Level Sensor Circuit Malfunction
-//P0461 Fuel Level Sensor Circuit Range/Performance
-//P0462 Fuel Level Sensor Circuit Low Input
-//P0463 Fuel Level Sensor Circuit High Input
-//P0464 Fuel Level Sensor Circuit Intermittent
-//P0465 Purge Flow Sensor Circuit Malfunction
-//P0466 Purge Flow Sensor Circuit Range/Performance
-//P0467 Purge Flow Sensor Circuit Low Input
-//P0468 Purge Flow Sensor Circuit High Input
-//P0469 Purge Flow Sensor Circuit Intermittent
-//P0470 Exhaust Pressure Sensor Malfunction
-//P0471 Exhaust Pressure Sensor Range/Performance
-//P0472 Exhaust Pressure Sensor Low
-//P0473 Exhaust Pressure Sensor High
-//P0474 Exhaust Pressure Sensor Intermittent
-//P0475 Exhaust Pressure Control Valve Malfunction
-//P0476 Exhaust Pressure Control Valve Range/Performance
-//P0477 Exhaust Pressure Control Valve Low
-//P0478 Exhaust Pressure Control Valve High
-//P0479 Exhaust Pressure Control Valve Intermittent
-//P0480 Cooling Fan I Control Circuit Malfunction
-//P0481 Cooling Fan 2 Control Circuit Malfunction
-//P0482 Cooling Fan 3 Control Circuit Malfunction
-//P0483 Cooling Fan Rationality Check Malfunction
-//P0484 Cooling Fan Circuit Over Current
-//P0485 Cooling Fan Power/Ground Circuit Malfunction
-//P0486 Exhaust Gas Recirculation Sensor "B" Circuit
-//P0487 Exhaust Gas Recirculation Throttle Control Circuit "A" Open
-//P0488 Exhaust Gas Recirculation Throttle Control Circuit "A" Range/Performance
-//P0489 Exhaust Gas Recirculation "A" Control Circuit Low
-//P0490 Exhaust Gas Recirculation "A" Control Circuit High
-//P0491 Secondary Air Injection System Insufficient Flow Bank 1
-//P0492 Secondary Air Injection System Insufficient Flow Bank 2
-//P0493 Fan Overspeed
-//P0494 Fan Speed Low
-//P0495 Fan Speed High
-//P0496 EVAP Flow During A Non-Purge Condition
-//P0497 Evaporative Emission System Low Purge Flow
-//P0498 Evaporative Emission System Vent Valve Control Circuit Low
-//P0499 Evaporative Emission System Vent Valve Control Circuit High
-//DTC Codes - P0500-P0599 - Vehicle Speed Controls and Idle Control System
-//P0500 Vehicle Speed Sensor Malfunction
-//P0501 Vehicle Speed Sensor Range/Performance
-//P0502 Vehicle Speed Sensor Low Input
-//P0503 Vehicle Speed Sensor Intermittent/Erratic/High
-//P0504 Brake Switch "A"/"B" Correlation
-//P0505 Idle Control System Malfunction
-//P0506 Idle Control System RPM Lower Than Expected
-//P0507 Idle Control System RPM Higher Than Expected
-//P0508 Idle Air Control System Circuit Low
-//P0509 Idle Air Control System Circuit High
-//P0510 Closed Throttle Position Switch Malfunction
-//P0511 Idle Air Control Circuit
-//P0512 Starter Request Circuit
-//P0513 Incorrect Immobilizer Key
-//P0514 Battery Temperature Sensor Circuit Range/Performance
-//P0515 Battery Temperature Sensor Circuit
-//P0516 Battery Temperature Sensor Circuit Low
-//P0517 Battery Temperature Sensor Circuit High
-//P0518 Idle Air Control Circuit Intermittent
-//P0519 Idle Air Control System Performance
-//P0520 Engine Oil Pressure Sensor/Switch Circuit Malfunction
-</unused>
 
 OBD_Oil_Pressure_Sensor_Malfunction = 520,
+OBD_System_Voltage_Malfunction = 560,
+OBD_PCM_Processor_Fault = 606,
+OBD_Throttle_Actuator_Control_Range_Performance_Bank_1 = 638,
 
 <unused><h1>Unused</h1>
 //P0521 Engine Oil Pressure Sensor/Switch Circuit Range/Performance
@@ -499,7 +117,6 @@ OBD_Oil_Pressure_Sensor_Malfunction = 520,
 //P0559 Brake Booster Pressure Sensor Circuit Intermittent
 </unused>
 
-OBD_System_Voltage_Malfunction = 560,
 
 <unused><h1>Unused</h1>
 //P0561 System Voltage Unstable
@@ -549,7 +166,6 @@ OBD_System_Voltage_Malfunction = 560,
 //P0605 Internal Control Module Read Only Memory (ROM) Error
 </unused>
 
-OBD_PCM_Processor_Fault = 606,
 
 <unused><h1>Unused</h1>
 //P0607 Control Module Performance
@@ -585,7 +201,6 @@ OBD_PCM_Processor_Fault = 606,
 //P0637 Power Steering Control Circuit High
 </unused>
 
-OBD_Throttle_Actuator_Control_Range_Performance_Bank_1 = 638,
 
 <unused><h1>Unused</h1>
 //P0639 Throttle Actuator Control Range/Performance (Bank 2)
@@ -2204,3 +1819,390 @@ CUSTOM_TOO_LONG_FUEL_INJECTION = 9013,
 //P0119 Engine Coolant Temperature Circuit Intermittent
 </unused>
 
+<unused><h1>Unused</h1>
+//P0122 Throttle Position Sensor/Switch A Circuit Low Input
+//P0123 Throttle Position Sensor/Switch A Circuit High Input
+//P0124 Throttle Position Sensor/Switch A Circuit Intermittent
+//P0125 Insufficient Coolant Temperature for Closed Loop Fuel Control
+//P0126 Insufficient Coolant Temperature for Stable Operation
+//P0128 Coolant Thermostat (Coolant Temperature Below Thermostat Regulating Temperature)
+//P0130 02 Sensor Circuit Malfunction (Bank I Sensor 1)
+//P0131 02 Sensor Circuit Low Voltage (Bank I Sensor I)
+//P0132 02 Sensor Circuit High Voltage (Bank I Sensor 1)
+//P0133 02 Sensor Circuit Slow Response (Bank 1 Sensor 1)
+//P0134 02 Sensor Circuit No Activity Detected (Bank I Sensor 1)
+//P0135 02 Sensor Heater Circuit Malfunction (Bank 1 Sensor 1)
+//P0136 02 Sensor Circuit Malfunction (Bank I Sensor 2)
+//P0137 02 Sensor Circuit Low Voltage (Bank I Sensor 2)
+//P0138 02 Sensor Circuit High Voltage (Bank I Sensor 2)
+//P0139 02 Sensor Circuit Slow Response (Bank 1 Sensor 2)
+//P0140 02 Sensor Circuit No Activity Detected (Bank 1 Sensor 2)
+//P0141 02 Sensor Heater Circuit Malfunction (Bank 1 Sensor 2)
+//P0142 02 Sensor Circuit Malfunction (Bank I Sensor 3)
+//P0143 02 Sensor Circuit Low Voltage (Bank I Sensor 3)
+//P0144 02 Sensor Circuit High Voltage (Bank I Sensor 3)
+//P0145 02 Sensor Circuit Slow Response (Bank 1 Sensor 3)
+//P0146 02 Sensor Circuit No Activity Detected (Bank I Sensor 3)
+//P0147 02 Sensor Heater Circuit Malfunction (Bank I Sensor 3)
+//P0150 02 Sensor Circuit Malfunction (Bank 2 Sensor I)
+//P0151 02 Sensor Circuit Low Voltage (Bank 2 Sensor I)
+//P0152 02 Sensor Circuit High Voltage (Bank 2 Sensor 1)
+//P0153 02 Sensor Circuit Slow Response (Bank 2 Sensor 1)
+//P0154 02 Sensor Circuit No Activity Detected (Bank 2 Sensor 1)
+//P0155 02 Sensor Heater Circuit Malfunction (Bank 2 Sensor 1)
+//P0156 02 Sensor Circuit Malfunction (Bank 2 Sensor 2)
+//P0157 02 Sensor Circuit Low Voltage (Bank 2 Sensor 2)
+//P0158 02 Sensor Circuit High Voltage (Bank 2 Sensor 2)
+//P0159 02 Sensor Circuit Slow Response (Bank 2 Sensor 2)
+//P0160 02 Sensor Circuit No Activity Detected (Bank 2 Sensor 2)
+//P0161 02 Sensor Heater Circuit Malfunction (Bank 2 Sensor 2)
+//P0162 02 Sensor Circuit Malfunction (Bank 2 Sensor 3)
+//P0163 02 Sensor Circuit Low Voltage (Bank 2 Sensor 3)
+//P0164 02 Sensor Circuit High Voltage (Bank 2 Sensor 3)
+//P0165 02 Sensor Circuit Slow Response (Bank 2 Sensor 3)
+//P0166 02 Sensor Circuit No Activity Detected (Bank 2 Sensor 3)
+//P0167 02 Sensor Heater Circuit Malfunction (Bank 2 Sensor 3)
+//P0170 Fuel Trim Malfunction (Bank 1)
+//P0171 System too Lean (Bank 1)
+//P0172 System too Rich (Bank 1)
+//P0173 Fuel Trim Malfunction (Bank 2)
+//P0174 System too Lean (Bank 2)
+/P0175 System too Rich (Bank 2)
+</unused>
+
+<unused><h1>Unused</h1>
+//P0176 Fuel Composition Sensor Circuit Malfunction
+//P0177 Fuel Composition Sensor Circuit Range/Performance
+//P0178 Fuel Composition Sensor Circuit Low Input
+//P0179 Fuel Composition Sensor Circuit High Input
+//P0180 Fuel Temperature Sensor A Circuit Malfunction
+//P0181 Fuel Temperature Sensor A Circuit Range/Performance
+//P0182 Fuel Temperature Sensor A Circuit Low Input
+//P0183 Fuel Temperature Sensor A Circuit High Input
+//P0184 Fuel Temperature Sensor A Circuit Intermittent
+//P0185 Fuel Temperature Sensor B Circuit Malfunction
+//P0186 Fuel Temperature Sensor B Circuit Range/Performance
+//P0187 Fuel Temperature Sensor B Circuit Low Input
+//P0188 Fuel Temperature Sensor B Circuit High Input
+//P0189 Fuel Temperature Sensor B Circuit Intermittent
+//P0190 Fuel Rail Pressure Sensor Circuit Malfunction
+//P0191 Fuel Rail Pressure Sensor Circuit Range/Performance
+//P0192 Fuel Rail Pressure Sensor Circuit Low Input
+//P0193 Fuel Rail Pressure Sensor Circuit High Input
+//P0194 Fuel Rail Pressure Sensor Circuit Intermittent
+//P0195 Engine Oil Temperature Sensor Malfunction
+//P0196 Engine Oil Temperature Sensor Range/Performance
+//P0197 Engine Oil Temperature Sensor Low
+//P0198 Engine Oil Temperature Sensor High
+//P0199 Engine Oil Temperature Sensor Intermittent
+
+//DTC Codes - P0200-P0299 - Fuel and Air Metering (Injector Circuit)
+//P0200 Injector Circuit Malfunction
+</unused>
+
+<unused><h1>Unused</h1>
+//P0213 Cold Start Injector 1 Malfunction
+//P0214 Cold Start Injector 2 Malfunction
+//P0215 Engine Shutoff Solenoid Malfunction
+//P0216 Injection Timing Control Circuit Malfunction
+//P0217 Engine Overtemp Condition
+//P0218 Transmission Over Temperature Condition
+//P0219 Engine Overspeed Condition
+//P0220 Throttle/Petal Position Sensor/Switch B Circuit Malfunction
+//P0221 Throttle/Petal Position Sensor/Switch B Circuit Range/Performance Problem
+</unused>
+
+<unused><h1>Unused</h1>
+//P0222 Throttle/Petal Position Sensor/Switch B Circuit Low Input
+//P0223 Throttle/Petal Position Sensor/Switch B Circuit High Input
+//P0224 Throttle/Petal Position Sensor/Switch B Circuit Intermittent
+//P0225 Throttle/Petal Position Sensor/Switch C Circuit Malfunction
+//P0226 Throttle/Petal Position Sensor/Switch C Circuit Range/Performance Problem
+//P0227 Throttle/Petal Position Sensor/Switch C Circuit Low Input
+//P0228 Throttle/Petal Position Sensor/Switch C Circuit High Input
+//P0229 Throttle/Petal Position Sensor/Switch C Circuit Intermittent
+//P0230 Fuel Pump Primary Circuit Malfunction
+//P0231 Fuel Pump Secondary Circuit Low
+//P0232 Fuel Pump Secondary Circuit High
+//P0233 Fuel Pump Secondary Circuit Intermittent
+//P0234 Engine Turbocharger/Supercharger Overboost Condition
+//P0235 Turbocharger Boost Sensor A Circuit Malfunction
+//P0236 Turbocharger Boost Sensor A Circuit Range/Performance
+//P0237 Turbocharger Boost Sensor A Circuit Low
+//P0238 Turbocharger Boost Sensor A Circuit High
+//P0239 Turbocharger Boost Sensor B Malfunction
+//P0240 Turbocharger Boost Sensor B Circuit Range/Performance
+//P0241 Turbocharger Boost Sensor B Circuit Low
+//P0242 Turbocharger Boost Sensor B Circuit High
+//P0243 Turbocharger Wastegate Solenoid A Malfunction
+//P0244 Turbocharger Wastegate Solenoid A Range/Performance
+//P0245 Turbocharger Wastegate Solenoid A Low
+//P0246 Turbocharger Wastegate Solenoid A High
+//P0247 Turbocharger Wastegate Solenoid B Malfunction
+//P0248 Turbocharger Wastegate Solenoid B Range/Performance
+//P0249 Turbocharger Wastegate Solenoid B Low
+//P0250 Turbocharger Wastegate Solenoid B High
+//P0251 Injection Pump Fuel Metering Control "A" Malfunction (Cam/Rotor/Injector)
+//P0252 Injection Pump Fuel Metering Control "A" Range/Performance (Cam/Rotor/Injector)
+//P0253 Injection Pump Fuel Metering Control "A" Low (Cam/Rotor/Injector)
+//P0254 Injection Pump Fuel Metering Control "A" High (Cam/Rotor/Injector)
+//P0255 Injection Pump Fuel Metering Control "A" Intermittent (Cam/Rotor/Injector)
+//P0256 Injection Pump Fuel Metering Control "B" Malfunction (Cam/Rotor/Injector)
+//P0257 Injection Pump Fuel Metering Control "B" Range/Performance Injector)
+//P0258 Injection Pump Fuel Metering Control "B" Low (Cam/R
+//P0259 Injection Pump Fuel Metering Control "B" High (Cam/R
+//P0260 Injection Pump Fuel Metering Control "B" Intermittent Injector)
+//P0261 Cylinder I Injector Circuit Low
+//P0262 Cylinder I Injector Circuit High
+//P0263 Cylinder I Contribution/Balance Fault
+//P0264 Cylinder 2 Injector Circuit Low
+//P0265 Cylinder 2 Injector Circuit High
+//P0266 Cylinder 2 Contribution/Balance Fault
+//P0267 Cylinder 3 Injector Circuit Low
+//P0268 Cylinder 3 Injector Circuit High
+//P0269 Cylinder 3 Contribution/Balance Fault
+//P0270 Cylinder 4 Injector Circuit Low
+//P0271 Cylinder 4 Injector Circuit High
+//P0272 Cylinder 4 Contribution/Balance Fault
+//P0273 Cylinder 5 Injector Circuit Low
+//P0274 Cylinder 5 Injector Circuit High
+//P0275 Cylinder S Contribution/Balance Fault
+//P0276 Cylinder 6 Injector Circuit Low
+//P0277 Cylinder 6 Injector Circuit High
+//P0278 Cylinder 6 Contribution/Balance Fault
+//P0279 Cylinder 7 Injector Circuit Low
+//P0280 Cylinder 7 Injector Circuit High
+//P0281 Cylinder 7 Contribution/Balance Fault
+//P0282 Cylinder 8 Injector Circuit Low
+//P0283 Cylinder 8 Injector Circuit High
+//P0284 Cylinder 8 Contribution/Balance Fault
+//P0285 Cylinder 9 Injector Circuit Low
+//P0286 Cylinder 9 Injector Circuit High
+//P0287 Cylinder 9 Contribution/Balance Fault
+//P0288 Cylinder 10 Injector Circuit Low
+//P0289 Cylinder 10 Injector Circuit High
+//P0290 Cylinder 10 Contribution/Balance Fault
+//P0291 Cylinder 11 Injector Circuit Low
+//P0292 Cylinder 11 Injector Circuit High
+//P0293 Cylinder 11 Contribution/Balance Fault
+//P0294 Cylinder 12 Injector Circuit Low
+//P0295 Cylinder 12 Injector Circuit High
+//P0296 Cylinder 12 Contribution/Range Fault
+//P0297 Vehicle Overspeed Condition
+//P0298 Engine Oil Over Temperature Condition
+//P0299 Turbocharger/Supercharger "A" Underboost Condition
+//P0300 Random/Multiple Cylinder Misfire Detected
+//P0301 Cylinder 1 Misfire Detected
+//P0302 Cylinder 2 Misfire Detected
+//P0303 Cylinder 3 Misfire Detected
+//P0304 Cylinder 4 Misfire Detected
+//P0305 Cylinder 5 Misfire Detected
+//P0306 Cylinder 6 Misfire Detected
+//P0307 Cylinder 7 Misfire Detected
+//P0308 Cylinder 8 Misfire Detected
+//P0309 Cylinder 9 Misfire Detected
+//P0310 Cylinder 10 Misfire Detected
+//P0311 Cylinder 11 Misfire Detected
+//P0312 Cylinder 12 Misfire Detected
+//P0313 Misfire Detected with Low Fuel
+//P0314 Single Cylinder Misfire (Cylinder not Specified)
+//P0315 Crankshaft Position System Variation Not Learned
+//P0316 Misfire Detected On Startup (First 1000 Revolutions)
+//P0317 Rough Road Hardware Not Present
+//P0318 Rough Road Sensor A Signal Circuit
+//P0319 Rough Road Sensor B Signal Circuit
+//P0320 Ignition/Distributor Engine Speed Input Circuit Malfunction
+//P0321 Ignition/Distributor Engine Speed Input Circuit Range/Performance
+//P0322 Ignition/Distributor Engine Speed Input Circuit No Signal
+//P0323 Ignition/Distributor Engine Speed Input Circuit Intermittent
+//P0324 Knock Control System Error
+//P0325 Knock Sensor 1 Circuit Malfunction (Bank I or Single Sensor)
+//P0326 Knock Sensor 1 Circuit Range/Performance (Bank 1 or Single Sensor)
+//P0327 Knock Sensor 1 Circuit Low Input (Bank I or Single Sensor)
+//P0328 Knock Sensor 1 Circuit High Input (Bank I or Single Sensor)
+//P0329 Knock Sensor 1 Circuit Intermittent (Bank 1 or Single Sensor)
+//P0330 Knock Sensor 2 Circuit Malfunction (Bank 2)
+//P0331 Knock Sensor 2 Circuit Range/Performance (Bank 2)
+//P0332 Knock Sensor 2 Circuit Low Input (Bank 2)
+//P0333 Knock Sensor 2 Circuit High Input (Bank 2)
+//P0334 Knock Sensor 2 Circuit Intermittent (Bank 2)
+</unused>
+
+<unused><h1>Unused</h1>
+//P0336 Crankshaft Position Sensor A Circuit Range/Performance
+//P0337 Crankshaft Position Sensor A Circuit Low Input
+//P0338 Crankshaft Position Sensor A Circuit High Input
+//P0339 Crankshaft Position Sensor A Circuit Intermittent
+//P0340 Camshaft Position Sensor Circuit Malfunction
+</unused>
+
+<unused><h1>Unused</h1>
+//P0342 Camshaft Position Sensor Circuit Low Input
+//P0343 Camshaft Position Sensor Circuit High Input
+//P0344 Camshaft Position Sensor Circuit Intermittent
+//P0345 Camshaft Position Sensor A Circuit Malfunction (Bank 2)
+//P0346 Camshaft Position Sensor A Circuit Range/Performance (Bank 2)
+//P0347 Camshaft Position Sensor A Circuit Low Input (Bank 2)
+//P0348 Camshaft Position Sensor A Circuit High Input (Bank 2)
+//P0349 Camshaft Position Sensor A Circuit Intermittent (Bank 2)
+//P0350 Ignition Coil Primary/Secondary Circuit Malfunction
+</unused>
+
+<unused><h1>Unused</h1>
+//P0363 Misfire Detected - Fueling Disabled
+//P0364 Reserved
+//P0365 Camshaft Position Sensor "B" Circuit (Bank 1)
+//P0366 Camshaft Position Sensor "B" Circuit Range/Performance (Bank 1)
+//P0367 Camshaft Position Sensor "B" Circuit Low (Bank 1)
+//P0368 Camshaft Position Sensor "B" Circuit High (Bank 1)
+//P0369 Camshaft Position Sensor "B" Circuit Intermittent (Bank 1)
+//P0370 Timing Reference High Resolution Signal A Malfunction
+//P0371 Timing Reference High Resolution Signal A Too Many Pulses
+//P0372 Timing Reference High Resolution Signal A Too Few Pulses
+//P0373 Timing Reference High Resolution Signal A Intermittent/Erratic Pulses
+//P0374 Timing Reference High Resolution Signal A No Pulses
+//P0375 Timing Reference High Resolution Signal B Malfunction
+//P0376 Timing Reference High Resolution Signal B Too Many Pulses
+//P0377 Timing Reference High Resolution Signal B Too Few Pulses
+//P0378 Timing Reference High Resolution Signal B Intermittent/Erratic Pulses
+//P0379 Timing Reference High Resolution Signal B No Pulses
+//P0380 Glow Plug/Heater Circuit "A" Malfunction
+//P0381 Glow Plug/Heater Indicator Circuit Malfunction
+//P0382 Exhaust Gas Recirculation Flow Malfunction
+//P0383 Glow Plug Control Module Control Circuit Low
+//P0384 Glow Plug Control Module Control Circuit High
+//P0385 Crankshaft Position Sensor B Circuit Malfunction
+//P0386 Crankshaft Position Sensor B Circuit Range/Performance
+//P0387 Crankshaft Position Sensor B Circuit Low Input
+//P0388 Crankshaft Position Sensor B Circuit High Input
+//P0389 Crankshaft Position Sensor B Circuit Intermittent
+//P0390 Camshaft Position Sensor "B" Circuit (Bank 2)
+//P0391 Camshaft Position Sensor "B" Circuit Range/Performance (Bank 2)
+//P0392 Camshaft Position Sensor "B" Circuit Low (Bank 2)
+//P0393 Camshaft Position Sensor "B" Circuit High (Bank 2)
+//P0394 Camshaft Position Sensor "B" Circuit Intermittent (Bank 2)
+//DTC Codes - P0400-P0499 - Auxiliary Emissions Controls
+//P0400 Exhaust Gas Recirculation Flow Malfunction
+//P0401 Exhaust Gas Recirculation Flow Insufficient Detected
+//P0402 Exhaust Gas Recirculation Flow Excessive Detected
+//P0403 Exhaust Gas Recirculation Circuit Malfunction
+//P0404 Exhaust Gas Recirculation Circuit Range/Performance
+//P0405 Exhaust Gas Recirculation Sensor A Circuit Low
+//P0406 Exhaust Gas Recirculation Sensor A Circuit High
+//P0407 Exhaust Gas Recirculation Sensor B Circuit Low
+//P0408 Exhaust Gas Recirculation Sensor B Circuit High
+//P0409 Exhaust Gas Recirculation Sensor "A" Circuit
+//P0410 Secondary Air Injection System Malfunction
+//P0411 Secondary Air Injection System Incorrect Flow Detected
+//P0412 Secondary Air Injection System Switching Valve A Circuit Malfunction
+//P0413 Secondary Air Injection System Switching Valve A Circuit Open
+//P0414 Secondary Air Injection System Switching Valve A Circuit Shorted
+//P0415 Secondary Air Injection System Switching Valve B Circuit Malfunction
+//P0416 Secondary Air Injection System Switching Valve B Circuit Open
+//P0417 Secondary Air Injection System Switching Valve B Circuit Shorted
+//P0418 Secondary Air Injection System Relay "A" Circuit Malfunction
+//P0419 Secondary Air Injection System Relay "B" Circuit Malfunction
+//P0420 Catalyst System Efficiency Below Threshold (Bank 1)
+//P0421 Warm Up Catalyst Efficiency Below Threshold (Bank 1)
+//P0422 Main Catalyst Efficiency Below Threshold (Bank 1)
+//P0423 Heated Catalyst Efficiency Below Threshold (Bank 1)
+//P0424 Heated Catalyst Temperature Below Threshold (Bank 1)
+//P0424 Heated Catalyst Temperature Below Threshold (Bank 1)
+//P0425 Catalyst Temperature Sensor (Bank 1)
+//P0426 Catalyst Temperature Sensor Range/Performance (Bank 1)
+//P0427 Catalyst Temperature Sensor Low (Bank 1)
+//P0428 Catalyst Temperature Sensor High (Bank 1)
+//P0429 Catalyst Heater Control Circuit
+//P0430 Catalyst System Efficiency Below Threshold (Bank 2)
+//P0431 Warm Up Catalyst Efficiency Below Threshold (Bank 2)
+//P0432 Main Catalyst Efficiency Below Threshold (Bank 2)
+//P0433 Heated Catalyst Efficiency Below Threshold (Bank 2)
+//P0434 Heated Catalyst Temperature Below Threshold (Bank 2)
+//P0435 Catalyst Temperature Sensor (Bank 2)
+//P0436 Catalyst Temperature Sensor Range/Performance (Bank 2)
+//P0437 Catalyst Temperature Sensor Low (Bank 2)
+//P0438 Catalyst Temperature Sensor High (Bank 2)
+//P0439 Catalyst Heater Control Circuit
+//P0440 Evaporative Emission Control System Malfunction
+//P0441 Evaporative Emission Control System Incorrect Purge Flow
+//P0442 Evaporative Emission Control System Leak Detected (small leak)
+//P0443 Evaporative Emission Control System Purge Control Valve Circuit
+//P0444 Evaporative Emission Control System Purge Control Valve Circuit Open
+//P0445 Evaporative Emission Control System Purge Control Valve Circuit Shorted
+//P0446 Evaporative Emission Control System Vent Control Circuit Malfunction
+//P0447 Evaporative Emission Control System Vent Control Circuit Open
+//P0448 Evaporative Emission Control System Vent Control Circuit Shorted
+//P0449 Evaporative Emission Control System Vent Valve/Solenoid Circuit Malfunction
+//P0450 Evaporative Emission Control System Pressure Sensor Malfunction
+//P0451 Evaporative Emission Control System Pressure Sensor Range/Performance
+//P0452 Evaporative Emission Control System Pressure Sensor Low Input
+//P0453 Evaporative Emission Control System Pressure Sensor High Input
+//P0454 Evaporative Emission Control System Pressure Sensor Intermittent
+//P0455 Evaporative Emission Control System Leak Detected (gross leak)
+//P0456 Evaporative Emissions System Small Leak Detected
+//P0457 Evaporative Emission Control System Leak Detected
+//P0458 Evaporative Emission System Purge Control Valve Circuit Low
+//P0459 Evaporative Emission System Purge Control Valve Circuit High
+//P0460 Fuel Level Sensor Circuit Malfunction
+//P0461 Fuel Level Sensor Circuit Range/Performance
+//P0462 Fuel Level Sensor Circuit Low Input
+//P0463 Fuel Level Sensor Circuit High Input
+//P0464 Fuel Level Sensor Circuit Intermittent
+//P0465 Purge Flow Sensor Circuit Malfunction
+//P0466 Purge Flow Sensor Circuit Range/Performance
+//P0467 Purge Flow Sensor Circuit Low Input
+//P0468 Purge Flow Sensor Circuit High Input
+//P0469 Purge Flow Sensor Circuit Intermittent
+//P0470 Exhaust Pressure Sensor Malfunction
+//P0471 Exhaust Pressure Sensor Range/Performance
+//P0472 Exhaust Pressure Sensor Low
+//P0473 Exhaust Pressure Sensor High
+//P0474 Exhaust Pressure Sensor Intermittent
+//P0475 Exhaust Pressure Control Valve Malfunction
+//P0476 Exhaust Pressure Control Valve Range/Performance
+//P0477 Exhaust Pressure Control Valve Low
+//P0478 Exhaust Pressure Control Valve High
+//P0479 Exhaust Pressure Control Valve Intermittent
+//P0480 Cooling Fan I Control Circuit Malfunction
+//P0481 Cooling Fan 2 Control Circuit Malfunction
+//P0482 Cooling Fan 3 Control Circuit Malfunction
+//P0483 Cooling Fan Rationality Check Malfunction
+//P0484 Cooling Fan Circuit Over Current
+//P0485 Cooling Fan Power/Ground Circuit Malfunction
+//P0486 Exhaust Gas Recirculation Sensor "B" Circuit
+//P0487 Exhaust Gas Recirculation Throttle Control Circuit "A" Open
+//P0488 Exhaust Gas Recirculation Throttle Control Circuit "A" Range/Performance
+//P0489 Exhaust Gas Recirculation "A" Control Circuit Low
+//P0490 Exhaust Gas Recirculation "A" Control Circuit High
+//P0491 Secondary Air Injection System Insufficient Flow Bank 1
+//P0492 Secondary Air Injection System Insufficient Flow Bank 2
+//P0493 Fan Overspeed
+//P0494 Fan Speed Low
+//P0495 Fan Speed High
+//P0496 EVAP Flow During A Non-Purge Condition
+//P0497 Evaporative Emission System Low Purge Flow
+//P0498 Evaporative Emission System Vent Valve Control Circuit Low
+//P0499 Evaporative Emission System Vent Valve Control Circuit High
+//DTC Codes - P0500-P0599 - Vehicle Speed Controls and Idle Control System
+//P0500 Vehicle Speed Sensor Malfunction
+//P0501 Vehicle Speed Sensor Range/Performance
+//P0502 Vehicle Speed Sensor Low Input
+//P0503 Vehicle Speed Sensor Intermittent/Erratic/High
+//P0504 Brake Switch "A"/"B" Correlation
+//P0505 Idle Control System Malfunction
+//P0506 Idle Control System RPM Lower Than Expected
+//P0507 Idle Control System RPM Higher Than Expected
+//P0508 Idle Air Control System Circuit Low
+//P0509 Idle Air Control System Circuit High
+//P0510 Closed Throttle Position Switch Malfunction
+//P0511 Idle Air Control Circuit
+//P0512 Starter Request Circuit
+//P0513 Incorrect Immobilizer Key
+//P0514 Battery Temperature Sensor Circuit Range/Performance
+//P0515 Battery Temperature Sensor Circuit
+//P0516 Battery Temperature Sensor Circuit Low
+//P0517 Battery Temperature Sensor Circuit High
+//P0518 Idle Air Control Circuit Intermittent
+//P0519 Idle Air Control System Performance
+//P0520 Engine Oil Pressure Sensor/Switch Circuit Malfunction
+</unused>
