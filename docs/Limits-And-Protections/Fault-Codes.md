@@ -337,7 +337,7 @@ CUSTOM_RE_ADDING_INTO_EXECUTION_QUEUE|9011,
 CUSTOM_OUT_OF_ORDER_COIL|9012,  
 CUSTOM_TOO_LONG_FUEL_INJECTION|9013,  
 
-## FOME provide standard OBC fault codes
+##  Standard OBC fault codes used by FOME
 
 the meanings of standard OBD codes is available on http:www.obd-codes.com/faq/obd2-codes-explained.php
  
