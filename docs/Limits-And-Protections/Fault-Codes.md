@@ -341,6 +341,8 @@ CUSTOM_TOO_LONG_FUEL_INJECTION|9013,
 
 the meanings of standard OBD codes is available on http://www.obd-codes.com/faq/obd2-codes-explained.php
  
+Meaning|Fault Code
+---|---
 OBD_Fuel_Pressure_Sensor_Missing|90,
 OBD_Mass_or_Volume_Air_Flow_Circuit_Malfunction|100,  
 OBD_Manifold_Absolute_Pressure_Circuit_Malfunction|105,  
@@ -351,22 +353,16 @@ OBD_ThermistorConfig|111,
 OBD_Iat_Timeout|110,
 OBD_Iat_Low|112,
 OBD_Iat_High|113,
-
 OBD_Clt_Timeout|115,
 OBD_Clt_Low|117,
 OBD_Clt_High|118,
-
 OBD_TPS_Configuration|121,
 OBD_TPS1_Primary_Timeout|120,
 OBD_TPS1_Primary_Low|122,
 OBD_TPS1_Primary_High|123,
-
-
-
 OBD_FlexSensor_Timeout|176,
 OBD_FlexSensor_Low|178,
 OBD_FlexSensor_High|179,
-
 OBD_Injector_Circuit_1|201,
 OBD_Injector_Circuit_2|202,
 OBD_Injector_Circuit_3|203,
@@ -379,18 +375,14 @@ OBD_Injector_Circuit_9|209,
 OBD_Injector_Circuit_10|210,
 OBD_Injector_Circuit_11|211,
 OBD_Injector_Circuit_12|212,
-
 OBD_TPS1_Secondary_Timeout|220,
 OBD_TPS1_Secondary_Low|222,
 OBD_TPS1_Secondary_High|223,
 OBD_TPS2_Primary_Timeout|225,
 OBD_TPS2_Primary_Low|227,
 OBD_TPS2_Primary_High|228,
-
 OBD_Crankshaft_Position_Sensor_A_Circuit_Malfunction|335,
-
 OBD_Camshaft_Position_Sensor_Circuit_Range_Performance|341,
-
 OBD_Ignition_Circuit_1|351,
 OBD_Ignition_Circuit_2|352,
 OBD_Ignition_Circuit_3|353,
@@ -403,13 +395,10 @@ OBD_Ignition_Circuit_9|359,
 OBD_Ignition_Circuit_10|360,
 OBD_Ignition_Circuit_11|361,
 OBD_Ignition_Circuit_12|362,
-
-
 OBD_Oil_Pressure_Sensor_Malfunction|520,
 OBD_System_Voltage_Malfunction|560,
 OBD_PCM_Processor_Fault|606,
 OBD_Throttle_Actuator_Control_Range_Performance_Bank_1|638,
-
 OBD_TPS2_Secondary_Timeout|2120,
 OBD_TPS2_Secondary_Low|2122,
 OBD_TPS2_Secondary_High|2123,
@@ -419,12 +408,10 @@ OBD_PPS_Primary_High|2128,
 OBD_PPS_Secondary_Timeout|2130,
 OBD_PPS_Secondary_Low|2132,
 OBD_PPS_Secondary_High|2133,
-
 OBD_TPS1_Correlation|2135,
 OBD_TPS2_Correlation|2136,
 OBD_PPS_Correlation|2137,
 OBD_Vehicle_Speed_SensorB|2158,
-
 OBD_Barometric_Press_Circ|2226,
 OBD_Barometric_Press_Circ_Range_Perf|2227,
 OBD_WB_FW_Mismatch|2133,  // actually: P2231 O2 Sensor Signal Circ Shorted to Heater Circ Bank1 Sensor 1  
