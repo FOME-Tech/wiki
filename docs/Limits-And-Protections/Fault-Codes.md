@@ -543,7 +543,7 @@ Wideband_2_Fault = 2901,
 
 
 
-<unused><h1><h1>Unused</h1></h1>  
+##  Standard OBD fault codes not used by FOME
 //P0001 Fuel Volume Regulator Control Circuit/Open
 //P0002 Fuel Volume Regulator Control Circuit Range/Performance
 //P0003 Fuel Volume Regulator Control Circuit Low
@@ -655,23 +655,14 @@ Wideband_2_Fault = 2901,
 //P0107 Manifold Absolute Pressure/Barometric Pressure Circuit Low Input
 //P0108 Manifold Absolute Pressure/Barometric Pressure Circuit High Input
 //P0109 Manifold Absolute Pressure/Barometric Pressure Circuit Intermittent
-</unused>
-
-
-<unused><h1>Unused</h1>
 //P0111 Intake Air Temperature Circuit Range/Performance Problem
 //P0112 Intake Air Temperature Circuit Low Input
 //P0113 Intake Air Temperature Circuit High Input
 //P0114 Intake Air Temperature Circuit Intermittent
-</unused>
-<unused><h1>Unused</h1>
 //P0116 Engine Coolant Temperature Circuit Range/Performance Problem
 //P0117 Engine Coolant Temperature Circuit Low Input
 //P0118 Engine Coolant Temperature Circuit High Input
 //P0119 Engine Coolant Temperature Circuit Intermittent
-</unused>
-
-<unused><h1>Unused</h1>
 //P0122 Throttle Position Sensor/Switch A Circuit Low Input
 //P0123 Throttle Position Sensor/Switch A Circuit High Input
 //P0124 Throttle Position Sensor/Switch A Circuit Intermittent
@@ -720,9 +711,6 @@ Wideband_2_Fault = 2901,
 //P0173 Fuel Trim Malfunction (Bank 2)
 //P0174 System too Lean (Bank 2)
 /P0175 System too Rich (Bank 2)
-</unused>
-
-<unused><h1>Unused</h1>
 //P0176 Fuel Composition Sensor Circuit Malfunction
 //P0177 Fuel Composition Sensor Circuit Range/Performance
 //P0178 Fuel Composition Sensor Circuit Low Input
@@ -750,9 +738,6 @@ Wideband_2_Fault = 2901,
 
 //DTC Codes - P0200-P0299 - Fuel and Air Metering (Injector Circuit)
 //P0200 Injector Circuit Malfunction
-</unused>
-
-<unused><h1>Unused</h1>
 //P0213 Cold Start Injector 1 Malfunction
 //P0214 Cold Start Injector 2 Malfunction
 //P0215 Engine Shutoff Solenoid Malfunction
@@ -762,9 +747,6 @@ Wideband_2_Fault = 2901,
 //P0219 Engine Overspeed Condition
 //P0220 Throttle/Petal Position Sensor/Switch B Circuit Malfunction
 //P0221 Throttle/Petal Position Sensor/Switch B Circuit Range/Performance Problem
-</unused>
-
-<unused><h1>Unused</h1>
 //P0222 Throttle/Petal Position Sensor/Switch B Circuit Low Input
 //P0223 Throttle/Petal Position Sensor/Switch B Circuit High Input
 //P0224 Throttle/Petal Position Sensor/Switch B Circuit Intermittent
@@ -878,17 +860,11 @@ Wideband_2_Fault = 2901,
 //P0332 Knock Sensor 2 Circuit Low Input (Bank 2)
 //P0333 Knock Sensor 2 Circuit High Input (Bank 2)
 //P0334 Knock Sensor 2 Circuit Intermittent (Bank 2)
-</unused>
-
-<unused><h1>Unused</h1>
 //P0336 Crankshaft Position Sensor A Circuit Range/Performance
 //P0337 Crankshaft Position Sensor A Circuit Low Input
 //P0338 Crankshaft Position Sensor A Circuit High Input
 //P0339 Crankshaft Position Sensor A Circuit Intermittent
 //P0340 Camshaft Position Sensor Circuit Malfunction
-</unused>
-
-<unused><h1>Unused</h1>
 //P0342 Camshaft Position Sensor Circuit Low Input
 //P0343 Camshaft Position Sensor Circuit High Input
 //P0344 Camshaft Position Sensor Circuit Intermittent
@@ -898,9 +874,6 @@ Wideband_2_Fault = 2901,
 //P0348 Camshaft Position Sensor A Circuit High Input (Bank 2)
 //P0349 Camshaft Position Sensor A Circuit Intermittent (Bank 2)
 //P0350 Ignition Coil Primary/Secondary Circuit Malfunction
-</unused>
-
-<unused><h1>Unused</h1>
 //P0363 Misfire Detected - Fueling Disabled
 //P0364 Reserved
 //P0365 Camshaft Position Sensor "B" Circuit (Bank 1)
@@ -1057,8 +1030,6 @@ Wideband_2_Fault = 2901,
 //P0518 Idle Air Control Circuit Intermittent
 //P0519 Idle Air Control System Performance
 //P0520 Engine Oil Pressure Sensor/Switch Circuit Malfunction
-</unused>
-<unused><h1>Unused</h1>
 //P0521 Engine Oil Pressure Sensor/Switch Circuit Range/Performance
 //P0522 Engine Oil Pressure Sensor/Switch Circuit Low Voltage
 //P0523 Engine Oil Pressure Sensor/Switch Circuit High Voltage
@@ -1098,10 +1069,6 @@ Wideband_2_Fault = 2901,
 //P0557 Brake Booster Pressure Sensor Circuit Low
 //P0558 Brake Booster Pressure Sensor Circuit High
 //P0559 Brake Booster Pressure Sensor Circuit Intermittent
-</unused>
-
-
-<unused><h1>Unused</h1>
 //P0561 System Voltage Unstable
 //P0562 System Voltage Low
 //P0563 System Voltage High
@@ -1147,10 +1114,6 @@ Wideband_2_Fault = 2901,
 //P0603 Internal Control Module Keep Alive Memory (KAM) Error
 //P0604 Internal Control Module Random Access Memory (RAM) Error
 //P0605 Internal Control Module Read Only Memory (ROM) Error
-</unused>
-
-
-<unused><h1>Unused</h1>
 //P0607 Control Module Performance
 //P0608 Control Module VSS Output "A" Malfunction
 //P0609 Control Module VSS Output "B" Malfunction
@@ -1182,10 +1145,6 @@ Wideband_2_Fault = 2901,
 //P0635 Power Steering Control Circuit
 //P0636 Power Steering Control Circuit Low
 //P0637 Power Steering Control Circuit High
-</unused>
-
-
-<unused><h1>Unused</h1>
 //P0639 Throttle Actuator Control Range/Performance (Bank 2)
 //P0640 Intake Air Heater Control Circuit
 //P0641 Sensor Reference Voltage &ldquo;A&rdquo; Circuit/Open
@@ -1566,9 +1525,6 @@ Wideband_2_Fault = 2901,
 //P2117 Throttle/Pedal Pos Sensor F Minimum Stop Perf
 //P2118 Throttle Actuator Ctrl Motor Current Range/Perf
 //P2119 Throttle Actuator Ctrl Throttle Body Range/Perf
-</unused>
-
-<unused><h1>Unused</h1>
 //P2120 Throttle/Pedal Pos Sensor/Switch D Circ
 //P2121 Throttle/Pedal Pos Sensor/Switch D Circ Range/Perf
 //P2122 Throttle/Pedal Pos Sensor/Switch D Circ Low Input
@@ -1584,10 +1540,6 @@ Wideband_2_Fault = 2901,
 //P2132 Throttle/Pedal Pos Sensor/Switch F Circ Low Input
 //P2133 Throttle/Pedal Pos Sensor/Switch F Circ High Input
 //P2134 Throttle/Pedal Pos Sensor/Switch F Circ Interm
-</unused>
-
-
-<unused><h1>Unused</h1>
 //P2135 Throttle/Pedal Pos Sensor/Switch A / B Voltage Correlation
 //P2136 Throttle/Pedal Pos Sensor/Switch A / C Voltage Correlation
 //P2137 Throttle/Pedal Pos Sensor/Switch B / C Voltage Correlation
@@ -1611,10 +1563,6 @@ Wideband_2_Fault = 2901,
 //P2155 Fuel Injector Group D Supply Voltage Circ/Open
 //P2156 Fuel Injector Group D Supply Voltage Circ Low
 //P2157 Fuel Injector Group D Supply Voltage Circ High
-</unused>
-
-
-<unused><h1>Unused</h1>
 //P2158 Vehicle Speed SensorB
 //P2159 Vehicle Speed SensorB Range/Perf
 //P2160 Vehicle Speed SensorB Circ Low
@@ -1683,17 +1631,9 @@ Wideband_2_Fault = 2901,
 //P2223 NOx Sensor Heater Sense Circ Low Bank2
 //P2224 NOx Sensor Heater Sense Circ High Bank2
 //P2225 NOx Sensor Heater Sense Circ Interm Bank2
-</unused>
-
-
-<unused><h1>Unused</h1>
 //P2228 Barometric Press Circ Low
 //P2229 Barometric Press Circ High
 //P2230 Barometric Press Circ Interm
-</unused>
-
-
-<unused><h1>Unused</h1>
 //P2232 O2 Sensor Signal Circ Shorted to Heater Circ Bank1 Sensor 2
 //P2233 O2 Sensor Signal Circ Shorted to Heater Circ Bank1 Sensor 3
 //P2234 O2 Sensor Signal Circ Shorted to Heater Circ Bank2 Sensor 1
@@ -2106,10 +2046,6 @@ Wideband_2_Fault = 2901,
 //P2793 Gear Shift Direction Circ
 //P2794 Gear Shift Direction Circ Low
 //P2795 Gear Shift Direction Circ High
-</unused>
-
-
-<unused><h1>Unused</h1>
 //P2A00 O2 Sensor Circ Range/Perf Bank1 Sensor 1
 //P2A01 O2 Sensor Circ Range/Perf Bank1 Sensor 2
 //P2A02 O2 Sensor Circ Range/Perf Bank1 Sensor 3
@@ -2211,4 +2147,3 @@ Wideband_2_Fault = 2901,
 //P3491 Cyl12 Deactivation/Intake Valve Ctrl Circ Low
 //P3492 Cyl12 Deactivation/Intake Valve Ctrl Circ High
 //P3493 Cyl12 Exhaust Valve Ctrl Circ/Open
-</unused>
