@@ -613,8 +613,6 @@ P0196 Engine Oil Temperature Sensor Range/Performance
 P0197 Engine Oil Temperature Sensor Low
 P0198 Engine Oil Temperature Sensor High
 P0199 Engine Oil Temperature Sensor Intermittent
-
-DTC Codes - P0200-P0299 - Fuel and Air Metering (Injector Circuit)
 P0200 Injector Circuit Malfunction
 P0213 Cold Start Injector 1 Malfunction
 P0214 Cold Start Injector 2 Malfunction
