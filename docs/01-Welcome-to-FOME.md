@@ -119,8 +119,6 @@ The first page to view should probably be [the FOME Overview page](01-Intro-Star
 - [Idle VE Table](Basic-Features/Idle-Control/Idle-VE-Table)
 - [Idle tuning](Basic-Features/Idle-Control/Idle-tuning)
 
----
-
 ### Advanced Features
 
 - [CAN settings](Advanced-Features/CAN-Settings)
@@ -168,8 +166,6 @@ The first page to view should probably be [the FOME Overview page](01-Intro-Star
 - [VVT PID](Advanced-Features/Variable-Cam-Timing/VVT-PID)
 - [VVT target tables](Advanced-Features/Variable-Cam-Timing/VVT-Target-Tables)
 
----
-
 ### Fuel
 
 #### Acceleration
@@ -196,8 +192,6 @@ The first page to view should probably be [the FOME Overview page](01-Intro-Star
 - [Injector Deadtime settings](Fuel/Fuel-Settings/Injection-Deadtime)
 - [Small Pulse width correction](Fuel/Fuel-Settings/Small-Pulse)
 
----
-
 ### Hardware
 
 - [Flashing Software Notes](Hardware/Flashing-Software-Notes)
@@ -220,8 +214,6 @@ The first page to view should probably be [the FOME Overview page](01-Intro-Star
 - [Low-Z Driver board](Hardware/Hardware-Details/Low-Z-Injector-Driver)
 - [Power Steering Controller](Hardware/Hardware-Details/PSC)
 - [Wideband Lambda module](Hardware/Hardware-Details/Wideband-Module)
-
----
 
 ### Ignition
 
