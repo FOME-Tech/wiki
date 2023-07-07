@@ -21,8 +21,6 @@ The first page to view should probably be [the FOME Overview page](01-Intro-Star
 - [Guide to ETB and VVT PIDs](01-Intro-Start-Here/HT-PID-ETB-And-VVT)
 - [Miata MX5 Quick Start Guide](01-Intro-Start-Here/Miata-MX5-Quick-Start)
 
----
-
 ### Fundamentals of FOME tuning
 
 - [Air Fuel Ratio](Fundamentals-Of-Tuning/AFR)
