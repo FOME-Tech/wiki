@@ -1,7 +1,7 @@
 # FOME OBD fault codes and how to read them
 
-The FOME ECU is providing a number of OBD fault codes,  the meanings of standart OBD codes is available on 
- http://www.obd-codes.com/faq/obd2-codes-explained.php
+The FOME ECU is providing a number of OBD fault codes,  they are either standard OBD fault codes or FOME custom fault codes.
+
 
 ## FOME specific custom codes are listed below:
 
@@ -449,6 +449,8 @@ CUSTOM_TOO_LONG_FUEL_INJECTION = 9013,
 
 ## FOME provide standard OBC fault codes
 
+the meanings of standard OBD codes is available on http://www.obd-codes.com/faq/obd2-codes-explained.php
+ 
 OBD_Fuel_Pressure_Sensor_Missing = 90,
 OBD_Mass_or_Volume_Air_Flow_Circuit_Malfunction = 100,  
 OBD_Manifold_Absolute_Pressure_Circuit_Malfunction = 105,  
