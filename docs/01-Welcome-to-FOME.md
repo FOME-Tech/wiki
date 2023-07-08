@@ -1,10 +1,9 @@
 ---
 slug: /
+---
 
 [//]: # (Docusaurus requires a root doc/page to have a 'slug: /', otherwise 404 is assumed as a welcome message)
 [//]: # (also numbered prefixes are NOT to be used in links)
-
----
 
 # Welcome to FOME
 
