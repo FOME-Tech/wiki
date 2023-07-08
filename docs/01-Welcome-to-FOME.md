@@ -1,7 +1,10 @@
 ---
 slug: /
----
 
+[//]: # (Docusaurus requires a root doc/page to have a "slug: /", otherwise 404 is assumed as a welcome message)
+[//]: # (also numbered prefixes are NOT to be used in links)
+
+---
 # Welcome to FOME
 
 Fome is a new project intending to deliver a user focused high feature ECU with open source hardware options and open firmware that give control back to the user, owner and driver.
@@ -24,6 +27,8 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [How to pick the right fueling method](Intro-Start-Here/Which-Fuel-Method-For-Me)
 - [Guide to ETB and VVT PIDs](Intro-Start-Here/HT-PID-ETB-And-VVT)
 - [Miata MX5 Quick Start Guide](Intro-Start-Here/Miata-MX5-Quick-Start)
+
+---
 
 ### Fundamentals of FOME tuning
 
@@ -123,6 +128,8 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Idle VE Table](Basic-Features/Idle-Control/Idle-VE-Table)
 - [Idle tuning](Basic-Features/Idle-Control/Idle-Tuning)
 
+---
+
 ### Advanced Features
 
 - [CAN settings](Advanced-Features/CAN-Settings)
@@ -169,6 +176,8 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [On/Off VVT](Advanced-Features/Variable-Cam-Timing/On-Off-VVT)
 - [VVT PID](Advanced-Features/Variable-Cam-Timing/VVT-PID)
 - [VVT target tables](Advanced-Features/Variable-Cam-Timing/VVT-Target-Tables)
+
+---
 
 ### Fuel
 
@@ -218,6 +227,8 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Low-Z Driver board](Hardware/Hardware-Details/Low-Z-Injector-Driver)
 - [Power Steering Controller](Hardware/Hardware-Details/PSC)
 - [Wideband Lambda module](Hardware/Hardware-Details/Wideband-Module)
+
+---
 
 ### Ignition
 
