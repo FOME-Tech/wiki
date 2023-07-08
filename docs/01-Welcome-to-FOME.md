@@ -1,10 +1,11 @@
 ---
 slug: /
 
-[//]: # (Docusaurus requires a root doc/page to have a "slug: /", otherwise 404 is assumed as a welcome message)
+[//]: # (Docusaurus requires a root doc/page to have a 'slug: /', otherwise 404 is assumed as a welcome message)
 [//]: # (also numbered prefixes are NOT to be used in links)
 
 ---
+
 # Welcome to FOME
 
 Fome is a new project intending to deliver a user focused high feature ECU with open source hardware options and open firmware that give control back to the user, owner and driver.
