@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "start": "docusaurus start --host 0.0.0.0",
     "build": "docusaurus build",
     "lint": "npm run lint:ts && npm run lint:links && npm run lint:md",
     "lint:ts": "tsc",
