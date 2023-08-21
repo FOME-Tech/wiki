@@ -1,6 +1,7 @@
 ---
-sidebar_position: 1
 slug: /
+# (Docusaurus 2.4.1 requires a root doc/page to have a "slug: /" directive, otherwise 404 is assumed as a welcome message)
+# (also numbered prefixes are NOT to be used in links, because Docusaurus 2.4.1 matches them automatically )
 ---
 
 # Welcome to FOME
@@ -124,7 +125,7 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Idle ignition table](Basic-Features/Idle-Control/Idle-Ignition-Table)
 - [Idle settings](Basic-Features/Idle-Control/Idle-Settings)
 - [Idle VE Table](Basic-Features/Idle-Control/Idle-VE-Table)
-- [Idle tuning](Basic-Features/Idle-Control/Idle-tuning)
+- [Idle tuning](Basic-Features/Idle-Control/Idle-Tuning)
 
 ---
 
@@ -202,8 +203,6 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Intake Air Temperature Multiplier](Fuel/Fuel-Settings/IAT_Multiplier)
 - [Injector Deadtime settings](Fuel/Fuel-Settings/Injection-Deadtime)
 - [Small Pulse width correction](Fuel/Fuel-Settings/Small-Pulse)
-
----
 
 ### Hardware
 
