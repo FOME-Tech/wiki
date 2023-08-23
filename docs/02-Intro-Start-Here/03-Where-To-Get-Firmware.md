@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Where to get firmware
 
 FOME firmware releases are located [here](https://github.com/FOME-Tech/fome-fw/releases). You can download a release and install to the ECU with the console, or another way is to use TunerStudio (TS).

@@ -1,7 +1,3 @@
----
-sidebar_position: 10
----
-
 # Guide to Tuning the ETB and VVT PIDs
 
 Let's discuss the ETB and VVT PID controls and some give techniques for tuning these loops.

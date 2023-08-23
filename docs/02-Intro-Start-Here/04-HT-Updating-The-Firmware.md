@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # Updating the firmware
 
 Updating the firmware is easy to do, however it is important to do it correctly to prevent errors or board

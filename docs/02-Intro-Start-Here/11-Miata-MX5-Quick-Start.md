@@ -1,7 +1,3 @@
----
-sidebar_position: 11
----
-
 # Miata MX5 Quick Start Guide
 
 So, you've just got yourself a shiny new BMM MX5 Miata ECU for your NA or NB, nice! If you're wondering how to install and get it running, you've come to the right place. This guide will cover how to install the ECU to the car with a Bosch LSU 4.9 wideband oxygen sensor and a mass air pressure (MAP) line. Installation of additional sensors or peripherals is covered in the advanced guides.
