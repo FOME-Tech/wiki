@@ -39,7 +39,7 @@ jobs:
             });
             const fs = require('fs');
             fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
-      - run: unzip build.zip
+      - run: unzip build.zip -d build
 
       - name: Deploy preview to Cloudflare Pages
         uses: cloudflare/pages-action@v1
