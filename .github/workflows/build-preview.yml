@@ -1,0 +1,34 @@
+# Build preview to Cloudflare Pages
+name: Build preview
+
+concurrency:
+  group: ${{ github.ref }}-preview
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'FOME-Tech' && github.actor != 'dependabot[bot]'
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload preview build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build/
