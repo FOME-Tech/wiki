@@ -15,7 +15,7 @@ jobs:
       github.event.workflow_run.conclusion == 'success'
 
     permissions:
-      contents: read
+      issues: write
       deployments: write
 
     steps:
