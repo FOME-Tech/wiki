@@ -9,6 +9,9 @@ on:
   push:
     branches: [ master ]
 
+env:
+  PRINCE_VER: 15.1
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -27,9 +30,9 @@ jobs:
 
       - name: Install PrinceXML
         run: |
-          curl https://www.princexml.com/download/prince-15.1-linux-generic-x86_64.tar.gz -O
-          tar zxf prince-15.1-linux-generic-x86_64.tar.gz
-          cd prince-15.1-linux-generic-x86_64
+          curl https://www.princexml.com/download/prince-${{ env.PRINCE_VER }}-linux-generic-x86_64.tar.gz -O
+          tar zxf prince-${{ env.PRINCE_VER }}-linux-generic-x86_64.tar.gz
+          cd prince-${{ env.PRINCE_VER }}-linux-generic-x86_64
           yes "" | sudo ./install.sh
 
       - name: Install Node.js dependencies
