@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Which FOME hardware to pick
 
 Currently there are a few sweet options for hardware, all have the same brain, but with different baseboards.
