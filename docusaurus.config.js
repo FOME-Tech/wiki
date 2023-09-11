@@ -27,8 +27,12 @@ const config = {
   tagline: 'Free Open Motorsports ECU',
   url,
   baseUrl: '/',
+
+  // strict URL validation
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
+  onDuplicateRoutes: 'throw',
+
   noIndex: false, // adds <meta name="robots" content="noindex, nofollow"> to every page
   favicon: 'img/icons/favicon.ico',
   trailingSlash: true, // adds trailing slash to all links since we are using Cloudflare Pages
