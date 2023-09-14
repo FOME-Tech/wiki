@@ -8,7 +8,7 @@
     "build": "docusaurus build",
     "lint": "npm run lint:ts && npm run lint:links && npm run lint:md",
     "lint:ts": "tsc",
-    "lint:links": "node scripts/linkValidator.js",
+    "lint:links": "node scripts/linkValidator.js 'docs/**/*.md?(x)'",
     "lint:md": "npx markdownlint-cli docs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
