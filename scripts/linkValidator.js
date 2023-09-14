@@ -39,7 +39,7 @@ const validateDocRules = (files) => {
   // * Check whether links are not using a "numbered prefix" like "(/01-blah)"
   const regexPatternStatNumPrefix = new RegExp(/\(.*\/\d\d\-.*\)/, 'i');
   // * Check whether links are not markdown links, meaning ending with .md or .mdx like "(/01-blah.md)"
-  const regexPatternStatMdLink = new RegExp(/\(.*\.(md|mdx)\)$/, 'i');
+  const regexPatternStatMdLink = new RegExp(/\(.*\.(md|mdx)\)/, 'i');
 
   files.forEach((fileName) => {
     const lines = fs.readFileSync(fileName, 'utf8').split('\n');
@@ -92,11 +92,11 @@ const main = () => {
   else {
     /* ToDo: correct error messages */
     console.log('❌ Failed\n')
-    console.log(`Errors.length: ${errors.length}`)
-    console.log(red(`Absolute URLs to "${wikiUrl}" found in the following files:\n`))
+    console.log(`Number of Errors found: ${errors.length}`)
+    //console.log(red(`Absolute URLs to "${wikiUrl}" found in the following files:\n`))
     errors.forEach((error) => {
       console.log(
-        `[${error.fileName}:${error.lineNo}] ${error.lineContent.trim()}`
+        `[${error.fileName}][Line:${error.lineNo}][ErrType:${error.ErrType}]"${error.lineContent.trim()}"`
       );
     });
   
