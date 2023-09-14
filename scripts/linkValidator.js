@@ -1,3 +1,12 @@
+/*
+* usage:
+* note: Windows path separator used below! (to avoid error with parsing of this comment block)
+* " node .\scripts\linkValidator.js 'docs\**\*.md?(x)' "
+*
+* for testing:
+* "node linkValidator.js .\linkValidator.test.md"
+*/
+
 const fs = require('fs');
 const glob = require('glob');
 
@@ -12,18 +21,16 @@ const validateDocRules = (files) => {
    * Check whether links are adhering to custom rules
    * @param {Array<string>} files - List of file names to check
   */
-  
-  fileIndicator =""
+  // ToDo: 0 files have to trigger error! currently incorrect msg below:
+  //  Validating rules for URL links in:  undefined
+  //  ✅ Ok
+  fileMatchIndicator = ""
   if (files.length > 1){
-      fileIndicator = `${files.length} + " files"`
+      fileMatchIndicator = `${files.length} files`
   } else {
-      //fileIndicator = `${files.fileName[0]}`
-      //fileIndicator = `${files.fileName['0']}`
-      //fileIndicator = files.fileName['0']
-      //fileIndicator = files.fileName[0]
-      fileIndicator = "todo: get fileName"
+      fileMatchIndicator = files[0]
   }
-  console.log(`Validating rules for URL links in:  ${fileIndicator}`);
+  console.log(`Validating rules for URL links in:  ${fileMatchIndicator}`);
  
   // * Check whether links are not staring with "https://wiki.fome.tech"
   // Note: dynamic javascript string interpolation is used here (see https://www.crstin.com/js-regex-interpolation/)
@@ -75,7 +82,6 @@ const main = () => {
   // ToDo: validate passed arg
   const args = process.argv.slice(2);
   const files = glob.sync(args[0]);
-  //new files() = glob.sync(args[0]); //SyntaxError: Invalid left-hand side in assignment
 
   // process
   validateDocRules(files);
