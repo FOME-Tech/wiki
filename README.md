@@ -30,6 +30,8 @@ Docusaurus guides: [https://docusaurus.io/docs/category/guides](https://docusaur
 
 ```bash
 npm run lint
+
+npm run lint:fix
 ```
 
 ### Build

@@ -13,11 +13,8 @@ const pdfName = 'wiki.fome.pdf';
 const pdfChecksum = () => {
   const data = fs.readFileSync(`static/pdf/${pdfName}`, 'utf8');
 
-  return crypto
-    .createHash('md5')
-    .update(data, 'utf8')
-    .digest('hex');
-}
+  return crypto.createHash('md5').update(data, 'utf8').digest('hex');
+};
 
 const pdfUrl = `${isBuild ? url : 'http://localhost:3000'}/pdf/${pdfName}?v=${pdfChecksum()}`;
 
@@ -60,12 +57,9 @@ const config = {
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: require.resolve('./sidebars.js'),
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/FOME-Tech/wiki/tree/master',
+          editUrl: 'https://github.com/FOME-Tech/wiki/tree/master',
           remarkPlugins: [require('remark-math')],
-          rehypePlugins: [
-            [require('rehype-katex'), { output: 'mathml' }]
-          ],
+          rehypePlugins: [[require('rehype-katex'), { output: 'mathml' }]],
         },
         blog: false,
         theme: {
@@ -79,8 +73,7 @@ const config = {
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
       type: 'text/css',
-      integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      integrity: 'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
       crossorigin: 'anonymous',
     },
   ],
@@ -157,7 +150,7 @@ const config = {
           style: {
             height: 30,
             marginTop: -2,
-          }
+          },
         },
         items: [
           {

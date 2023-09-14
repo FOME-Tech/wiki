@@ -34,14 +34,12 @@ const validateAbsoluteUrls = (files) => {
     console.log('❌ Failed\n');
     console.log(red(`Absolute URLs to "${wikiUrl}" found in the following files:\n`));
     errors.forEach((error) => {
-      console.log(
-        `[${error.fileName}:${error.lineNo}] ${error.lineContent.trim()}`
-      );
+      console.log(`[${error.fileName}:${error.lineNo}] ${error.lineContent.trim()}`);
     });
 
     process.exit(1);
   }
-}
+};
 
 /**
  * Load all md and mdx files from / docs and process them
@@ -54,6 +52,6 @@ const main = () => {
   // validateRelativeUrls(files);
 
   console.log('✅ Ok');
-}
+};
 
 main();
