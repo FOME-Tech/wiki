@@ -21,10 +21,10 @@ const validateDocRules = (files) => {
    * Check whether links are adhering to custom rules
    * @param {Array<string>} files - List of file names to check
   */
-  // ToDo: 0 files have to trigger error! currently incorrect msg below:
-  //  Validating rules for URL links in:  undefined
-  //  ✅ Ok
   fileMatchIndicator = ""
+  if (files.length == 0){
+   throw new Error("UsageError: no files qualify!")
+  }
   if (files.length > 1){
       fileMatchIndicator = `${files.length} files`
   } else {
@@ -78,8 +78,7 @@ const validateDocRules = (files) => {
  * Load all md and mdx files from / docs and process them
 */
 const main = () => {
-  // ToDo: change in package.json "lint:links": "node scripts/linkValidator.js 'docs/**/*.md?(x)'",
-  // ToDo: validate passed arg
+  // ToDo: add try + catch?
   const args = process.argv.slice(2);
   const files = glob.sync(args[0]);
 
@@ -90,10 +89,8 @@ const main = () => {
     console.log('✅ Ok');
   }
   else {
-    /* ToDo: correct error messages */
     console.log('❌ Failed\n')
-    console.log(`Number of Errors found: ${errors.length}`)
-    //console.log(red(`Absolute URLs to "${wikiUrl}" found in the following files:\n`))
+    console.log(red(`Number of Errors found: ${errors.length}`))
     errors.forEach((error) => {
       console.log(
         `[${error.fileName}][Line:${error.lineNo}][ErrType:${error.ErrType}]"${error.lineContent.trim()}"`
