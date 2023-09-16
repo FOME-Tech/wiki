@@ -71,8 +71,7 @@ const validateDocRules = (files) => {
       }
     });
   });
-
-}
+};
 
 /**
  * Load all md and mdx files from / docs and process them
@@ -99,6 +98,6 @@ const main = () => {
   
     process.exit(1);
   }
-}
+};
 
 main();
