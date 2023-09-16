@@ -20,7 +20,8 @@
 			// NOTE: keep this in sync with: .vscode/extensions.json
 			"extensions": [
 				"davidanson.vscode-markdownlint",
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker",
+				"biomejs.biome"
 			]
 		}
 	},

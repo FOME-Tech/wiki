@@ -1,8 +1,17 @@
 {
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.formatOnSave": true,
   "cSpell.words": [
     "Airmass",
     "autotune",
     "autotuner",
+    "biomejs",
     "bootloader",
     "CANBUS",
     "Colour",
@@ -11,6 +20,7 @@
     "Deadtime",
     "deadzone",
     "debugmode",
+    "devcontainer",
     "devcontainers",
     "DFCO",
     "dyno",

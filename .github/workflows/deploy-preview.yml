@@ -40,7 +40,6 @@ jobs:
             const fs = require('fs');
             fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
       - run: unzip build.zip -d build
-
       - name: Deploy preview to Cloudflare Pages
         id: deploy
         uses: cloudflare/pages-action@v1
@@ -50,9 +49,9 @@ jobs:
           projectName: wiki
           directory: build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }} # GitHub Deployments
-          wranglerVersion: '3'
+          wranglerVersion: "3"
 
-      - name: 'Comment on PR'
+      - name: "Comment on PR"
         uses: actions/github-script@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

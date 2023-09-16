@@ -71,6 +71,16 @@ const validateDocRules = (files) => {
       }
     });
   });
+
+  if (errors.length > 0) {
+    console.log('❌ Failed\n');
+    console.log(red(`Absolute URLs to "${wikiUrl}" found in the following files:\n`));
+    errors.forEach((error) => {
+      console.log(`[${error.fileName}:${error.lineNo}] ${error.lineContent.trim()}`);
+    });
+
+    process.exit(1);
+  }
 };
 
 /**

@@ -6,7 +6,10 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start --host 0.0.0.0",
     "build": "docusaurus build",
-    "lint": "npm run lint:ts && npm run lint:links && npm run lint:md",
+    "lint": "npm run lint:biome && npm run lint:ts && npm run lint:links && npm run lint:md",
+    "lint:biome": "biome check .",
+    "lint:fix": "biome format --write . && biome check --apply .",
+    "lint:fix:unsafe": "biome check . --apply-unsafe .",
     "lint:ts": "tsc",
     "lint:links": "node scripts/linkValidator.js 'docs/**/*.md?(x)'",
     "lint:md": "npx markdownlint-cli docs",
@@ -32,6 +35,7 @@
     "remark-math": "^3.0.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.1.2",
     "@docusaurus/module-type-aliases": "^2.4.1",
     "@tsconfig/docusaurus": "^2.0.0",
     "docusaurus-prince-pdf": "^1.2.1",
