@@ -91,9 +91,7 @@ const main = () => {
     console.log('❌ Failed\n')
     console.log(red(`Number of Errors found: ${errors.length}`))
     errors.forEach((error) => {
-      console.log(
-        `[${error.fileName}][Line:${error.lineNo}][ErrType:${error.ErrType}]"${error.lineContent.trim()}"`
-      );
+      console.log(`[${error.fileName}][Line:${error.lineNo}][ErrType:${error.ErrType}]"${error.lineContent.trim()}"`);
     });
   
     process.exit(1);
