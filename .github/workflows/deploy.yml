@@ -7,7 +7,10 @@ concurrency:
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
+
+env:
+  PRINCE_VER: 15.1
 
 jobs:
   deploy:
@@ -19,17 +22,17 @@ jobs:
       deployments: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
-          cache: 'npm'
+          node-version-file: ".nvmrc"
+          cache: "npm"
 
       - name: Install PrinceXML
         run: |
-          curl https://www.princexml.com/download/prince-15.1-linux-generic-x86_64.tar.gz -O
-          tar zxf prince-15.1-linux-generic-x86_64.tar.gz
-          cd prince-15.1-linux-generic-x86_64
+          curl https://www.princexml.com/download/prince-${{ env.PRINCE_VER }}-linux-generic-x86_64.tar.gz -O
+          tar zxf prince-${{ env.PRINCE_VER }}-linux-generic-x86_64.tar.gz
+          cd prince-${{ env.PRINCE_VER }}-linux-generic-x86_64
           yes "" | sudo ./install.sh
 
       - name: Install Node.js dependencies
@@ -62,4 +65,4 @@ jobs:
           directory: build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }} # GitHub Deployments
           branch: master
-          wranglerVersion: '3'
+          wranglerVersion: "3"
