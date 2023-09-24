@@ -12,7 +12,7 @@
     "lint:fix:unsafe": "biome check . --apply-unsafe .",
     "lint:ts": "tsc",
     "lint:links": "node scripts/linkValidator.js 'docs/**/*.md?(x)'",
-    "lint:md": "npx markdownlint-cli docs",
+    "lint:md": "npx -y markdownlint-cli docs",
     "lint:biome": "biome check .",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
