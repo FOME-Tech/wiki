@@ -1,4 +1,4 @@
-# LUA scripting
+# LUA Scripting
 
 For a basic introductions see [this wiki section](https://wiki.rusefi.com/Lua-Scripting/)
 
