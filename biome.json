@@ -20,8 +20,7 @@
         "noConsoleLog": "off"
       },
       "nursery": {
-        "all": true,
-        "useExhaustiveDependencies": "off"
+        "all": true
       },
       "complexity": {
         "all": true,
@@ -33,7 +32,7 @@
     "enabled": true,
     "indentStyle": "space",
     "lineWidth": 100,
-    "indentSize": 2
+    "indentWidth": 2
   },
   "javascript": {
     "formatter": {
