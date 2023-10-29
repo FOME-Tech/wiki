@@ -16,23 +16,19 @@ const red = (text) => `\x1b[31m${text}\x1b[0m`;
 const errors = [];
 const wikiUrl = 'wiki.fome.tech';
 
+/**
+ * Check whether links are adhering to custom rules
+ * @param {Array<string>} files - List of file names to check
+ */
 const validateDocRules = (files) => {
-  /**
-   * Check whether links are adhering to custom rules
-   * @param {Array<string>} files - List of file names to check
-   */
-
-  let fileMatchIndicator = '';
   if (files.length === 0) {
     console.log('UsageError: no files qualify!');
     process.exit(1);
   }
-  if (files.length > 1) {
-    fileMatchIndicator = `${files.length} files`;
-  } else {
-    fileMatchIndicator = files[0];
-  }
-  console.log(`Validating rules for URL links in:  ${fileMatchIndicator}`);
+
+  const fileMatchIndicator = files.length > 1 ? `${files.length} files` : files[0];
+
+  console.log(`Validating rules for URL links in: ${fileMatchIndicator}`);
 
   // * Check whether links are not staring with "https://wiki.fome.tech"
   // Note: dynamic javascript string interpolation is used here (see https://www.crstin.com/js-regex-interpolation/)
@@ -79,7 +75,7 @@ const validateDocRules = (files) => {
  * Load all md and mdx files from / docs and process them
  */
 const main = () => {
-  // ToDo: add try + catch?
+  // TODO: add try + catch?
   const args = process.argv.slice(2);
   const files = glob.sync(args[0]);
 
@@ -88,20 +84,20 @@ const main = () => {
 
   if (errors.length === 0) {
     console.log('✅ Ok');
-  } else {
-    console.log('❌ Failed\n');
-    console.log(red(`Number of Errors found: ${errors.length}`));
-    errors.forEach((error) => {
-      console.log(
-        `[${error.fileName}]` +
-          `[Line:${error.lineNo}]` +
-          `[errType:${error.errType}]` +
-          `"${error.lineContent.trim()}"`,
-      );
-    });
-
-    process.exit(2);
+    process.exit(0);
   }
+
+  console.log('❌ Failed\n');
+  console.log(red(`Number of Errors found: ${errors.length}`));
+  errors.forEach((error) => {
+    console.log(
+      `[${error.fileName}][Line:${error.lineNo}][Type:${
+        error.errType
+      }]" ${error.lineContent.trim()}"`,
+    );
+  });
+
+  process.exit(2);
 };
 
 // main
