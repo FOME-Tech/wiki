@@ -1,10 +1,12 @@
-// Note: type annotations allow type checking and IDEs autocompletion
+import type { Options, ThemeConfig } from '@docusaurus/preset-classic';
+import type { Config } from '@docusaurus/types';
+import { themes } from 'prism-react-renderer';
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import crypto from 'crypto';
+import fs from 'fs';
 
-const fs = require('fs');
-const crypto = require('crypto');
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 const url = 'https://wiki.fome.tech';
 const isBuild = process.env.NODE_ENV === 'production';
@@ -18,8 +20,7 @@ const pdfChecksum = () => {
 
 const pdfUrl = `${isBuild ? url : 'http://localhost:3000'}/pdf/${pdfName}?v=${pdfChecksum()}`;
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: 'FOME Wiki',
   tagline: 'Free Open Motorsports ECU',
   url,
@@ -51,11 +52,10 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           routeBasePath: '/', // Serve the docs at the site's root
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.ts'),
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/FOME-Tech/wiki/tree/master',
           remarkPlugins: [require('remark-math')],
@@ -65,7 +65,7 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      } satisfies Options,
     ],
   ],
 
@@ -81,12 +81,11 @@ const config = {
   themes: [
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
-      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
-      ({
+      {
         hashed: true, // `hashed` is recommended as long-term-cache of index file is possible.
         indexBlog: false,
         docsRouteBasePath: '/',
-      }),
+      },
     ],
   ],
 
@@ -134,84 +133,82 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      image: 'img/icons/android-chrome-512x512.png',
-      colorMode: {
-        defaultMode: 'dark',
-        respectPrefersColorScheme: true,
-      },
-      navbar: {
-        title: '',
-        logo: {
-          alt: 'FOME Logo',
-          src: 'img/logo-transparent.png',
-          style: {
-            height: 30,
-            marginTop: -2,
-          },
+  themeConfig: {
+    image: 'img/icons/android-chrome-512x512.png',
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
+    },
+    navbar: {
+      title: '',
+      logo: {
+        alt: 'FOME Logo',
+        src: 'img/logo-transparent.png',
+        style: {
+          height: 30,
+          marginTop: -2,
         },
-        items: [
-          {
-            href: pdfUrl,
-            label: 'PDF',
-            position: 'right',
-            target: '_blank',
-          },
-          {
-            href: 'https://github.com/FOME-Tech/wiki',
-            label: 'GitHub',
-            position: 'right',
-          },
-          {
-            type: 'search',
-            position: 'right',
-          },
-        ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/5FQj4DMz',
-              },
-              {
-                label: 'Facebook',
-                href: 'https://www.facebook.com/profile.php?id=100088049271157',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                to: pdfUrl,
-                label: 'PDF version',
-                target: '_blank',
-              },
-              {
-                label: 'FOME.tech',
-                href: 'https://www.fome.tech',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/FOME-Tech',
-              },
-            ],
-          },
-        ],
-        // copyright: `Copyright © ${new Date().getFullYear()} FOME`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+      items: [
+        {
+          href: pdfUrl,
+          label: 'PDF',
+          position: 'right',
+          target: '_blank',
+        },
+        {
+          href: 'https://github.com/FOME-Tech/wiki',
+          label: 'GitHub',
+          position: 'right',
+        },
+        {
+          type: 'search',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/5FQj4DMz',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com/profile.php?id=100088049271157',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              to: pdfUrl,
+              label: 'PDF version',
+              target: '_blank',
+            },
+            {
+              label: 'FOME.tech',
+              href: 'https://www.fome.tech',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/FOME-Tech',
+            },
+          ],
+        },
+      ],
+      // copyright: `Copyright © ${new Date().getFullYear()} FOME`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
+  } satisfies ThemeConfig,
 };
 
 module.exports = config;

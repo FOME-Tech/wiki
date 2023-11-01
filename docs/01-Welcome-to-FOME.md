@@ -131,7 +131,7 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 ### Advanced Features
 
-- [CAN settings](Advanced-Features/CAN-Settings)
+- [CAN settings](Advanced-Features/CAN)
 - [Cylinder Angle Offset](Advanced-Features/Cylinder-Angle-Offset)
 - [Knock control](Advanced-Features/Knock-Control)
 - [Launch Control](Advanced-Features/Launch-Control)

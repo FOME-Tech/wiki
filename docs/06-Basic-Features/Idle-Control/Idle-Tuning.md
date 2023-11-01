@@ -22,7 +22,7 @@ Within the idle settings, the first set of parameters to configure are the idle 
 
 ### Idle Air Control Valve Offsets
 
-Load can vary during idle and AC is the most significant factor that can significantly impact the engine load at idle. For engines equipped with an automatic transmission, the load in park/neutral is significantly different from that in drive. It is usually necessary to add IAC duty cycle/air to compensate for the torque required to spin the AC compressor. Again, it is crucial to ensure that AFRs don't swing excessively when moving between different idle operational areas. In the idle settings, start with about 10-15% for the _A/C adder (%)_ parameter. As the AC increases the alternator load, the engine torque also needs to increase when the AC is enabled so it is recommended to do this by increasing the engine RPM by 100-200 with the _A/C target adder (RPM)_. The cooling fans also have associated adders (_Fan #x adder(%)_) although these don't usually need to be increased unless you notice a significant drop in RPM when the fans come on.
+Load can vary during idle and AC is the most significant factor that can significantly impact the engine load at idle. For engines equipped with an automatic transmission, the load in park/neutral is significantly different from that in drive. It is usually necessary to add IAC duty cycle/air to compensate for the torque required to spin the AC compressor. Again, it is crucial to ensure that AFRs don't swing excessively when moving between different idle operational areas. In the idle settings, start with about 10-15% for the _AC adder (%)_ parameter. As the AC increases the alternator load, the engine torque also needs to increase when the AC is enabled so it is recommended to do this by increasing the engine RPM by 100-200 with the _AC target adder (RPM)_. The cooling fans also have associated adders (_Fan #x adder(%)_) although these don't usually need to be increased unless you notice a significant drop in RPM when the fans come on.
 
 ## Open Loop Idle
 
@@ -46,7 +46,7 @@ The first step of tuning the idle RPM is to set up the open loop idle airflow. S
 
   Closed loop idle control uses a combination of closed loop timing adjustments and idle air control valve adjustments to achieve a stable idle. Achieving a stable idle can be difficult as it requires tuning two separate controllers which operate in parallel to control the engine RPM. The best way to achieve a good idle is to use the closed loop idle timing for the larger and quicker corrections with the idle air controller acting to compensate for slower changes.
 
-  Before tuning the closed loop idle, you need to have properly tuned the idle VE, idle ignition table and open loop idle control. To tune the closed loop controllers, you also need some understanding of a closed loop controller called a PID controller. [This video by RC Model Reviews] (<https://youtu.be/0vqWyramGy8>) perfectly explains PID controllers in basic terms.
+  Before tuning the closed loop idle, you need to have properly tuned the idle VE, idle ignition table and open loop idle control. To tune the closed loop controllers, you also need some understanding of a closed loop controller called a PID controller. [This video by RC Model Reviews](https://youtu.be/0vqWyramGy8) perfectly explains PID controllers in basic terms.
 
 ### Closed Loop Timing
 
