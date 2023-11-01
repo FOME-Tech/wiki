@@ -2,9 +2,9 @@
 
 Here, you can find assets related to our project's branding, trademarks, and marketing materials. While our project is open source and inclusive, we encourage users to respect our brand identity.
 
-## Trademark Usage Agreement
+<!-- ## Trademark Usage Agreement -->
 
-TODO
+<!-- TODO -->
 
 ## Assets
 
