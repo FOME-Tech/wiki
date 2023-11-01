@@ -56,7 +56,7 @@ const DbcViewer: React.FC = () => {
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Signed</th>
+                  <th>Type</th>
                   <th>Format</th>
                   <th>Start</th>
                   <th>Length</th>
@@ -72,7 +72,7 @@ const DbcViewer: React.FC = () => {
                 {Array.from(message.signals.values()).map((signal) => (
                   <tr key={`${signal.name}-${signal.startBit}`}>
                     <td>{signal.name}</td>
-                    <td>{signal.signed ? 'Yes' : 'No'}</td>
+                    <td>{signal.dataType}</td>
                     <td>{signal.endian}</td>
                     <td>{signal.startBit}</td>
                     <td>{signal.length}</td>
