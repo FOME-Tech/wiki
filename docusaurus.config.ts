@@ -149,6 +149,7 @@ const config: Config = {
           marginTop: -2,
         },
       },
+      hideOnScroll: true,
       items: [
         {
           href: pdfUrl,
