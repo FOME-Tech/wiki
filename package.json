@@ -28,6 +28,7 @@
     "@docusaurus/preset-classic": "^3.0.0",
     "@easyops-cn/docusaurus-search-local": "^0.36.0",
     "@mdx-js/react": "^3.0.0",
+    "candied": "^2.2.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
@@ -43,6 +44,7 @@
     "@tsconfig/docusaurus": "^2.0.2",
     "@types/node": "^20.8.10",
     "docusaurus-prince-pdf": "^1.2.1",
+    "raw-loader": "^4.0.2",
     "typescript": "^5.2.2"
   },
   "browserslist": {

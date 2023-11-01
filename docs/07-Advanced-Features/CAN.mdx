@@ -1,3 +1,5 @@
+import DbcViewer from '@site/src/components/DbcViewer';
+
 # CAN
 
 ## What is CANBUS?
@@ -5,4 +7,24 @@
 CANBUS is a communication protocol that allows devices to talk to each other.
 
 It is used in many modern cars, and is a great way to get data from the car to the ECU. It is also a great way to get data from the ECU to other devices, such as a dash, or a data logger.
+
+## DBC
+
+A DBC (Database Container) file is a standard file format used in the context of Controller Area Network (CAN) networks. It contains information about messages and signals that can be transmitted over a CAN network.
+
+In a DBC file:
+
+- Messages represent specific packets of data sent over the CAN network, each identified by a unique ID.
+
+- Signals are individual pieces of data within messages, specifying the data's name, start bit, length, endianess, and other attributes. Signals can represent information such as vehicle speed, engine RPM, or sensor readings.
+
+## FOME's DBC file
+
+:::info SOURCE
+
+[FOME-Tech/fome-fw/blob/master/firmware/controllers/can/rusEFI_CAN_verbose.dbc](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/can/rusEFI_CAN_verbose.dbc)
+
+:::
+
+<DbcViewer />
 
