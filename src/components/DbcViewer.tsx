@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
 import { Dbc } from 'candied';
 import { DbcData } from 'candied/lib/dbc/Dbc';
 import { dbcReader } from 'candied/lib/filesystem/DbcWebFs';
+import { useEffect, useState } from 'react';
 
 import fomeDbcFileRaw from '!!raw-loader!../data/FOME_CAN_verbose.dbc';
 
