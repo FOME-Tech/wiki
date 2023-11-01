@@ -1,14 +1,13 @@
+import { useEffect, useState } from 'react';
 import { Dbc } from 'candied';
 import { DbcData } from 'candied/lib/dbc/Dbc';
 import { dbcReader } from 'candied/lib/filesystem/DbcWebFs';
-import React, { useEffect } from 'react';
 
 import fomeDbcFileRaw from '!!raw-loader!../data/FOME_CAN_verbose.dbc';
 
-const DbcViewer: React.FC = () => {
-  const [dbcData, setDbcData] = React.useState<DbcData>(null);
+const DbcViewer = () => {
+  const [dbcData, setDbcData] = useState<DbcData>(null);
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     const dbc = new Dbc();
 
@@ -28,8 +27,7 @@ const DbcViewer: React.FC = () => {
         .sort((a, b) => Number(a.id) - Number(b.id))
         .map((message) => (
           <div key={message.id}>
-            <h3 id={message.name}>{message.name}</h3>
-
+            <h3 id={`#${message.name}`}>Message {message.name}</h3>
             <table>
               <thead>
                 <tr>
@@ -51,7 +49,7 @@ const DbcViewer: React.FC = () => {
               </tbody>
             </table>
 
-            <h3>Signals</h3>
+            <h4>Signals</h4>
             <table>
               <thead>
                 <tr>
