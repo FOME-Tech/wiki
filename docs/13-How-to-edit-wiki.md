@@ -47,7 +47,7 @@ Save your work and proceed to testing of change.
 
 ### Prerequisites for local test
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
+- [Node.js](https://nodejs.org/en/download/) version 18 or above:
   - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
 
 ### run Docusaurus locally
