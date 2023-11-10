@@ -7,6 +7,7 @@
 ## Simplest approach to make a small change
 
 - go to end of page and click on "Edit this page" link
+- follow GitHub's instructions for ["Editing files in another user's repository".](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files#editing-files-in-another-users-repository)
 
 ## Best way to edit or add a larger number of pages
 
