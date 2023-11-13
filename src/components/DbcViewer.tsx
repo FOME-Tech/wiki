@@ -18,7 +18,7 @@ const DbcViewer = () => {
   }, []);
 
   if (!dbcData) {
-    return <span>Loading</span>;
+    return <span>Loading...</span>;
   }
 
   return (
@@ -41,7 +41,9 @@ const DbcViewer = () => {
               <tbody>
                 <tr>
                   <td>{message.name}</td>
-                  <td>{message.id}</td>
+                  <td>
+                    {message.id} ({`0x${message.id.toString(16)}`})
+                  </td>
                   <td>{message.dlc}</td>
                   <td>{message.sendingNode}</td>
                   <td>{message.description}</td>
