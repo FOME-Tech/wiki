@@ -10,7 +10,8 @@
       "node_modules",
       ".docusaurus",
       "build",
-      "pdf"
+      "pdf",
+      "biome.json"
     ]
   },
   "linter": {
