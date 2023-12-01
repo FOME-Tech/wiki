@@ -4,7 +4,14 @@
     "enabled": true
   },
   "files": {
-    "ignore": [".devcontainer", ".vscode", "node_modules", ".docusaurus", "build", "pdf"]
+    "ignore": [
+      ".devcontainer",
+      ".vscode",
+      "node_modules",
+      ".docusaurus",
+      "build",
+      "pdf"
+    ]
   },
   "linter": {
     "enabled": true,
@@ -20,7 +27,8 @@
         "noConsoleLog": "off"
       },
       "nursery": {
-        "all": true
+        "all": true,
+        "noDefaultExport": "off"
       },
       "complexity": {
         "all": true,
