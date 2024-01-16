@@ -1,5 +1,5 @@
 import { Dbc } from 'candied';
-import { DbcData } from 'candied/lib/dbc/Dbc';
+import type { DbcData } from 'candied/lib/dbc/Dbc';
 import { dbcReader } from 'candied/lib/filesystem/DbcWebFs';
 import { useEffect, useState } from 'react';
 
@@ -34,7 +34,6 @@ const DbcViewer = () => {
                   <th>Name</th>
                   <th>CAN ID</th>
                   <th>DLC</th>
-                  <th>Sending Node</th>
                   <th>Description</th>
                 </tr>
               </thead>
@@ -45,7 +44,6 @@ const DbcViewer = () => {
                     {message.id} ({`0x${message.id.toString(16)}`})
                   </td>
                   <td>{message.dlc}</td>
-                  <td>{message.sendingNode}</td>
                   <td>{message.description}</td>
                 </tr>
               </tbody>
@@ -57,13 +55,11 @@ const DbcViewer = () => {
                 <tr>
                   <th>Name</th>
                   <th>Type</th>
-                  <th>Format</th>
                   <th>Start</th>
                   <th>Length</th>
                   <th>Factor</th>
                   <th>Offset</th>
-                  <th>Min</th>
-                  <th>Max</th>
+                  <th>Min/Max</th>
                   <th>Unit</th>
                   <th>Description</th>
                 </tr>
@@ -72,15 +68,18 @@ const DbcViewer = () => {
                 {Array.from(message.signals.values()).map((signal) => (
                   <tr key={`${signal.name}-${signal.startBit}`}>
                     <td>{signal.name}</td>
-                    <td>{signal.dataType}</td>
-                    <td>{signal.endian}</td>
+                    <td>
+                      {signal.dataType}
+                      <br />({signal.endian === 'Intel' ? 'LE' : 'BE'})
+                    </td>
                     <td>{signal.startBit}</td>
                     <td>{signal.length}</td>
                     <td>{signal.factor}</td>
                     <td>{signal.offset}</td>
-                    <td>{signal.min}</td>
-                    <td>{signal.max}</td>
-                    <td>{signal.unit}</td>
+                    <td>
+                      {signal.min}..{signal.max}
+                    </td>
+                    <td style={{ whiteSpace: 'nowrap' }}>{signal.unit}</td>
                     <td>{signal.description}</td>
                   </tr>
                 ))}

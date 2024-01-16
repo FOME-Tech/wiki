@@ -23,9 +23,9 @@
     "pdf": "docusaurus-prince-pdf -u http://localhost:3000 -o static/pdf/wiki.fome.pdf"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.0.1",
-    "@docusaurus/plugin-client-redirects": "^3.0.1",
-    "@docusaurus/preset-classic": "^3.0.1",
+    "@docusaurus/core": "^3.1.0",
+    "@docusaurus/plugin-client-redirects": "^3.1.0",
+    "@docusaurus/preset-classic": "^3.1.0",
     "@easyops-cn/docusaurus-search-local": "^0.40.1",
     "@mdx-js/react": "^3.0.0",
     "candied": "^2.2.0",
@@ -37,12 +37,12 @@
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.4.1",
-    "@docusaurus/module-type-aliases": "^3.0.1",
-    "@docusaurus/tsconfig": "^3.0.1",
-    "@docusaurus/types": "^3.0.1",
+    "@biomejs/biome": "1.5.2",
+    "@docusaurus/module-type-aliases": "^3.1.0",
+    "@docusaurus/tsconfig": "^3.1.0",
+    "@docusaurus/types": "^3.1.0",
     "@tsconfig/docusaurus": "^2.0.2",
-    "@types/node": "^20.10.6",
+    "@types/node": "^20.11.4",
     "docusaurus-prince-pdf": "^1.2.1",
     "raw-loader": "^4.0.2",
     "typescript": "^5.3.3"
