@@ -60,7 +60,7 @@ jobs:
           comment-author: "github-actions[bot]"
           body-includes: "Preview URL:"
       - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         with:
           comment-id: ${{ steps.find_comment.outputs.comment-id }}
           issue-number: ${{ steps.find_pr_number.outputs.pr_number }}
