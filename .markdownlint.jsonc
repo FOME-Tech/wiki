@@ -2,5 +2,6 @@
   "default": true,
   "line-length": false,
   "no-trailing-spaces": false,
-  "single-trailing-newline": false
+  "single-trailing-newline": false,
+  "table-pipe-style": false
 }
