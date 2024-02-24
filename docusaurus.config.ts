@@ -208,6 +208,7 @@ const config: Config = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
+      additionalLanguages: ['lua'],
     },
   } satisfies ThemeConfig,
 };
