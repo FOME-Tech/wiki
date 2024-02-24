@@ -122,7 +122,7 @@ const config: Config = {
           },
           {
             from: '/r/lua',
-            to: '/Advanced-Features/LUA-Scripting/',
+            to: '/Advanced-Features/Lua-Scripting/',
           },
           {
             from: '/r/vr',
