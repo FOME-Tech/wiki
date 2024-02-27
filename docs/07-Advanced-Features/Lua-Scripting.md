@@ -842,3 +842,9 @@ Retrieves the values of the last valid message of the specified SENT channel.
 #### `getCurrentGear`
 
 #### `getRpmInGear`
+
+----
+
+*testing by nmschulte*
+- test
+- test
