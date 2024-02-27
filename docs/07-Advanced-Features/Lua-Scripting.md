@@ -1,3 +1,7 @@
+---
+description: Use Lua to extend and customize firmware behavior
+---
+
 # Lua Scripting
 
 ## Introduction
