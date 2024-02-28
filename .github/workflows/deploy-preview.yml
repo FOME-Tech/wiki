@@ -47,6 +47,7 @@ jobs:
           projectName: wiki
           directory: build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }} # GitHub Deployments
+          branch: ${{ github.event.workflow_run.head_branch }}
           wranglerVersion: "3"
       - name: Find PR number
         id: find_pr_number
