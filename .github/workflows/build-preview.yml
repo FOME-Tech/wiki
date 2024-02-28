@@ -33,7 +33,7 @@ jobs:
           echo ${{ github.event.number }} > ./build/PR_NR
 
       - name: Upload preview build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: github.actor != 'dependabot[bot]'
         with:
           name: build
