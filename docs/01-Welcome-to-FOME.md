@@ -135,7 +135,7 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Cylinder Angle Offset](Advanced-Features/Cylinder-Angle-Offset)
 - [Knock control](Advanced-Features/Knock-Control)
 - [Launch Control](Advanced-Features/Launch-Control)
-- [LUA Scripting](Advanced-Features/LUA-Scripting)
+- [Lua Scripting](Advanced-Features/Lua-Scripting)
 - [MAP sampling angle](Advanced-Features/MAP-Sampling-Angle)
 - [Multi-Dimensional Mapping](Advanced-Features/Multi-Dimensional-Mapping)
 - [Override Table Axis](Advanced-Features/Override-Table-Axis)
