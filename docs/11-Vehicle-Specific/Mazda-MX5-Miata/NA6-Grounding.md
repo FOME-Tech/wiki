@@ -8,6 +8,12 @@ Grounding sensors directly to the ECU rather than the chassis provides numerous 
 
 There is a stud coming off the intake manifold below the fuel rail, holding a P clamp for the wire harness with a connector to the Cam Angle Sensor. This is where a pair of grounds meet on a round ring terminal: one being a chassis ground (black), the other being an ECU ground (black and green). The black and green wire must be cut from this ring terminal and isolated. The location of this wire is shown in the images below:
 
+![image](<NA6 ECU Gnding/Picture1.png>)
+
+![image](<NA6 ECU Gnding/Picture2.png>)
+
+![image](<NA6 ECU Gnding/Picture3.png>)
+
 Note: If your car's ground is different due to modifications, follow the harness from the passenger side firewall to the cam angle sensor, and the pair of grounds may have been relocated to another location. See the NA6 wiring diagram at the end of this guide for further information.
 
 ## Benefits
@@ -23,3 +29,7 @@ Maintaining Factory ECU Grounding: Factory ECU ground connections to the chassis
 ## NA6 Wiring
 
 If you are having difficulties tracing the correct wires to isolate, the wiring diagram below highlights the black and green ground wire and where it connects to on the car. By cutting the black and green wire from the engine block, you can see that the crank angle sensor is only wired to the ground on the ECU.
+
+![image](<NA6 ECU Gnding/Picture4.png>)
+
+![image](<NA6 ECU Gnding/Picture5.png>)

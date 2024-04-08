@@ -70,7 +70,7 @@ Using the MAP line combined with an intake air temperature (IAT) sensor, the BMM
 
 ## Additional Steps for NA6 Vehicles
 
-The NA6 1.6L vehicles which use an AFM instead of a MAF require a few additional modifications to run with a BMM ECU. A manual NA6 do not have a variable throttle position sensor (TPS) like the automatic NA6, later model NAs and all NBs. An NA6 also needs an external intake air temperature (IAT) sensor wired in as the AFM which has one inside is typically removed. They also require a jumper for the ECU to control the fuel pump which was previously the job of the air flow meter.
+The NA6 1.6L vehicles which use an AFM instead of a MAF require a few additional modifications to run with a BMM ECU. A manual NA6 do not have a variable throttle position sensor (TPS) like the automatic NA6, later model NAs and all NBs. An NA6 also needs an external intake air temperature (IAT) sensor wired in as the AFM which has one inside is typically removed. They also require a jumper for the ECU to control the fuel pump which was previously the job of the air flow meter. Additionally, it is recommended to ground the sensors to the ECU rather than the chassis as detailed in the [NA6 ECU Grounding Guide](docs\11-Vehicle-Specific\Mazda-MX5-Miata\NA6-Grounding.md). 
 
 The first step is to disconnect the factory TPS sensor. **This is very important or it will cause a short circuit later.**. The TPS sensor location is shown in the image below.
 
@@ -110,7 +110,7 @@ In the final dialog box, select the default gauge layout (you can change this la
 
 ### Additional Tuner Studio Steps for an External Wideband Controller
 
-To set up the external wideband controller there are several additional steps in Tuner Studio. First, your display units should be set to AFR for this as already stated. If you forgot to do this earlier, press _CTRL + P_ to open the vehicle properties. Now, open the _Aux Sensors_ dialog under _Sensors_ and the _Full Pinout 3/3_ dialog under _Controllers_. As per the diagram below, set the _AFR ADC Input_ and _ADC Input_ to the pin corresponding with _O2S_ (pin 2C for the example). for the values in the _Aux Linear Sensor #1_ box you need to reference the manual of your wideband controller for what voltages correspond to its AFR outputs. In the example below, 0V corresponds to an AFR of 10.0 and 4.99V corresponds to an AFR of 19.98. Once these are set, click _Burn_.
+To set up the external wideband controller there are several additional steps in Tuner Studio. First, your display units should be set to AFR for this as already stated. If you forgot to do this earlier, press _CTRL + P_ to open the vehicle properties. Now, open the _Aux Sensors_ dialog under _Sensors_ and the _Full Pinout 3/3_ dialog under _Controllers_. As per the diagram below, set the _AFR ADC Input_ and _ADC Input_ to the pin corresponding with _O2S_ (pin 2C for the example). for the values in the _Aux Linear Sensor #1_ box you need to reference the manual of your wideband controller for what voltages correspond to its AFR outputs. In the example below, 0V corresponds to an AFR of 10.0 and 4.99V corresponds to an AFR of 19.98. Once these are set, click _Burn_. If TS does not exactly correspond to the readings on your wideband, you can adjust with the correction value.
 
 ![image](Miata-MX5-Quick-Start-Images/extwideband.png)
 
