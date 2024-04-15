@@ -45,7 +45,7 @@
     "@types/node": "^20.11.20",
     "docusaurus-prince-pdf": "^1.2.1",
     "raw-loader": "^4.0.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.5"
   },
   "browserslist": {
     "production": [
