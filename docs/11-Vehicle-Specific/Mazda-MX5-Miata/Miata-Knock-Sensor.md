@@ -47,15 +47,15 @@ When knock occurs due to factors like advanced ignition timing or high cylinder 
 6. Adjust knock retard aggression to determine the level of response.
 7. Set up the Max Knock Retard table to define maximum allowable ignition timing retardation.
 
+__The following steps assumes your ECU is on the latest release of FOME__
+
 **1. Enable the knock sensor**, and calculate the estimated knock filter frequency (kHz). For now, configure the first setting “cylinder bore” as 0.00mm.
 
 - An adequate approximation formula for Knock Frequency is “Knock Frequency = 900,000/(π *0.5*cylinder bore diameter )”
 - Once the approximated knock frequency is calculated, use the second-order harmonics of the estimated frequency. The second-order frequency are multiples of the original calculated frequency. So twice the Knock Frequency. We do this to increase sensitivity, improve signal to noise ratio, and general “robustness” in frequency analysis.
-- For now, Set knock detection window start to 0.00
+- For now, Set knock detection window start to 0.00, This feature is for advanced users only.
 
   - <sub>This formula is derived from the relationship between the speed of sound, the bore diameter, and the frequency of knock waves. It assumes that the speed of sound is approximately constant and that the knock waves travel at a specific angle through the combustion chamber. As an example, the NA6’s estimated knock frequency is 7300 Hz or 7.3kHz & its 2nd order harmonic would be 14.60Khz.</sub>
-
-  - <sub>The __knockDetectionWindowStart__ parameter determines the angle within the engine cycle at which knock sensing begins. When this angle is increased, knock sensing starts later in the combustion process. This delay means that the engine has progressed further in its cycle before knock sensing begins, potentially reducing false knock detections caused by non-knock-related engine noise earlier in the cycle. However, increasing the angle too much might delay the detection of genuine knock events, impacting the effectiveness of knock control strategies.</sub>
 
 __The next few steps assume your car is running well enough to take a low-load full rpm log to define the engine knock threshold curve.__ <sub>An engine knock threshold curve shows how the sensitivity of knock sensors changes with engine speed. It's a graph where the horizontal axis represents engine speed (in RPM) and the vertical axis shows the knock sensor's sensitivity level (in dBV). Tuning this curve ensures the ECU reacts appropriately to protect the engine while maximizing performance.</sub>
 
@@ -68,10 +68,14 @@ __The next few steps assume your car is running well enough to take a low-load f
 **4. Restore the tune back to the previous configuration** (for example, add 3 degrees of ignition timing).
 
 **5. Review the log in MegaLog Viewer and generate a scatter plot** of the “Knock: Current Level” vs RPM:
-    - Ideally the plot is the low-load noise of the engine throughout the whole rpm range. It should look something like this below. Further filtering can be applied to remove high manifold pressures, and deceleration noise.
+    - Ideally the plot is the low-load noise of the engine throughout the whole rpm range. It should look something like this below. 
+        - Further filtering can be applied in megalog viewer to remove high manifold pressure and deceleration noise. Use these expressions to help analysis the measured data.
+            - Deceleration : “ [RPM-4]<=[Field.RPM]&&[TPS]<50 “
+            - High Load : “ [Ign: Load]>60 “
     ![image](<Knock Sensor\knock current vs rpm.png>)
-    - Once the above plot for your engine has been generated, we can use this data to create a plot that will be used in Tunerstudio’s table. This is a baseline curve, further logs can be taken and more data reduction can used to refine the curve.
-    - The plot used in Tunerstudio should “curve” over the general low-load noise shown in the above scatter plot. As shown below, the orange scatter is all the data less than 60kpa and the grey is a curve that would be used as the baseline threshold.
+    - Once the above plot for your engine has been generated, we can use this data to create a plot that will be used in Tunerstudio’s table on the bottom right. This is a baseline curve, further logs can be taken and more data reduction can used to refine the curve.
+    - The curve used in Tunerstudio should fit over the top of the low-load noise and also be “tight” to the measured data. As shown below, the orange scater is all the data less than 60kpa and the grey is a curve can be used as a baseline threshold in Tunerstudio.
+        - An active system is better than one missing low level knocks
     ![image](<Knock Sensor\knock threshold curve fitted.png>)
     ![image](<Knock Sensor\Software knock.png>)
     
