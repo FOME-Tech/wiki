@@ -51,7 +51,7 @@ __The following steps assumes your ECU is on the latest release of FOME__
 
 **1. Enable the knock sensor**, and calculate the estimated knock filter frequency (kHz). For now, configure the first setting “cylinder bore” as 0.00mm.
 
-- An adequate approximation formula for Knock Frequency is “Knock Frequency = 900,000/(π *0.5*cylinder bore diameter )”
+- An adequate approximation formula for Knock Frequency is “Knock Frequency = 900,000/(π {'*'} 0.5 {'*'} cylinder bore diameter )” $=5
 - Once the approximated knock frequency is calculated, use the second-order harmonics of the estimated frequency. The second-order frequency are multiples of the original calculated frequency. So twice the Knock Frequency. We do this to increase sensitivity, improve signal to noise ratio, and general “robustness” in frequency analysis.
 - For now, Set knock detection window start to 0.00, This feature is for advanced users only.
 
@@ -70,7 +70,7 @@ __The next few steps assume your car is running well enough to take a low-load f
 **5. Review the log in MegaLog Viewer and generate a scatter plot** of the “Knock: Current Level” vs RPM:
     - Ideally the plot is the low-load noise of the engine throughout the whole rpm range. It should look something like this below. 
         - Further filtering can be applied in megalog viewer to remove high manifold pressure and deceleration noise. Use these expressions to help analysis the measured data.
-            - Deceleration : “ [RPM-4]<=[Field.RPM]&&[TPS]<50 “
+            - Deceleration : “ [RPM-4]{'<='}[Field.RPM]&&[TPS]{'<'}50 “
             - High Load : “ [Ign: Load]>60 “
     ![image](<Knock Sensor\knock current vs rpm.png>)
     - Once the above plot for your engine has been generated, we can use this data to create a plot that will be used in Tunerstudio’s table on the bottom right. This is a baseline curve, further logs can be taken and more data reduction can used to refine the curve.

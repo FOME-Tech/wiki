@@ -14,7 +14,7 @@ console**, which is capable of flashing firmware to supported ECUs and is the re
 The FOME console is included with each firmware release, and bundles can be downloaded from [the release
 page](https://github.com/FOME-Tech/fome-fw/releases).
 
-After extracting the bundle contents, navigate to the `console/` directory and run the FOME console program (e.g.
+After extracting the bundle contents,navigate to the 'drivers/' directory and install the drivers. After, navigate to the `console/` directory and run the FOME console program (e.g.
 `fome_console.exe` if using Windows).  After first confirming **TunerStudio is not running**, connect the ECU to the
 computer.  FOME console will automatically detect the board and present similar to the display below.
 
@@ -68,3 +68,27 @@ as shown here) to load the preset for your vehicle (**not the button to *Reset f
 
 Once the preset has been loaded, you can either start tuning or load your tune from the older firmware versions under
 *File > Load Tune (msq)*. After that, the update is complete!
+
+## Troubleshooting updates prior to release FOME 2312
+
+If an error persist during the DFU update for release 2312 a manual driver update may be required. 
+
+When the FOMEconsole prompts with a ConfigManagerErrorCode=28 proceed by opening Device Manager. Look for the following device "STM32 BOOTLOADER" It may be under 'Other Devices'. 
+
+![image](Updating-FW/stm32drivererror.png)
+
+Right click STM32 BOOTLOADER and select 'Update Drivers'
+
+![image](Updating-FW/updatedriver.png)
+
+Select 'Browse my computer for drivers' and proceed to Browse and have windows update the drivers for STM32 BOOTLOADER by directing it to 'Drivers/silent_st_drivers/'
+
+Proceed to unplug the ECU and retry the install. If another DFU update error persist such as "Data mismatch found at address" or "looks like ECU didn't reboot to OpenBLT"
+
+![image](Updating-FW/datamismatcherror.png)
+
+Proceed to unplug the ECU and retry the install. At this point, the FOME console should have detected the ECU as OpenBLT Bootloader. Proceed by updating the firmware "Manual OpenBLT Update"
+
+![image](Updating-FW/openblt.png)
+
+If prompted with Update completed succesfully, proceed with power cycle. From this release onwards the ECU can be updated using OpenBLT and should not require any manual driver installs.
