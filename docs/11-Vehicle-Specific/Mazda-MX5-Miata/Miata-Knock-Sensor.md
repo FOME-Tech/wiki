@@ -51,7 +51,7 @@ __The following steps assumes your ECU is on the latest release of FOME__
 
 **1. Enable the knock sensor**, and calculate the estimated knock filter frequency (kHz). For now, configure the first setting “cylinder bore” as 0.00mm.
 
-- An adequate approximation formula for Knock Frequency is “Knock Frequency = 900,000/(π {'*'} 0.5 {'*'} cylinder bore diameter )” $=5
+- An adequate approximation formula for Knock Frequency is “Knock Frequency = 900,000/(π {'*'} 0.5 {'*'} cylinder bore diameter )” 
 - Once the approximated knock frequency is calculated, use the second-order harmonics of the estimated frequency. The second-order frequency are multiples of the original calculated frequency. So twice the Knock Frequency. We do this to increase sensitivity, improve signal to noise ratio, and general “robustness” in frequency analysis.
 - For now, Set knock detection window start to 0.00, This feature is for advanced users only.
 
