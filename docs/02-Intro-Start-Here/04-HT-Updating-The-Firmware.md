@@ -14,7 +14,7 @@ console**, which is capable of flashing firmware to supported ECUs and is the re
 The FOME console is included with each firmware release, and bundles can be downloaded from [the release
 page](https://github.com/FOME-Tech/fome-fw/releases).
 
-After extracting the bundle contents,navigate to the 'drivers/' directory and install the drivers. After, navigate to the `console/` directory and run the FOME console program (e.g.
+After extracting the bundle contents, navigate to the 'drivers/' directory and install the drivers. After, navigate to the `console/` directory and run the FOME console program (e.g.
 `fome_console.exe` if using Windows).  After first confirming **TunerStudio is not running**, connect the ECU to the
 computer.  FOME console will automatically detect the board and present similar to the display below.
 
