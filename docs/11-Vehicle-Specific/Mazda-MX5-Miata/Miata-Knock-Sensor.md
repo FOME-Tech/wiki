@@ -59,7 +59,10 @@ The following steps assumes your ECU is running the latest release of FOME (2312
 
   - <sub>This formula is derived from the relationship between the speed of sound, the bore diameter, and the frequency of knock waves. It assumes that the speed of sound is approximately constant and that the knock waves travel at a specific angle through the combustion chamber. As an example, the NA6’s estimated knock frequency is 7300 Hz or 7.3kHz & its 2nd order harmonic would be 14.60Khz.</sub>
 
-__The next few steps assume your car is running well enough to take a low-load full rpm log to define the engine knock threshold curve.__ <sub>An engine knock threshold curve shows how the sensitivity of knock sensors changes with engine speed. It's a graph where the horizontal axis represents engine speed (in RPM) and the vertical axis shows the knock sensor's sensitivity level (in dBV). Tuning this curve ensures the ECU reacts appropriately to protect the engine while maximizing performance.</sub>
+:::info
+The next few steps assume your car is running well enough to take a low-load full rpm log to define the engine knock threshold curve.
+:::
+An engine knock threshold curve shows how the sensitivity of knock sensors changes with engine speed. It's a graph where the horizontal axis represents engine speed (in RPM) and the vertical axis shows the knock sensor's sensitivity level (in dBV). Tuning this curve ensures the ECU reacts appropriately to protect the engine while maximizing performance.
 
 **2. Start by removing ignition timing** from the ignition map, an approach is to remove 3 degrees of timing, increase octane rating, decrease boost and any other parameters that can contribute to pre-detonation events.
 
