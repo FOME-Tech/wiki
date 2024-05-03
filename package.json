@@ -42,7 +42,7 @@
     "@docusaurus/tsconfig": "^3.1.1",
     "@docusaurus/types": "^3.1.1",
     "@tsconfig/docusaurus": "^2.0.2",
-    "@types/node": "^20.11.20",
+    "@types/node": "^20.12.7",
     "docusaurus-prince-pdf": "^1.2.1",
     "raw-loader": "^4.0.2",
     "typescript": "^5.4.5"
