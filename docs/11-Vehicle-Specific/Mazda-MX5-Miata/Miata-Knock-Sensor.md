@@ -47,7 +47,9 @@ When knock occurs due to factors like advanced ignition timing or high cylinder 
 6. Adjust knock retard aggression to determine the level of response.
 7. Set up the Max Knock Retard table to define maximum allowable ignition timing retardation.
 
-__The following steps assumes your ECU is on the latest release of FOME__
+:::info
+The following steps assumes your ECU is running the latest release of FOME (2312)
+:::
 
 **1. Enable the knock sensor**, and calculate the estimated knock filter frequency (kHz). For now, configure the first setting “cylinder bore” as 0.00mm.
 
