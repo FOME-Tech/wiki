@@ -93,4 +93,4 @@ Proceed to unplug the ECU and retry the install. At this point, the FOME console
 
 If prompted with Update completed successfully, proceed with power cycle. From this release onwards the ECU can be updated using OpenBLT and should not require any manual driver installs.
 
-![image](Updating-fw/openbltsuccess.png)
+![image](Updating-FW/openbltsuccess.png)
