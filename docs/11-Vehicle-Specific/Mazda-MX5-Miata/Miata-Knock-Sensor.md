@@ -25,7 +25,7 @@ Wiring might entail additional pins and connectors depending on the Miata's mode
 - NB1 – 1S
 - NB2 – 4M
 
-# Overview of the Block
+## Overview of the Block
 
 ![image](<Knock Sensor/block overview 1.png>)
 ![image](<Knock Sensor/block overview 2.png>)
