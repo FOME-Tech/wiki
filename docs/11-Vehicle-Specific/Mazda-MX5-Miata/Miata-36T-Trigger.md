@@ -54,7 +54,7 @@ In the "Trigger" menu under the Base Engine tab, change the trigger type to 36/1
 
 If using a 36-2 trigger wheel instead, the first setting would be 36/2 and the advance will likely be different so check with the manufacturer. In the case of a 36-2T trigger wheel for an ATI damper, the advance angle should be around 148 degrees.
 
-These settings will likely get the car started with the Mazda 323 timing wheel however the trigger angle advance may need to be iterated to perfectly match the timing on your car. To check or set the base timing, set the timing to fixed in TunerStudio and use a timing light on the crank to measure the timing. If the timing is not 10 degrees BTDC, iterate the trigger angle advance in TS until it is spot on. This is covered in "Set Base Timing" within the [Miata Quick Start Guide](docs\11-Vehicle-Specific\Mazda-MX5-Miata\11-Miata-MX5-Quick-Start.md).
+These settings will likely get the car started with the Mazda 323 timing wheel however the trigger angle advance may need to be iterated to perfectly match the timing on your car. To check or set the base timing, set the timing to fixed in TunerStudio and use a timing light on the crank to measure the timing. If the timing is not 10 degrees BTDC, iterate the trigger angle advance in TS until it is spot on. This is covered in "Set Base Timing" within the [Miata Quick Start Guide](../Miata-MX5-Quick-Start).
 
 ![image](36T-trigger/trig6.png)
 
