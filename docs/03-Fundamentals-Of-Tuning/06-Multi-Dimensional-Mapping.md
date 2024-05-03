@@ -26,7 +26,7 @@ VVT Position for bank 1 or 2 intake and exhaust,
 Ethanol % sensed from the Flex Fuel,  
 Aux Linear Sensors 1 and 2,  
 GPPWM Outputs 1 to 4,  
-LUA outputs 1 and 2, RPM,  
+Lua outputs 1 and 2, RPM,  
 Detected Gear,  
 
 All of the above can be considered the additional dimensions the system is able to be mapped for once selected.  

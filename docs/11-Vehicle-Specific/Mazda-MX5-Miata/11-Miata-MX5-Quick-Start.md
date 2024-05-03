@@ -70,7 +70,7 @@ Using the MAP line combined with an intake air temperature (IAT) sensor, the BMM
 
 ## Additional Steps for NA6 Vehicles
 
-The NA6 1.6L vehicles which use an AFM instead of a MAF require a few additional modifications to run with a BMM ECU. A manual NA6 do not have a variable throttle position sensor (TPS) like the automatic NA6, later model NAs and all NBs. An NA6 also needs an external intake air temperature (IAT) sensor wired in as the AFM which has one inside is typically removed. They also require a jumper for the ECU to control the fuel pump which was previously the job of the air flow meter. Additionally, it is recommended to ground the sensors to the ECU rather than the chassis as detailed in the [NA6 ECU Grounding Guide](docs\11-Vehicle-Specific\Mazda-MX5-Miata\NA6-Grounding.md). 
+The NA6 1.6L vehicles which use an AFM instead of a MAF require a few additional modifications to run with a BMM ECU. A manual NA6 do not have a variable throttle position sensor (TPS) like the automatic NA6, later model NAs and all NBs. An NA6 also needs an external intake air temperature (IAT) sensor wired in as the AFM which has one inside is typically removed. They also require a jumper for the ECU to control the fuel pump which was previously the job of the air flow meter. Additionally, it is recommended to ground the sensors to the ECU rather than the chassis as detailed in the [NA6 ECU Grounding Guide](../NA6-Grounding).
 
 The first step is to disconnect the factory TPS sensor. **This is very important or it will cause a short circuit later.**. The TPS sensor location is shown in the image below.
 

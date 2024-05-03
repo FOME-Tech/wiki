@@ -122,7 +122,7 @@ const config: Config = {
           },
           {
             from: '/r/lua',
-            to: '/Advanced-Features/LUA-Scripting/',
+            to: '/Advanced-Features/Lua-Scripting/',
           },
           {
             from: '/r/vr',
@@ -208,6 +208,7 @@ const config: Config = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
+      additionalLanguages: ['lua'],
     },
   } satisfies ThemeConfig,
 };
