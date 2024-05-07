@@ -71,4 +71,4 @@ Once the preset has been loaded, you can either start tuning or load your tune f
 
 ## Troubleshooting and Other Notes
 
-See this page for troubleshooting and other flashing notes: [Flashing Software Notes](Flashing Software Notes).
+See the [Flashing Software Notes](/Hardware/Flashing-Software-Notes) page for troubleshooting and other flashing notes.
