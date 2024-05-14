@@ -10,10 +10,10 @@ Here, you can find assets related to our project's branding, trademarks, and mar
 
 ### Logo
 
-![FOME Logo](./100-brand-and-marketing/assets/logo-small.jpg)
+![FOME Logo](/assets/logo-small.jpg)
 
-[Download LogoFiles.zip](./100-brand-and-marketing/assets/LogoFiles.zip)
+[Download LogoFiles.zip](pathname:///assets/LogoFiles.zip)
 
 ### Font
 
-[Download Comfortaa.zip](./100-brand-and-marketing/assets/Comfortaa.zip)
+[Download Comfortaa.zip](pathname:///assets/Comfortaa.zip)
