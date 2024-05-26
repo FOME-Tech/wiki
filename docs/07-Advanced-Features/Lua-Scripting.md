@@ -641,6 +641,22 @@ Lookup a character of the set vehicle identification number (VIN) at the given i
 |-:|--|:-|
 |`index`|number|The character index of the set VIN to return.|
 
+#### `setIdleAdd`
+
+TODO
+
+|parameters|type|description|
+|-:|--|:-|
+|`amount`|float|TODO|
+
+#### `setIdleAddRpm`
+
+TODO
+
+|parameters|type|description|
+|-:|--|:-|
+|`amount`|float|TODO|
+
 ### CAN Bus
 
 :::info
@@ -836,10 +852,6 @@ Retrieves the values of the last valid message of the specified SENT channel.
 #### `setBoostTargetMult`
 
 #### `setBoostDutyAdd`
-
-### Idle Control
-
-#### `setIdleAdd`
 
 ### Vehicle Speed
 
