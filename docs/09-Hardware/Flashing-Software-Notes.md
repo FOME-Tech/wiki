@@ -59,3 +59,31 @@ To erase a device, use the following invocation:
 ```sh
 dfu-util -v -d 0483:df11 -a 0 -s :mass-erase:force
 ```
+
+## Troubleshooting updates prior to release FOME 2312
+
+If an error occurs during the DFU update for release 2312 a manual driver update may be required. This may be the case if the ECU is not yet using the OpenBLT bootloader implementation.
+
+When FOME console prompts with a "ConfigManagerErrorCode=28", proceed by opening Device Manager. Look for the device named "STM32 BOOTLOADER"; it may be under "Other Devices".
+
+![image](Flashing-Notes/stm32drivererror.png)
+
+Right click the STM32 BOOTLOADER device and select "Update driver" from the context menu.
+
+![image](Flashing-Notes/updatedriver.png)
+
+Select "Browse my computer for drivers" and proceed to browse and have Windows update the drivers for STM32 BOOTLOADER by directing it to "../drivers/silent_st_drivers/" directory, which is extracted from the ".../drivers/silent_st_drivers2.exe" archive.
+
+Then, unplug the ECU and retry the firmware udpate from FOME console.
+
+Other DFU update errors may occur, such as "Data mismatch found at address" or "looks like ECU didn't reboot to OpenBLT."
+
+![image](Flashing-Notes/datamismatcherror.png)
+
+Again, unplug the ECU and retry the firmware update. At this point, FOME console should have detected the ECU as "OpenBLT Bootloader". Proceed by updating the firmware via "Manual OpenBLT Update."
+
+![image](Flashing-Notes/openblt.png)
+
+If prompted with "Update completed successfully!", proceed by power cycling the ECU. From this release onwards the ECU can be updated using OpenBLT and should not require any manual driver installs.
+
+![image](Flashing-Notes/openbltsuccess.png)

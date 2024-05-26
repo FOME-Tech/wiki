@@ -69,28 +69,6 @@ as shown here) to load the preset for your vehicle (**not the button to *Reset f
 Once the preset has been loaded, you can either start tuning or load your tune from the older firmware versions under
 *File > Load Tune (msq)*. After that, the update is complete!
 
-## Troubleshooting updates prior to release FOME 2312
+## Troubleshooting and Other Notes
 
-If an error persist during the DFU update for release 2312 a manual driver update may be required. 
-
-When the FOMEconsole prompts with a ConfigManagerErrorCode=28 proceed by opening Device Manager. Look for the following device "STM32 BOOTLOADER" It may be under 'Other Devices'. 
-
-![image](Updating-FW/stm32drivererror.png)
-
-Right click STM32 BOOTLOADER and select 'Update Drivers'
-
-![image](Updating-FW/updatedriver.png)
-
-Select 'Browse my computer for drivers' and proceed to Browse and have windows update the drivers for STM32 BOOTLOADER by directing it to 'Drivers/silent_st_drivers/'
-
-Proceed to unplug the ECU and retry the install. If another DFU update error persist such as "Data mismatch found at address" or "looks like ECU didn't reboot to OpenBLT"
-
-![image](Updating-FW/datamismatcherror.png)
-
-Proceed to unplug the ECU and retry the install. At this point, the FOME console should have detected the ECU as OpenBLT Bootloader. Proceed by updating the firmware "Manual OpenBLT Update"
-
-![image](Updating-FW/openblt.png)
-
-If prompted with Update completed successfully, proceed with power cycle. From this release onwards the ECU can be updated using OpenBLT and should not require any manual driver installs.
-
-![image](Updating-FW/openbltsuccess.png)
+See the [Flashing Software Notes](/Hardware/Flashing-Software-Notes) page for troubleshooting and other flashing notes.
