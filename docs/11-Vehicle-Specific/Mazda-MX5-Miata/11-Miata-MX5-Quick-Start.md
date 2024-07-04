@@ -154,8 +154,98 @@ There are three ways of tuning the VE table. The first way is to drive the car a
 
 Next, click the tab labelled _Tune Analyze Live! - Tune For You_ to bring up the autotuner. Click to the _Advanced Settings_ tab and configure it as shown in the image below. These configuration settings are deliberately quite loose so that TS can quickly tune the general shape of the VE table. On the left side of the _VE Table Control Panel_, you also need to check the box marked _Update Controller_ which ensures that the VE table is updated on the ECU as the autotune corrects itself.
 
-![image](Miata-MX5-Quick-Start-Images/autotune.jpg)
+![image](Miata-MX5-Quick-Start-Images/autotune2.jpg)
+| **Setting** | **Value** |
+|------------------------------|----- |
+| Cell Change Resistance       | Easy |
+| Max Cell Value Change        | 30   |
+| Max Cell Percentage Change   | 100  |
+| Minimum Rpm                  | 1300 |
+| Minimum CLT                  | 60   |
+| dTPS                         | 50   |
+| vBatt                        | 12   |
+| Minimum TPS                  | 3    |
 
-Now that the autotuner is set up, start the car and click _Start Auto Tune_ on the autotuner. Let the car idle in park whilst it gets up to the minimum temperature. While this happens, you can attempt to change the idle cells in the VE table to get them to a lambda of 1. Once the car has warmed up, **smoothly** drive it around going through the gears and all the way through the rev range. A mix of flat, uphill and downhill driving in different gears is optimal to tune the majority of the engine's operating range. After you are sufficiently happy, click _Stop Auto Tune_, turn the engine off and click _Save on ECU_. You will want to repeat this process several more times, every time dropping the _Cell Change Resistance_ and _Authority Limits_ to slowly refine your VE table.
+Now that the autotuner is set up, start the car and click _Start Auto Tune_ on the autotuner. Let the car idle in park whilst it gets up to the minimum temperature. While this happens, you can change the idle cells in the VE table to get them to a lambda of 1. Follow the Cursor on the VE table while idling and adjust the values your car is at while monitoring the lambda value. Once the car has warmed up its time to auto tune. After you are sufficiently happy, click Stop Auto Tune, turn the engine off and click Save on ECU. Below is a auto tune guideline
+
+## Safety First
+
+- Conduct tuning in a safe environment, such as a closed course or dyno, if possible.
+- Have a second person to monitor the software and make adjustments, allowing the driver to focus on driving.
+
+## Driving Guidelines
+
+### 1. Warm Up the Engine
+
+- Start with the engine at normal operating temperature to ensure accurate readings.
+
+### 2. Cover a Range of Operating Conditions
+
+- **Idle:** Let the engine idle for a few minutes to manually tune and collect data at low load and RPM.
+- **Cruising:** Drive at a steady speed on flat roads to cover light to moderate load and mid-RPM ranges.
+- **Acceleration:** Perform smooth accelerations from low to high RPM to gather data across a range of engine loads.
+- **Deceleration:** Allow the car to decelerate without braking to gather data on how the engine behaves under low or negative load.
+- **Full Throttle:** Perform wide-open throttle (WOT) pulls if safe to do so, to collect data at high load and RPM.
+
+### 3. Vary the Driving Conditions
+
+- Include different gears to change the load on the engine.
+- Use hills or inclines to increase the load and vary the driving conditions.
+- Drive at different speeds and RPM ranges to ensure a comprehensive dataset.
+
+### 4. Smooth and Controlled Inputs
+
+- Avoid sudden throttle changes, as they can cause transient conditions that may not provide useful steady-state data.
+- Aim for smooth transitions in throttle, brake, and gear changes.
+
+## Logging and Reviewing Data
+
+### 1. Continuous Logging
+
+- Ensure the TunerStudio software logs continuously during the entire drive.
+- Monitor real-time Lambda readings and make sure they are within safe limits to avoid engine damage.
+
+### 2. Data Review
+
+- After collecting sufficient data, stop and review the logs to identify any areas where the lambda deviates from the target.
+- The log can be used to review areas where adjustments to the VE table are needed.
+
+### 3. Initial Adjustments
+
+- Make initial adjustments to the VE table based on the collected data. Such as increasing a few cells by 3-4% and smoothing the area.
+
+## Iterative Process
+
+### 1. Repeat and Refine
+
+- Drive again, following the same driving guidelines to gather more data and further refine the settings in autotune to achieve a better VE table.
+- Multiple iterations with multiple settings may be necessary to achieve an optimal VE table. 
+- You can Lock cells by highlighting them and locking them. Such as Idle or Coasting sections.
+
+For Example 
+| **Setting** | **Value** |
+|------------------------------|----- |
+| Cell Change Resistance       | Hard / Very Hard |
+| Max Cell Value Change        | 10 / 5   |
+| Max Cell Percentage Change   | 30 / 10  |
+| Minimum Rpm                  | 1300 |
+| Minimum CLT                  | 60   |
+| dTPS                         | 50   |
+| vBatt                        | 12   |
+| Minimum TPS                  | 3    |
+
+### 2. Monitor Consistency
+
+- Continuously monitor the consistency of lambda readings against the target table.
+- Ensure that adjustments lead to stable and reliable engine performance.
+
+### 3. Fine-Tuning
+
+- After a few iterations, fine-tune specific areas where the lambda is still not meeting the target.
+- Focus on problematic zones, such as transitions between idle and cruise, or low RPM and high load conditions.
+
+## Summary
+
+The process of auto-tuning the VE table using a wideband lambda sensor and a target AFR table involves systematic and controlled driving to gather data across a range of operating conditions. By following the outlined steps, the software can make accurate adjustments to the VE table, resulting in improved engine performance and efficiency. Remember, safety is paramount, and tuning should always be conducted in a controlled environment.
 
 When you are satisfied with your VE table, turn closed loop fuel correction and _Deceleration fuel cut off (DFCO)_ back to true. You don't actually need DFCO to be enabled although it will save fuel by turning the injectors off when the car is rolling in gear. Your Miata should now be relatively safe to drive but this is only the start of the tuning journey. As you read through the more advanced guides in this wiki, you will learn about all of the different ways the ECU can be configured to improve the drivability and squeeze every drop of performance out of your Miata.
