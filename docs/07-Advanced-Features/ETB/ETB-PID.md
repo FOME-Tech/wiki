@@ -8,8 +8,6 @@ When the ETB PID loop updates, the pFactor, iFactor, and dFactor outputs are add
 Similar to _pid min_ and _pid max_, these values apply specifically to the _iFactor_ output. The result of _iFactor_ will never be less than _iTermMin_ or greater than _iTermMax_.
 
 ## PID AutoTune
-Used to auto-calibrate the PID settings for the ETB.
-//TODO: Expand on this.
 
 ## Log Variables
 ### etbStatus_output
