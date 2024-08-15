@@ -34,14 +34,22 @@ Added to the closed loop _Idle Target RPM_ when the A/C is active, can be used t
 
 ## Closed Loop Idle
 ### P-factor
-Sets the Proportional gain of the closed loop idle air strategy
+Sets the Proportional gain of the closed loop idle air strategy.
 
 ### I-factor
-Sets the Integral gain of the closed loop idle air strategy
+Sets the Integral gain of the closed loop idle air strategy.
 
 ### derivativeFilterLoss
 ### antiwindupFreq
+Used to limit the Integral term (iTerm) windup when the closed loop idle air strategy output is being limited by the min/max duty cycle limit. Once the Integral term has been calculated and limited if appropriate (_iTerm Min_, _iTerm Max_), if the output of the closed loop idle air PID controller exceeds the overall PID _Min_ or _Max_ settings, the Integral term is further limited to prevent integral windup. As long as the output of the closed loop idle air strategy exceeds the limits set by _Min_ or _Max_, the I term is continuously modified.
+
+`iTerm += time(sec) * antiwindupFreq * (ClosedLoopLimitedOutput - ClosedLoopOutput)`
+
+Keep in mind that the Integral term is updated every time the closed loop idle air PID control strategy runs and will continue to be modified based on the error and _I-factor_ gain. Additionally, if _ClosedLoopLimitedOutput_ equals _ClosedLoopOutput_, antiwindupFreq has no effect.
+
 ### D-factor
+Sets the Derivative gain of the closed loop idle air strategy.
+
 ### Min, Max
 Sets the minimum and maximum duty cycle modifier that can be commanded by the closed loop idle air strategy. The P, I and D-factors are added up then limited based on the Min and Max values to give the _Idle: Closed loop_ output. This is then added to the _open loop base position_ to result in the final output, _Idle: Position_.
 
