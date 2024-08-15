@@ -43,7 +43,9 @@ Sets the Integral gain of the closed loop idle air strategy.
 ### antiwindupFreq
 Used to limit the Integral term (iTerm) windup when the closed loop idle air strategy output is being limited by the min/max duty cycle limit. Once the Integral term has been calculated and limited if appropriate (_iTerm Min_, _iTerm Max_), if the output of the closed loop idle air PID controller exceeds the overall PID _Min_ or _Max_ settings, the Integral term is further limited to prevent integral windup. As long as the output of the closed loop idle air strategy exceeds the limits set by _Min_ or _Max_, the I term is continuously modified.
 
-`iTerm += time(sec) * antiwindupFreq * (ClosedLoopLimitedOutput - ClosedLoopOutput)`
+`iTerm += dTime(sec) * antiwindupFreq * (ClosedLoopLimitedOutput - ClosedLoopOutput)`
+
+_note: dTime is the delta time since the closed loop idle air PID controller last ran._
 
 Keep in mind that the Integral term is updated every time the closed loop idle air PID control strategy runs and will continue to be modified based on the error and _I-factor_ gain. Additionally, if _ClosedLoopLimitedOutput_ equals _ClosedLoopOutput_, antiwindupFreq has no effect.
 
