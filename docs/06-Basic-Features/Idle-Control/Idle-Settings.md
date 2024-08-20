@@ -70,10 +70,10 @@ Sets the minimum and maximum duty cycle modifier for the _I-factor_ specifically
 
 ## Extra Idle Features
 ### Use idle ignition table
-Setting this to _true_ activates a separate ignition timing table (2D) for idle conditions; this can help idle stability by using ignition retard and advance either side of the desired idle speed. _False_ disables the timing table.
+Setting this to __true__ activates a separate ignition timing table (2D) for idle conditions; this can help idle stability by using ignition retard and advance either side of the desired idle speed. __false__ disables the timing table.
 
 ### Use idle VE table
-Setting this to _true_ activates a separate fuel table (3D) for idle, which allows fine tuning of the idle fuelling. _False_ disables the VE table.
+Setting this to __true__ activates a separate fuel table (3D) for idle, which allows fine tuning of the idle fuelling. __false__ disables the VE table.
 
 ### Override idle VE table load axis
 Override the Y axis (load) value used for only the Idle VE table. Setting this to _none_ disables the override.
@@ -92,7 +92,7 @@ The _open loop base position_ value is multiplied by the value in this table. Fo
 
 # Closed-loop idle timing
 ## Enable closed loop idle ignition timing
-_True_ enables the closed loop idle ignition timing loop strategy, _False_ disables it.
+_True_ enables the closed loop idle ignition timing loop strategy, __false__ disables it.
 
 ### Proportional gain
 Unity gain results in 1 deg CKA for every 1 RPM of error between actual engine speed and target engine speed. For example, a gain of 0.1 results in 1 deg CKA for every 10 RPM of error. If the engine speed were 100 RPM below the Idle target RPM the resulting output would be +10 deg CKA (advance).
@@ -102,11 +102,13 @@ Unity gain results in 1 deg CKA for every 1 RPM of error between actual engine s
 Limits the minimum and maximum amount of timing adjustment output by the _closed loop idle ignition timing_ strategy. Keep these values to the minimum required to avoid excessive spark advance or retard at idle speeds.
 
 # IAC PID Multiplier
+Only enabled when _Use IAC PID Multiplier Table_ is set to __true__.
 
 # Coasting IAC Position
+Only enabled when _Use coasting Idle Table_ is set to __true__. 2D Table. When the engine is in the _coasting_ phase, the IAC base position is set to the value defined by this table. This table is not used if the engine is not in the _coasting_ phase and the _open loop base position_ will be used instead. _Note: despite the "multiplier" label, this table sets the IAC position in % duty cycle just like _open loop base position_ - this is not a multiplier applied to the base position_.
 
 # Idle VE
-Only enabled when _Use idle VE table_ is set to _true_. 3D table.
+Only enabled when _Use idle VE table_ is set to __true__. 3D table. Used in place of the regular VE table when idle is active, or during the cranking taper if _Use idle tables for cranking taper_ is set to __true__.
 
 # Idle Ignition Advance
-Only enabled when _Use idle ignition table_ is set to _true_. 2D table (curve).
+Only enabled when _Use idle ignition table_ is set to __true__. 2D table (curve). The values in this table are used in place of the regular ignition curve when idle is active, or during the cranking taper if _Use idle tables for cranking taper_ is set to __true__. Unlike _Closed-loop Idle Timing_, this table does not react to _Idle target RPM_ and is open loop only.
