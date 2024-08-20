@@ -24,7 +24,7 @@ An electric wastegate actuator replaces a conventional spring based wastegate wi
 
 ## Open Loop Boost Control
 
-Open loop boost control is the simplest form of electronic boost control where the boost control solenoid is assigned a specific duty cycle based on the engine RPM and throttle pedal position. With open loop control, you need to guess what duty cycle will correspond with your desired boost pressure and work from there. An example of on open loop boost control table is shown below.
+Open loop boost control is the simplest form of electronic boost control where the boost control solenoid is assigned a specific duty cycle based on the engine RPM and throttle pedal position. With open loop control, you need to guess what duty cycle will correspond with your desired boost pressure and work from there. An example of an open loop boost control table is shown below.
 
 ![image](Boost-Control/olboost.png)
 
@@ -50,10 +50,16 @@ Before you start tuning the boost, consider what you are looking for the boost c
 
 ## Closed Loop Boost Control
 
-Closed loop boost control builds on the open loop boost controller and actively adjusts the solenoid duty cycle to reach the specified target pressure. The controller starts at the specified duty cycle in a given cell in the open loop table and adds or subtracts to that value until the target pressure is reached. The closed loop boost controller uses a PID controller to adjust the duty cycle. A PID controller works by measuring the error between the measured boost and the desired boost and calculating values for the P, I and D terms based off of the error. These terms are then added togethor to form the calculated duty cycle which the controller will measure the boost pressure response to and will continually adjust its calculated duty cycle until the target pressure is achieved.
+Closed loop boost control builds on the open loop boost controller and actively adjusts the solenoid duty cycle to reach the specified target pressure. The controller starts at the specified duty cycle in a given cell in the open loop table and adds or subtracts to that value until the target pressure is reached. The closed loop boost controller uses a PID controller to adjust the duty cycle. A PID controller works by measuring the error between the measured boost and the desired boost and calculating values for the P, I and D terms based off of the error. These terms are then added together to form the calculated duty cycle which the controller will measure the boost pressure response to and will continually adjust its calculated duty cycle until the target pressure is achieved.
 
-The P-term multiplies the duty cycle per kPa of error. For example, if P is set to 0.2 and there is a 20kPa error, it will add a value of `0.2 * 20 = 4%` to the duty cycle.
+![image](https://github.com/user-attachments/assets/3e698305-f347-4e7c-b085-987e029b8b11)
 
-The I-term multiplies the duty cycle by the kPa of error and the seconds that there is error. For example, if I is 0.1 and there is 10kPa of error for 2 seconds, it will add a value of `0.1 * 10 * 2 = 2%` to the duty cycle.
+The P-term is calculated by multiplying the duty cycle per kPa of error times the gain. For example, if _P Gain_ is set to 0.2 and there is a 20kPa error, it will add a value of `0.2 * 20 = 4%` to the duty cycle.
 
-The D-term multiplies the duty cycle by the kPa of error per second (or rate of change of kPa). For example, if D is 0.2 and the boost is rising at 10kPa per second, a value of `0.2 * 10 = 5%` would be subtracted to the duty cycle to slow the rate of approach to the target.
+The I-term is calculated by multiplying the duty cycle by the kPa of error and the seconds that there is error times the gain. For example, if _I Gain_ is 0.1 and there is 10kPa of error for 2 seconds, it will add a value of `0.1 * 10 * 2 = 2%` to the duty cycle.
+
+The D-term is calculated by multiplying the duty cycle by the kPa of error per second (or rate of change of kPa) times the gain. For example, if _D Gain_ is 0.2 and the boost is rising at 10kPa per second, a value of `0.2 * 10 = 5%` would be subtracted from the duty cycle to slow the rate of approach to the target.
+
+The _min adjustment_ and _max adjustment_ settings define the maximum duty cycle that can be subtracted from or added to the boost control open loop position.
+
+Once the P, I and D terms are added together, the PID controller output is limited by the _min adjustment_ and _max adjustment_ values and then added to the boost control open loop value for the final output. For example, if _max adjustment_ is set to 20, even with a very high gain or a very large error the maximum final duty cycle will be whatever is in the open loop table + 20%.
