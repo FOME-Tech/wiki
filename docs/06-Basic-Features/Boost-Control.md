@@ -54,12 +54,22 @@ Closed loop boost control builds on the open loop boost controller and actively 
 
 ![image](https://github.com/user-attachments/assets/3e698305-f347-4e7c-b085-987e029b8b11)
 
-The P-term is calculated by multiplying the duty cycle per kPa of error times the gain. For example, if _P Gain_ is set to 0.2 and there is a 20kPa error, it will add a value of `0.2 * 20 = 4%` to the duty cycle.
+### P-Term
+The P-term is calculated by multiplying the error in kPa times the Proportional gain (_P Gain_) value to generate an instantaneous output.
 
-The I-term is calculated by multiplying the duty cycle by the kPa of error and the seconds that there is error times the gain. For example, if _I Gain_ is 0.1 and there is 10kPa of error for 2 seconds, it will add a value of `0.1 * 10 * 2 = 2%` to the duty cycle.
+For example, if _P Gain_ is set to 0.2 and there is a 20kPa error, it will add a value of `0.2 * 20 = 4%` to the duty cycle.
 
-The D-term is calculated by multiplying the duty cycle by the kPa of error per second (or rate of change of kPa) times the gain. For example, if _D Gain_ is 0.2 and the boost is rising at 10kPa per second, a value of `0.2 * 10 = 5%` would be subtracted from the duty cycle to slow the rate of approach to the target.
+### I-Term
+The I-term is calculated by multiplying the error in kPa times the seconds that there is error times the Integral gain (_I Gain_) value, then adding the result to the existing I-term value for the final output.
 
+For example, if _I Gain_ is set to 0.1 and there is 10kPa of error for 2 seconds, it will add a value of `0.1 * 10 * 2 = 2%` to the duty cycle over that time period. As long as the error is present the I-term will continue to increase. Using the last example, after 4 seconds the I-term will be adding 4% to the duty cycle provided the error is still 10 kPa.
+
+### D-Term
+The D-term is calculated by multiplying the change in error in kPa per second (or rate of change in kPa per second) times the Derivative gain (_D Gain_) value to generate an instantaneous output.
+
+For example, if _D Gain_ is set to 0.2 and the boost is rising at 10kPa per second, a value of `0.2 * 10 = 5%` would be subtracted from the duty cycle to slow the rate of approach to the target.
+
+### Min adjustment, Max adjustment
 The _min adjustment_ and _max adjustment_ settings define the maximum duty cycle that can be subtracted from or added to the boost control open loop position.
 
 Once the P, I and D terms are added together, the PID controller output is limited by the _min adjustment_ and _max adjustment_ values and then added to the boost control open loop value for the final output. For example, if _max adjustment_ is set to 20, even with a very high gain or a very large error the maximum final duty cycle will be whatever is in the open loop table + 20%.
