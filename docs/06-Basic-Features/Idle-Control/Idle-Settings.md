@@ -100,6 +100,8 @@ Setting this to __true__ activates a separate ignition timing table (2D) for idl
 
 Setting this to __true__ activates a separate fuel table (3D) for idle, which allows fine tuning of the idle fuelling. __false__ disables the VE table.
 
+See [here](../Idle-VE-Table) for more detail about idle-specific VE settings.
+
 #### Override idle VE table load axis
 
 Override the Y axis (load) value used for only the Idle VE table. Setting this to _none_ disables the override.
@@ -147,6 +149,8 @@ Only enabled when _Use coasting Idle Table_ is set to __true__. 2D Table. When t
 ## Idle VE
 
 Only enabled when _Use idle VE table_ is set to __true__. 3D table. Used in place of the regular VE table when idle is active, or during the cranking taper if _Use idle tables for cranking taper_ is set to __true__.
+
+See [here](../Idle-VE-Table) for more detail about idle-specific VE settings.
 
 ## Idle Ignition Advance
 
