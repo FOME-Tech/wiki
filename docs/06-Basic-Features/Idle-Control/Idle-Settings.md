@@ -10,7 +10,7 @@ _Open Loop_ disables the Closed Loop Idle strategy for the IACV/ETB. _Open Loop 
 
 The below settings are utilized to prevent the closed loop idle air strategy from engaging when it is not desired.
 
-![image](Idle-Settings/IdleDetectionThresholds.png)
+![image](Idle-Settings/idleDetectionThresholds.png)
 
 #### TPS Threshold
 
