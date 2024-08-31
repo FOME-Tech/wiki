@@ -1,21 +1,21 @@
 # Rev limiters  
-
+Rev limiters can be found under __Base Engine > Limits and fallbacks__.
 ## Hard cuts  
-
-Hard cuts apply when an engine reaches the __RPM hard limit__.
+![image](RPM-Limit/revLimitHardCuts.png)
+Hard cuts apply when an engine reaches the __RPM hard limit__. In most cases, it is recommended to use fuel cut instead of spark cut.
 
 ### Fuel cut  
 
-If __Cut fuel on RPM limit__ is set to _yes_ FOME will stop injecting fuel once the engine reaches the __RPM hard limit__. The engine speed must drop below the __RPM hard limit__ by the number of RPM specified in __Hard limit hysteresis__ before fuel injection is resumed.
+If __Cut fuel on RPM limit__ is set to _yes_, FOME will stop injecting fuel once the engine reaches the __RPM hard limit__. The engine speed must drop below the __RPM hard limit__ by the number of RPM specified in __Hard limit hysteresis__ before fuel injection is resumed.
 
 ### Spark cut  
 
-If __Cut spark on RPM limit__ is set to _yes_ FOME will stop firing the ignition coil(s) once the engine reaches the __RPM hard limit__. The engine speed must drop below the __RPM hard limit__ by the number of RPM specified in __Hard limit hysteresis__ before ignition is resumed.
-
-Warning: If __Cut fuel on RPM limit__ is set to _no_ then fuel will continue to be injected during the spark cut. This can cause a build-up of unburned fuel in the exhaust system which may ignite when ignition resumes and can cause damage to the engine and exhaust system.
-
-Warning: Cutting spark can lead to engine valvetrain damage due to the immediate reduction in torque. It is recommended to use fuel cut instead of spark cut in most cases.
-
+If __Cut spark on RPM limit__ is set to _yes_, FOME will stop firing the ignition coil(s) once the engine reaches the __RPM hard limit__. The engine speed must drop below the __RPM hard limit__ by the number of RPM specified in __Hard limit hysteresis__ before ignition is resumed.
+:::danger  
+If __Cut fuel on RPM limit__ is set to _no_ then fuel will continue to be injected during the spark cut. This can cause a build-up of unburned fuel in the exhaust system which may ignite when ignition resumes and can cause damage to the engine and exhaust system.
+::::::warning
+Cutting spark can lead to engine valvetrain damage due to the immediate reduction in torque. It is recommended to use fuel cut instead of spark cut in most cases.
+:::
 ### Both cut  
 
 Both fuel cut and spark cut can be used together. This reduces the risk of unburned fuel in the exhaust when using spark cut, but the risk of valvetrain damage still applies. 
