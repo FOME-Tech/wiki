@@ -30,7 +30,7 @@ The VSS must be at or below this speed before the idle state can be entered. Set
 
 ### Open Loop Idle
 
-![image](Idle-Settings/OpenLoopIdle.png)
+![image](Idle-Settings/openLoopIdle.png)
 
 #### Open loop base position
 
@@ -188,6 +188,6 @@ See [here](../Idle-VE-Table) for more detail about idle-specific VE settings.
 
 Found under _Idle > Ignition Advance_.
 
-![image](Idle-Settings/IdleAdvanceAngle.png)
+![image](Idle-Settings/idleAdvanceAngle.png)
 
 Only enabled when _Use idle ignition table_ is set to __true__. 2D table (curve). The values in this table are used in place of the regular ignition curve when idle is active, or during the cranking taper if _Use idle tables for cranking taper_ is set to __true__. Unlike _Closed-loop Idle Timing_, this table does not react to _Idle target RPM_ and is open loop only.
