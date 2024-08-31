@@ -6,11 +6,11 @@ Hard cuts apply when an engine reaches the __RPM hard limit__.
 
 ### Fuel cut  
 
-If __Cut fuel on RPM limit__ is set to _yes_ FOME will stop injecting fuel once the engine reaches the __RPM hard limit__. The engine speed must drop by the number of RPM specified in __Hard limit hysteresis__ before fuel injection is resumed.
+If __Cut fuel on RPM limit__ is set to _yes_ FOME will stop injecting fuel once the engine reaches the __RPM hard limit__. The engine speed must drop below the __RPM hard limit__ by the number of RPM specified in __Hard limit hysteresis__ before fuel injection is resumed.
 
 ### Spark cut  
 
-If __Cut spark on RPM limit__ is set to _yes_ FOME will stop firing the ignition coil(s) once the engine reaches the __RPM hard limit__. The engine speed must drop by the number of RPM specified in __Hard limit hysteresis__ before ignition is resumed.
+If __Cut spark on RPM limit__ is set to _yes_ FOME will stop firing the ignition coil(s) once the engine reaches the __RPM hard limit__. The engine speed must drop below the __RPM hard limit__ by the number of RPM specified in __Hard limit hysteresis__ before ignition is resumed.
 
 Warning: If __Cut fuel on RPM limit__ is set to _no_ then fuel will continue to be injected during the spark cut. This can cause a build-up of unburned fuel in the exhaust system which may ignite when ignition resumes and can cause damage to the engine and exhaust system.
 
@@ -23,6 +23,8 @@ Both fuel cut and spark cut can be used together. This reduces the risk of unbur
 ## Soft limiting  
 
 ### Electronic Throttle Limiting  
+
+![image](RPM-Limit/ElectronicThrottleLimiting.png)
 
 Engines equipped with an Electronic Throttle Body (ETB) can utilize Electronic Throttle Limiting. This will smoothly close the throttle starting at the __Soft limiter start__ engine speed and fully close it once the engine speed has increased by the number of RPM defined in __Soft limiter range__.
 
