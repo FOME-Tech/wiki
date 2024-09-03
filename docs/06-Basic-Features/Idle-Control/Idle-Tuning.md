@@ -34,7 +34,7 @@ The first step of tuning the idle RPM is to set up the open loop idle airflow. S
 
 :::note 
 
-If you are using an electronic throttle body (ETB), the _Open Loop base position (%)_ parameter is applied to the _Electronic throttle idle range (%)_ value. If you need to set the _Open Loop base position (%)_ significantly higher than 30%, try increasing the _Electronic throttle idle range (%)_ value until you are able to get the desired idle engine speed with a base value of approximately 30%.
+If you are using an electronic throttle body (ETB), the _Open loop base position_ parameter is applied to the _Electronic throttle idle range_ value to calculate the idle TPS value. If you need to set the _Open loop base position_ significantly higher than 30%, try increasing the _Electronic throttle idle range_ value until you are able to get the desired idle engine speed with an _Open loop base position_ value of approximately 30%. If the inverse is true and the _Open loop base position_ is too low, try decreasing the _Electronic throttle idle range_ value.
 
 Find the _Electronic throttle idle range (%)_ value under the _Idle > Idle hardware_ menu.
 
