@@ -32,6 +32,14 @@ Tuning the open loop idle is the first step in achieving a stable idle. In some 
 
 The first step of tuning the idle RPM is to set up the open loop idle airflow. Suppose you aim to set the engine to idle at 800 RPM (minimum), the airflow must be tuned to make the engine idle 50-150RPM higher than the 800 RPM target. This can be done by adjusting the _Open loop base position (%)_ parameter, the idle adjustment screw, or the throttle end stop. It is recommended to tune these adjustments so the _Open loop base position (%)_ parameter (which is the base duty cycle of the IACV) is at about 30% when the engine is idling 50-150RPM above target. This gives some room for the closed loop controller to adjust the duty cycle. It's essential to ensure that AFRs remain stable as you adjust the airflow. Before enabling idle control, a stable foundation is necessary. In this example, we will say that the engine idles at 950 RPM (150 RPM above target) with 10 degrees of timing, 1.0 lambda and 30% IACV duty cycle.
 
+:::note 
+
+If you are using an electronic throttle body (ETB), the _Open Loop base position (%)_ parameter is applied to the _Electronic throttle idle range (%)_ value. If you need to set the _Open Loop base position (%)_ significantly higher than 30%, try increasing the _Electronic throttle idle range (%)_ value until you are able to get the desired idle engine speed with a base value of approximately 30%.
+
+Find the _Electronic throttle idle range (%)_ value under the _Idle > Idle hardware_ menu.
+
+:::
+
 ### Idle Ignition Table
 
   The idle ignition table acts much like the _open loop base position_ in the regard that it is another open loop system contributing to the idle of the vehicle. Adjusting the engine ignition timing at idle changes the engine torque output where an increase in timing produces more torque and a reduction reduces the torque. This change in torque can be used to adjust the engine speed and achieve a stable idle by reducing the timing above the idle RPM target and increasing it below the target.
