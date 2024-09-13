@@ -12,7 +12,7 @@ Interpolates between four coefficients based on RPM and TPS to generate a coeffi
 
 ![image](Charge-Temp-Estimation/cteRpmTpsMode.png)
 
-For example, a coefficient of 0.2500 means that 25% of the estimated air temperature is from the IAT, and 75% from the CLT. If the IAT was 20C and the CLT was 80C, the calculation for estimated air temperature would be `(40C * 0.25) + (80C * 0.75) = 70C`.
+For example, a coefficient of 0.2500 means that 25% of the estimated air temperature is from the IAT, and 75% from the CLT. If the IAT was 40C and the CLT was 80C, the calculation for estimated air temperature would be `(40C * 0.25) + (80C * 0.75) = 70C`.
 
 A coefficient of 0.9000 (which may be used at high loads/RPM) would result in the calculation `(40C * 0.90) + (80C * 0.10) = 44C`. A coefficient of 1 means that the charge temperature estimate would be the same as IAT.
 
@@ -22,7 +22,7 @@ Also labeled as Airflow interpolation mode. This uses linear interpolation betwe
 
 ![image](Charge-Temp-Estimation/cteAirflowInterpolation.png)
 
-For example, a _low flow coefficient_ of 0.100, a _high flow coefficent_ of 0.900 and a _max air flow_ of 300 kg/h would result in a calculated coefficient of 0.5 at an air flow of 150 kg/h. This means that the charge temperature estimate would be a 50/50 split between IAT and CLT. At or above max air flow, the calculated coefficient would be 0.9. Similar to the above examples in RPM+TPS mode, the resultant charge temperature estimate would be `(40C * 0.90) + (80C * 0.10) = 44C`.
+For example, a _low flow coefficient_ of 0.100, a _high flow coefficent_ of 0.900 and a _max air flow_ of 300 kg/h would result in a calculated coefficient of 0.5 at an air flow of 150 kg/h. This means that the charge temperature estimate would be a 50/50 split between IAT and CLT. At or above _max air flow_, the calculated coefficient would be 0.9. Similar to the above examples in RPM+TPS mode (40C IAT and 80C CLT), the resultant charge temperature estimate would be `(40C * 0.90) + (80C * 0.10) = 44C` at or above _max air flow_.
 
 ### Table
 
