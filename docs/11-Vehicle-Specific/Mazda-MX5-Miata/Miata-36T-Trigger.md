@@ -60,19 +60,19 @@ These settings will likely get the car started with the Mazda 323 timing wheel h
 
 Now after ensuring your timing is reverted back to dynamic in TS, the installation should now be complete!
 
-# Additional Steps For NA Miatas
+## Additional Steps For NA Miatas
 
-## Crank Position Sensor
+### Crank Position Sensor
 
 NAs either do not come with any crank position sensor, or have a VR sensor.  In either case, you need to use a Hall effect CPS from a 1999-2005 Miata.  The CPS will be bolted in place with an M5 or M6 bolt, and possibly some washers, in order to align properly with your trigger wheel.  Ensure that the pigtail from the sensor is secured such that it does not get damaged by the nearby belts.
 
-## Wiring
+### Wiring
 
 No additional wires need to be run to the ECU, but the wiring will require slight modification.  This can either be done by cutting the factory harness, or by making a making a sub-harness that plugs into the CAS receptacle.  Either way, you'll need to match the connectivity shown in the diagram below.  Both sensors should receive power and ground, CMP should only connect to the CAS, CNK should only connect to the new crank position sensor.
 
 ![image](36T-trigger/cas_wiring.png)
 
-## Tunserstudio Settings
+### Tunserstudio Settings
 
 In order to enable sequential fuel or ignition, the cam input settings pictured here should be used.  Regardless if you have a 1.6 or 1.8, Cam Mode (intake) should be set to Miata NA, and Cam Mode (exhaust) should be inactive.  This requires a firmware release from after October 1, 2024
 
