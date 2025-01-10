@@ -4,7 +4,7 @@ This is the source code for the FOME Wiki - [wiki.fome.tech](https://wiki.fome.t
 
 ## Development
 
-FOME Wiki is built using [Docusaurus 2](https://docusaurus.io/).
+FOME Wiki is built using [Docusaurus 3](https://docusaurus.io/).
 
 ### Installation
 
