@@ -155,6 +155,7 @@ There are three ways of tuning the VE table. The first way is to drive the car a
 Next, click the tab labelled _Tune Analyze Live! - Tune For You_ to bring up the autotuner. Click to the _Advanced Settings_ tab and configure it as shown in the image below. These configuration settings are deliberately quite loose so that TS can quickly tune the general shape of the VE table. On the left side of the _VE Table Control Panel_, you also need to check the box marked _Update Controller_ which ensures that the VE table is updated on the ECU as the autotune corrects itself.
 
 ![image](Miata-MX5-Quick-Start-Images/autotune2.jpg)
+
 | **Setting** | **Value** |
 |------------------------------|----- |
 | Cell Change Resistance       | Easy |
@@ -223,6 +224,7 @@ Now that the autotuner is set up, start the car and click _Start Auto Tune_ on t
 - You can Lock cells by highlighting them and locking them. Such as Idle or Coasting sections.
 
 For Example 
+
 | **Setting** | **Value** |
 |------------------------------|----- |
 | Cell Change Resistance       | Hard / Very Hard |
