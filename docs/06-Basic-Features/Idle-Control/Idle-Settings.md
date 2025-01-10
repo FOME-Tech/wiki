@@ -10,13 +10,15 @@ _Open Loop_ disables the Closed Loop Idle strategy for the IACV/ETB. _Open Loop 
 
 The below settings are utilized to prevent the closed loop idle air strategy from engaging when it is not desired.
 
+![image](Idle-Settings/idleDetectionThresholds.png)
+
 #### TPS Threshold
 
 The TPS value must be below this % before the idle state can be entered. When using an Electronic Throttle Body (ETB) this references the Accelerator Pedal Position sensor instead.
 
-#### RPM upper limit(RPM)
+#### RPM upper limit
 
-The engine speed must be at or below the target RPM plus this value before the idle state can be entered. For example, if the Idle Target RPM is 750 RPM and this value is set to 200, the engine speed must be at or below 950 RPM before closed loop idle can be entered.
+The engine speed must be at or below the _idle target RPM_ plus this value before the idle state can be entered. For example, if the _idle target RPM_ is 750 RPM and this value is set to 200, the engine speed must be at or below 950 RPM before closed loop idle can be entered.
 
 #### RPM deadzone
 
@@ -27,6 +29,8 @@ When the engine speed is within this many RPM of the target idle RPM, the closed
 The VSS must be at or below this speed before the idle state can be entered. Setting this to 0 disables this check and enables closed loop idle air control at any speed.
 
 ### Open Loop Idle
+
+![image](Idle-Settings/openLoopIdle.png)
 
 #### Open loop base position
 
@@ -50,15 +54,17 @@ Added to the _open loop base position_ when the fans are activated. May compensa
 
 The closed loop idle air strategy can utilize all three terms (Proportional, Integral, Derivative) to provide accurate control of the IACV or ETB position and achieve a stable target idle. The 3 terms are calculated, added up and then limited by the _Min_ or _Max_ values to arrive at the final _Idle: Closed Loop_ output. The error (difference between the _Idle Target RPM_ and actual RPM) is written on the variable _idleStatus_Error_.
 
+![image](Idle-Settings/closedLoopIdle.png)
+
 #### P-factor
 
-Sets the Proportional gain of the closed loop idle air strategy, used to generate the P Term. Unity gain results in a P term output equal to the error, (_Idle Target RPM_ - actual RPM). Log variable is _idleStatus_pTerm_. 
+Sets the Proportional gain of the closed loop idle air strategy, used to generate the P Term. Unity gain results in a P term output equal to the error, `(Idle Target RPM - actual RPM)`. Log variable is _idleStatus_pTerm_. 
 
 For example, an instantaneous error of 100 RPM with a P-factor gain of 0.5 would result in a P term output of 50%.
 
 #### I-factor
 
-Sets the Integral gain of the closed loop idle air strategy, used to generate the I Term. Unity gain results in an I term output equal to the error/second (_Idle Target RPM_ - actual RPM)/sec. Log variable is _idleStatus_iTerm_.
+Sets the Integral gain of the closed loop idle air strategy, used to generate the I Term. Unity gain results in an I term output equal to the error/second, `(Idle Target RPM - actual RPM)/sec`. Log variable is _idleStatus_iTerm_.
 
 For example, a consistent error of 100 RPM with an I-factor gain of 0.01 would result in an I term output that increases by 1% every second.
 
@@ -70,7 +76,11 @@ Used to limit the Integral term (iTerm) windup when the closed loop idle air str
 
 `iTerm += dTime(sec) * antiwindupFreq * (ClosedLoopLimitedOutput - ClosedLoopOutput)`
 
-_note: dTime is the delta time since the closed loop idle air PID controller last ran._
+:::info
+
+_dTime_ is the delta time since the closed loop idle air PID controller last ran.
+
+:::
 
 Keep in mind that the Integral term is updated every time the closed loop idle air PID control strategy runs and will continue to be modified based on the error and _I-factor_ gain. Additionally, if _ClosedLoopLimitedOutput_ equals _ClosedLoopOutput_, antiwindupFreq has no effect.
 
@@ -91,6 +101,8 @@ Sets the minimum and maximum duty cycle modifier for the _I-factor_ specifically
 #### Use IAC PID Multiplier Table
 
 ### Extra Idle Features
+
+![image](Idle-Settings/extraIdleFeatures.png)
 
 #### Use idle ignition table
 
@@ -116,21 +128,33 @@ Override the IAC position during overrun conditions. This can be used to help re
 
 ## Idle Target RPM
 
+Found under _Idle > Target RPM_.
+
+![image](Idle-Settings/idleTargetRPM.png)
+
 Defines the target idle RPM used by the main Closed Loop Idle air strategy as well as _Closed Loop Idle Ignition Timing_. Log variable is _Idle: Target RPM_.
 
 ## Warmup idle multiplier/CLT multiplier
+
+Found under _Idle > CLT Multiplier_.
+
+![image](Idle-Settings/warmupIdleMultiplier.png)
 
 The _open loop base position_ value is multiplied by the value in this table. For example, if the _open loop base position_ value was 30% and the multiplier was 1.50 at 0 degC, the commanded base position at 0 degC would be 45%. A multiplier of 1 would simply output the open loop base position value.
 
 ## Closed-loop idle timing
 
+Found under _Idle > Closed-loop idle timing_.
+
+![image](Idle-Settings/closedLoopIdleTiming.png)
+
 ### Enable closed loop idle ignition timing
 
-_True_ enables the closed loop idle ignition timing loop strategy, __false__ disables it.
+__True__ enables the closed loop idle ignition timing loop strategy, __false__ disables it.
 
 ### Proportional gain
 
-Unity gain results in 1 deg CKA for every 1 RPM of error between actual engine speed and target engine speed. For example, a gain of 0.1 results in 1 deg CKA for every 10 RPM of error. If the engine speed were 100 RPM below the Idle target RPM the resulting output would be +10 deg CKA (advance).
+Unity gain (1.0000) results in 1 deg CKA for every 1 RPM of error between actual engine speed and target engine speed. For example, a gain of 0.1000 results in 1 deg CKA for every 10 RPM of error. If the engine speed is 100 RPM below the _Idle target RPM_ the resulting output would be +10 deg CKA (advance).
 
 ### Derivative gain
 
@@ -144,7 +168,15 @@ Only enabled when _Use IAC PID Multiplier Table_ is set to __true__.
 
 ## Coasting IAC Position
 
-Only enabled when _Use coasting Idle Table_ is set to __true__. 2D Table. When the engine is in the _coasting_ phase, the IAC base position is set to the value defined by this table. This table is not used if the engine is not in the _coasting_ phase and the _open loop base position_ will be used instead. _Note: despite the "multiplier" label, this table sets the IAC position in % duty cycle just like _open loop base position_ - this is not a multiplier applied to the base position_.
+Found under _Idle > Coasting IAC Position_.
+
+![image](Idle-Settings/coastingIacPosition.png)
+
+Only enabled when _Use coasting Idle Table_ is set to __true__. 2D Table. When the engine is in the _coasting_ phase, the IAC base position is set to the value defined by this table. This table is not used if the engine is not in the _coasting_ phase and the _open loop base position_ will be used instead.
+
+:::note
+Despite the _multiplier_ label in the table, this table sets the IAC position in % duty cycle just like _open loop base position_ - this is not a multiplier applied to the base position.
+:::
 
 ## Idle VE
 
@@ -153,5 +185,9 @@ Only enabled when _Use idle VE table_ is set to __true__. 3D table. Used in plac
 See [here](../Idle-VE-Table) for more detail about idle-specific VE settings.
 
 ## Idle Ignition Advance
+
+Found under _Idle > Ignition Advance_.
+
+![image](Idle-Settings/idleAdvanceAngle.png)
 
 Only enabled when _Use idle ignition table_ is set to __true__. 2D table (curve). The values in this table are used in place of the regular ignition curve when idle is active, or during the cranking taper if _Use idle tables for cranking taper_ is set to __true__. Unlike _Closed-loop Idle Timing_, this table does not react to _Idle target RPM_ and is open loop only.
