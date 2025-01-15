@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RealDashCAN version="2">
+  <frames>
+    <frame id="0x0">
+      <value targetId="0" offset="0" length="2" endianness="big" conversion="V*0.001"/>
+      <value name="VVTPos" offset="3" length="2" signed="true" conversion="V*0.02"/>
+      <value name="NewSignal_0010" offset="3" length="1"/>
+      <value name="NewSignal_0009" offset="2" length="1"/>
+      <value name="NewSignal_0008" offset="1" length="1"/>
+      <value name="NewSignal_0015" offset="1" length="1"/>
+      <value name="NewSignal_0016" offset="2" length="1"/>
+      <value name="NewSignal_0024" length="1"/>
+    </frame>
+    <frame id="0x200">
+      <value name="WarningCounter" length="2"/>
+      <value name="LastError" offset="2" length="2"/>
+      <value name="BASE0_RevLimAct" startbit="32" bitcount="1" units="bit"/>
+      <value name="BASE0_MainRelayAct" startbit="33" bitcount="1" units="bit"/>
+      <value name="BASE0_FuelPumpAct" startbit="34" bitcount="1" units="bit"/>
+      <value name="BASE0_CELAct" startbit="35" bitcount="1" units="bit"/>
+      <value name="BASE0_EGOHeatAct" startbit="36" bitcount="1" units="bit"/>
+      <value name="BASE0_LambdaProtectAct" startbit="37" bitcount="1" units="bit"/>
+      <value name="CurrentGear" offset="5" length="1"/>
+      <value name="DistanceTraveled" offset="6" length="2" conversion="V*0.1"/>
+      <value name="BASE0_Fan" startbit="38" bitcount="1" units="bit"/>
+      <value name="BASE0_Fan2" startbit="39" bitcount="1" units="bit"/>
+    </frame>
+    <frame id="0x201">
+      <value targetId="37" length="2"/>
+      <value name="IgnitionTiming" offset="2" length="2" signed="true" conversion="V*0.02"/>
+      <value name="InjDuty" offset="4" length="1" conversion="V*0.5"/>
+      <value name="IgnDuty" offset="5" length="1" conversion="V*0.5"/>
+      <value targetId="81" offset="6" length="1" units="km/h"/>
+      <value name="FlexPct" offset="7" length="1"/>
+    </frame>
+    <frame id="0x202" signed="true">
+      <value name="PPS" length="2" conversion="V*0.01"/>
+      <value name="TPS1" offset="2" length="2" conversion="V*0.01"/>
+      <value name="TPS2" offset="4" length="2" conversion="V*0.01"/>
+      <value name="Wastegate" offset="6" length="2" conversion="V*0.01"/>
+    </frame>
+    <frame id="0x203">
+      <value targetId="31" length="2" conversion="V*0.03333333"/>
+      <value targetId="14" offset="2" length="1" units="C" conversion="V-40"/>
+      <value targetId="27" offset="3" length="1" units="C" conversion="V-40"/>
+      <value name="AUX1Temp" offset="4" length="1" units="C" conversion="V-40"/>
+      <value name="AUX2Temp" offset="5" length="1" units="C" conversion="V-40"/>
+      <value name="MCUTemp" offset="6" length="1" units="C" conversion="V-40"/>
+      <value name="FuelLevel" offset="7" length="1" conversion="V*0.5"/>
+    </frame>
+    <frame id="0x204">
+      <value name="OilPress" offset="2" length="2" conversion="V*0.03333333"/>
+      <value targetId="152" offset="4" length="1" units="C" conversion="V-40"/>
+      <value name="FuelTemperature" offset="5" length="1" units="C" conversion="V-40"/>
+      <value name="BattVolt" offset="6" length="2" conversion="V*0.001"/>
+    </frame>
+    <frame id="0x205">
+      <value name="CylAM" length="2"/>
+      <value name="EstMAF" offset="2" length="2" conversion="V*0.01"/>
+      <value name="InjPW" offset="4" length="2" conversion="V*0.003333333"/>
+      <value name="KnockCt" offset="6" length="2"/>
+    </frame>
+    <frame id="0x206">
+      <value name="FuelUsed" length="2"/>
+      <value name="FuelFlow" offset="2" length="2" conversion="V*0.005"/>
+      <value name="FuelTrim1" offset="4" length="2" conversion="V*0.01"/>
+      <value name="FuelTrim2" offset="6" length="2" conversion="V*0.01"/>
+    </frame>
+    <frame id="0x207">
+      <value name="Lam1" length="2" conversion="V*0.0001"/>
+      <value name="Lam2" offset="2" length="2" conversion="V*0.0001"/>
+      <value name="FpLow" offset="4" length="2" conversion="V*0.03333333"/>
+      <value name="FpHigh" offset="6" length="2" units="bar" conversion="V*0.1"/>
+    </frame>
+    <frame id="0x208" signed="true">
+      <value name="Cam1I" length="1"/>
+      <value name="Cam1Itar" offset="1" length="1"/>
+      <value name="Cam1E" offset="2" length="1"/>
+      <value name="Cam1Etar" offset="3" length="1"/>
+      <value name="Cam2I" offset="4" length="1"/>
+      <value name="Cam2Itar" offset="5" length="1"/>
+      <value name="Cam2E" offset="6" length="1"/>
+      <value name="Cam2Etar" offset="7" length="1"/>
+    </frame>
+    <frame id="0x209">
+      <value targetId="106" length="1" units="C" conversion="V*5"/>
+      <value targetId="107" offset="1" length="1" units="C" conversion="V*5"/>
+      <value targetId="108" offset="2" length="1" units="C" conversion="V*5"/>
+      <value targetId="109" offset="3" length="1" units="C" conversion="V*5"/>
+      <value targetId="110" offset="4" length="1" units="C" conversion="V*5"/>
+      <value targetId="111" offset="5" length="1" units="C" conversion="V*5"/>
+      <value targetId="112" offset="6" length="1" units="C" conversion="V*5"/>
+      <value targetId="113" offset="7" length="1" units="C" conversion="V*5"/>
+    </frame>
+  </frames>
+</RealDashCAN>
