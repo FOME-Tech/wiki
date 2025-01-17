@@ -1,4 +1,4 @@
-# MAF based fuel control
+# MAF Strategy
 
 ## Current Status
 
