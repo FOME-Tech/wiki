@@ -1,1 +1,1 @@
-# Wasted spark ignition mode  
+# Wasted Spark Ignition Mode
