@@ -14,6 +14,10 @@ Using a main relay has several benefits. First, it helps to protect the ECU from
 
 It's important to note that the wiring of the main relay may vary depending on the specific ECU and vehicle configuration. Always refer to the manufacturer's instructions and wiring diagrams when installing the main relay to ensure proper installation and operation.
 
+## Tune Sensors While Powered From +12V
+
+Not all boards, perhaps most even, do not provide a fully re-buffed +5 volt supply when powered by e.g. only USB.  Therefor, losses from the host supply will leave the +5 volt rail available to sensors drooping in comparison to when powered by a running engine (+12 volt available).  Tuning in this manner will likely cause a significant difference in readings compared to a fully powered ECU.
+
 ## Why Do I Have XYZ Error?
 
 Check error code and compare to this list (grab list out of firmware)
