@@ -6,8 +6,6 @@
 |------------|----------|
 | GM LS | Found on most GM LS engines |
 
-
-
 ## Coils with known issues
 
 | Name | Description |

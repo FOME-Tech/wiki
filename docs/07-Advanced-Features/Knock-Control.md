@@ -29,10 +29,10 @@ The scatter plot is also useful. Knock generally shows up as outliers outside of
 Contrast the image above to a normal noise scatter plot (no knock), which might look like this
 ![no knock](./un-knock-example.png)
 
-
 ## Reapply Rate Configuration
 
 Setting the reapply rate can be tricky:
+
 - Low load conditions need faster reapply rates
 - High load conditions need slower reapply rates
 
@@ -41,6 +41,7 @@ Some users implement a workaround by using zeros in the bottom line of the max k
 ## Hardware Connections
 
 The knock sensor is essentially a piezo microphone element:
+
 - For testing/analysis, you can attach a 3.5mm connector to your knock sensor wires and plug into a laptop
 - The knock input on ECUs (like Proteus) is very different from a normal analog input
 - The sensor connection is balanced, similar to audio equipment principles

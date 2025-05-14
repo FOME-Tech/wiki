@@ -21,7 +21,6 @@ Wideband oxygen sensors are required for accurate AFR measurement. Unlike narrow
 
 ![wideband dfu](../lsu-pinout.webp)
 
-
 **Note:** The calibration resistor is internal to the sensor. On the sensor connector, there are only 5 wires but 6 pins, as pins 1 and 5 have a laser-trimmed resistor between them.
 
 ### F042 Controller Module Pinout
@@ -82,11 +81,12 @@ For standalone units without a programmer, use the DFU (Device Firmware Upgrade)
 3. Make sure the transceiver isn't connected (connector PCB), otherwise USB won't work
 4. Use STM32Cube software to flash the firmware (ST Link utility may not work)
 
-Download firmware binary from: https://github.com/mck1117/wideband/releases
+Download firmware binary from: [mck1117/wideband Releases on GitHub](https://github.com/mck1117/wideband/releases).
 
 ![wideband dfu](../wbo-dfu.webp)
 
 ## Common Issues and Solutions
 
 ### Extension Cable Issues
+
 When using extension cables, ensure all pins are connected. Some aftermarket extension cables (like certain Innovate models) may omit the calibration resistor pin (Pin 5/RT).
