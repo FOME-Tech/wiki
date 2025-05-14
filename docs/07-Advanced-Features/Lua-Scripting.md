@@ -99,6 +99,16 @@ FOME provides eight user-definable single-precision floating-point settings for 
 
 - [`findSetting(name, defaultValue)`](#findsettingname-defaultvalue)
 
+## Persistent Values
+
+FOME provides 64 numeric persistent values for use with Lua scripting. Persistent values store data in RAM that is
+backed up in such a way as to survive ignition/power cycles.
+
+TODO: provide more detail of this new feature
+
+- [`getPersistentValue(index)`](#getpersistentvalueindex)
+- [`storePersistentValue(index, value)`](#storepersistentvalueindex-value)
+
 ## Lua Interface Reference
 
 ### Utilities
@@ -227,6 +237,23 @@ in TunerStudio.
 |-:|--|:-|
 |`name`|string|The name of the user-defined setting to retrieve the value of.|
 |`defaultValue`|float|The value to use if specified user-defined setting does not exist.|
+
+#### `getPersistentValue(index)`
+
+Returns the persisted value currently stored for the given index. Persistent values are indentified by their 1-based index: 1, 2, 3, ..., 64.
+
+|parameter|type|description|
+|-:|--|:-|
+|`index`|integer|The index of the persistent value to retrieve; 1 through 64.|
+
+#### `storePersistentValue(index, value)`
+
+Stores the given value to the persistent index specified. Persistent values are indentified by their 1-based index: 1, 2, 3, ..., 64.
+
+|parameter|type|description|
+|-:|--|:-|
+|`index`|integer|The index of the persistent value to store; 1 through 64.|
+|`value`|number|The persistent value to set the specified index to.|
 
 #### `Timer`
 
