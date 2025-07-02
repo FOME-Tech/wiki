@@ -12,7 +12,6 @@ Bottom line: to get the most out of FOME's knock control, setup and configuratio
 
 ## Basic Setup Process
 
-
 1. Enable the knock sensor and calculate the knock frequency using an approximation formula.
 2. Remove ignition timing from the ignition map, adjust other parameters to prevent pre-detonation events.
 3. Record a log of engine performance and knock sensor levels across full RPM range.
@@ -75,7 +74,6 @@ An engine knock threshold curve shows how the sensitivity of knock sensors chang
 
 A good starting point is setting your threshold approximately 4dB above normal engine sound levels. This provides enough margin to avoid false positives while still detecting actual knock events.
 
-
 ## Interpreting Knock Data
 
 Signal-noise ratio comes into play here.  Your knock sensor is going to capture noise because engines are loud.  Some of that noise is going to be "normal" things like timing gears, pumps, belt-driven accessories, bearings, the gears of a supercharger, vibrations/harmonics between the engine and the frame of the car with solid mounts, injectors tapping, etc.  This is the "noise" in signal-noise ratio for knock purposes.  The "signal" is the auditory component of knock from each cylinder.  One of the reason why most OEMs have independent gains for each cylinder is that the SIGNAL is not the same amplitude for each cylinder, so gains are used to compensate.  Looking at individual cylinder scatter graphs are going to help determine appropriate gains for each cylinder.
@@ -99,7 +97,6 @@ Knock appears as sharp spikes in the time domain. Since knock is a stochastic pr
 - Spikes in knock level that correspond to specific load conditions
 - Cylinder-specific knock patterns
 
-
 ## Reapply Rate Configuration
 
 Setting the reapply rate can be tricky:
@@ -119,13 +116,13 @@ The knock sensor is essentially a piezo microphone element:
 
 ## Common Issues & Debugging
 
-1. **No Timing Retard**: Ensure your max knock retard table isn't all zeros
-2. **False Positives**: If you're getting knock detection without audible knock, recalibrate your threshold
-3. **Noise Filtering**: In TunerStudio, set filter level to 2 to clean up MAP signals and reduce noise
-4. **Rich Mixtures**: Beyond 0.8 lambda, additional fuel enrichment won't help with knock mitigation
+1. __No Timing Retard__: Ensure your max knock retard table isn't all zeros
+2. __False Positives__: If you're getting knock detection without audible knock, recalibrate your threshold
+3. __Noise Filtering__: In TunerStudio, set filter level to 2 to clean up MAP signals and reduce noise
+4. __Rich Mixtures__: Beyond 0.8 lambda, additional fuel enrichment won't help with knock mitigation
 
 ## Advanced Analysis
 
 For deeper knock analysis, consider using a spectrogram to visualize the frequency characteristics of engine noise and knock events.
 
-_Remember: When setting up knock detection, it's prudent to start with conservative timing and gradually optimize rather than risking engine damage._
+*Remember: When setting up knock detection, it's prudent to start with conservative timing and gradually optimize rather than risking engine damage.*
