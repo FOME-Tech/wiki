@@ -2,7 +2,7 @@
 
 Updating the firmware is easy to do, however it is important to do it correctly to prevent errors or board
 misconfiguration.  A guide to downloading FOME firmware and setting up TunerStudio can be found
-[here](/Intro-Start-Here/Where-To-Get-Firmware/).
+[on this page](/Intro-Start-Here/Where-To-Get-Firmware/).
 
 Updating firmware involves a process sometimes called "flashing" or even "programming" the ECU.  Generally, these all
 refer to the same thing: taking the compiled FOME firmware and loading it into the non-volatile flash memory on the ECU.

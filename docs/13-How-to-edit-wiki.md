@@ -107,4 +107,4 @@ Once that is done you can push your changes and they will get automatically upda
 
 ### This kind of subtitle
 
-You can also use like **this** **[link](https://fome.tech)**
+You can also use like **this** **[link to FOME's site](https://fome.tech)**.
