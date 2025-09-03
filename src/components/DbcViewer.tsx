@@ -1,9 +1,8 @@
+import fomeDbcFileRaw from '!!raw-loader!../data/FOME_CAN_verbose.dbc';
 import { Dbc } from 'candied';
 import type { DbcData } from 'candied/lib/dbc/Dbc';
 import { dbcReader } from 'candied/lib/filesystem/DbcWebFs';
 import { useEffect, useState } from 'react';
-
-import fomeDbcFileRaw from '!!raw-loader!../data/FOME_CAN_verbose.dbc';
 
 const DbcViewer = () => {
   const [dbcData, setDbcData] = useState<DbcData>(null);
