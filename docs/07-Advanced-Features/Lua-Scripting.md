@@ -345,9 +345,20 @@ Resets the PID controller.
 
 #### `getDigital(index)`
 
+Returns the current value of a digital I/O channel of the specified index.
+Channels are indexed as follows (from [`lua_hooks.cpp`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/lua/lua_hooks.cpp#L287)):
+
+|index|description|
+|-:|:-|
+|0|Clutch Down Switch|
+|1|Clutch Up Switch|
+|2|Brake Pedal Switch|
+|3|A/C Switch|
+|4|A/C Pressure Switch|
+
 |parameter|type|description|
 |-:|--|:-|
-|`index`|integer||
+|`index`|integer|The index of the digital channel to return; 0 through 4; see [`lua_hooks.cpp`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/lua/lua_hooks.cpp#L287).|
 
 #### `readPin(name)`
 
