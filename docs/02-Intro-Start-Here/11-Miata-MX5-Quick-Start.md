@@ -150,8 +150,9 @@ When you are satisfied with your VE table, turn closed loop fuel correction and 
 
 ## Firmware Download & Updating
 
+There are several resources below on downloading and updating the firmware.
 **NOTE: Before updating the firmware, "save as" your current TS tune file so you have a stable point to import settings from**
 
-- Steps on where to download the firmware can be found [here](https://wiki.fome.tech/Intro-Start-Here/Where-To-Get-Firmware/).
-- Steps on how to update the firmware can be found [here](https://wiki.fome.tech/Intro-Start-Here/HT-Updating-The-Firmware/).
-- Additional notes on flashing in the event you're unsuccessful the first time can be found [here](dhttps://wiki.fome.tech/Hardware/Flashing-Software-Notes/).
+- Steps on where to download the firmware can be found [in this guide on where to download the firmware](Intro-Start-Here/Where-To-Get-Firmware/).
+- Steps on how to update the firmware can be found [in this guide on firmware updating](Intro-Start-Here/HT-Updating-The-Firmware/).
+- Additional notes on flashing in the event you're unsuccessful the first time can be found [in this flashing notes guide](Hardware/Flashing-Software-Notes/).

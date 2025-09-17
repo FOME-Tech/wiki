@@ -10,4 +10,4 @@ Most FOME ECUs have in internal wideband controller meaning they only need a wid
 
 ## Internal WBO2 Coding Documentation
 
-The repository for the internal WBO firmware and hardware can be found [here](https://github.com/mck1117/wideband).
+The repository for the internal WBO firmware and hardware can be found [in this github repository](https://github.com/mck1117/wideband).
