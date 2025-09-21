@@ -50,13 +50,13 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [CAN gauge](Sensors-And-Gauges/Driver-Controls-And-Feedback/CAN-Gauge)
 - [Clutch Pedal position and pressure sensing](Sensors-And-Gauges/Driver-Controls-And-Feedback/Clutch)
 - [Rev Counter](Sensors-And-Gauges/Driver-Controls-And-Feedback/Tacho)
-- [WBO2 Wideband Lambda](Sensors-And-Gauges/Driver-Controls-And-Feedback/Wideband)
 
 #### Fuel Sensors
 
 - [Flex-fuel sensor](Sensors-And-Gauges/Fuel-Sensors/Flex-Fuel-Sensor)
 - [Fuel level](Sensors-And-Gauges/Fuel-Sensors/Fuel-Level)
 - [Fuel pressure](Sensors-And-Gauges/Fuel-Sensors/Fuel-Pressure)
+- [WBO2 Wideband Lambda](Sensors-And-Gauges/Fuel-Sensors/Wideband)
 
 #### General Sensors
 
