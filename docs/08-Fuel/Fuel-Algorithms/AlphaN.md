@@ -6,7 +6,7 @@ Alpha-N is a fuel strategy that implies calculating engine load using the TPS (T
 ## How does it work?
 <img width="1546" height="630" alt="image" src="https://github.com/user-attachments/assets/a14d036c-af46-45d7-bb8d-dfef62e3c413" />
 
-In esscence, this fueling method is quite similar to Speed Density, you're equally presented with both a VE table and a target AFR table. Where X axis means RPM, Y Axis means Load and the cell value means VE (or target AFR on said table). The main difference is that the Y Axis will represent **Throttle Position** instead of MAP (Manifold Air Pressure). 
+In essence, this fueling method is quite similar to Speed Density, you're equally presented with both a VE table and a target AFR table. Where X axis means RPM, Y Axis means Load and the cell value means VE (or target AFR on said table). The main difference is that the Y Axis will represent **Throttle Position** instead of MAP (Manifold Air Pressure). 
 
 ## Why should I use this instead of Speed Density or MAF Air Charge?
 Speed Density works best on engines where vacuum is relatively linear when compared to the load the engine is facing. This is almost always the case on naturally aspirated engines with stock to mild aftermarket camshafts. And a single throttle body manifold with a plenum.
