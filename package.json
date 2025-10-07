@@ -44,6 +44,7 @@
     "@tsconfig/docusaurus": "^2.0.2",
     "@types/node": "^24.7.0",
     "docusaurus-prince-pdf": "^1.2.1",
+    "glob": "^11.0.3",
     "markdownlint-cli": "^0.45.0",
     "raw-loader": "^4.0.2",
     "typescript": "^5.9.3"
