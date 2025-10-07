@@ -46,7 +46,7 @@
     "docusaurus-prince-pdf": "^1.2.1",
     "markdownlint-cli": "^0.45.0",
     "raw-loader": "^4.0.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.9.3"
   },
   "browserslist": {
     "production": [
