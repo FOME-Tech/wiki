@@ -23,6 +23,7 @@ Some **Ford** and **Toyota** applications are of this type, either TPS (includin
 - ETB: Ford 4M5G-EDLF15
 
 While using partially redundant sensors with the **default** Tunerstudio settings most likely a **TPS error** will occur. While the error is active you will be able to run the *Automatic TPS Calibration* but the *Automatic ETB PID Calibration* procedure will be disabled. To clear the error the solution is to use the **Partial Secondary TPS Maximum(%)** setting (Tunerstudio > TPS settings) to allow a greater difference between the primary and secondary sensor. Good known values:
+
 - Ford ~53%
 - Toyota ETCS-i ~65%
 - To disable the setting use 0 or 100%
