@@ -1,4 +1,4 @@
-# Redundant Sensors for ETB Position
+# ETB redundancy
 
 ## Reason for redundancy in ETB position sensing
 
@@ -16,11 +16,17 @@ Things like 0.5-4.5 volt primary sensing with delta, inverted, or half-value cha
 
 ## Partial Redundancy sensors
 
-Some Ford and Toyota applications are of this type, either TPS, APPS, or both.
+These sensors are equipped with a **linear primary sensor** like the fully redundant sensors, but **the secondary sensor doesn't cover the full sensing range**.  Instead, it reaches full-scale well before the primary sensor, providing only "partial" redundancy and a overall non-linear output over the full range.
 
-These sensors are linear like the fully redundant sensors, but the secondary sensor doesn't cover the full sensing range.  Instead, it reaches full-scale well before the primary sensor, providing only "partial" redundancy and a overall non-linear output over the full range.
+Some **Ford** and **Toyota** applications are of this type, either TPS (including ETBs), APPS, or both. Known partially redundant units:
+- ETB: Ford 4M5G-EDLF15
 
-FOME supports these sensors with the `tpsSecondaryMaximum` and `ppsSecondaryMaximum` tune configurations.  When necessary, these values should be tuned to indicate the percent of the primary sensor's full-scale reading at which the secondary sensor has just reached it's maximum.  There are a number of techniques to determine this value, both directly/precisely and indirectly.
+While using partially redundant sensors with the **default** Tunerstudio settings most likely a **TPS error** will occur. While the error is active you will be able to run the *Automatic TPS Calibration* but the *Automatic ETB PID Calibration* procedure will be disabled. To clear the error the solution is to use the **Partial Secondary TPS Maximum(%)** setting (Tunerstudio > TPS settings) to allow a greater difference between the primary and secondary sensor. Good known values:
+- Ford ~53%
+- Toyota ETCS-i ~65%
+- To disable the setting use 0 or 100%
+
+FOME supports partially redundant sensors with the `tpsSecondaryMaximum` and `ppsSecondaryMaximum` tune configurations.  When necessary, these values should be tuned to indicate the percent of the primary sensor's full-scale reading at which the secondary sensor has just reached it's maximum.  There are a number of techniques to determine this value, both directly/precisely and indirectly.
 
 A direct method would be like:
 
