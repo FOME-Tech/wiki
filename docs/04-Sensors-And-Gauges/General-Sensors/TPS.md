@@ -10,7 +10,7 @@ Wiring power and ground from the FOME ECU will ensure a clean and consistent sig
 
 For more info on how TPS sensors operate on Electronic Throttele Bodies: [ETB Throttle Position](../ETB-TPS)
 
-### ETB Throttle Position
+## ETB Throttle Position
 
 Electronic Throttle Bodies typically have a **primary** and **secondary** throttle position sensor. This is to ensure safe operation of the vehicle. When connecting an ETB to a FOME ECU it is always required to have **two redundant signals** (e.g. primary 0-5v and secondary 5-0v).
 
