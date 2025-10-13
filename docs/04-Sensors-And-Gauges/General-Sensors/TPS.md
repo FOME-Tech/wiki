@@ -8,7 +8,6 @@ Throttle Position Sensors are used to tell the FOME ECU the angle of the throttl
 
 Wiring power and ground from the FOME ECU will ensure a clean and consistent signal.
 
-For more info on how TPS sensors operate on Electronic Throttele Bodies: [ETB Throttle Position](../ETB-TPS)
 
 ## ETB Throttle Position
 
