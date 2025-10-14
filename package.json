@@ -12,7 +12,7 @@
     "lint:fix:unsafe": "biome check . --apply-unsafe .",
     "lint:ts": "tsc",
     "lint:links": "node scripts/linkValidator.js 'docs/**/*.md?(x)'",
-    "lint:md": "npx -y markdownlint-cli docs",
+    "lint:md": "markdownlint docs/",
     "lint:biome": "biome check .",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -23,29 +23,31 @@
     "pdf": "docusaurus-prince-pdf -u http://localhost:3000 -o static/pdf/wiki.fome.pdf"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.8.1",
-    "@docusaurus/plugin-client-redirects": "^3.8.1",
-    "@docusaurus/preset-classic": "^3.8.1",
+    "@docusaurus/core": "^3.9.1",
+    "@docusaurus/plugin-client-redirects": "^3.9.1",
+    "@docusaurus/preset-classic": "^3.9.1",
     "@easyops-cn/docusaurus-search-local": "^0.52.1",
-    "@mdx-js/react": "^3.0.1",
+    "@mdx-js/react": "^3.1.1",
     "candied": "^2.2.0",
     "clsx": "^2.1.1",
-    "prism-react-renderer": "^2.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rehype-katex": "^7.0.0",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.3",
+    "@biomejs/biome": "2.2.5",
     "@docusaurus/module-type-aliases": "^3.8.1",
     "@docusaurus/tsconfig": "^3.8.1",
     "@docusaurus/types": "^3.8.1",
-    "@tsconfig/docusaurus": "^2.0.2",
-    "@types/node": "^20.12.7",
+    "@tsconfig/docusaurus": "^2.0.4",
+    "@types/node": "^24.7.2",
     "docusaurus-prince-pdf": "^1.2.1",
+    "glob": "^11.0.3",
+    "markdownlint-cli": "^0.45.0",
     "raw-loader": "^4.0.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.9.3"
   },
   "browserslist": {
     "production": [

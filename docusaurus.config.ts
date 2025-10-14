@@ -27,7 +27,6 @@ const config: Config = {
 
   // strict URL validation
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
   onDuplicateRoutes: 'throw',
 
   noIndex: false, // adds <meta name="robots" content="noindex, nofollow"> to every page
@@ -67,6 +66,12 @@ const config: Config = {
       } satisfies Options,
     ],
   ],
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
+  },
 
   stylesheets: [
     {

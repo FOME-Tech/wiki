@@ -54,14 +54,14 @@ jobs:
         run: |
           echo "pr_number=$(cat ./build/PR_NR)" >> $GITHUB_OUTPUT
       - name: Find comment
-        uses: peter-evans/find-comment@v3
+        uses: peter-evans/find-comment@v4
         id: find_comment
         with:
           issue-number: ${{ steps.find_pr_number.outputs.pr_number }}
           comment-author: "github-actions[bot]"
           body-includes: "Preview URL:"
       - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         with:
           comment-id: ${{ steps.find_comment.outputs.comment-id }}
           issue-number: ${{ steps.find_pr_number.outputs.pr_number }}
