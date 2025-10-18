@@ -1,4 +1,4 @@
-# General Purpose PWM (GPPMW)
+# General Purpose PWM (GPPWM)
 
 ## Known Functional PWM Controllers
 
