@@ -40,7 +40,7 @@
     "@biomejs/biome": "2.3.1",
     "@docusaurus/module-type-aliases": "^3.8.1",
     "@docusaurus/tsconfig": "^3.8.1",
-    "@docusaurus/types": "^3.8.1",
+    "@docusaurus/types": "^3.9.2",
     "@tsconfig/docusaurus": "^2.0.4",
     "@types/node": "^24.7.2",
     "docusaurus-prince-pdf": "^1.2.1",
