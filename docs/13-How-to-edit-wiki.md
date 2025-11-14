@@ -91,6 +91,6 @@ It will ask you for a summary of your changes, more thorough description, and to
 
 ![img](Push.JPG)
 
-**Pushing** in this context means to make a request for the maintainers of the wiki to review your suggested changes. Once approved, your **push** will be accepted into the master repository and go live on the wiki.
+**Pushing** in this context means to save your changes to your saved copy of the wiki repo (short for repository). Once you do this, the next prompt will be to **"Preview Pull Request."** Click the down-arrow to the right of it and instead click **"Create Pull Request."** As the text beside it shows, you "Create a pull request to propose and collaborate on your changes." In other words, this makes a request for the maintainers of the wiki to review your suggested changes. Once approved, the true wiki repository will **pull** from your local **push** and be accepted into the master repository and the live wiki pages will now have your edits. Even more simply, your "pull request" is another way to say "I want the *actual* wiki to download the changes I made to the copy of it I made that are saved locally on my computer."
 
 [And again, formatting assistance can be found here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
