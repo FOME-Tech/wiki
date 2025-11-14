@@ -4,7 +4,7 @@
 
 **Smart** coils are transformers with the igniter included, meaning there is no need for an external igniter or ignition module. The **IGBT** is built in.
 
-### YOU CANNOT IDENTIFY IF A COIL IS SMART OR DUMB BY THE NUMBER OF PINS IT HAS
+***YOU CANNOT IDENTIFY IF A COIL IS SMART OR DUMB BY THE NUMBER OF PINS IT HAS***
 
 ---
 
