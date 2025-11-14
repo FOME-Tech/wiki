@@ -93,4 +93,6 @@ It will ask you for a summary of your changes, more thorough description, and to
 
 **Pushing** in this context means to save your changes to your saved copy of the wiki repo (short for repository). Once you do this, the next prompt will be to **"Preview Pull Request."** Click the down-arrow to the right of it and instead click **"Create Pull Request."** As the text beside it shows, you "Create a pull request to propose and collaborate on your changes." In other words, this makes a request for the maintainers of the wiki to review your suggested changes. Once approved, the true wiki repository will **pull** from your local **push** and be accepted into the master repository and the live wiki pages will now have your edits. Even more simply, your "pull request" is another way to say "I want the *actual* wiki to download the changes I made to the copy of it I made that are saved locally on my computer."
 
+When you create a pull request, your browser should open automatically, and you'll again see a **"Title"** and **"Description"** box. These are the boxes where you quickly and more thoroughly describe your changes you've made to the wiki that the maintainers will be able to see. 
+
 [And again, formatting assistance can be found here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
