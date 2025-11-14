@@ -69,13 +69,13 @@ npm start
 
 ---
 
-##### The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there
+**The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there**
 
-##### The `npm install` installs all the dependencies for your site. You'll need to run this command once when you first download the project, and again only if you `package-lock.json` file changes
+ **The `npm install` installs all the dependencies for your site. You'll need to run this command once when you first download the project, and again only if you `package-lock.json` file changes**
 
-##### The `npm start` command builds your website locally and serves it through a development server, ready for you to view at [http://localhost:3000](http://localhost:3000)
+ **The `npm start` command builds your website locally and serves it through a development server, ready for you to view at [http://localhost:3000](http://localhost:3000)**
 
-##### Open `docs/13-How-to-edit-wiki.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes after hitting save
+ **Open `docs/13-How-to-edit-wiki.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes after hitting save**
 
 ---
 
