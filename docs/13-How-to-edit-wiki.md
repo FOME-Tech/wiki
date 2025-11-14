@@ -9,7 +9,7 @@
 - go to end of page and click on "Edit this page" link
 - follow GitHub's instructions for ["Editing files in another user's repository".](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files#editing-files-in-another-users-repository)
 
-## Best way to edit or add a larger number of pages
+## Our recommended way to edit or add a larger number of pages
 
 Get this:
 [Github Desktop](https://desktop.github.com)
@@ -28,7 +28,7 @@ Open Wiki in VScode from github desktop
 Start to edit the docs
 ![img](Docs.JPG)
 
-Pages are creates with a right click and named ##-xxxx.md, they will show up as pages in the wiki.
+Pages are created by right-clicking empty space in the explorer and should be named "##-xxxx.md". You fill in the "##" for a page number and "xxxx" for what the page is about. This way they will show up correctly in the wiki.
 
 Folders are creatable with a right click, they will show up like this in the wiki
 ![img](Folder.JPG)
@@ -51,12 +51,12 @@ Save your work and proceed to testing of change.
 - [Node.js](https://nodejs.org/en/download/) version 18 or above:
   - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
 
-### run Docusaurus locally
+### Run Docusaurus locally by
 
-Change directory:
+Opening a terminal or command prompt and navigating to the cloned wiki directory:
 
 ```bash
-cd wiki
+cd C:\Users\User\Documents\GitHub\wiki
 ```
 
 Install NodeJS dependencies:
@@ -66,28 +66,33 @@ npm install
 ```
 
 Run the development server:
+*After you run this, your browser should automatically open a page to [http://localhost:3000](http://localhost:3000)*
 
 ```bash
 npm start
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+---
 
-The `npm install` installs all the dependencies for your site. You'll need to run this command once when you first download the project, and again only if you `package-lock.json` file changes.
+> ##### The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there
 
-The `npm start` command builds your website locally and serves it through a development server, ready for you to view at [http://localhost:3000](http://localhost:3000).
+> ##### The `npm install` installs all the dependencies for your site. You'll need to run this command once when you first download the project, and again only if you `package-lock.json` file changes
 
-Open `docs/13-How-to-edit-wiki.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+> ##### The `npm start` command builds your website locally and serves it through a development server, ready for you to view at [http://localhost:3000](http://localhost:3000)
+
+> ##### Open `docs/13-How-to-edit-wiki.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes after hitting save
+
+---
 
 ### How to publish your change to wiki
 
-in VScode and go to github desktop
+Open github desktop again, and hopefully you'll see all of the changes you've made.
 
-It will ask you for a title, description and to commit the changes (see bottom left of picture)
+It will ask you for a summary of your changes, more thorough description, and to commit the changes (see bottom left of picture)
 
 ![img](Commit.JPG)
 
-Once that is done you can push your changes and they will get automatically updated to the wiki
+Once you click "Commit to *master*" your changes will get automatically updated to the wiki. However, if you do not have the permissions to edit the wiki directly, you will be prompted to "create a fork." Click that, then "Fork this repository," and "To contribute to the parent project."  
 
 ![img](Push.JPG)
 
