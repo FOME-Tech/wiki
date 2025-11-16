@@ -6,8 +6,6 @@ Product description and purchase link: [BMM KaN Multi Fit CAN Gauge](https://www
 
 The KaN gauge is a multi function, multi fit gauge designed exclusively for Fome ECUs. The gauge has generic mounting options to fit any car and specific mounting solutions to fit into multiple locations on a Miata including the oil pressure gauge hole, an air conditioning vent or into a standard 52mm gauge pod. Data is sent to the gauge via CAN bus communication wires coming from the ECU and the layout of the gauge can be configured wirelessly using its standalone WiFi network.
 
-For a comprehensive installation guide on a Miata, see the [Miata KaN Gauge Installation Page](/Vehicle-Specific/Mazda-MX5-Miata\Miata-KaN-Gauge/).
-
 ## Wiring
 
 Open your ECU casing and locate a 12V output, ground, CAN High, and CAN Low pins. Match each of these pins to one of the four corresponding wires on the gauge. For best signal over long distances, twist the pair of CAN lines. The gauge must be powered from the 12V power plug on the gauge circuit board to work correctly, the micro USB port is for re-programming which must also be done while the gauge is powered from 12V.
