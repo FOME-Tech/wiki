@@ -10,11 +10,7 @@ This project is made possible thanks to the fantastic work by Keith N, hence the
 
 ## WiFi Configuration
 
-When powered, the gauge will start its own standalone wifi network. In the WiFi settings for your device, connect to this network with a phone or laptop and open your browser of choice. Next find the IP address of your gauge. It should be a number like "192.168.X.XXX" which was included with your gauge purchase. In the browser's web address bar, input this IP address of the device into the browser and go to the web page. 
-
-The web page should detail the gauge settings to allow for customization of the theme and displayed values.
-
-If using multiple gauges, it is reccomended to change the network name of one of them to allow for differentiation.
+When powered, the gauge will start its own standalone wifi network called "KaN Gauge". In the WiFi settings for your device, connect to this network with a phone or laptop. The password is "update1234". Open your browser of choice and enter IP 192.168.4.1 in the address bar and hit enter. The web page should detail the gauge settings to allow for customization of the theme and displayed values. If using multiple gauges, it is reccomended to change the network name of one of them to allow for differentiation.
 
 ## Installation Steps
 
