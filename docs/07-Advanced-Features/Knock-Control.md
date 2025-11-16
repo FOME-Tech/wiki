@@ -10,6 +10,15 @@ Knock sensor placement can also have a huge role.  Many newer engines have multi
 
 Bottom line: to get the most out of FOME's knock control, setup and configuration for the individual setup is needed.
 
+## Knock Frequency (vs Cylinder Diameter)
+
+As mentioned above, knock sensing operates about a determined frequency.  FOME provides two calibrations to configure this frequency:
+
+1. indirectly, via given cylinder bore diameter
+2. directly, via explicit knock frequency
+
+Only one method should be used; if an explicit knock frequency is provided, any specified cylinder bore diameter will be ignored.  Again, providing a non-zero knock frequency override value, will __override__ the implicit frequency computation based upon the given cylinder bore diameter.
+
 ## Basic Setup Process
 
 1. Enable the knock sensor and calculate the knock frequency using an approximation formula.
