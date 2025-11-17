@@ -1,8 +1,10 @@
 # KaN (CAN) Gauge Miata Installation
 
+![image](<Miata-KaN/kanphoto1.png>)
+
 Product description and purchase link: [BMM KaN Multi Fit CAN Gauge](https://www.beermoneymotorsports.com/products/kan-gauge-for-rusefi).
 
-The KaN gauge is a multi function, multi fit gauge designed exclusively for Fome ECUs. The gauge has generic mounting options to fit any car and specific mounting solutions to fit into multiple locations on a Miata including the oil pressure gauge hole, an air conditioning vent or into a standard 52mm gauge pod. Data is sent to the gauge via CAN bus communication wires coming from the ECU and the layout of the gauge can be configured wirelessly using its standalone WiFi network. This article will detail the installation and setup of a gauge into your Miata.
+The KaN gauge is a multi function, multi fit gauge designed for Fome ECUs. The gauge has generic mounting options to fit any car and specific mounting solutions to fit into multiple locations on a Miata including the oil pressure gauge hole, an air conditioning vent or into a standard 52mm gauge pod. Data is sent to the gauge via CAN bus communication wires coming from the ECU and the layout of the gauge can be configured wirelessly using its standalone WiFi network. This article will detail the installation and setup of a gauge into your Miata.
 
 ## Github Repository
 
@@ -32,14 +34,14 @@ For the different Miatas, the CAN lines are as follows:
 
 ### Connect CAN wires to the canbus pins
 
-Measure several meters of wires (more than you think you'll need) and twist by constraining one and and putting the other end into a drill. Twisting is not necesary but recommended. To connect the wires to the ECU, there are two ways of doing this. The neatest is to crimp contacts onto the end of the wires and plug into the corresponding ECU wiring harness sockets (you can also re-use contact pigtails from a junk wiring harness). For all but NB1's the contact part numbers are shown below. Be sure to note if you require the narrower or wider contacts for your ECU.
+Measure several meters of wires (more than you think you'll need) and twist by constraining one end and putting the other end into a drill. Twisting is not necesary but recommended. To connect the wires to the ECU, there are two ways of doing this. The neatest is to crimp contacts onto the end of the wires and plug into the corresponding ECU wiring harness sockets (you can also re-use contact pigtails from a junk wiring harness). For all but NB1's the contact part numbers are shown below. Be sure to note if you require the narrower or wider contacts for your ECU.
 
 - .040" size contacts (175061-1)
 - .070" size contacts (173631-6)
 
-**For NB1s the contacts are not the same as they are a JAE connector not TE as the other ECUs use. The JAE connectors plugs into the NB1 TE branded socket but the contacts in the JAE connectors are not the same** 
-
 ![image](<Miata-KaN/ecucrimps.jpg>)
+
+**For NB1s the contacts are not the same as they are a JAE connector not TE as the other ECUs use. The JAE connectors plugs into the NB1 TE branded socket but the contacts in the JAE connectors are not the same** 
 
 For those with NB1s, no spare harness, or who don't want to wait in on contacts arriving in the mail; solder the CAN wires directly to the backside of the ECU to the corresponding CAN-H and CAN-L locations. **Make sure to label which wire is CAN-H and CAN-L**
 
@@ -125,10 +127,50 @@ Connect the gauge wires to the CANbus wires on the ECU and plug the cluster back
 
 Once everything is verified, carefully clip the gauge cluster back togethor and re-install into the car. Ensure any new wires are secured to the car so they will not vibrate and eventually break. Re-screw in the cluster and clip on the sun shade followed by the steering column plastics.
 
-## Gauge Interface Configuration
+## Gauge WIFI configuration
 
-### Brightness Control
+Through the KaN gauge web page, the interface can be configured to your desired specifications including gauge layout, displayed data, text & gauge colours, brightness, and warning thresholds. The gauge firmware is also updated through this page. When on the home page, the following options are displayed:
 
-### Text Colour
+![image](<Miata-KaN/kanhome.png>)
 
-### Screen Select
+### Gauge configuration
+
+In the gauge configuration menu, the look and sensor selection can be configured. First select the desired configuration to modify (1, 2 or 3), these are the three gauge layout screens that can be cycled through using the button. Under that the gauge type can be selected. There are images of each possible gauge type on the [KaN V2 Github here](https://github.com/Keith-N/KaN_Gauge_V2/wiki/Gauge-Types). Under that the current sensor selection displays which sensors have been selected for the chosen layout. For the sensor selection there are two "Select Gauge Sensors" boxes, only use the FOME one if using a FOME ECU and ditto for megasquirt (MS).
+
+![image](<Miata-KaN/kansensorconfig.png>)
+
+### Sensor limit configuration
+
+In the "Configure Sensor Limit" menu, the displayed sensor value range and alerts can be set. Ensure the correct configuration is set before configuring the sensor limits displayed in that configuration. Below the configuration will be a list detailing all current limits.
+
+![image](<Miata-KaN/kansenlimit.png>)
+
+### Display configuration
+
+This menu allow for configuration of the alert types, display update rate, brightness, gauge ring colour configuration and other colour configuration. The selected alert type will trigger when any sensor exceeds its minimum or maximim alert ranges. For the display rate, this can be left at 0 or increased if you wish for a slower updating display. Below that the inner and outer arc colours can be set as well as the display colours where the value digits, unit text, alert digits and meeter needle can all be changed to a colour of your choice. The gauge brightness can also be configured in this menu to control the amount of dimming when the dimmer input A1 receives 12V.
+
+![image](<Miata-KaN/kandispconf.png>)
+
+### LED configuration
+
+This menu allows for the LED colours and brightness to be configured. In the LED colours menu, they can be set to stay as a single colour or gradually change based on the sensor they are representing. Next the LED brightness can be configured like the screen brightness so it dims when the headlights are switched on. Lastly, custom LED colours can be set using the 0-255 RGB colour scale for each LED.
+
+![image](<Miata-KaN/kanled.png>)
+
+### Update firmware
+
+The gauge firmware can be updated from this screen. First, open the firmware releases link and download the latest gauge release ".bin" file. Then coming back to the gauge webpage, select the downloaded bin file and press update. When updating, make sure the gauge is powered from 12V when updating not the micro USB connector. In the rare case WIFI firmware updating fails, it can be manually updated over USB by following the [flashing guide on Github](https://github.com/Keith-N/KaN_Gauge_V2/wiki/Flashing).
+
+![image](<Miata-KaN/kanfw.png>)
+
+### Configure WIFI
+
+In this menu, the SSID, password and gauge network name can be configured. This is useful in the case that multiple gauges are installed and they need differentiation in the WIFI menu.
+
+![image](<Miata-KaN/kanwifi.png>)
+
+### Configure boot
+
+When the gauge boots, it can display up to 3 different logos. The order, logo time and logos displayed can all be configured in this menu.
+
+![image](<Miata-KaN/kanboot.png>)
