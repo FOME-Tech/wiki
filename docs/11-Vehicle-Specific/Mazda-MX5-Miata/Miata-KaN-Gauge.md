@@ -4,7 +4,7 @@
 
 Product description and purchase link: [BMM KaN Multi Fit CAN Gauge](https://www.beermoneymotorsports.com/products/kan-gauge-for-rusefi).
 
-The KaN gauge is a multi function, multi fit gauge designed for Fome ECUs. The gauge has generic mounting options to fit any car and specific mounting solutions to fit into multiple locations on a Miata including the oil pressure gauge hole, an air conditioning vent or into a standard 52mm gauge pod. Data is sent to the gauge via CAN bus communication wires coming from the ECU and the layout of the gauge can be configured wirelessly using its standalone WiFi network. This article will detail the installation and setup of a gauge into your Miata.
+The KaN gauge is a multi function, multi fit gauge designed for Fome ECUs. The gauge has generic mounting options to fit any car and specific mounting solutions to fit into multiple locations on a Miata including the oil pressure gauge hole, an air conditioning vent or into a standard 52mm gauge pod. Data is sent to the gauge via CAN bus communication wires coming from the ECU and the layout of the gauge can be configured wirelessly using its standalone WiFi network. This article will detail the installation and setup of a gauge into your Mnpmiata.
 
 ## Github Repository
 
@@ -34,14 +34,18 @@ For the different Miatas, the CAN lines are as follows:
 
 ### Connect CAN wires to the canbus pins
 
-Measure several meters of wires (more than you think you'll need) and twist by constraining one end and putting the other end into a drill. Twisting is not necesary but recommended. To connect the wires to the ECU, there are two ways of doing this. The neatest is to crimp contacts onto the end of the wires and plug into the corresponding ECU wiring harness sockets (you can also re-use contact pigtails from a junk wiring harness). For all but NB1's the contact part numbers are shown below. Be sure to note if you require the narrower or wider contacts for your ECU.
+Measure several meters of wires (more than you think you'll need) and twist by constraining one end and putting the other end into a drill. Twisting is not necesary but recommended. To connect the wires to the ECU, there are two ways of doing this. The neatest is to crimp contacts onto the end of the wires and plug into the corresponding ECU wiring harness sockets (you can also re-use contact pigtails from a junk wiring harness). For NA's the contact part numbers are shown below. Be sure to note if you require the narrower or wider contacts for your ECU.
 
-- .040" size contacts (175061-1)
-- .070" size contacts (173631-6)
+- .040" size TE brand contacts (175061-1)
+- .070" size TE brand contacts (173631-6)
+
+For the NB2, use the following contacts:
+
+- 0.040" size TE brand contacts (1376700-1)
 
 ![image](<Miata-KaN/ecucrimps.jpg>)
 
-**For NB1s the contacts are not the same as they are a JAE connector not TE as the other ECUs use. The JAE connectors plugs into the NB1 TE branded socket but the contacts in the JAE connectors are not the same** 
+**For NB1s the contacts are not the same as they use a JAE connector not TE as the other ECUs use. The JAE connectors plugs into the NB1 TE branded socket but the contacts in the JAE connectors are not the same. The JAE contacts are difficult to source and a 0.040" and 0.070" contact would be needed** 
 
 For those with NB1s, no spare harness, or who don't want to wait in on contacts arriving in the mail; solder the CAN wires directly to the backside of the ECU to the corresponding CAN-H and CAN-L locations. **Make sure to label which wire is CAN-H and CAN-L**
 
