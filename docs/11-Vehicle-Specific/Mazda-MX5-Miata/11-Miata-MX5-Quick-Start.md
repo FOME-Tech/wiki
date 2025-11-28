@@ -144,16 +144,16 @@ Next, click the tab labelled _Tune Analyze Live! - Tune For You_ to bring up the
 
 ![image](Miata-MX5-Quick-Start-Images/autotune2.jpg)
 
-| **Setting** | **Value** |
-|------------------------------|----- |
-| Cell Change Resistance       | Easy |
-| Max Cell Value Change        | 30   |
-| Max Cell Percentage Change   | 100  |
-| Minimum Rpm                  | 1300 |
-| Minimum CLT                  | 60   |
-| dTPS                         | 50   |
-| vBatt                        | 12   |
-| Minimum TPS                  | 3    |
+|**Setting**|**Value**|
+|-----------|---------|
+|Cell Change Resistance|Easy|
+|Max Cell Value Change|30|
+|Max Cell Percentage Change|100|
+|Minimum Rpm|1300|
+|Minimum CLT|60|
+|dTPS|50|
+|vBatt|12|
+|Minimum TPS|3|
 
 Now that the autotuner is set up, start the car and click _Start Auto Tune_ on the autotuner. Let the car idle in park whilst it gets up to the minimum temperature. While this happens, you can change the idle cells in the VE table to get them to a lambda of 1. Follow the Cursor on the VE table while idling and adjust the values your car is at while monitoring the lambda value. Once the car has warmed up its time to autotune. After you are sufficiently happy, click Stop Auto Tune, turn the engine off and click Save on ECU. Below is an autotune guideline.
 
@@ -213,16 +213,16 @@ Now that the autotuner is set up, start the car and click _Start Auto Tune_ on t
 
 For Example:
 
-| **Setting** | **Value** |
-|------------------------------|----- |
-| Cell Change Resistance       | Hard / Very Hard |
-| Max Cell Value Change        | 10 / 5   |
-| Max Cell Percentage Change   | 30 / 10  |
-| Minimum Rpm                  | 1300 |
-| Minimum CLT                  | 60   |
-| dTPS                         | 50   |
-| vBatt                        | 12   |
-| Minimum TPS                  | 3    |
+|**Setting**|**Value**|
+|-----------|---------|
+|Cell Change Resistance|Hard / Very Hard|
+|Max Cell Value Change|10 / 5|
+|Max Cell Percentage Change|30 / 10|
+|Minimum Rpm|1300|
+|Minimum CLT|60|
+|dTPS|50|
+|vBatt|12|
+|Minimum TPS|3|
 
 ### 2. Monitor Consistency
 
