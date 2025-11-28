@@ -100,7 +100,7 @@ Installing a knock sensor in a Mazda Miata involves accessing a threaded hole ab
 
 ## Knock Sensor Part list
 
-|Knock|Bosch - Off the Shelf| |
+|Knock|Bosch - Off the Shelf||
 |---|---|---|
 |Bosch KS4-P|0 261 231 173|FCP Euro 2-Pin RB-Kp.1 (F02U.B00.966-01) or 0 261 231 188 Ballenger 2-Pin Jetronic (D261.205.288-01) [LK-2 Connector]|
 |Bosch KS4-R|0 261 231 218|eBay 2-Pin RB-Kp.1 or 0 261 231 223 eBay 2-Pin RB-Kp.3 (F02U.B00.967-01)|
