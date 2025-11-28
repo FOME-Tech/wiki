@@ -4,7 +4,7 @@ This page is for the legacy series of Miata Hellen ECU Boards
 
 ## Using an External Wideband Controller
 
-In the case you wish to use an external wideband controller such as an _AEM X-Series Wideband UEGO AFR Sensor Controller Gauge_, the wideband sensor should be plugged into the wideband controller instead of directly into the ECU. The best way to wire in the controller is directly to the old narrow band oxygen sensor plug on the car based off the diagram below. In this diagram, pin 1 goes to the controller analogue output, pin 2 to the signal ground, pin 3 to the controller 12V input and pin 4 to the other controller ground (if applicable). Make sure to double check the voltages on the pins before connecting the controller to them. The external controller also requires additional setup in Tuner Studio which will be covered later.
+In the case you wish to use an external wideband controller such as an _AEM X-Series Wideband UEGO AFR Sensor Controller Gauge_, the wideband sensor should be plugged into the wideband controller instead of directly into the ECU. The best way to wire in the controller is directly to the old narrow band oxygen sensor plug on the car based off the diagram below. In this diagram, pin 1 goes to the controller analogue output and pin 2 to the signal ground. The controller will also need 12V power and ground from another voltage source on the ECU. Make sure to double check the voltages on the pins before connecting the controller to them. The external controller also requires additional setup in Tuner Studio which will be covered later.
 
 ![image](Miata-MX5-Quick-Start-Images/o2v2.jpg)
 
