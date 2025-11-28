@@ -45,7 +45,7 @@
     "@types/node": "^24.10.1",
     "docusaurus-prince-pdf": "^1.2.1",
     "glob": "^11.1.0",
-    "markdownlint-cli": "^0.45.0",
+    "markdownlint-cli": "^0.46.0",
     "raw-loader": "^4.0.2",
     "typescript": "^5.9.3"
   },

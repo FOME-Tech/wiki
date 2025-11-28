@@ -50,12 +50,6 @@ Find the factory oxygen sensor on the exhaust and unplug it from the wiring harn
 
 ![image](Miata-MX5-Quick-Start-Images/bung.jpg)
 
-### Using an External Wideband Controller
-
-In the case you wish to use an external wideband controller such as an _AEM X-Series Wideband UEGO AFR Sensor Controller Gauge_, the wideband sensor should be plugged into the wideband controller instead of directly into the ECU. The best way to wire in the controller is directly to the old narrow band oxygen sensor plug on the car based off the diagram below. In this diagram, pin 1 goes to the controller analogue output, pin 2 to the signal ground, pin 3 to the controller 12V input and pin 4 to the other controller ground (if applicable). Make sure to double check the voltages on the pins before connecting the controller to them. The external controller also requires additional setup in Tuner Studio which will be covered later.
-
-![image](Miata-MX5-Quick-Start-Images/o2v2.jpg)
-
 ## Connecting MAP Line
 
 Look around the intake manifold for any spare vacuum ports that lie after the throttle body and connect the vacuum line. If there are no spare ports, pick one and attach the vacuum line to it using a tee piece. It is recommended but not required to cable tie the vacuum line to the tee. In the image below, there was a free vacuum port on the back of the intake manifold which has been tee'ed off into the MAP line and the blow off valve line (only applicable on turbo charged vehicles).
@@ -107,12 +101,6 @@ In the third dialog box, configure it as shown in the image below but select the
 ![image](Miata-MX5-Quick-Start-Images/com.png)
 
 In the final dialog box, select the default gauge layout (you can change this later as you wish) and click _finish_. The last step before cranking the engine is to click the _Ignition_ button to open the ignition settings and change the timing mode from _dynamic_ to _fixed_ and the fixed timing setting to 10 degrees. This will lock the engine to operate at 10 degrees of timing so that you can set the base timing.
-
-### Additional Tuner Studio Steps for an External Wideband Controller
-
-To set up the external wideband controller there are several additional steps in Tuner Studio. First, your display units should be set to AFR for this as already stated. If you forgot to do this earlier, press _CTRL + P_ to open the vehicle properties. Now, open the _Aux Sensors_ dialog under _Sensors_ and the _Full Pinout 3/3_ dialog under _Controllers_. As per the diagram below, set the _AFR ADC Input_ and _ADC Input_ to the pin corresponding with _O2S_ (pin 2C for the example). for the values in the _Aux Linear Sensor #1_ box you need to reference the manual of your wideband controller for what voltages correspond to its AFR outputs. In the example below, 0V corresponds to an AFR of 10.0 and 4.99V corresponds to an AFR of 19.98. Once these are set, click _Burn_. If TS does not exactly correspond to the readings on your wideband, you can adjust with the correction value.
-
-![image](Miata-MX5-Quick-Start-Images/extwideband.png)
 
 After completing all of the setup steps, you can go ahead and turn the car key two clicks to _ON_ and listed for the fuel pump priming. Once the fuel pump has primed, go ahead and start the engine. Let it run for a few seconds and turn it off again. **Do not drive the vehicle yet, there are still several steps to complete before the car is ready for a drive**.
 
