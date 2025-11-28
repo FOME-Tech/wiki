@@ -52,10 +52,10 @@ On the AFR target diagram, certain operating zones have missing values. To prope
 
 Fundamentally, an oxygen sensor works in lambda. It measures the oxygen content in the exhaust relative to the open air and outputs a voltage which the ECU or wideband controller can directly convert to lambda. The ECU then converts this to AFR if required by multiplying the lambda by the stoichiometric value of the fuel (typically 14.7 for unleaded). Regardless of the fuel, the oxygen sensor will read the same lambda for any fuel that is burning at its stoichiometric point. A table is shown below comparing the stoichiometric AFR values of common fuels.
 
-| **Fuel Type**     | **Stoichiometric AFR** |
-|-------------------|-----------------------|
-| Unleaded Gasoline | 14.7                  |
-| E85               | 9.76                  |
-| E100              | 8.98                  |
-| Diesel            | 14.5                  |
-| Methanol          | 6.46                  |
+|**Fuel Type**|**Stoichiometric AFR**|
+|-------------|-----------------------|
+|Unleaded Gasoline|14.7|
+|E85|9.76|
+|E100|8.98|
+|Diesel|14.5|
+|Methanol|6.46|
