@@ -72,11 +72,11 @@ The first step is to disconnect the factory TPS sensor. **This is very important
 
 The BMM ECUs for this vehicle include a KIA TPS and adapter. The KIA TPS will plug straight to the OEM TPS plug without any additional wiring. If using another variable TPS that requires re-wiring, the NA6 TPS connector pinout is as follows:
 
-| **Function** | **Cable Colour** |
-|--------------|------------------|
-| Signal       | Green/White      |
-| Ground       | Black/Green      |
-| 5V Reference | Red              |
+|Function|Cable Colour|
+|--------|------------|
+|Signal|Green/White|
+|Ground|Black/Green|
+|5V Reference|Red|
 
 The next step is to wire up the IAT sensor and to add a jumper wire to the AFM connector as per the wiring diagram below. Any IAT sensor with two wires can be used although a GM IAT sensor is recommended as FOME already has a configuration for it. As the IAT is a resistance-based sensor, the orientation of the wires does not matter.
 

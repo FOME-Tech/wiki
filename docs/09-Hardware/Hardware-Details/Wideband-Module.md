@@ -10,14 +10,14 @@ Wideband oxygen sensors are required for accurate AFR measurement. Unlike narrow
 
 ### LSU 4.9 Sensor Pinout
 
-| Pin Number | Function | Description |
-|------------|----------|-------------|
-| 1 | IP | Pump Current |
-| 2 | VM | Virtual Ground |
-| 3 | HEAT- | Heater Negative |
-| 4 | HEAT+ | Heater Positive |
-| 5 | RT | Calibration Resistor |
-| 6 | UN | Nernst Voltage |
+|PinNumber|Function|Description|
+|---------|--------|-----------|
+|1|IP|Pump Current|
+|2|VM|Virtual Ground|
+|3|HEAT-|Heater Negative|
+|4|HEAT+|Heater Positive|
+|5|RT|Calibration Resistor|
+|6|UN|Nernst Voltage|
 
 ![wideband dfu](../lsu-pinout.webp)
 
