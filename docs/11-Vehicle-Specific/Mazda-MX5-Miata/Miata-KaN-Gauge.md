@@ -14,6 +14,19 @@ This project is made possible thanks to the fantastic work by Keith N, hence the
 
 When powered, the gauge will start its own standalone wifi network called "KaN Gauge". In the WiFi settings for your device, connect to this network with a phone or laptop. The password is "update1234". Open your browser of choice and enter IP 192.168.4.1 in the address bar and hit enter. The web page should detail the gauge settings to allow for customization of the theme and displayed values. If using multiple gauges, it is reccomended to change the network name of one of them to allow for differentiation.
 
+## Gauge Pinout
+
+The pinout for the gauge and pin descriptions are shown below.
+
+![image](<Miata-KaN/kanpcb.png>)
+
+- 12V- Ignition power supply
+- GND- Chassis ground
+- CAN L- Can Bus Low(see pinout for your ecu)
+- CAN H- Can Bus High(see pinout for your ecu)
+- D2- This goes to one wire of the included switch.  The other wire on the switch will go to a chassis ground. The switch is to cycle between the configurable preset screens. 
+- A1- Dimmer wire.  This should get 12v whenever the lights are on. You can configure the bright and dim settings via wifi. 
+
 ## Installation Steps
 
 This guide will go through the installation steps for the KaN gauge into a Miata gauge cluster.
