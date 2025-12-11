@@ -5,6 +5,8 @@
 # - links: scripts/linkValidator.js
 # - makrdown: .markdownlint.jsonc
 name: Lint
+permissions:
+  contents: read
 
 concurrency:
   group: ${{ github.ref }}-lint
