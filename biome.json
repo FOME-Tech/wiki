@@ -1,41 +1,36 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.1.2/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "files": {
-    "ignore": [
-      ".devcontainer",
-      ".vscode",
-      "node_modules",
-      ".docusaurus",
-      "build",
-      "pdf",
-      "biome.json"
+    "includes": [
+      "**",
+      "!**/.devcontainer",
+      "!**/.vscode",
+      "!**/node_modules",
+      "!**/.docusaurus",
+      "!**/build",
+      "!**/pdf",
+      "!**/biome.json"
     ]
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "all": true,
       "style": {
-        "all": true,
         "useEnumInitializers": "off",
         "noNonNullAssertion": "off",
-        "noDefaultExport": "off"
-      },
-      "suspicious": {
-        "all": true,
-        "noConsoleLog": "off"
-      },
-      "nursery": {
-        "all": true,
-        "noNodejsModules": "off",
+        "noDefaultExport": "off",
         "useNodejsImportProtocol": "off"
       },
+      "suspicious": {
+        "noConsole": { "level": "off", "options": { "allow": ["log"] } }
+      },
+      "nursery": {},
       "complexity": {
-        "all": true,
         "noForEach": "off"
+      },
+      "correctness": {
+        "noNodejsModules": "off"
       }
     }
   },
@@ -48,7 +43,7 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "trailingComma": "all"
+      "trailingCommas": "all"
     }
   }
 }

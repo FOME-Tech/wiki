@@ -35,7 +35,7 @@ const validateDocRules = (files) => {
   const regexPatternDynAbsLink = new RegExp(`\\]\\((https|http):\\/\\/${wikiUrl}`, 'i');
   // hint: test static regex via https://regex101.com
   // * Check whether links are not using a "numbered prefix" like "(/01-blah)"
-  const regexPatternStatNumPrefix = new RegExp(/\(.*\/\d\d\-.*\)/, 'i');
+  const regexPatternStatNumPrefix = new RegExp(/\(.*\/\d\d-.*\)/, 'i');
   // * Check whether links are not markdown links, meaning ending with .md or .mdx like "(/01-blah.md)"
   const regexPatternStatMdLink = new RegExp(/\(.*\.(md|mdx)\)/, 'i');
 

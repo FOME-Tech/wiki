@@ -22,8 +22,8 @@ jobs:
       deployments: write
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
@@ -41,20 +41,22 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Generate PDF
-        run: |
-          npm run serve &
-          sleep 5
-          npm run pdf
-
-      - name: Check for generated PDF
-        run: ls -lah static/pdf/wiki.fome.pdf
-
-      - name: Rebuild with PDF
-        run: npm run build
-
-      - name: Check for bundled PDF
-        run: ls -lah build/pdf/wiki.fome.pdf
+# TODO: fix PDF file size constraint issue
+# https://github.com/FOME-Tech/wiki/issues/382
+#      - name: Generate PDF
+#        run: |
+#          npm run serve &
+#          sleep 5
+#          npm run pdf
+#
+#      - name: Check for generated PDF
+#        run: ls -lah static/pdf/wiki.fome.pdf
+#
+#      - name: Rebuild with PDF
+#        run: npm run build
+#
+#      - name: Check for bundled PDF
+#        run: ls -lah build/pdf/wiki.fome.pdf
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1

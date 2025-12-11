@@ -1,9 +1,8 @@
 import type { Options, ThemeConfig } from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
-import { themes } from 'prism-react-renderer';
-
 import crypto from 'crypto';
 import fs from 'fs';
+import { themes } from 'prism-react-renderer';
 
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
@@ -28,7 +27,6 @@ const config: Config = {
 
   // strict URL validation
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
   onDuplicateRoutes: 'throw',
 
   noIndex: false, // adds <meta name="robots" content="noindex, nofollow"> to every page
@@ -68,6 +66,12 @@ const config: Config = {
       } satisfies Options,
     ],
   ],
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
+  },
 
   stylesheets: [
     {
