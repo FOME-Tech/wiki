@@ -42,7 +42,7 @@
     "@docusaurus/tsconfig": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
     "@tsconfig/docusaurus": "^2.0.7",
-    "@types/node": "^25.0.2",
+    "@types/node": "^25.0.3",
     "docusaurus-prince-pdf": "^1.2.1",
     "glob": "^13.0.0",
     "markdownlint-cli": "^0.47.0",
