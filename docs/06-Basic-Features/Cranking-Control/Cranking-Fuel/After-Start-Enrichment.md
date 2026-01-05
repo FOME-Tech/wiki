@@ -4,7 +4,7 @@ After-start enrichment is important because an engine that has just fired up is 
 
 ## Basic After Start Enrichment 
 
-The basic enrichment holds a set fuel multiplier for a set timing duration before switching over to the main VE table. This is usually good enough for most users although it will use the same multiplier regardless of coolant temperature.
+The basic enrichment holds a set fuel multiplier for a set timing duration before switching over to the main VE table. This is usually reasonable for most users although it will use the same multiplier regardless of coolant temperature.
 
 Reasonable values to start with would be between 1.05-1.15 for the multiplier and 5-20 seconds for the duration
 
