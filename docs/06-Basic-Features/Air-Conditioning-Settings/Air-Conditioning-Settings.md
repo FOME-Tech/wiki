@@ -2,7 +2,7 @@
 
 FOME supports controlling an air conditioning (AC) accessory powered from the engine. The settings menu for the AC is found under _Base Engine > Air Conditioning_ as shown below.
 
-![image](Air-Conditioning-Settings/aircon.png)
+![image](aircon.png)
 
 ## ECU Input/Outputs
 
