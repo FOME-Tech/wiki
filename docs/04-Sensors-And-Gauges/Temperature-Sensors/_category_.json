@@ -3,6 +3,13 @@
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Temperature sensors"
+    "description": "Temperature sensors 
+    
+    :::tip[Hint]
+
+    general purpose input ports require an additional 2.7k ohms pull-up resistor to work correctly
+
+    :::
+    "
   }
 }
