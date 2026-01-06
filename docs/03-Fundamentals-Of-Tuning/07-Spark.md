@@ -19,3 +19,7 @@ MBT, or Maximum Brake Torque timing, is the spark advance that produces the grea
 ## MBT vs. Knock Limits
 
 Knock occurs when unburned air-fuel mixture ignites before the spark due to excessive pressure and temperature, which can damage the engine if uncontrolled. Advancing the timing increases engine torque up until MBT is reached however the timing is often set slightly retarded from MBT at higher loads to avoid knock. In most real-world cases, an engine will knock under load before reaching MBT but this can vary largely on the engine configuration.
+
+## Timing vs. Boost
+
+In a boosted engine, the timing can often be significantly retarded from MBT as a safety measure to ensure that the engine doesn't produce excessive low or mid-range torque. High torque at low engine speeds increases the force on the pistons, rods and bearings which can result in bent rods or failed bearings if tuned improperly. It is common to see an ignition map for a turbo car where the timing is most retarded at the point where maximum torque is reached and timing is advanced gradually as RPM increases.

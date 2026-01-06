@@ -1,1 +1,3 @@
 # Cranking Fuel Coolant Multiplier 
+
+The cranking fuel coolant multiplier is used to add fuel when the engine is cold and to take fuel away when the engine is warm. A cold engine cannot atomize the fuel as well as a warm engine as the intake will be at ambient temperature. As the engine reaches operating temperature and the intake heats up, the fuel is able to vaporize in the intake causing better mixing.
