@@ -36,7 +36,7 @@ This box is where the air to fuel stoichiometric ratios are set. _Stoichiometric
 
 ### Injector Dead Time
 
-The injector dead time is basically the delay the injector takes when sent a pulse before it starts spraying fuel. Getting this right is essential for having a car that runs well. Ideally the dead times will be included in the data-sheet for injectors or searchable on forums. Dead times are dependant on the battery voltage and fuel pressure. E.g. Bosch EV14 370cc/min injectors with 300kPa fixed fuel pressure will need the dead times for the range of possible battery voltages (as higher voltages activates the injectors quicker). A good flow testing shop should be able to provide this data for your injectors. If you have your own flow testing setup, the [injector testing page](/docs/08-Fuel/Injectors/Injector-testing.md) details how to determine the dead times.
+The injector dead time is basically the delay the injector takes when sent a pulse before it starts spraying fuel. Getting this right is essential for having a car that runs well. Ideally the dead times will be included in the data-sheet for injectors or searchable on forums. Dead times are dependant on the battery voltage and fuel pressure. E.g. Bosch EV14 370cc/min injectors with 300kPa fixed fuel pressure will need the dead times for the range of possible battery voltages (as higher voltages activates the injectors quicker). A good flow testing shop should be able to provide this data for your injectors. If you have your own flow testing setup, the [injector testing page](/Injectors/Injector-testing/) details how to determine the dead times.
 
 To roughly tune the dead times without a flow testing setup, get the engine to a stable idle and check the VE value needed to get stoichiometric AFR. The VE value requires should roughly correspond to the table values below. If the VE is above, the dead time is too low and needs to be increased as not enough fuel is spraying. If the VE is below, decrease the dead time as too much fuel is being sprayed. This only needs to be done at idle as the dead time is a high percentage of the injector duty cycle pulse length at idle but at high RPM it only makes up a small duration. If the dead times need to be increased slightly from the manufacturer data, that is ok as the ECU has it's own processing delay which stacks on top of the physical dead time and also needs to be factored in.
 
@@ -53,7 +53,7 @@ To roughly tune the dead times without a flow testing setup, get the engine to a
 
 ## Injector Test
 
-This dialog allows you to test injectors are working. Ensure the fuel pump is off if you just want to hear them click to verify correct cylinder position or wiring (or fuel may go everywhere or flood the cylinder). See the [injector testing page for more information](/docs/08-Fuel/Injectors/Injector-testing.md).
+This dialog allows you to test injectors are working. Ensure the fuel pump is off if you just want to hear them click to verify correct cylinder position or wiring (or fuel may go everywhere or flood the cylinder). See the [injector testing page for more information](/Injectors/Injector-testing/).
 
 ## Cylinder Bank Selection and Cylinder Fuel Trims
 
