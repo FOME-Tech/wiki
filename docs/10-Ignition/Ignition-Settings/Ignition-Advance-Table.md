@@ -1,1 +1,3 @@
 # Ignition advance table 
+
+The ignition advance table is where the magic happens, the values in this table highly influence the engine torque. Set a cell too low and the engine will underperform, set it too high and you'll get to experience engine knock first hand or worse; rod knock. This table takes the RPM and MAP of the car and for each cell on the table has a set ignition value that will be output to the engine after having any additional corrections applied.

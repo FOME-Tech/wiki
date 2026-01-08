@@ -1,1 +1,11 @@
-# Intake Air Temperature Ignition Adder
+# Intake Air Temperature Ignition Correction
+
+As the intake air temperature (IAT) on the vehicle goes up, the chance of knock occurring goes up, and nobody likes knock! So how do we make sure this doesn't happen, we use the IAT correction table to retard the ignition timing. 
+
+On the table, the X axis is the IAT and the Y axis is the engine load in kPa. The values on the table are added onto the ignition table i.e. a value of -5 in this table will subtract 5 from the total amount of timing. The idea of configuring this table is to progressively add more timing retard as the intake air temperature goes up. This way the engine torque will be reduced as the IAT increases, decreasing the chance of knock occurring.
+
+## How to tune the IAT correction
+
+A good starting place for setting up this table is to start retarding the timing in the 40-50 °C range, adding more retard for every 10 °C increase. A safe start would be to retard -0.5 degrees at 45 °C, adding an extra -0.5 degrees for every 5 °C increase in IAT. The table also doesn't need to have identical values going down every column, as the engine load decreases, it is acceptable to reduce the amount of timing retard so a well tuned IAT correction table will have the most retard in the top right and will taper towards zero retard at the bottom left. You want to tune your car such that the timing values in your main ignition table are the maximum values you'd like your car to reach and this table will only be used to subtract from it. You could in theory also use this table to add timing if the IAT drops below the IAT that the main table was tuned on however properly tuning that would be difficult. 
+
+To dial in the amount of timing retard, first dial in you main spark table to be a reliable safe baseline such that under "normal" sub 40 °C IATs, the car doesn't knock. On a hotter day, take out the car and afterwards, observe the RPM vs knock level scatter plot or knock count values. If knock has occurred, take the MAP/engine load and IAT for where the knock occurred and increase the amount of correction in the table at that cell and potentially to the right and above it too for added safety. Repeat this process again and again until the car drives in any weather under any IAT without knocking
