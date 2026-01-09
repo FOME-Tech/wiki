@@ -12,7 +12,7 @@ Shared coils means that a pair of cylinders share a single ignition coil. This i
 
 ## Shared wiring individual coils
 
-One common upgrade for the NA and NB miatas is to add individual coils onto each cylinder instead of the stock shared coil arrangement. An important note for this setup is that although there will be four ignition coils, they will be wired togethor to fire in pairs like a shared coil configuration. To convert this configuration to a true individual configuration two more ignition output wires need to be run from the ECU to the coils. [Miata COP conversion is covered in this guide](/docs/Vehicle-Specific/Mazda-MX5-Miata/Miata-COP-Conversion) however it does not cover the wiring of additional outputs.
+One common upgrade for the NA and NB miatas is to add individual coils onto each cylinder instead of the stock shared coil arrangement. An important note for this setup is that although there will be four ignition coils, they will be wired togethor to fire in pairs like a shared coil configuration. To convert this configuration to a true individual configuration two more ignition output wires need to be run from the ECU to the coils. [Miata COP conversion is covered in this guide](/Vehicle-Specific/Mazda-MX5-Miata/Miata-COP-Conversion) however it does not cover the wiring of additional outputs.
 
 ## Single coil
 

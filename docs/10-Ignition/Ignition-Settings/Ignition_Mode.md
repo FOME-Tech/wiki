@@ -2,7 +2,7 @@
 
 ## See Ignition Types Section?  
 
-The ignition mode can be configured differently depending on the type of ignition system on the vehicle. See [ignition types for more information](/docs/Ignition/Ignition-Types/Coil-configuration).
+The ignition mode can be configured differently depending on the type of ignition system on the vehicle. See [ignition types for more information](/Ignition/Ignition-Types/Coil-configuration).
 
 ## Sequential ignition mode
 
