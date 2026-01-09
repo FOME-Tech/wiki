@@ -249,7 +249,4 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 #### Ignition Types
 
-- [Individual Coils](Ignition/Ignition-Types/Individual-Coils)
-- [Sequential Ignition](Ignition/Ignition-Types/Sequential)
-- [Wasted Spark](Ignition/Ignition-Types/Wasted-Spark)
-- [Single Coil/Distributor](Ignition/Ignition-Types/Single-Coil)
+- [Ignition Types Description](Ignition/Ignition-Types/Coil-configuration)
