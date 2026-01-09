@@ -1,1 +1,0 @@
-# Sequential ignition mode
