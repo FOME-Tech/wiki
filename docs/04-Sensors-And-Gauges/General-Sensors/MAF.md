@@ -14,7 +14,7 @@ Ideally, connect the MAF to a calibrated air flow bench and collect the transfer
 
 ### Preliminary Approximation
 
-1. Ensure the car is set to run on __Speed Density__ in __Engine>Base Engine Settings>Fuel strategy__ (__NOT MAF AIR CHARGE__) and has a drivable tune to run on the mass air pressure (MAP) sensor. This means the MAP line needs to be installed. Ideally have DFCO and closed loop fuel correction disabled.
+1. Ensure the car is set to run on __Speed Density__ in __Engine>Base Engine Settings>Fuel strategy__ (__NOT MAF AIR CHARGE__) and has a drivable tune to run on the manifold absolute pressure (MAP) sensor. This means the MAP line needs to be installed. Ideally have DFCO and closed loop fuel correction disabled.
 
 2. Connect the MAF sensor and ensure that the MAF ADC input is set to the correct pin on the ECU (it will likely be labelled as MAF). The MAP pin assignment is under __Sensors>MAF Sensor__.
 
