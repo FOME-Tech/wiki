@@ -4,7 +4,7 @@ A MAF (Mass Air Flow) sensor measures how much air is entering the engine. The e
 
 ## TunerStudio Setup
 
-By default, most ECUs will be set to run on mass air pressure (MAP) not MAF. Under __Base Engine>Base Engine Settings>Fuel strategy__, change it to ___MAF air charge__. Under __Sensors>MAF Sensor__, ensure that the MAF ADC input is set to the correct pin on the ECU (it will likely be labelled as MAF). 
+By default, most ECUs will be set to run on manifold absolute pressure (MAP) not MAF. Under __Base Engine>Base Engine Settings>Fuel strategy__, change it to __MAF air charge__. Under __Sensors>MAF Sensor__, ensure that the MAF ADC input is set to the correct pin on the ECU (it will likely be labelled as MAF). 
 
 Next in the sensors tab, open the __MAF Transfer Function__ setting. This graph represents the corporation between the MAF raw voltage and the actual MAF reading. If data is available for your specific MAF, that can simply be copied across and used (cautiously checking it when driving for the first few times). If MAF data is unavailable, it can be approximated which is detailed below.
 
@@ -14,7 +14,7 @@ Ideally, connect the MAF to a calibrated air flow bench and collect the transfer
 
 ### Preliminary Approximation
 
-1. Ensure the car is set to run on __Speed Density__ in __Engine>Base Engine Settings>Fuel strategy__ (__NOT MAF AIR CHARGE__) and has a drivable tune to run on the manifold absolute pressure (MAP) sensor. This means the MAP line needs to be installed. Ideally have DFCO and closed loop fuel correction disabled.
+1. Ensure the car is set to run on __Speed Density__ in __Engine>Base Engine Settings>Fuel strategy__ (__NOT MAF AIR CHARGE__) and has a drivable tune to run on the MAP sensor. This means the MAP line needs to be installed. Ideally have DFCO and closed loop fuel correction disabled.
 
 2. Connect the MAF sensor and ensure that the MAF ADC input is set to the correct pin on the ECU (it will likely be labelled as MAF). The MAP pin assignment is under __Sensors>MAF Sensor__.
 
