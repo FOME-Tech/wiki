@@ -10,29 +10,19 @@ Next in the sensors tab, open the __MAF Transfer Function__ setting. This graph 
 
 ## MAF Transfer Function Approximation
 
-<<<<<<< HEAD
 Ideally, connect the MAF to a calibrated air flow bench and collect the transfer function voltage vs Kg/h data that way. Most users however are unlikely to have access to this but luckily the function can be approximated using the data logging features on the car and the following steps:
 
 ### Preliminary Approximation
 
 1. Ensure the car is set to run on __Speed Density__ in __Engine>Base Engine Settings>Fuel strategy__ (__NOT MAF AIR CHARGE__) and has a drivable tune to run on the mass air pressure (MAP) sensor. This means the MAP line needs to be installed. Ideally have DFCO and closed loop fuel correction disabled.
-=======
-Ideally, connect the MAF to a calibrated air flow bench and collect the transfer function voltage vs Kg/h data that way. Most users however are unlikely to have access to this but luckily the function can be approximated using the data logging features on the car and the following steps.
-
-### Preliminary Approximation
-
-1. Ensure the car is set to run on __Speed Density__ in __Engine>Base Engine Settings>Fuel strategy__ (__NOT MAF AIR CHARGE__) and has a drivable tune to run on the mass air pressure (MAP) sensor. This means the MAP line needs to be installed. Ideally have DFCO and closed loop fuel correction disabled. If you do not have MAP set up, go directly to the Refined Approximation and repeat it twice. On the first pass, try and find a similar MAF curve to start off with and on the second pass, repeat as per instructions.
->>>>>>> Wiki-Editing
 
 2. Connect the MAF sensor and ensure that the MAF ADC input is set to the correct pin on the ECU (it will likely be labelled as MAF). The MAP pin assignment is under __Sensors>MAF Sensor__.
 
 3. Take the car out for a drive at different engine loads and ensure it is logging data either to the laptop or onboard SD card.
 
-4. After the drive, open the data log in Mega Log Viewer and under the scatter plots tab, create a plot of __rawMaf__ on the X-axis, __Air: Flow Estimate__ on the Y-axis, and __Hits__ on the Z-axis. This will create a __preliminary__ starting curve to use for calibrating the MAF. This curve is essentially plotting the derived MAF value on the Y-axis using the actual MAP data and other sensors vs the actual MAF sensor voltage.
+4. After the drive, open the data log in Mega Log Viewer and under the scatter plots tab, create a plot of __rawMaf__ on the X-axis, __Air: Flow Estimate__ on the Y-axis, and __Hits__ on the Z-axis. This will create a __preliminary__ starting curve to use for calibrating the MAF. This curve is essentially plotting the derived MAF value on the Y-axis using the actual MAP data and other sensors vs the actual MAF sensor voltage. ![image](MAF/MAFcalibrationcurve.png)
 
-![image](MAF/MAFcalibrationcurve.png)
-
-1. Copy the preliminary curve across to the ___MAF transfer function__ under __Sensors__. It only needs to be a rough approximation as it will be refined from here.
+5. Copy the preliminary curve across to the ___MAF transfer function__ under __Sensors__. It only needs to be a rough approximation as it will be refined from here.
 
 ### Refined Approximation
 
