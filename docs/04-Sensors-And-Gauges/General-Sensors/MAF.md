@@ -8,13 +8,16 @@ By default, most ECUs will be set to run on manifold absolute pressure (MAP) not
 
 Next in the sensors tab, open the __MAF Transfer Function__ setting. This graph represents the corporation between the MAF raw voltage and the actual MAF reading. If data is available for your specific MAF, that can simply be copied across and used (cautiously checking it when driving for the first few times). If MAF data is unavailable, it can be approximated which is detailed below.
 
+Before starting the engine for the first time it is wise to ensure the VE Fuel Table is filled with values of "100", a value of 100 means that the fuel calculation uses 100% of its measured air mass to decide on the fuel injection pulse. Tuning this table will adjust for dynamic airflow effects that happen in the inlet of an engine and will allow small (or large but hopefully not) corrections to the fuel injection which may be required to have the engine meet it's desired air/fuel target.
+The VE table should only be tuned if the engine is not meeting the desired air/fuel target under relatively steady state conditions (i.e. without any acceleration enrichment or overrun fuel cut). If a different air/fuel ratio is desired at a specific load or RPM then the AFR Table is the correct table to adjust instead.
+
 ## MAF Transfer Function Approximation
 
 Ideally, connect the MAF to a calibrated air flow bench and collect the transfer function voltage vs Kg/h data that way. Most users however are unlikely to have access to this but luckily the function can be approximated using the data logging features on the car and the following steps:
 
 ### Preliminary Approximation
 
-1. Ensure the car is set to run on __Speed Density__ in __Engine>Base Engine Settings>Fuel strategy__ (__NOT MAF AIR CHARGE__) and has a drivable tune to run on the MAP sensor. This means the MAP line needs to be installed. Ideally have DFCO and closed loop fuel correction disabled.
+1. Ensure the car is set to run on __Speed Density__ in __Engine>Base Engine Settings>Fuel strategy__ (__NOT MAF AIR CHARGE__) and has a drivable tune to run on the MAP sensor. This means the MAP line needs to be installed. Ideally have DFCO and closed loop fuel correction disabled. Also leave the VE table as set to run on MAP.
 
 2. Connect the MAF sensor and ensure that the MAF ADC input is set to the correct pin on the ECU (it will likely be labelled as MAF). The MAP pin assignment is under __Sensors>MAF Sensor__.
 
@@ -30,7 +33,7 @@ Now using the preliminary curve and the actual MAF readings, the transfer functi
 
 1. Under __Base Engine>Base Engine Settings>Fuel strategy__, change it to ___MAF air charge__. Ensure that DFCO and closed loop fuelling are also off.
 
-2. Save/export your current VE table so as not to loose it. Set all values to 100. In the AFR/lambda target table, set all values to 14.7/1.0 respectively.
+2. Save/export your current VE table so as not to loose it if you want to switch back to MAP in the future. Now set all values in the VE table to 100. In the AFR/lambda target table, set all values to 14.7/1.0 respectively.
 
 3. While logging, take the car out for a drive being smooth with the throttle inputs and with a large range of engine loads.
 
@@ -38,4 +41,4 @@ Now using the preliminary curve and the actual MAF readings, the transfer functi
 
 5. Create a scatter plot with __rawMaf__ (volts) on the X-axis, __Target_MAF__ (Kg/h) on the Y-axis, ans __Hits__ on the Z-axis. The scatter plot should hopefully produce a relatively defined transfer function. Open the ___MAF transfer function__ and add the average points of the scatter plot transfer function to it.
 
-6. You should now have a reasonably calibrated MAF sensor. You can now reset the VE and target lambda tables to their previous values and take the car out for a __careful__ drive. From here, it is recommended to use the __Tune Analyze Live__ tool in TS to fully dial in the VE for the MAF as there will likely be some inaccuracies which the VE table will absorb.
+6. You should now have a reasonably calibrated MAF sensor. You can now reset the target lambda tables to its previous value and take the car out for a __careful__ drive. The VE table should stay at 100, only changing slightly if the car cannot reach the AFR targets in a specific area. You can use the __Tune Analyze Live__ tool in TS to fully dial in the VE for the MAF as there will likely be some inaccuracies which the VE table will absorb.
