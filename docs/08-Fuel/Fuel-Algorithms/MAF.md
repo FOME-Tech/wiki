@@ -1,11 +1,10 @@
-# MAF Strategy
+# MAF Fuelling Strategy
 
-## Current Status
+MAF-based fuelling is an engine management strategy that calculates fuel delivery using the mass air flow (MAF) sensor’s measurement of the air entering the engine. Because it measures actual air mass rather than estimating it, the ECU can deliver very accurate fueling across a wide range of operating conditions. This approach automatically compensates for changes in temperature, altitude, and engine modifications that affect airflow. As a result, MAF-based systems typically offer good drivability, fuel economy, and emissions control.
 
-The MAF based fueling of FOME is still undergoing development, the current status has the fueling functioning correctly but presents a few tuning challenges due to TunerStudio integration and the Spark Table still being reliant on the old engine load math.
+## MAF fuel setup and tuning
 
-This is an evolving situation at present and thus MAF fueling is still considered experimental.  
-**Please only use for development work at your own risk.**
+To tune FOME using the MAF is probably the quickest and easiest method provided you have a working MAF sensor and the correct information to input in the Transfer Function Table. Details on tuning and setting up the MAF sensor can be found in the [MAF sensor page](/General-Sensors/MAF).
 
 ## MAF fuel theory - The detail
 
@@ -48,27 +47,8 @@ The required fuel is now simply corrected by adjusting the measured air by the v
 
 Using this method FOME is able to directly measure the air flow into an engine and calculate the required fuel with minimal tuning.
 
-## MAF fuel tuning - The quick version
+For those interested, [this link](https://www.efunda.com/designstandards/sensors/hot_wires/hot_wires_theory.cfm) details the MAF sensor equations in more detail.
 
-To tune FOME using the MAF is probably the quickest and easiest method provided you have a working MAF sensor and the correct information to input in the Transfer Function Table.
+## MAF plenum filling model
 
-The first thing to do is input the voltage (or current) to Kg/h information into the Transfer Function Table in TunerStudio.
-
-Secondly you will need to decide what Air/Fuel ratio you would like your engine to run at and input this into the AFR table in TunerStudio.
-For a first start a value of 14 is perfectly acceptable for gasoline.
-This table is the primary source of the desired fuel mixture, it will be this table that is tuned to decide the engines target AFR.
-A future update will make this fueling table dynamic so that an input % of ethanol in the main fueling dialog will change the fuel density and thus the required fuel mass injected. The result of this will be that users can leave this table tuned as though it were for pure gasoline (14.7:1 stoichiometric) and the % ethanol input will make sure the fuelling stays at the same Lambda value.
-This has the advantage of working well with aftermarket wideband controllers that generally work in AFR using pure gasoline as the standard.
-
-[//]: # "todo: Add AFR table picture"
-
-Before starting the engine for the first time it is wise to ensure the Fuel Table is filled with values of "100", a value of 100 means that the fuel calculation uses 100% of its measured air mass to decide on the fuel injection pulse.  
-Tuning this table will adjust for dynamic airflow effects that happen in the inlet of an engine and will allow small (or large but hopefully not) corrections to the fuel injection which may be required to have the engine meet it's desired air/fuel target.  
-This table should only be tuned if the engine is not meeting the desired air/fuel target under relatively steady state conditions (i.e. without any acceleration enrichment or overrun fuel cut).
-If a different air/fuel ratio is desired at a specific load or RPM then the AFR Table is the correct table to adjust instead.
-
-[//]: # "todo: Add VE table picture"
-
-Some useful MAF sensor maths in [this link](https://www.efunda.com/designstandards/sensors/hot_wires/hot_wires_theory.cfm)
-
-[//]: # "todo: OrchardPerformance"
+The MAF fuelling strategy also uses a plenum filling model. This model describes how the ECU accounts for the air mass stored in the intake plenum between the MAF sensor and the engine. During rapid throttle changes, the airflow measured by the MAF does not immediately match the air actually entering the cylinders because the plenum is filling or emptying. The model estimates this transient air storage effect and corrects fueling accordingly to prevent lean or rich spikes. This improves throttle response and maintains accurate air–fuel ratios during dynamic engine operation.
