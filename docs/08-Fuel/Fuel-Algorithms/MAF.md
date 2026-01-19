@@ -4,7 +4,7 @@ MAF-based fuelling is an engine management strategy that calculates fuel deliver
 
 ## MAF fuel setup and tuning
 
-To tune FOME using the MAF is probably the quickest and easiest method provided you have a working MAF sensor and the correct information to input in the Transfer Function Table. Details on tuning and setting up the MAF sensor can be found in the [MAF sensor page](/General-Sensors/MAF).
+To tune FOME using the MAF is probably the quickest and easiest method provided you have a working MAF sensor and the correct information to input in the Transfer Function Table. Details on tuning and setting up the MAF sensor can be found in the [MAF sensor page](/Sensors-And-Gauges/General-Sensors/MAF).
 
 ## MAF fuel theory - The detail
 
