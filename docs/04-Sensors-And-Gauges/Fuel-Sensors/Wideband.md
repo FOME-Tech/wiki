@@ -8,7 +8,7 @@ A wideband O2 sensor (or WBO/WBO2) is a device that measures the exact air–fue
 
 Widebands consist of several elements; the heater element, the Nesrnst cell, and the pump. The wideband controller on the ECU reads and controls these elements to take an accurate reading of the lambda.
 
-The heater element has its duty cycle controlled to maintain the temperature of the WBO to within ~750-850^o^C. The heater enables the sensor to start working before the exhaust gas has fully heated up and allows for stable readings.
+The heater element has its duty cycle controlled to maintain the temperature of the WBO to within ~750-850°C. The heater enables the sensor to start working before the exhaust gas has fully heated up and allows for stable readings.
 
 The Nernst cell is essentially a zirconia ceramic electrolyte sandwiched between two porous platinum electrodes. At high temperatures, the zirconia will conduct oxygen ions and conduct a voltage. This voltage is called the Nernst voltage which is measured by the wideband controller and actively controlled using the pump.
 
@@ -46,6 +46,6 @@ Alternatively, oil getting into the exhaust can also register rich on the WBO wh
 
 ### WBO Shuts Down from Excessively Hot Exhaust Gasses
 
-The WBO heater can only raise the temperature of the sensor, in the case that the exhaust gas temperature is too hot, the WBO controller may shut down the wideband to prevent damage. Typically, the WBO controller is programmed to shut down if the WBO temperature sensor reads more than 100^o^C above target. In this event, the _WBO x:Fault Code_ parameter in the ECU logs should register a fault code of 4.
+The WBO heater can only raise the temperature of the sensor, in the case that the exhaust gas temperature is too hot, the WBO controller may shut down the wideband to prevent damage. Typically, the WBO controller is programmed to shut down if the WBO temperature sensor reads more than 100°C above target. In this event, the _WBO x:Fault Code_ parameter in the ECU logs should register a fault code of 4.
 
 If this occurs, the vehicle may be running either too lean or too rich. Slightly lean or rich can increase EGTs however very lean or rich can decrease EGTs. EGT management is a fine balance best discussed seperately as
