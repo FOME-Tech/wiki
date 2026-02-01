@@ -14,13 +14,13 @@ These settings control the activation of the TPS/TPS enrichment. TPS/TPS enrichm
 
 ### Accelerator Pump Model
 
-The accelerator pump model is a more simple form of enrichment that acts like a digital version of an accelerator pump on an old school carburetor. When the throttle is stabbed, the pump on a carburetor adds an immediate shot of fuel to combat the brief lean spike. This model does the same and is controlled by the following settings below. 
+The accelerator pump model can be used in combination with the TPS based AE to spread out the extra fuel over multiple engine cycles instead of squirting it in all at once when the AE is triggered. This acts to smooth out the enrichment making throttle tip in feel less jerky. The model acts like a digital version of an accelerator pump on an old school carburetor. When the throttle is stabbed, the pump on a carburetor adds an immediate shot of fuel to combat the brief lean spike and reduces the shot to zero over a short delay. This digital version does the same and is controlled by the following settings below. Ideally the pump model should be left disabled until the TPS/TPS AE is reasonably well tuned as it merely acts to smooth out the added fuel.
 
-Note that the accelerator pump model is to be used as a substitute for TPS/TPS enrichment, not with it. A user may choose to use the pump model over TPS/TPS enrichment as it is simpler. In this case, the __Length(sec)__ setting or __TPS/TPS extra fuel__ table need to be set to zero. Similarly if the pump model is not to be used, the fraction settings should be set to 0.
+The pump model is not critical to use for AE and if you wish to disable it, the fraction settings should be set to 0.
 
-- __Fraction Period__: How many engine crank shaft cycles will the fuel enrichment last for. Like all enrichment tuning, the duration should be increased to find a balance where it is rich enough to minimise the lean spike on blip but not too rich to cause bogging. 2-10 cycles is a reasonable starting range, start small and gradually increase.
+- __Fraction Period__: How many engine crank shaft cycles will the fuel enrichment last for. Like all enrichment tuning, the duration should be increased to find a balance where it is rich enough to minimise the lean spike on blip but not too rich to cause bogging. 2-8 cycles is a reasonable starting range, start small and gradually increase.
 
-- __Fraction Divisor__: How to divide the fuel among the cycles, either all at once or tapering down to zero. A value of 1 will deliver the entire fuel shot in 1 cycle. Increasing the divisor will increase the length of the fuel as it tapers dow. For example, a value of 1.5 will deliver 66.7% in the first cycle, 22.2% in the second, then 11.% and 2.5% and so on. A value of 2 will be distributed as 50%, 25%, 12.5%, 6.25% and so on. Values of 1-10 are reasonable and should be experimented with.
+- __Fraction Divisor__: How to divide the fuel among the cycles, either all at once or tapering down to zero. A value of 1 will deliver the entire fuel shot in 1 cycle. Increasing the divisor will increase the length of the fuel as it tapers dow. For example, a value of 1.5 will deliver 66.7% in the first cycle, 22.2% in the second, then 11.% and 2.5% and so on. A value of 2 will be distributed as 50%, 25%, 12.5%, 6.25% and so on. Values of 1-3 are reasonable and should be experimented with.
 
 ## TPS/TPS Acceleration Extra Fuel
 
