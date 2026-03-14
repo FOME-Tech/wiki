@@ -104,6 +104,18 @@ In the final dialog box, select the default gauge layout (you can change this la
 
 After completing all of the setup steps, you can go ahead and turn the car key two clicks to _ON_ and listed for the fuel pump priming. Once the fuel pump has primed, go ahead and start the engine. Let it run for a few seconds and turn it off again. **Do not drive the vehicle yet, there are still several steps to complete before the car is ready for a drive**.
 
+## Calibrate Throttle Position Sensor (TPS)
+
+To calibrate the TPS, in the top menu bar of TS, click **Tools > Calibrate TPS** to bring up the menu shown below. With the key in the **on (2 clicks)** position click **get current** for the closed throttle position with your foot off the gas then do the same for the full throttle position with your foot fully pressing the gas. Press accept and check in the throttle position gauge that the needle moves all the way from 0-100%. If not, redo the calibration. The calibration needs to be done with the key in the on position so that the ECU is powered from the car battery not the USB connection which can cause TPS calibration inaccuracies.
+
+![image](Miata-MX5-Quick-Start-Images/tpscali.png)
+
+## Optional - Install 36-2 Tooth Trigger Wheel
+
+Optionally, a higher precision 36-2 tooth trigger wheel can be installed in place of the OEM 4 tooth trigger wheel by following the [Miata 36T Trigger Installation Guide](/Vehicle-Specific/Mazda-MX5-Miata/Miata-36T-Trigger).
+
+![image](36T-trigger\trig1.jpg)
+
 ## Set Base Timing
 
 The car should start on the base map although once it is running, the base timing needs to be set up. This syncs the timing between the ECU and the car so that they are both reading the same values. Typically. the base timing will be a few degrees out from the base map as it varies slightly from car to car.
