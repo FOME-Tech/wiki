@@ -109,10 +109,6 @@ const config: Config = {
             to: '/category/vvt/',
           },
           {
-            from: '/r/debugmode',
-            to: '/Advanced-Features/Debug-Mode/',
-          },
-          {
             from: '/r/trigger',
             to: '/category/general-sensors/',
           },
