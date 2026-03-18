@@ -142,19 +142,6 @@ Print a line of text to the ECU's log.
 |-:|--|:-|
 |`message`|string|The message to print. Pass a string (or number) and it will be printed to the log.|
 
-#### `setDebug(index, value)`
-
-Sets the debug channel of the specified index to the given value.
-
-:::note
-`setDebug` only works when FOME's [debug mode](/Advanced-Features/Debug-Mode) is set to `Lua`.
-:::
-
-|parameter|type|description|
-|-:|--|:-|
-|`index`|integer|The index of the debug channel to set; 1 through 6.|
-|`value`|float|The value to set the specified debug channel to.|
-
 #### `setTickRate(frequency)`
 
 Set the frequency at which the firmware passes context to the Lua script. Primarily, this controls how often FOME calls
