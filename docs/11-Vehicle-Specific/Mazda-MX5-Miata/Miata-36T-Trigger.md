@@ -6,7 +6,7 @@ For Miatas, there are a range of upgraded trigger wheels available, most with 35
 
 The trigger wheel recommended for BMM ECUs is the 1999-2001 Mazda Protege 36-1 Trigger Wheel (part # ZM0111408). This trigger wheel is compatible with the stock crankshaft pulley and a Fluiddampr crankshaft pulley. If using an ATI damper, you must purchase a compatible trigger wheel.
 
-![image](36T-trigger\trig1.jpg)
+![image](36T-trigger/trig1.jpg)
 
 ## Installation
 

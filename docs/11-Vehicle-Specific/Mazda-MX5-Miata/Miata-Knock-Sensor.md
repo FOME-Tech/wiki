@@ -80,19 +80,19 @@ An engine knock threshold curve shows how the sensitivity of knock sensors chang
         - Further filtering can be applied in megalog viewer to remove high manifold pressure and deceleration noise. Use these expressions to help analysis the measured data.
             - Deceleration : “ [RPM-4]{'<='}[Field.RPM]&&[TPS]{'<'}50 “
             - High Load : “ [Ign: Load]>60 “
-    ![image](<Knock Sensor\knock current vs rpm.png>)
+    ![image](<Knock Sensor/knock current vs rpm.png>)
     - Once the above plot for your engine has been generated, we can use this data to create a plot that will be used in Tunerstudio’s table on the bottom right. This is a baseline curve, further logs can be taken and more data reduction can used to refine the curve.
     - The curve used in Tunerstudio should fit over the top of the low-load noise and also be “tight” to the measured data. As shown below, the orange scater is all the data less than 60kpa and the grey is a curve can be used as a baseline threshold in Tunerstudio.
         - An active system is better than one missing low level knocks
-    ![image](<Knock Sensor\knock threshold curve fitted.png>)
-    ![image](<Knock Sensor\Software knock.png>)
+    ![image](<Knock Sensor/knock threshold curve fitted.png>)
+    ![image](<Knock Sensor/Software knock.png>)
 
 6. __Set up the Response of the Knock controller’s parameter “Knock retard aggression”__ A generalized rule of thumb would be 5% is considered adequate where as 15% being very aggressive:
     - The knock retardation amount is determined by calculating the distortion from the optimal ignition timing, multiplying it by the configured knock retard aggression percentage to determine the desired retardation, and then applying this retardation to the current knock retardation value.
 
 7. __Set up the Max Knock Retard table__:
     - The max knock table defines the maximum allowable knock values that the knock controller can use to retard ignition timing, with the Y-axis representing ignition load, the X-axis engine speed in RPM, and the Z-axis indicating the degree of timing retardation permitted for each combination of load and speed.
-    ![image](<Knock Sensor\max retard allowable.png>)
+    ![image](<Knock Sensor/max retard allowable.png>)
 
 ## Conclusion
 
