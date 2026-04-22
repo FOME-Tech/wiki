@@ -114,7 +114,7 @@ To calibrate the TPS, in the top menu bar of TS, click **Tools > Calibrate TPS**
 
 Optionally, a higher precision 36-2 tooth trigger wheel can be installed in place of the OEM 4 tooth trigger wheel by following the [Miata 36T Trigger Installation Guide](/Vehicle-Specific/Mazda-MX5-Miata/Miata-36T-Trigger).
 
-![image](36T-trigger\trig1.jpg)
+![image](36T-trigger/trig1.jpg)
 
 ## Set Base Timing
 
