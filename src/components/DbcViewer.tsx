@@ -5,7 +5,7 @@ import { dbcReader } from 'candied/lib/filesystem/DbcWebFs';
 import { useEffect, useState } from 'react';
 
 const DbcViewer = () => {
-  const [dbcData, setDbcData] = useState<DbcData>(null);
+  const [dbcData, setDbcData] = useState<DbcData>();
 
   useEffect(() => {
     const dbc = new Dbc();
