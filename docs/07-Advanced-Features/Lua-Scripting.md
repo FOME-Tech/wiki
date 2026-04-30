@@ -73,7 +73,7 @@ FOME provides four user-definable three-dimensional tables for use with Lua scri
 precision, defined by single-precision floating-point values, while the remaining three tables are defined by 8-bit
 integers; all tables are eight by eight in dimension, defined by 16-bit integer coordinates.
 
-TODO: insert TunerStudio Script Table dialog screenshots
+![lua user-defined table](./Lua-Scripting/user-defined-table.png)
 
 Two functions are provided to interact with the user-defined tables:
 
@@ -86,7 +86,7 @@ FOME provides six user-definable two-dimensional curves for use with Lua scripti
 most accuracy, defined by sixteen single-precision floating-point coordinates, while the remaining four curves are
 defined by eight single-precision floating-point coordinates.
 
-TODO: insert TunerStudio Script Curve dialog screenshots
+![lua user-defined curve](./Lua-Scripting/user-defined-curve.png)
 
 Two functions are provided to interact with the user-defined curves:
 
@@ -96,6 +96,10 @@ Two functions are provided to interact with the user-defined curves:
 ## User-Defined Settings
 
 FOME provides eight user-definable single-precision floating-point settings for use with Lua scripting.
+
+![lua user-defined settings](./Lua-Scripting/user-defined-settings.png)
+
+One function is provided to interact with the user-defined settings:
 
 - [`findSetting(name, defaultValue)`](#findsettingname-defaultvalue)
 
@@ -322,6 +326,8 @@ Resets the PID controller.
 
 Returns the value of an auxiliary analog input sensor (i.e. Lua Analog Aux Inputs: *ADC #1* ... *#8*) by its index. Inputs are identified by their 0-based index: *ADC #1* has index `0`.
 
+![lua analog aux](./Lua-Scripting/lua-analog-aux-inputs.png)
+
 |parameter|type|description|
 |-:|--|:-|
 |`index`|integer|The index of the auxiliary analog (ADC) sensor; 0 through 7.|
@@ -329,6 +335,8 @@ Returns the value of an auxiliary analog input sensor (i.e. Lua Analog Aux Input
 #### `getAuxDigital(index)`
 
 Returns the value of an auxiliary digital input sensor (i.e. Lua Digital Aux Inputs: *Digital #1* ... *#8*) by its index.  Inputs are identified by their 0-based index: *Digital #1* has index `0`.
+
+![lua digital aux](./Lua-Scripting/lua-digital-aux-inputs.png)
 
 |parameter|type|description|
 |-:|--|:-|
@@ -360,6 +368,8 @@ Returns the physical value of an MCU pin by its name.
 |`name`|string|The name of the MCU pin to return the value of; e.g. "PD15".|
 
 #### `startPwm(index, frequency, duty)`
+
+![lua outputs](./Lua-Scripting/lua-outputs.png)
 
 |parameter|type|description|
 |-:|--|:-|
