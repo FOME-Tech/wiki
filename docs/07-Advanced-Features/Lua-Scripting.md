@@ -320,15 +320,19 @@ Resets the PID controller.
 
 #### `getAuxAnalog(index)`
 
+Returns the value of an auxiliary analog input sensor (i.e. Lua Analog Aux Inputs: *ADC #1* ... *#8*) by its index. Inputs are identified by their 0-based index: *ADC #1* has index `0`.
+
 |parameter|type|description|
 |-:|--|:-|
-|`index`|integer||
+|`index`|integer|The index of the auxiliary analog (ADC) sensor; 0 through 7.|
 
 #### `getAuxDigital(index)`
 
+Returns the value of an auxiliary digital input sensor (i.e. Lua Digital Aux Inputs: *Digital #1* ... *#8*) by its index.  Inputs are identified by their 0-based index: *Digital #1* has index `0`.
+
 |parameter|type|description|
 |-:|--|:-|
-|`index`|integer||
+|`index`|integer|The index of the auxiliary digital sensor; 0 through 7.|
 
 #### `getDigital(index)`
 
