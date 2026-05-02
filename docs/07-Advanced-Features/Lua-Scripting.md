@@ -512,7 +512,7 @@ Returns the (floating point) value of a "channel" from FOME, given its name.  Va
 |`"FuelFlow"`|Fuel consumption in grams per second.|
 |`"AFR"`|Air-fuel (stoichiometric) ratio.|
 |`"InjectorDutyCycle"`|Injector duty cycle for the current engine RPM.|
-|`"InjectorPulseWidth"`|Injector pulse width (of the most previous injection).|
+|`"InjectorPulseWidth"`|Injector pulse width (of the most previous injection) in milliseconds.|
 
 |parameter|type|description|
 |-:|--|:-|
