@@ -349,11 +349,11 @@ Channels are indexed as follows (from [`lua_hooks.cpp`](https://github.com/FOME-
 
 |index|description|
 |-:|:-|
-|0|Clutch Down Switch|
-|1|Clutch Up Switch|
-|2|Brake Pedal Switch|
-|3|A/C Switch|
-|4|A/C Pressure Switch|
+|`0`|Clutch Down Switch|
+|`1`|Clutch Up Switch|
+|`2`|Brake Pedal Switch|
+|`3`|A/C Switch|
+|`4`|A/C Pressure Switch|
 
 |parameter|type|description|
 |-:|--|:-|
