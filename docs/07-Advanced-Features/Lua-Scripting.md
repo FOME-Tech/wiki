@@ -503,6 +503,21 @@ TODO: reference list of valid outputs
 |-:|--|:-|
 |`name`|string|The name of a FOME output/state to return the value of.|
 
+#### `getChannel(name)`
+
+Returns the (floating point) value of a "channel" from FOME, given its name.  Valid channel names are (from [`lua_getchannels.cpp`](https://github.com/dynfer/fome-fw/blob/master/firmware/controllers/lua/lua_getchannel.cpp)):
+
+|name|description|
+|-:|:-|
+|`"FuelFlow"`|Fuel consumption in grams per second.|
+|`"AFR"`|Air-fuel (stoichiometric) ratio.|
+|`"InjectorDutyCycle"`|Injector duty cycle for the current engine RPM.|
+|`"InjectorPulseWidth"`|Injector pulse width (of the most previous injection).|
+
+|parameter|type|description|
+|-:|--|:-|
+|`name`|string|The name of a FOME channel to return the value of.|
+
 #### `setClutchUpState(isUp)`
 
 Use `setClutchUpState` to tell FOME about CAN-based brake pedal.
