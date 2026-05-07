@@ -674,14 +674,6 @@ TODO
 |*no parameters*|
 |--|
 
-#### `vin(index)`
-
-Lookup a character of the set vehicle identification number (VIN) at the given index.
-
-|parameter|type|description|
-|-:|--|:-|
-|`index`|number|The character index of the set VIN to return.|
-
 #### `setIdleAdd`
 
 TODO
