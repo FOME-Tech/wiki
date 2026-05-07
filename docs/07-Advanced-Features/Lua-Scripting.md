@@ -407,13 +407,13 @@ This can also be accomplished by using [the Lua `Sensor` interface](#sensor), bu
 
 ### Sensors
 
-#### `hasSensor(index)`
+#### `hasSensor(name)`
 
 Checks whether a particular sensor is configured (whether it is currently valid or not).
 
 |parameter|type|description|
 |-:|--|:-|
-|`index`|integer|The index of the sensor to check; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
+|`name`|string|The name of the sensor to check; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
 
 #### `getSensor(name)`
 
@@ -423,7 +423,7 @@ Returns the value of a sensor by its name.
 |-:|--|:-|
 |`name`|string|The name of the sensor to get the value of; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
 
-#### `getSensorRaw(index)`
+#### `getSensorRaw(name)`
 
 Returns the raw value of a sensor by its name. For most sensors this means the analog voltage on the relevant input pin.
 
@@ -433,15 +433,7 @@ Returns 0 if the sensor doesn't support raw readings, isn't configured/valid, or
 
 |parameter|type|description|
 |-:|--|:-|
-|`name`|string|The name of the sensor to get the value of; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
-
-#### `getSensorByIndex(index)`
-
-Returns the value of a sensor by its index.
-
-|parameter|type|description|
-|-:|--|:-|
-|`index`|integer|The index of the sensor to get the value of; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
+|`name`|string|The name of the sensor to get the raw value of; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
 
 #### `Sensor`
 
