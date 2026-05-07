@@ -690,6 +690,13 @@ TODO
 |-:|--|:-|
 |`amount`|float|TODO|
 
+#### `getIdlePosition()`
+
+TODO
+
+|*no parameters*|
+|--|
+
 ### CAN Bus
 
 :::info
