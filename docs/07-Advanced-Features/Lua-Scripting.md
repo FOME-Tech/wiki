@@ -390,10 +390,6 @@ Returns the physical value of an MCU pin by its name.
 |`index`|integer|The index of the PWM output to control; 0 through 7.|
 |`frequency`|float|The frequency to set the PWM output to. Values are clamped to be not less than 1 hertz and not more than 1000 hertz.|
 
-<!--
-#### `setDacVoltage(index, value)`
--->
-
 #### `setLuaGauge(index, value)`
 
 Sets the given Lua gauge to the provided value. Currently two Lua guages are supported: indices 1 and 2.
