@@ -21,7 +21,6 @@ FOME provides Lua interface with a number of functions and types to interface wi
 - General input and output; see the [Input and Output](#input-and-output) reference.
 - Firmware sensors and control; see the [Sensors](#sensors) reference.
 - CAN bus communication; see the [CAN bus](#can-bus) reference.
-- SENT protocol communication; see the [SENT protocol](#sent-protocol-sae-j2716) reference.
 - Firmware state and configuration; see the [Firmware ... TODO](#firmware--todo) reference.
 
 <!--
@@ -846,32 +845,6 @@ Transmits a CAN frame on the specified CAN bus, with the supplied CAN ID and dat
 |`id`|integer|The CAN ID to transmit with the frame.|
 |`isExtended`|integer|Whether to transmit a standard (11-bit ID) or extended (29-bit ID) CAN frame.|
 |`data`|integer table|The data to transmit with the CAN frame.|
-
-### SENT Protocol (SAE J2716)
-
-:::info
-These functions are included in builds of FOME that incorporate [SAE J2716 SENT](https://en.wikipedia.org/wiki/SENT_(protocol)) support.
-:::
-
-:::warning
-These functions are still in development and not fully documented or supported. Use is discouraged.
-:::
-
-#### `getSentValue(index)`
-
-Retrieves the value of the last valid message of the specified SENT channel.
-
-|parameter|type|description|
-|-:|--|:-|
-|`index`|integer|The SENT channel to retrieve the value of; 0 through 3.|
-
-#### `getSentValues(index)`
-
-Retrieves the values of the last valid message of the specified SENT channel.
-
-|parameter|type|description|
-|-:|--|:-|
-|`index`|integer|The SENT channel to retrieve the values of; 0 through 3.|
 
 ----
 
