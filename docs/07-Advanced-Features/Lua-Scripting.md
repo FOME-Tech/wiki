@@ -6,44 +6,33 @@ description: Use Lua to extend and customize firmware behavior
 
 ## Introduction
 
-FOME allows to extend and customize firmware functionality and behavior by providing a [Lua script
-interpreter](https://www.lua.org/docs.html).  Various sensors, signals, and state are provided for reading and
-manipulating , allowing to tailor a control strategy to fit the applications needs.
+FOME extends and customizes firmware functionality and behavior through an embedded [Lua
+interpreter](https://www.lua.org/docs.html). Sensors, signals, and engine controller state are exposed for reading
+and manipulation, allowing the user to tailor a control strategy to fit a specific application's needs.
 
 This page documents the most up-to-date version of FOME's Lua scripting support: not all interfaces are supported in
 earlier versions.
 
 ## Overview
 
-FOME provides Lua interface with a number of functions and types to interface with the firmware and to discern and manipulate its state and configuration.  At a high level, the interface comprises these categories:
+FOME exposes a Lua interface comprising a number of functions and types for inspecting and manipulating firmware
+state and configuration. At a high level, the interface is organized into these categories:
 
-- A small utility library, including timers, and user-defined lookups; see the [Utilities](#utilities) reference.
+- A small utility library, including timers, PIDs, and user-defined lookups; see the [Utilities](#utilities) reference.
 - General input and output; see the [Input and Output](#input-and-output) reference.
-- Firmware sensors and control; see the [Sensors](#sensors) reference.
-- CAN bus communication; see the [CAN bus](#can-bus) reference.
-- SENT protocol communication; see the [SENT protocol](#sent-protocol-sae-j2716) reference.
-- Firmware state and configuration; see the [Firmware ... TODO](#firmware--todo) reference.
+- Sensor reading and Lua-controlled sensors; see the [Sensors](#sensors) reference.
+- Engine controller state, calibration, and per-cycle adjustments; see the [Firmware State and Control](#firmware-state-and-control) reference.
+- CAN bus communication; see the [CAN Bus](#can-bus) reference.
+- Subsystem-specific hooks for [Launch Control](#launch-control), [Boost Control](#boost-control), [Crankshaft Position Input](#crankshaft-position-input), and [Vehicle Speed](#vehicle-speed).
 
-<!--
+For examples, see the files in FOME's [`lua/examples/` directory](https://github.com/FOME-Tech/fome-fw/tree/master/firmware/controllers/lua/examples/).
 
-- Inputs from sensors can be read directly; see [Input](#input)
-- Control of ECU general purpose outputs; see [Output](#output).
-- Aspects of the engine can be controlled directly; see [Engine Control](#engine-control).
-- FOME Configuration can be accessed via the [`getCalibration`](#getcalibrationname) hook, and manipulated via the [`setCalibration()`](#setcalibrationname-value-needevent) hook.
-  - Configuration names are dynamically updated to match the current firmware; see here for the current list: ...
-- ECU internal state, i.e. logic outputs from the firmware can be read via the universal [`getOutput()`](#getoutputname) hook, and some can be altered via correspondingly named hooks i.e. `setOutputName()` where `OutputName` is name of the output, e.g. [`setClutchUpState()`](#setclutchupstatevalue).  See also: [Output](#output).
-  - Output names are dynamically updated to match the current firmware; see here for the current list: [https://github.com/rusefi/rusefi/blob/master/firmware/controllers/lua/generated/output_lookup_generated.cpp](https://github.com/rusefi/rusefi/blob/master/firmware/controllers/lua/generated/output_lookup_generated.cpp).
-
--->
-
-For examples see the files in FOME's [`lua/examples/` directory](https://github.com/FOME-Tech/fome-fw/tree/master/firmware/controllers/lua/examples/).
-
-For a basic introduction see [this wiki section](https://wiki.rusefi.com/Lua-Scripting/).
+For a basic introduction to the Lua language itself, see the [Lua reference manual](https://www.lua.org/manual/5.4/).
 
 ## Conventions
 
 - The Lua interpreter will trigger an error if there is a mistake in the program: check the FOME Console to see errors and script output.
-- Unless otherwise mentioned, all `index` parameters start with the first element at index 0.
+- Index conventions vary by function. Most `index` parameters (e.g. PWM channels, aux analog/digital, digital I/O) are 0-based, but tables, curves, Lua gauges, persistent values, and CAN bus channels are 1-based, matching their numbering in TunerStudio. Each function's documentation calls out the correct range.
 
 ## Writing Your Script
 
@@ -64,7 +53,7 @@ end
 FOME provides for user-defined lookup tables and curves for use with Lua scripting. These tables and curves are set in
 the FOME configuration (via TunerStudio) and lookups are interpolated along their definition.
 
-The tables and curves have user-defineable names up to sixteen characters long. Their names and definitions are
+The tables and curves have user-definable names up to sixteen characters long. Their names and definitions are
 configurable in the *Advanced > Lua Calibrations* menu in TunerStudio.
 
 ### 3D Tables
@@ -82,7 +71,7 @@ Two functions are provided to interact with the user-defined tables:
 
 ### 2D Curves
 
-FOME provides six user-definable two-dimensional curves for use with Lua scripting. The first two curves affords the
+FOME provides six user-definable two-dimensional curves for use with Lua scripting. The first two curves afford the
 most accuracy, defined by sixteen single-precision floating-point coordinates, while the remaining four curves are
 defined by eight single-precision floating-point coordinates.
 
@@ -105,10 +94,13 @@ One function is provided to interact with the user-defined settings:
 
 ## Persistent Values
 
-FOME provides 64 numeric persistent values for use with Lua scripting. Persistent values store data in RAM that is
-backed up in such a way as to survive ignition/power cycles.
+FOME provides 64 numeric persistent values for use with Lua scripting. Persistent values are stored in MCU backup
+SRAM, which is preserved across ignition/power cycles for as long as the ECU has any source of power (including the
+backup battery on supported boards). They are useful for retaining state between runs, e.g. trip counters or learned
+values.
 
-TODO: provide more detail of this new feature
+Persistent values require backup SRAM hardware support; calling these functions on a board without backup SRAM raises
+a Lua error.
 
 - [`getPersistentValue(index)`](#getpersistentvalueindex)
 - [`storePersistentValue(index, value)`](#storepersistentvalueindex-value)
@@ -130,7 +122,7 @@ Currently not implemented.
 #### `mcu_standby()`
 
 :::warning
-`mcu_standby` is only availble in FOME builds targetting STM32 F4 and STM32 F7 MCUs.
+`mcu_standby` is only available in FOME builds targeting STM32 F4 and STM32 F7 MCUs.
 :::
 
 Causes the firmware to place the MCU into a low current consumption standby mode.
@@ -160,12 +152,13 @@ The default rate set at startup is 10 times per second (10 Hz).
 
 #### `crc8_j1850(data, length)`
 
-TODO: computes the OBD-II (SAE J1850) CRC-8 cyclic redundancy check on up to eight bytes of data
+Computes the OBD-II (SAE J1850) CRC-8 cyclic redundancy check across the leading bytes of the supplied data table. At
+most eight bytes of input are read; the CRC is computed over the lesser of the table length and `length`.
 
 |parameter|type|description|
 |-:|--|:-|
-|`data`|integer table||
-|`length`|integer||
+|`data`|integer table|Up to 8 bytes of input data, in a Lua table indexed from 1.|
+|`length`|integer|Maximum number of bytes from `data` to include in the CRC computation.|
 
 #### `interpolate(x1, y1, x2, y2, x)`
 
@@ -181,11 +174,12 @@ Linearly interpolate a value `x` along the line defined by two points `(x1, y1)`
 
 #### `findTableIndex(name)`
 
-Determine the user-defined Lua script table index identified by its name.
+Returns the 1-based index of the named user-defined table, suitable for passing to `table3d`. Returns `nil` if no
+table with that name exists.
 
 |parameter|type|description|
 |-:|--|:-|
-|`name`|string|The name of the user-defined table to determine the index of.|
+|`name`|string|The name of the user-defined table to look up.|
 
 #### `table3d(index, x, y)`
 
@@ -200,11 +194,12 @@ Lookup a linearly interpolated value from the specified user-defined Lua script 
 
 #### `findCurveIndex(name)`
 
-Determine the user-defined Lua script curve index identified by its name.
+Returns the 1-based index of the named user-defined curve, suitable for passing to `curve`. Returns `nil` if no
+curve with that name exists.
 
 |parameter|type|description|
 |-:|--|:-|
-|`name`|string|The name of the user-defined curve to determine the index of.|
+|`name`|string|The name of the user-defined curve to look up.|
 
 #### `curve(index, x)`
 
@@ -231,7 +226,7 @@ in TunerStudio.
 
 #### `getPersistentValue(index)`
 
-Returns the persisted value currently stored for the given index. Persistent values are indentified by their 1-based index: 1, 2, 3, ..., 64.
+Returns the persisted value currently stored for the given index. Persistent values are identified by their 1-based index: 1, 2, 3, ..., 64.
 
 |parameter|type|description|
 |-:|--|:-|
@@ -239,7 +234,7 @@ Returns the persisted value currently stored for the given index. Persistent val
 
 #### `storePersistentValue(index, value)`
 
-Stores the given value to the persistent index specified. Persistent values are indentified by their 1-based index: 1, 2, 3, ..., 64.
+Stores the given value to the persistent index specified. Persistent values are identified by their 1-based index: 1, 2, 3, ..., 64.
 
 |parameter|type|description|
 |-:|--|:-|
@@ -248,7 +243,7 @@ Stores the given value to the persistent index specified. Persistent values are 
 
 #### `Timer`
 
-`Timer` is Lua type that keeps track of elapsed seconds. The timer does not initialize to a reset state; instead it
+`Timer` is a Lua type that keeps track of elapsed seconds. The timer does not initialize to a reset state; instead it
 initializes to a "foreverish" value.
 
 ```lua
@@ -397,7 +392,7 @@ Returns the physical value of an MCU pin by its name.
 
 #### `setLuaGauge(index, value)`
 
-Sets the given Lua gauge to the provided value. Currently two Lua guages are supported: indices 1 and 2.
+Sets the given Lua gauge to the provided value. Currently two Lua gauges are supported: indices 1 and 2.
 This can also be accomplished by using [the Lua `Sensor` interface](#sensor), but `setLuaGauge` is more convenient to use.
 
 |parameter|type|description|
@@ -407,13 +402,13 @@ This can also be accomplished by using [the Lua `Sensor` interface](#sensor), bu
 
 ### Sensors
 
-#### `hasSensor(index)`
+#### `hasSensor(name)`
 
 Checks whether a particular sensor is configured (whether it is currently valid or not).
 
 |parameter|type|description|
 |-:|--|:-|
-|`index`|integer|The index of the sensor to check; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
+|`name`|string|The name of the sensor to check; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
 
 #### `getSensor(name)`
 
@@ -423,7 +418,7 @@ Returns the value of a sensor by its name.
 |-:|--|:-|
 |`name`|string|The name of the sensor to get the value of; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
 
-#### `getSensorRaw(index)`
+#### `getSensorRaw(name)`
 
 Returns the raw value of a sensor by its name. For most sensors this means the analog voltage on the relevant input pin.
 
@@ -435,18 +430,11 @@ Returns 0 if the sensor doesn't support raw readings, isn't configured/valid, or
 |-:|--|:-|
 |`name`|string|The name of the sensor to get the value of; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
 
-#### `getSensorByIndex(index)`
-
-Returns the value of a sensor by its index.
-
-|parameter|type|description|
-|-:|--|:-|
-|`index`|integer|The index of the sensor to get the value of; see [`sensor_type.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/sensors/sensor_type.h#L18).|
-
 #### `Sensor`
 
-`Sensor` is a Lua type that allows to control the value of sensors. The type is implemented as a "stored-value" sensor,
-that operates asynchronously and whose value is invalidated periodically upon a given timeout (initially: 100 milliseconds).
+`Sensor` is a Lua type that allows a script to act as the source of a firmware sensor. It is implemented as a
+"stored-value" sensor: the script sets a value, and that value is reported until either it is replaced by a newer
+write or the configured timeout expires (initially 100 milliseconds), at which point the sensor reports as invalid.
 
 ```lua
 sensor = Sensor.new("OilPressure")
@@ -489,23 +477,27 @@ Invalidates the controlled sensor's stored-value.
 |*no parameters*|
 |--|
 
-### Firmware ... TODO
+### Firmware State and Control
 
-TODO
+These functions read and modify the running engine controller's state: live calibrations, computed sensor and
+actuator outputs, and adjustments to fuel, ignition, idle, boost, and ETB. Lua-controlled adjustments persist at
+their last-written value and are reapplied each engine cycle. They reset to neutral defaults (0 for additive
+offsets, 1.0 for multipliers, `false` for cut/disable flags) when the script is reloaded or the engine is
+reconfigured.
 
 #### `getOutput(name)`
 
-Returns the value of an "output" from FOME: allows to inspect "internal" firmware state.
-
-TODO: reference list of valid outputs
+Returns the value of an output channel from FOME: allows inspection of internal firmware state. Valid output names
+are the live data channels listed in `output_channels.txt` and related generated headers (the same names visible in
+TunerStudio gauges and logs).
 
 |parameter|type|description|
 |-:|--|:-|
-|`name`|string|The name of a FOME output/state to return the value of.|
+|`name`|string|The name of a FOME output channel to return the value of.|
 
 #### `getChannel(name)`
 
-Returns the (floating point) value of a "channel" from FOME, given its name.  Valid channel names are (from [`lua_getchannels.cpp`](https://github.com/dynfer/fome-fw/blob/master/firmware/controllers/lua/lua_getchannel.cpp)):
+Returns the (floating point) value of a "channel" from FOME, given its name.  Valid channel names are (from [`lua_getchannel.cpp`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/lua/lua_getchannel.cpp)):
 
 |name|description|
 |-:|:-|
@@ -520,7 +512,7 @@ Returns the (floating point) value of a "channel" from FOME, given its name.  Va
 
 #### `setClutchUpState(isUp)`
 
-Use `setClutchUpState` to tell FOME about CAN-based brake pedal.
+Use `setClutchUpState` to tell FOME about a CAN-based clutch pedal.
 
 |parameter|type|description|
 |-:|--|:-|
@@ -528,7 +520,7 @@ Use `setClutchUpState` to tell FOME about CAN-based brake pedal.
 
 #### `setBrakePedalState(isUp)`
 
-Use `setBrakePedalState` to tell FOME about CAN-based brake pedal.
+Use `setBrakePedalState` to tell FOME about a CAN-based brake pedal.
 
 |parameter|type|description|
 |-:|--|:-|
@@ -536,7 +528,7 @@ Use `setBrakePedalState` to tell FOME about CAN-based brake pedal.
 
 #### `setAcRequestState(isRequested)`
 
-Use `setAcRequestState` to tell FOME about CAN-based A/C request.
+Use `setAcRequestState` to tell FOME about a CAN-based A/C request.
 
 |parameter|type|description|
 |-:|--|:-|
@@ -544,172 +536,199 @@ Use `setAcRequestState` to tell FOME about CAN-based A/C request.
 
 #### `restartEtb()`
 
-TODO
+Re-initializes the electronic throttle subsystem. Useful when a Lua-controlled `Sensor` is acting in place of a
+physical pedal-position sensor: call `restartEtb` after the Lua sensor begins providing valid values so that ETB
+control picks it up.
 
 |*no parameters*|
 |--|
 
 #### `setEtbDisabled(isDisabled)`
 
-TODO
+Disables electronic throttle control from Lua. While disabled, the ETB controller will not drive the throttle.
 
 |parameter|type|description|
 |-:|--|:-|
-|`isDisabled`|boolean|Whether the ETB is disabled or not.|
+|`isDisabled`|boolean|`true` to disable ETB control; `false` to allow normal operation.|
 
 #### `setIgnDisabled(isDisabled)`
 
-TODO: `setIgnDisabled` function for all kinds of cranking safety systems
+Cuts ignition from Lua. Useful for cranking-safety interlocks (e.g. clutch switch, neutral switch), anti-theft
+overrides, or any condition where the script wants to inhibit firing. The cut is enforced by the limp manager.
 
 |parameter|type|description|
 |-:|--|:-|
-|`isDisabled`|boolean|Whether the ignition is disabled or not.|
+|`isDisabled`|boolean|`true` to cut ignition; `false` to allow normal operation.|
 
 #### `setAcDisabled(isDisabled)`
 
-TODO: Disable/suppress A/C functionality regardless of what and how enables it, an override kind of deal.
+Suppresses A/C output regardless of which subsystem requested it. Acts as an unconditional override that disables
+the A/C clutch.
 
 |parameter|type|description|
 |-:|--|:-|
-|`isDisabled`|boolean|Whether the A/C is disabled or not.|
+|`isDisabled`|boolean|`true` to force A/C off; `false` to allow normal operation.|
 
 #### `getTimeSinceAcToggleMs()`
 
-TODO
+Returns the elapsed time, in milliseconds, since the A/C controller's state last changed (on→off or off→on). Useful
+for implementing post-toggle dwell, idle bump timing, or compressor-cycling logic.
 
 |*no parameters*|
 |--|
 
 #### `getCalibration(name)`
 
-TODO: Gets current calibration value for specified scalar setting ``name``. For example ``getCalibration("cranking.rpm")``
+Gets the current value of the named scalar calibration setting. For example `getCalibration("cranking.rpm")`.
 
-For complete list of possible calibration names (valid parameter values) and descriptions see `value_lookup_generated.md`.
+For the complete list of valid calibration names and their descriptions, see `value_lookup_generated.md`.
 
 |parameter|type|description|
 |-:|--|:-|
-|`name`|string|TODO|
+|`name`|string|The name of the scalar calibration setting to read.|
 
 #### `setCalibration(name, value, needEvent)`
 
-TODO: Sets specified calibration setting to specified value. Fires calibration change event depending on needEvent parameter.
+Writes a value to the named scalar calibration setting. If `needEvent` is `true`, the global configuration version
+is incremented so that subsystems which depend on the changed setting re-read it on their next cycle (e.g. trigger
+shape, fuel/ignition tables). Pass `false` for hot-path adjustments where re-initialization is unnecessary.
 
-For example `setCalibration("cranking.rpm", 900, false)`
+For example `setCalibration("cranking.rpm", 900, false)`.
 
 |parameter|type|description|
 |-:|--|:-|
-|`name`|string|TODO|
-|`value`|number|TODO|
-|`needEvent`|boolean|TODO|
+|`name`|string|The name of the scalar calibration setting to write.|
+|`value`|number|The new value to assign.|
+|`needEvent`|boolean|`true` to increment the global configuration version after writing; `false` otherwise.|
 
 #### `setTimingAdd(angle)`
 
-TODO: Use negative values to retard timing.
+Adds the supplied angle to the computed ignition advance, in crank degrees. Use negative values to retard timing,
+positive to advance. Resets to 0 on script reload.
 
 |parameter|type|description|
 |-:|--|:-|
-|`angle`|float|TODO|
+|`angle`|float|The crank-angle offset to add to ignition advance, in degrees.|
 
 #### `setTimingMult(coefficient)`
 
-TODO
+Multiplies the computed ignition advance by the supplied coefficient before `setTimingAdd` is applied. Resets to
+`1.0` on script reload or engine reconfiguration.
 
 |parameter|type|description|
 |-:|--|:-|
-|`coefficient`|float|TODO|
+|`coefficient`|float|The factor to multiply ignition advance by.|
 
 #### `setFuelAdd(amount)`
 
-TODO: Amount of fuel mass to add to injection, scaled by fuel multiplier ([`setFuelMult(coefficient)`](#setfuelmultcoefficient)); initially 0.
+Adds the supplied fuel mass, in grams, to each injection event. Applied after `setFuelMult` (i.e. final mass =
+base * mult + add). Initially 0.
 
 |parameter|type|description|
 |-:|--|:-|
-|`amount`|float|TODO|
+|`amount`|float|Fuel mass to add to each injection, in grams.|
 
 #### `setFuelMult(coefficient)`
 
-TODO: Amount to scale added fuel mass by; initially 1.0;
+Multiplies the computed injection fuel mass by the supplied coefficient. `setFuelAdd` is applied after this
+multiplier. Initially `1.0`.
 
 |parameter|type|description|
 |-:|--|:-|
-|`coefficient`|float|TODO|
+|`coefficient`|float|The factor to multiply injection fuel mass by.|
 
 #### `setEtbAdd(percent)`
 
-TODO: Amount of ETB to add, as a percent of the wide-open value: e.g. `10` for +10%.  The value is a static amount to add to
-the determined value, e.g. TPS of 5% w/ `10` results in 15% ETB. #torque
+Adds a static offset, in percent of wide-open, to the ETB target. For example, with the driver requesting 5% TPS,
+calling `setEtbAdd(10)` opens the throttle to 15%. Useful for torque-based interventions like idle bumps, traction
+control, or anti-lag.
+
+Note: Unlike other Lua adjustments, `setEtbAdd` has a 200 ms watchdog: if the script does not call
+`setEtbAdd` again within 200 ms, the adjustment is treated as `0`. This is a safety measure — if the script hangs
+or stops running, the throttle reverts to the driver's requested position rather than holding the last
+intervention. Scripts using `setEtbAdd` must call it at a tick rate of 5 Hz or faster.
 
 |parameter|type|description|
 |-:|--|:-|
-|`percent`|float|TODO|
+|`percent`|float|Amount to add to the ETB target, as a percent of wide-open.|
 
 #### `getGlobalConfigurationVersion()`
 
-TODO
+Returns a counter that is incremented every time the engine configuration changes (e.g. via TunerStudio writes or
+`setCalibration(..., true)`). Lua scripts can compare the value across ticks to detect configuration changes and
+re-cache derived values.
 
 |*no parameters*|
 |--|
 
 #### `getFan()`
 
-TODO
+Returns the current logical state (on/off) of the primary fan relay output.
 
 |*no parameters*|
 |--|
 
-#### `getAirmass()`
+#### `getAirmass(mode)`
 
-TODO
+Returns the cylinder airmass (in grams) computed by the specified airmass model. If no argument is supplied, the
+currently-configured fuel algorithm is used. Valid model values match the `engine_load_mode_e` enum in
+`rusefi_enums.h`: `1` = real MAF, `2` = alpha-N (TPS), `3` = Lua.
 
-|*no parameters*|
-|--|
+|parameter|type|description|
+|-:|--|:-|
+|`mode`|integer|Optional. The airmass model to evaluate; if omitted, the currently-configured fuel algorithm is used.|
 
 #### `setAirmass(airmass, load)`
 
-TODO
+Feeds a Lua-controlled cylinder airmass and engine load into the Lua airmass model. To take effect on running
+fueling, the engine's fuel algorithm must be set to the Lua airmass model in TunerStudio. Inputs are clamped to safe
+ranges (airmass 0–10 g, load 0–1000%).
 
-|parameters|type|description|
+|parameter|type|description|
 |-:|--|:-|
-|`airmass`|float|TODO|
-|`load`|float|TODO: percent|
+|`airmass`|float|Cylinder airmass, in grams. Clamped to 0–10.|
+|`load`|float|Engine load, as a percent. Clamped to 0–1000.|
 
 #### `resetOdometer()`
 
-TODO
+Resets the trip odometer to zero.
 
 |*no parameters*|
 |--|
 
 #### `stopEngine()`
 
-TODO
+Schedules an orderly engine stop: ignition and injection are cut and the firmware records the shutdown reason as
+Lua-initiated. Useful for safety interlocks (e.g. oil pressure loss, overtemp) where the script wants to bring the
+engine down rather than just cut a single output.
 
 |*no parameters*|
 |--|
 
-#### `vin(index)`
+#### `setIdleAdd(amount)`
 
-Lookup a character of the set vehicle identification number (VIN) at the given index.
+Adds the supplied open-loop offset, in percent, to the idle valve / ETB idle target position. Used by scripts to
+bump the idle position for accessory loads or compensation. Resets to 0 on script reload.
 
 |parameter|type|description|
 |-:|--|:-|
-|`index`|number|The character index of the set VIN to return.|
+|`amount`|float|Offset to add to the idle position, in percent.|
 
-#### `setIdleAdd`
+#### `setIdleAddRpm(amount)`
 
-TODO
+Adds the supplied offset, in RPM, to the target idle RPM. Used by scripts to bump the idle target for accessory
+loads (e.g. A/C, power steering). Resets to 0 on script reload.
 
-|parameters|type|description|
+|parameter|type|description|
 |-:|--|:-|
-|`amount`|float|TODO|
+|`amount`|float|Offset to add to the target idle RPM, in RPM.|
 
-#### `setIdleAddRpm`
+#### `getIdlePosition()`
 
-TODO
+Returns the current commanded idle valve/ETB position, as a percentage.
 
-|parameters|type|description|
-|-:|--|:-|
-|`amount`|float|TODO|
+|*no parameters*|
+|--|
 
 ### CAN Bus
 
@@ -758,7 +777,7 @@ canRxAddMask(2, 0x40, 0x94, handleSpecialCanRx)
 
 #### `canRxAdd(bus, id, callback)`
 
-Adds a CAN frame receiption filter, filtering by CAN bus and CAN ID, which invokes the supplied function when a CAN
+Adds a CAN frame reception filter, filtering by CAN bus and CAN ID, which invokes the supplied function when a CAN
 frame passes the filter.
 
 |parameter|type|description|
@@ -855,60 +874,93 @@ Transmits a CAN frame on the specified CAN bus, with the supplied CAN ID and dat
 |`isExtended`|integer|Whether to transmit a standard (11-bit ID) or extended (29-bit ID) CAN frame.|
 |`data`|integer table|The data to transmit with the CAN frame.|
 
-### SENT Protocol (SAE J2716)
-
-:::info
-These functions are included in builds of FOME that incorporate [SAE J2716 SENT](https://en.wikipedia.org/wiki/SENT_(protocol)) support.
-:::
-
-:::warning
-These functions are still in development and not fully documented or supported. Use is discouraged.
-:::
-
-#### `getSentValue(index)`
-
-Retrieves the value of the last valid message of the specified SENT channel.
-
-|parameter|type|description|
-|-:|--|:-|
-|`index`|integer|The SENT channel to retrieve the value of; 0 through 3.|
-
-#### `getSentValues(index)`
-
-Retrieves the values of the last valid message of the specified SENT channel.
-
-|parameter|type|description|
-|-:|--|:-|
-|`index`|integer|The SENT channel to retrieve the values of; 0 through 3.|
-
-----
-
-<!-- TODO: re-structure the below into logical categories; see the bullet points near the top of the document -->
-
-## Lua Functions/Hooks
-
 ### Launch Control
 
-#### `setSparkSkipRatio`
+#### `setSparkSkipRatio(ratio)`
+
+:::info
+`setSparkSkipRatio` is only included in builds of FOME with launch control support enabled.
+:::
+
+Sets the target ratio of ignition events to be skipped (suppressed) by the soft spark limiter. A value of 0 fires every spark; 1.0 skips every spark.
+
+|parameter|type|description|
+|-:|--|:-|
+|`ratio`|float|The target spark-skip ratio, in the range 0.0 to 1.0.|
 
 ### Crankshaft Position Input
 
-#### `selfStimulateRPM`
+#### `selfStimulateRPM(rpm)`
 
-#### `getEngineState`
+Drives the trigger emulator to self-stimulate the engine at the requested RPM. Pass an RPM value less than 1 to disable self-stimulation.
 
-#### `getTimeSinceTriggerEventMs`
+|parameter|type|description|
+|-:|--|:-|
+|`rpm`|integer|RPM to emulate; values less than 1 disable the trigger stimulator.|
+
+#### `getEngineState()`
+
+Returns a numeric code representing the current engine running state.
+
+|value|state|
+|-:|:-|
+|`0`|Stopped|
+|`1`|Spinning up or cranking|
+|`2`|Running|
+
+|*no parameters*|
+|--|
+
+#### `getTimeSinceTriggerEventMs()`
+
+Returns the elapsed time, in milliseconds, since the last received trigger event.
+
+|*no parameters*|
+|--|
 
 ### Boost Control
 
-#### `setBoostTargetAdd`
+#### `setBoostTargetAdd(value)`
 
-#### `setBoostTargetMult`
+Sets a Lua-controlled additive offset applied to the computed boost target.
 
-#### `setBoostDutyAdd`
+|parameter|type|description|
+|-:|--|:-|
+|`value`|float|The amount to add to the boost target.|
+
+#### `setBoostTargetMult(value)`
+
+Sets a Lua-controlled multiplier applied to the computed boost target.
+
+|parameter|type|description|
+|-:|--|:-|
+|`value`|float|The factor to multiply the boost target by.|
+
+#### `setBoostDutyAdd(value)`
+
+Sets a Lua-controlled additive offset applied to the boost control open-loop duty cycle.
+
+|parameter|type|description|
+|-:|--|:-|
+|`value`|float|The amount to add to the boost open-loop duty cycle.|
 
 ### Vehicle Speed
 
-#### `getCurrentGear`
+:::info
+These functions are only included in builds of FOME with the gear-detection module enabled.
+:::
 
-#### `getRpmInGear`
+#### `getCurrentGear()`
+
+Returns the currently detected gear.
+
+|*no parameters*|
+|--|
+
+#### `getRpmInGear(index)`
+
+Returns the engine RPM that corresponds to current vehicle speed in the specified gear.
+
+|parameter|type|description|
+|-:|--|:-|
+|`index`|integer|The gear index to return the RPM for.|
