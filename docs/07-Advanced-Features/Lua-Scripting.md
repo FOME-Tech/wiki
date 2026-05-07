@@ -643,10 +643,12 @@ Adds a static offset, in percent of wide-open, to the ETB target. For example, w
 calling `setEtbAdd(10)` opens the throttle to 15%. Useful for torque-based interventions like idle bumps, traction
 control, or anti-lag.
 
-Note: Unlike other Lua adjustments, `setEtbAdd` has a 200 ms watchdog: if the script does not call
+:::warning
+Unlike other Lua adjustments, `setEtbAdd` has a 200 ms watchdog: if the script does not call
 `setEtbAdd` again within 200 ms, the adjustment is treated as `0`. This is a safety measure — if the script hangs
 or stops running, the throttle reverts to the driver's requested position rather than holding the last
 intervention. Scripts using `setEtbAdd` must call it at a tick rate of 5 Hz or faster.
+:::
 
 |parameter|type|description|
 |-:|--|:-|
