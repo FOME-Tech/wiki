@@ -16,11 +16,11 @@
 Used to calculate the Tau value (_wwaeTau_) of wall-wetting function.
 
 - __Evap time vs. CLT__: Sets the base evaporation time based on CLT. Warmer engines will have a lower evaporation time.
-- __Evap time vs. MAP__: Sets the multiplier of the base evaporation time based on MAP. Lower MAP values will have a lower multiplier (shorter evaporation time), higher MAP values will have a higher multiplier (longer evaporation time).
+- __Evap time vs. MAP__: Sets the multiplier of the base evaporation time based on MAP. Lower MAP values will have a higher multiplier (longer evaporation time), higher MAP values will have a lower multiplier (shorter evaporation time).
 
 #### Wall wetting AE impact fraction
 
 Used to calculate the Beta value (_wwaeBeta_) of wall-wetting function.
 
 - __Impact fraction vs. CLT__: Sets the base impact fraction based on CLT. Colder engines will have a higher impact fraction (more fuel sticks to the walls), warmer engines will have a lower fraction (more fuel sucked into the intake). Values range from 0 to 1.
-- __Impact fraction vs. MAP__: Sets the multiplier of the base impact fraction based on MAP. Lower MAP values will have a lower multiplier (more fuel sucked into the intake, higher MAP values will have a higher multiplier (more fuel sticks to the walls).
+- __Impact fraction vs. MAP__: Sets the multiplier of the base impact fraction based on MAP. Lower MAP values will have a lower multiplier (more fuel sucked into the intake), higher MAP values will have a higher multiplier (more fuel sticks to the walls).
