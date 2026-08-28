@@ -1,418 +1,182 @@
-# FOME OBD fault codes and how to read them
+# Fault Codes
 
-The FOME ECU is providing a number of OBD fault codes,  they are either standard OBD fault codes or FOME custom fault codes.
+FOME reports problems as OBD-II style fault codes (DTCs). Most of them are standard `P0xxx`/`P2xxx` codes with their usual meanings, so a code you see here means roughly what it would mean on a factory ECU.
 
-## FOME specific custom codes are listed below
+## Reading a code
 
-Meaning|Fault Code
----|---
-CUSTOM_NAN_ENGINE_LOAD|6000|
-CUSTOM_WRONG_ALGORITHM|6001|
-CUSTOM_NAN_ENGINE_LOAD_2|6002|
-CUSTOM_INTEPOLATE_ERROR|6012|
-CUSTOM_INTEPOLATE_ERROR_2|6013|
-CUSTOM_INTEPOLATE_ERROR_3|6014|
-CUSTOM_INTEPOLATE_ERROR_4|6015|
-CUSTOM_PARAM_RANGE|6016|
-CUSTOM_MAF_NEEDED|6017|
-CUSTOM_UNKNOWN_ALGORITHM|6018|
-CUSTOM_OBD_UNKNOWN_FIRING_ORDER|6023|
-CUSTOM_OBD_WRONG_FIRING_ORDER|6024|
-CUSTOM_OBD_IGNITION_MODE|6025|
-CUSTOM_UNEXPECTED_ENGINE_TYPE|6027|
-CUSTOM_INVALID_TPS_SETTING|6028|
-CUSTOM_OBD_NAN_INJECTION|6030|
-CUSTOM_OBD_NEG_INJECTION|6031|
-CUSTOM_ZERO_DWELL|6032|
-CUSTOM_DWELL_TOO_LONG|6033|
-CUSTOM_SKIPPING_STROKE|6034|
-CUSTOM_OBD_ANALOG_INPUT_NOT_CONFIGURED|6038|
-CUSTOM_OBD_WRONG_ADC_MODE|6039|
-CUSTOM_OBD_KNOCK_PROCESSOR|6041|
-CUSTOM_OBD_LOCAL_FREEZE|6042|
-CUSTOM_LOGGING_BUFFER_OVERFLOW|6044|
-CUSTOM_OBD_PIN_CONFLICT|6048|
-CUSTOM_OBD_LOW_FREQUENCY|6049|
-CUSTOM_OBD_TS_PAGE_MISMATCH|6052|
-CUSTOM_OBD_TS_OUTPUT_MISMATCH|6053|
-CUSTOM_TOO_LONG_CRANKING_FUEL_INJECTION|6054|
-CUSTOM_INTERPOLATE_NAN|6055|
-ERROR_HISTO_NAME|6056|
-CUSTOM_OBD_HIGH_FREQUENCY|6058|
-CUSTOM_OBD_MMC_START1|6060|
-CUSTOM_OBD_MMC_START2|6061|
-CUSTOM_PID_DTERM|6097|
-CUSTOM_DWELL|6098|
-CUSTOM_TS_OVERFLOW|6099|
-CUSTOM_ERR_OP_MODE|6100|
-CUSTOM_ERR_TRIGGER_ZERO|6101|
-CUSTOM_ERR_6102|6102|
-CUSTOM_ERR_2ND_WATCHDOG|6103|
-CUSTOM_ERR_INVALID_INJECTION_MODE|6104|
-CUSTOM_ERR_WAVE_1|6105|
-CUSTOM_ERR_WAVE_2|6106|
-CUSTOM_ERR_TEST_ERROR|6107|
-CUSTOM_ERR_IGNITION_MODE|6108|
-CUSTOM_ERR_CAN_CONFIGURATION|6109|
-CUSTOM_ERR_INTERPOLATE|6110|
-CUSTOM_ERR_NOT_INITIALIZED_TRIGGER|6111|
-CUSTOM_ERR_MAP_TYPE|6112|
-CUSTOM_ERR_THERM|6113|
-CUSTOM_ERR_NATURAL_LOGARITHM_ERROR|6114|
-CUSTOM_ERR_LOOPED_QUEUE|6115|
-CUSTOM_ERR_PWM_1|6116|
-CUSTOM_ERR_PWM_2|6117|
-CUSTOM_ERR_DWELL_DURATION|6118|
-CUSTOM_ERR_NO_SHAPE|6119|
-CUSTOM_ERR_SGTP_ARGUMENT|6121|
-CUSTOM_ERR_INVALID_PIN|6130|
-CUSTOM_ERR_6131|6131|
-CUSTOM_ERR_UNKNOWN_PORT|6132|
-CUSTOM_ERR_PIN_ALREADY_USED_1|6133|
-CUSTOM_ERR_PIN_ALREADY_USED_2|6134|
-CUSTOM_ERR_6135|6135|
-CUSTOM_ERR_TCHARGE_NOT_READY|6136|
-CUSTOM_ERR_TRIGGER_WAVEFORM_TOO_LONG|6137|
-CUSTOM_ERR_FUEL_TABLE_NOT_READY|6138|
-CUSTOM_ERR_TCHARGE_NOT_READY2|6139|
-CUSTOM_ERR_COMMAND_LOWER_CASE_EXPECTED|6140|
-CUSTOM_ERR_FLASH_CRC_FAILED|6141|
-CUSTOM_ERR_NOT_INPUT_PIN|6142|
-CUSTOM_ERR_SKIPPED_TOOTH_SHAPE|6143|
-CUSTOM_ERR_UNEXPECTED_SHAFT_EVENT|6144|
-CUSTOM_ERR_SD_MOUNT_FAILED|6145|
-CUSTOM_ERR_SD_SEEK_FAILED|6146|
-CUSTOM_ERR_OUT_OF_ORDER|6147|
-CUSTOM_ERR_T2_CHARGE|6148|
-CUSTOM_ERR_ASSERT|6500|
-CUSTOM_ERR_ASSERT_VOID|6501|
-ERROR_FL_STACK_OVERFLOW|6502|
-CUSTOM_6503|6503|
-CUSTOM_FLSTACK|6504|
-CUSTOM_ERR_NAN_TCHARGE|6505|
-CUSTOM_EGO_TYPE|6506|
-CUSTOM_LIST_LOOP|6507|
-CUSTOM_ERR_LOCK_ISSUE|6508|
-CUSTOM_CONFIG_NOT_READY|6509|
-CUSTOM_ERR_TRG_ANGLE_ORDER|6510|
-CUSTOM_ERR_STATE_NULL|6511|
-CUSTOM_ERR_SAME_ANGLE|6512|
-ERROR_TRIGGER_DRAMA|6513|
-CUSTOM_MAP_ANGLE_PARAM|6514|
-CUSTOM_ERR_DISPLAY_MODE|6515|
-CUSTOM_ERR_ADC_UNKNOWN_CHANNEL|6516|
-CUSTOM_ERR_ADC_USED|6517|
-CUSTOM_ERR_ADC_DEPTH_SLOW|6518|
-CUSTOM_ERR_ADC_DEPTH_FAST|6519|
-CUSTOM_ERR_6520|6520|
-CUSTOM_ERR_6521|6521|
-CUSTOM_ERR_6522|6522|
-CUSTOM_ERR_6523|6523|
-CUSTOM_ERR_UNEXPECTED_SPI|6524|
-CUSTOM_ERR_EXT_MODE|6525|
-CUSTOM_ERR_TIMER_OVERFLOW|6526|
-CUSTOM_ERR_6527|6527|
-CUSTOM_ERR_SCHEDULING_ERROR|6528|
-CUSTOM_ERR_LOGGING_NOT_READY|6529|
-ERROR_NAN_FIND_INDEX|6530|
-ERROR_NULL_BUFFER|6531|
-CUSTOM_ERR_BUFF_INIT_ERROR|6532|
-CUSTOM_ERR_INTERPOLATE_PARAM|6533|
-ERROR_LOGGING_SIZE_CALC|6534|
-CUSTOM_ERR_ADC_CHANNEL|6535|
-CUSTOM_ERR_ANGLE|6536|
-CUSTOM_ERR_LOGGING_NULL|6537|
-CUSTOM_ERR_PARSING_ERROR|6538|
-CUSTOM_ERR_INJECTOR_LAG|6539|
-CUSTOM_ERR_AXIS_ORDER|6540|
-CUSTOM_HW_TIMER|6541|
-CUSTOM_INJ_DURATION|6542|
-CUSTOM_ADD_BASE|6543|
-CUSTOM_ERR_6544|6544|
-CUSTOM_ERR_6545|6545|
-CUSTOM_UNEXPECTED_TDC_ANGLE|6546|
-CUSTOM_INVALID_GLOBAL_OFFSET|6547|
-CUSTOM_UNEXPECTED_MAP_VALUE|6548|
-CUSTOM_ERR_6549|6549|
-CUSTOM_ERR_6550|6550|
-CUSTOM_TRIGGER_SYNC_ANGLE|6551|
-CUSTOM_TRIGGER_SYNC_ANGLE2|6552|
-CUSTOM_ERR_6553|6553|
-CUSTOM_ERR_6554|6554|
-CUSTOM_ERR_6555|6555|
-CUSTOM_ERR_6556|6556|
-CUSTOM_ERR_6557|6557|
-CUSTOM_ERR_6558|6558|
-CUSTOM_TRIGGER_SYNC_ANGLE_RANGE|6559|
-CUSTOM_ERR_TRIGGER_ANGLE_RANGE|6560|
-CUSTOM_ERR_6561|6561|
-CUSTOM_ERR_6562|6562|
-CUSTOM_ERR_6563|6563|
-CUSTOM_ERR_6564|6564|
-CUSTOM_ERR_6565|6565|
-CUSTOM_ERR_6566|6566|
-CUSTOM_ERR_6567|6567|
-CUSTOM_ERR_6568|6568|
-CUSTOM_ERR_6569|6569|
-CUSTOM_ERR_6570|6570|
-CUSTOM_ERR_6571|6571|
-CUSTOM_ERR_ARRAY_REMOVE|6572|
-CUSTOM_ERR_6573|6573|
-CUSTOM_ERR_6574|6574|
-CUSTOM_ERR_6575|6575|
-CUSTOM_ERR_6576|6576|
-CUSTOM_ERR_6577|6577|
-CUSTOM_NULL_ENGINE_PTR|6578|
-CUSTOM_DUTY_TOO_LOW|6579|
-CUSTOM_ERR_6580|6580|
-CUSTOM_ERR_6581|6581|
-CUSTOM_ERR_6582|6582|
-CUSTOM_ERR_6583|6583|
-CUSTOM_ERR_6584|6584|
-CUSTOM_ERR_6585|6585|
-CUSTOM_ERR_6586|6586|
-CUSTOM_ERR_6587|6587|
-CUSTOM_NULL_SHAPE|6588|
-CUSTOM_SPARK_ANGLE_1|6589|
-CUSTOM_ERR_6590|6590|
-CUSTOM_ERR_6591|6591|
-CUSTOM_ERR_6592|6592|
-CUSTOM_ERR_6593|6593|
-CUSTOM_SHAPE_LEN_ZERO|6594|
-CUSTOM_TRIGGER_CYCLE|6595|
-CUSTOM_TRIGGER_CYCLE_NAN|6596|
-CUSTOM_OMODE_UNDEF|6597|
-CUSTOM_ERR_6598|6598|
-CUSTOM_ERR_6599|6599|
-CUSTOM_ERR_6600|6600|
-CUSTOM_CONSOLE_TOO_MANY|6601|
-CUSTOM_APPEND_NULL|6602|
-CUSTOM_ERR_6603|6603|
-CUSTOM_ERR_6604|6604|
-CUSTOM_ERR_6605|6605|
-CUSTOM_ERR_6606|6606|
-CUSTOM_APPEND_STACK|6607|
-CUSTOM_ERR_6608|6608|
-CUSTOM_ERR_6609|6609|
-CUSTOM_ERR_6610|6610|
-CUSTOM_ERR_6611|6611|
-CUSTOM_ERR_6612|6612|
-CUSTOM_ERR_6613|6613|
-CUSTOM_ERR_6614|6614|
-CUSTOM_ERR_6615|6615|
-CUSTOM_ERR_6616|6616|
-CUSTOM_ERR_TIMER_STATE|6617|
-CUSTOM_ERR_6618|6618|
-CUSTOM_ERR_6619|6619|
-CUSTOM_APPLY_STACK|6620|
-CUSTOM_ERR_6621|6621|
-CUSTOM_ERR_6622|6622|
-CUSTOM_ERR_6623|6623|
-CUSTOM_ERR_6624|6624|
-CUSTOM_ERR_6625|6625|
-CUSTOM_EVENT_6626|6626|
-CUSTOM_STACK_6627|6627|
-CUSTOM_ERR_6628|6628|
-CUSTOM_STACK_6629|6629|
-CUSTOM_ERR_6030|6630|
-CUSTOM_ERR_6631|6631|
-CUSTOM_ERR_6632|6632|
-CUSTOM_ANGLE_NAN|6633|
-CUSTOM_ERR_6634|6634|
-CUSTOM_ERR_6635|6635|
-CUSTOM_ERR_6636|6636|
-CUSTOM_CONF_NULL|6637|
-CUSTOM_TRIGGER_EVENT_TYPE|6638|
-CUSTOM_ERR_6639|6639|
-CUSTOM_TRIGGER_UNEXPECTED|6640|
-CUSTOM_ERR_6641|6641|
-CUSTOM_TRIGGER_STACK|6642|
-CUSTOM_ERR_6643|6643|
-CUSTOM_IDLE_WAVE_CNT|6644|
-CUSTOM_ERR_6645|6645|
-CUSTOM_ERR_6646|6646|
-CUSTOM_ERR_6647|6647|
-CUSTOM_ERR_6648|6648|
-CUSTOM_ERR_6649|6649|
-CUSTOM_ERR_6650|6650|
-CUSTOM_ERR_6651|6651|
-CUSTOM_ERR_6652|6652|
-CUSTOM_ERR_6653|6653|
-CUSTOM_ERR_6654|6654|
-CUSTOM_ERR_6655|6655|
-CUSTOM_ERR_6656|6656|
-CUSTOM_ERR_6657|6657|
-CUSTOM_ERR_6658|6658|
-CUSTOM_ERR_6659|6659|
-CUSTOM_ERR_6660|6660|
-CUSTOM_ERR_6661|6661|
-CUSTOM_ERR_6662|6662|
-CUSTOM_ERR_6663|6663|
-CUSTOM_ERR_6664|6664|
-CUSTOM_ERR_6665|6665|
-CUSTOM_ERR_6666|6666|
-CUSTOM_ERR_ADCANCE_CALC_ANGLE|6667|
-CUSTOM_ERR_ETB_TARGET|6668|
-CUSTOM_ERR_6669|6669|
-CUSTOM_ERR_6670|6670|
-CUSTOM_STACK_ADC_6671|6671|
-CUSTOM_ERR_6672|6672|
-CUSTOM_ERR_6673|6673|
-CUSTOM_STACK_SPI|6674|
-CUSTOM_VVT_SYNC_POSITION|6675|
-CUSTOM_STACK_ADC|6676|
-CUSTOM_IH_STACK|6677|
-CUSTOM_ERR_6678|6678|
-CUSTOM_ERR6679|6679|
-CUSTOM_ERR_ANGLE_CR|6680|
-CUSTOM_DELTA_NOT_POSITIVE|6681|
-CUSTOM_TIMER_WATCHDOG|6682|
-CUSTOM_SAME_TWICE|6683|
-CUSTOM_ERR_6684|6684|
-CUSTOM_ERR_6685|6685|
-CUSTOM_ERR_6686|6686|
-CUSTOM_FIRING_LENGTH|6687|
-CUSTOM_ADVANCE_SPARK|6688|
-CUSTOM_ERR_6689|6689|
-CUSTOM_ERR_MAP_START_ASSERT|6690|
-CUSTOM_ERR_MAP_AVG_OFFSET|6691|
-CUSTOM_ERR_MAP_CYL_OFFSET|6692|
-CUSTOM_ERR_PWM_DUTY_ASSERT|6693|
-CUSTOM_ERR_ZERO_CRANKING_FUEL|6694|
-CUSTOM_NULL_EXECUTOR|6695|
-CUSTOM_SLOW_NOT_INVOKED|6696|
-CUSTOM_PWM_CYCLE_START|6697|
-CUSTOM_ERR_ARRAY_IS_FULL|6698|
-CUSTOM_ERR_ARRAY_REMOVE_ERROR|6699|
-CUSTOM_ERR_6700|6700|
-CUSTOM_CJ125_0|6700|
-CUSTOM_CJ125_1|6701|
-CUSTOM_CJ125_2|6702|
-CUSTOM_ERR_BENCH_PARAM|6703|
-CUSTOM_ERR_BOTH_FRONTS_REQUIRED|6704|
-CUSTOM_TLE8888|6705|
-CUSTOM_KNOCK_WINDOW|6706|
-CUSTOM_ERR_TIMER_TEST_CALLBACK_NOT_HAPPENED|6707|
-CUSTOM_ERR_TIMER_TEST_CALLBACK_WRONG_TIME|6708|
-CUSTOM_ERR_6709|6709|
-CUSTOM_DUTY_INVALID|6710|
-CUSTOM_PWM_DUTY_TOO_HIGH|6711|
-CUSTOM_ERR_PWM_STATE_ASSERT|6712|
-CUSTOM_ERR_PWM_CALLBACK_ASSERT|6713|
-CUSTOM_ERR_PWM_SWITCH_ASSERT|6714|
-CUSTOM_ERR_ZERO_E0_MULT|6715|
-CUSTOM_ERR_ZERO_E85_MULT|6716|
-CUSTOM_INVALID_ADC|6720|
-CUSTOM_INVALID_MODE_SETTING|6721|
-CUSTOM_ERR_TASK_TIMER_OVERFLOW|6722|
-CUSTOM_NO_ETB_FOR_IDLE|6723|
-CUSTOM_ERR_TLE8888_RESPONSE|6724|
-CUSTOM_ERR_CJ125_DIAG|6725|
-CUSTOM_6726|6726|
-CUSTOM_VVT_MODE_NOT_SELECTED|6727|
-CUSTOM_ERR_6728|6728|
-CUSTOM_ARTIFICIAL_MISFIRE|6729|
-CUSTOM_INSTANT_MAP_DECODING|6899|
-STACK_USAGE_COMMUNICATION|6900|
-STACK_USAGE_MIL|6901|
-CUSTOM_6902|6902|
-STACK_USAGE_STATUS|6903|
-STACK_USAGE_4|6904|
-CUSTOM_OBD_MMC_ERROR|8000|
-CUSTOM_ERR_CAN_COMMUNICATION|8900|
-CUSTOM_8901|8901|
-CUSTOM_ERR_CUSTOM_GAPS_BAD|8999|
-CUSTOM_ERR_TRIGGER_SYNC|9000|
-CUSTOM_OBD_TRIGGER_WAVEFORM|9001|
-CUSTOM_PRIMARY_TOO_MANY_TEETH|9002|
-CUSTOM_PRIMARY_NOT_ENOUGH_TEETH|9003|
-CUSTOM_CAM_TOO_MANY_TEETH|9004|
-CUSTOM_CAM_NOT_ENOUGH_TEETH|9005|
-CUSTOM_PRIMARY_DOUBLED_EDGE|9006|
-CUSTOM_PRIMARY_BAD_TOOTH_TIMING|9007|
-CUSTOM_OBD_SKIPPED_SPARK|9009|
-CUSTOM_OBD_SKIPPED_FUEL|9010|
-CUSTOM_RE_ADDING_INTO_EXECUTION_QUEUE|9011|
-CUSTOM_OUT_OF_ORDER_COIL|9012|
-CUSTOM_TOO_LONG_FUEL_INJECTION|9013|
+There are three places a fault shows up, and they don't all show the same thing.
 
-## Standard OBD fault codes used by FOME
+### In TunerStudio
 
-the meanings of standard OBD codes are available on http//:www.obd-codes.com/faq/obd2-codes-explained.php
+The `Last error` and `Error#1`–`Error#8` gauges show the eight most recent faults. **They are shown as a plain decimal number, not as a `P` code.** To convert, read the decimal number as hexadecimal — those digits are the P-code:
 
-Meaning|Fault Code
----|---
-OBD_Fuel_Pressure_Sensor_Missing|90|
-OBD_Mass_or_Volume_Air_Flow_Circuit_Malfunction|100|
-OBD_Manifold_Absolute_Pressure_Circuit_Malfunction|105|
-OBD_Map_Timeout|106|
-OBD_Map_Low|107|
-OBD_Map_High|108|
-OBD_ThermistorConfig|111|
-OBD_Iat_Timeout|110|
-OBD_Iat_Low|112|
-OBD_Iat_High|113|
-OBD_Clt_Timeout|115|
-OBD_Clt_Low|117|
-OBD_Clt_High|118|
-OBD_TPS_Configuration|121|
-OBD_TPS1_Primary_Timeout|120|
-OBD_TPS1_Primary_Low|122|
-OBD_TPS1_Primary_High|123|
-OBD_FlexSensor_Timeout|176|
-OBD_FlexSensor_Low|178|
-OBD_FlexSensor_High|179|
-OBD_Injector_Circuit_1|201|
-OBD_Injector_Circuit_2|202|
-OBD_Injector_Circuit_3|203|
-OBD_Injector_Circuit_4|204|
-OBD_Injector_Circuit_5|205|
-OBD_Injector_Circuit_6|206|
-OBD_Injector_Circuit_7|207|
-OBD_Injector_Circuit_8|208|
-OBD_Injector_Circuit_9|209|
-OBD_Injector_Circuit_10|210|
-OBD_Injector_Circuit_11|211|
-OBD_Injector_Circuit_12|212|
-OBD_TPS1_Secondary_Timeout|220|
-OBD_TPS1_Secondary_Low|222|
-OBD_TPS1_Secondary_High|223|
-OBD_TPS2_Primary_Timeout|225|
-OBD_TPS2_Primary_Low|227|
-OBD_TPS2_Primary_High|228|
-OBD_Crankshaft_Position_Sensor_A_Circuit_Malfunction|335|
-OBD_Camshaft_Position_Sensor_Circuit_Range_Performance|341|
-OBD_Ignition_Circuit_1|351|
-OBD_Ignition_Circuit_2|352|
-OBD_Ignition_Circuit_3|353|
-OBD_Ignition_Circuit_4|354|
-OBD_Ignition_Circuit_5|355|
-OBD_Ignition_Circuit_6|356|
-OBD_Ignition_Circuit_7|357|
-OBD_Ignition_Circuit_8|358|
-OBD_Ignition_Circuit_9|359|
-OBD_Ignition_Circuit_10|360|
-OBD_Ignition_Circuit_11|361|
-OBD_Ignition_Circuit_12|362|
-OBD_Oil_Pressure_Sensor_Malfunction|520|
-OBD_System_Voltage_Malfunction|560|
-OBD_PCM_Processor_Fault|606|
-OBD_Throttle_Actuator_Control_Range_Performance_Bank_1|638|
-OBD_TPS2_Secondary_Timeout|2120|
-OBD_TPS2_Secondary_Low|2122|
-OBD_TPS2_Secondary_High|2123|
-OBD_PPS_Primary_Timeout|2125|
-OBD_PPS_Primary_Low|2127|
-OBD_PPS_Primary_High|2128|
-OBD_PPS_Secondary_Timeout|2130|
-OBD_PPS_Secondary_Low|2132|
-OBD_PPS_Secondary_High|2133|
-OBD_TPS1_Correlation|2135|
-OBD_TPS2_Correlation|2136|
-OBD_PPS_Correlation|2137|
-OBD_Vehicle_Speed_SensorB|2158|
-OBD_Barometric_Press_Circ|2226|
-OBD_Barometric_Press_Circ_Range_Perf|2227|
-OBD_WB_FW_Mismatch|2133, actually: P2231 O2 Sensor Signal Circ Shorted to Heater Circ Bank1 Sensor 1|
-Wideband_1_Fault|2900|
-Wideband_2_Fault|2901|
+| TunerStudio shows | Read as hex | Fault code |
+|---|---|---|
+| 263 | 0x107 | P0107 |
+| 279 | 0x117 | P0117 |
+| 822 | 0x336 | P0336 |
+| 8501 | 0x2135 | P2135 |
+
+The tables below list both forms, so you can just look up the number you see.
+
+The FOME console also prints a plain-English line when the fault happens, for example `WARNING: Sensor fault: CLT input too low`. That's usually faster to read than the code.
+
+### On the check engine light
+
+If your board has a MIL output configured, it blinks stored codes out as **hexadecimal** digits, with a 1 second gap between digits and 5 seconds between codes. Each digit is blinked `n+1` times, so `0` is one blink and `7` is eight blinks. P0107 blinks as 2, 1, 8.
+
+### Over CAN
+
+FOME answers OBD-II service `0x03` (read stored DTCs) on the CAN bus, so a generic scan tool will read the codes normally. Pending and permanent DTCs (services `0x07` and `0x0A`) are not supported.
+
+## Clearing codes
+
+Stored codes live in RAM only, so **power cycling the ECU clears them**. Nothing is written to flash, and codes do not survive a reboot.
+
+While the ECU is running, most sensor faults latch: once set, the code stays until reboot even if the sensor starts reading correctly again.
+
+## Choosing what a code does
+
+Several codes have a configurable severity, set in TunerStudio next to the relevant sensor's settings (look for a "DTC Pxxxx severity" field):
+
+- **Warning only** — the fault is logged, the code is stored, and the MIL is lit.
+- **Ignore** — the fault is still logged as a warning, but no code is stored and the MIL stays off.
+
+Use *Ignore* for codes that are noise on your setup — for example P0176 on a car with no flex sensor wiring, or the cam sensor codes on an engine where the cam signal is intentionally marginal.
+
+Codes without a severity setting are always reported.
+
+## Sensor circuit codes
+
+These come from the sensor checker, which runs once the ECU has been powered for a second and the battery voltage has been stable for 5 seconds. "Low"/"High" mean the raw input is outside the range that could possibly be real — almost always wiring, not calibration. "Timeout" means no reading has
+arrived at all.
+
+| Code | Dec | Meaning | What to check |
+|---|---:|---|---|
+| P0101 | 257 | MAF signal timeout | MAF unplugged, wrong pin assigned, no signal on the wire |
+| P0102 | 258 | MAF input below `mafMinVoltage` | Short to ground, open signal wire, or `mafMinVoltage` set too high for your sensor |
+| P0103 | 259 | MAF input above `mafMaxVoltage` | Short to 5V, open ground on the MAF, or `mafMaxVoltage` set too low |
+| P0106 | 262 | MAP signal timeout | MAP sensor unplugged or wrong input pin assigned |
+| P0107 | 263 | MAP below the configured minimum | Short to ground, broken signal wire, or `mapErrorDetectionTooLow` set too high for your sensor |
+| P0108 | 264 | MAP above the configured maximum | Short to 5V, missing sensor ground, or `mapErrorDetectionTooHigh` set too low for a boosted engine |
+| P0110 | 272 | IAT signal timeout | IAT input not configured or not sampling |
+| P0112 | 274 | IAT input below 0.05V | Sensor shorted to ground, or a short in the harness |
+| P0113 | 275 | IAT input above 4.9V | Open circuit — unplugged sensor, broken wire, or missing bias resistor |
+| P0115 | 277 | CLT signal timeout | CLT input not configured or not sampling |
+| P0117 | 279 | CLT input below 0.05V | Sensor or harness shorted to ground |
+| P0118 | 280 | CLT input above 4.9V | Open circuit — unplugged sensor or broken wire |
+| P0120 | 288 | TPS1 primary timeout | TPS input not configured or not sampling |
+| P0122 | 290 | TPS1 primary below `tpsErrorDetectionTooLow` | Open or shorted signal wire, or closed-throttle calibration is wrong |
+| P0123 | 291 | TPS1 primary above `tpsErrorDetectionTooHigh` | Short to 5V, or wide-open calibration is wrong |
+| P0176 | 374 | Flex sensor signal lost | Sensor unplugged, broken wire, or missing pull-up resistor on the signal line |
+| P0178 | 376 | Flex frequency too low (<45 Hz) | Marginal signal, noise, or a failing sensor |
+| P0179 | 377 | Flex frequency too high (>155 Hz) | Failing sensor, or methanol contamination in the fuel |
+| P0196 | 406 | Oil temperature signal timeout | Oil temp input not configured or not sampling |
+| P0197 | 407 | Oil temp input below 0.05V | Sensor or harness shorted to ground |
+| P0198 | 408 | Oil temp input above 4.9V | Open circuit — unplugged sensor or broken wire |
+| P0220 | 544 | TPS1 secondary timeout | Second TPS channel not configured or not sampling |
+| P0222 | 546 | TPS1 secondary too low | Open or shorted wire on the second TPS channel |
+| P0223 | 547 | TPS1 secondary too high | Short to 5V on the second TPS channel |
+| P0225 | 549 | TPS2 primary timeout | See P0120, for the second throttle body |
+| P0227 | 551 | TPS2 primary too low | See P0122 |
+| P0228 | 552 | TPS2 primary too high | See P0123 |
+| P0521 | 1313 | Oil pressure signal timeout | Oil pressure input not configured or not sampling |
+| P0522 | 1314 | Oil pressure below sensor range | Short to ground or broken signal wire |
+| P0523 | 1315 | Oil pressure above sensor range | Short to 5V, or the sensor's configured pressure range is too small |
+| P2120 | 8480 | TPS2 secondary timeout | See P0220, for the second throttle body |
+| P2122 | 8482 | TPS2 secondary too low | See P0222 |
+| P2123 | 8483 | TPS2 secondary too high | See P0223 |
+| P2125 | 8485 | Pedal primary timeout | Pedal input not configured or not sampling |
+| P2127 | 8487 | Pedal primary too low | Open or shorted pedal signal wire, or bad closed-pedal calibration |
+| P2128 | 8488 | Pedal primary too high | Short to 5V, or bad full-travel calibration |
+| P2130 | 8496 | Pedal secondary timeout | Second pedal channel not configured or not sampling |
+| P2132 | 8498 | Pedal secondary too low | Open or shorted wire on the second pedal channel |
+| P2133 | 8499 | Pedal secondary too high | Short to 5V on the second pedal channel |
+| P2226 | 8742 | Implausible barometric pressure at startup | MAP reading was not close to atmospheric when the ECU booted — check the MAP sensor calibration and that the engine was actually stopped |
+
+### Redundancy correlation codes
+
+Redundant sensor pairs (TPS and pedal) are cross-checked against each other. If the two channels disagree by more than 5% (10% on Hellen 121 Nissan), the combined sensor is invalidated:
+
+| Code | Dec | Meaning |
+|---|---:|---|
+| P2135 | 8501 | TPS1 primary and secondary disagree |
+| P2136 | 8502 | TPS2 primary and secondary disagree |
+| P2137 | 8503 | Pedal primary and secondary disagree |
+
+A correlation fault almost always means one of the two channels has drifted, is noisy, or was calibrated against the wrong end of its travel. Log both raw channels and compare them across the whole range of travel — they should track each other everywhere, not just at idle.
+
+:::warning
+On an electronic throttle car, a correlation fault will cut the throttle. Fix it before driving.
+:::
+
+## Trigger and cam codes
+
+| Code | Dec | Meaning | What to check |
+|---|---:|---|---|
+| P0336 | 822 | 50+ crank trigger decode errors in one run | Noise on the crank signal, wrong trigger wheel selected, bad sensor gap, or a damaged reluctor |
+| P0340 | 832 | Bank 1 intake cam: no signal | Cam sensor unplugged, wrong input pin, or no signal reaching the ECU while the crank signal is fine |
+| P0341 | 833 | Bank 1 intake cam: 50+ decode errors | Noisy or intermittent cam signal, or the wrong VVT mode selected |
+| P0345 | 837 | Bank 2 intake cam: no signal | As P0340 |
+| P0346 | 838 | Bank 2 intake cam: 50+ decode errors | As P0341 |
+| P0365 | 869 | Bank 1 exhaust cam: no signal | As P0340 |
+| P0366 | 870 | Bank 1 exhaust cam: 50+ decode errors | As P0341 |
+| P0385 | 901 | Bank 2 exhaust cam: no signal | As P0340 |
+| P0386 | 902 | Bank 2 exhaust cam: 50+ decode errors | As P0341 |
+
+Cam codes are only checked once the crank trigger has synced 20 times, and only for cam inputs that actually have a pin assigned. Crank checking is skipped below the cranking RPM threshold so that a stalling engine doesn't set a code on the way down.
+
+## Knock sensor codes
+
+| Code | Dec | Meaning |
+|---|---:|---|
+| P0327 | 807 | Knock sensor 1 signal too low |
+| P0332 | 818 | Knock sensor 2 signal too low |
+
+Set when a knock sensor that was previously working reads below `knockNoiseThreshold` for longer than `knockNoiseTimeout` while the engine is running. A healthy sensor reads roughly -50 to -20 dBv; a disconnected one sits near the noise floor below -80 dBv. Check the sensor connector, the shield ground, and the sensor's mounting torque. Setting `knockNoiseTimeout` to 0 disables the check.
+
+## Injector and ignition circuit codes
+
+| Code | Dec | Meaning |
+|---|---:|---|
+| P0201–P0212 | 513–530 | Injector circuit 1–12 fault |
+| P0351–P0362 | 849–866 | Ignition circuit 1–12 fault |
+
+These require a board with smart driver chips capable of reporting output diagnostics — boards without them never set these codes. The TunerStudio console message includes the specific fault the driver reported (open load, short to ground, short to battery, over temperature). Check the injector or coil connector and the wiring to it first.
+
+## Power supply and system codes
+
+| Code | Dec | Meaning | What to check |
+|---|---:|---|---|
+| P0612 | 1554 | Main relay fault | The main relay voltage sense input reads more than 3V below battery voltage, 0.5s after the relay was commanded on. Check the relay, its fuse, and the wiring to the ECU's main relay feed |
+| P0642 | 1602 | 5V sensor supply below 4.75V | A sensor is overloading or shorting the 5V rail. Unplug sensors one at a time to find it. Note that sensor checking is suspended while this is set |
+| P0643 | 1603 | 5V sensor supply above 5.25V | ECU internal regulator problem, or something back-feeding the 5V rail |
+| P0652 | 1618 | Second 5V sensor supply low | As P0642, for boards with a second sensor supply (Proteus) |
+| P2900 | 10496 | Wideband controller 1 fault | The controller is reporting a fault of its own. The console message names it — usually sensor heater, sensor open, or overheating |
+| P2901 | 10497 | Wideband controller 2 fault | As P2900 |
+| P2902 | 10498 | Wideband controller firmware too old | Update the wideband controller's firmware to match this FOME build |
+
+P2900–P2902 are FOME-specific codes, not standard OBD codes — a generic scan tool will not have a description for them.
+
+## Configuration errors
+
+These are *fatal* — the ECU refuses to run the engine and TunerStudio shows a critical error banner with a message explaining the problem. They mean the tune is wrong, not that hardware failed. Fix the setting named in the message and reboot.
+
+| Code | Dec | Meaning |
+|---|---:|---|
+| P0090 | 144 | Injector compensation is set to use a fuel pressure sensor, but no sensor is configured |
+| P0111 | 273 | Thermistor calibration points are not in ascending temperature order |
+| P0121 | 289 | Throttle/pedal configuration problem — open and closed calibration voltages too close together, a redundant pair that isn't actually redundant, both channels of a "redundant" pair wired to one sensor, or a failed ETB autotune |
+| P0606 | 1542 | General ECU fault. Used for internal assertion failures and for prompting a power cycle after applying a preset. The console message says what happened |
+| P0638 | 1592 | ETB startup position was more than 5% away from the configured neutral position. Check for a stuck throttle plate, a wrong `etbNeutralPosition`, or bad TPS calibration |
+| P2158 | 8536 | An invalid CAN DBC was selected for CAN vehicle speed input |
+
+## Internal codes (6000 and above)
+
+Codes numbered 6000 and up are FOME internal diagnostics, not OBD codes. They aren't sent over CAN and they're rarely actionable — they indicate either a firmware bug or a configuration so far out of range that the firmware couldn't cope.
+
+If you see one, the TunerStudio console message next to it is the useful part. Report the code together with that message and your tune on the [Discord](https://discord.gg/GXPEbcM) `#firmware`
+channel.
+
+The full list is in
+[`firmware/controllers/algo/obd_error_codes.h`](https://github.com/FOME-Tech/fome-fw/blob/master/firmware/controllers/algo/obd_error_codes.h).
