@@ -69,7 +69,7 @@ arrived at all.
 | P0122 | 290 | TPS1 primary below `tpsErrorDetectionTooLow` | Open or shorted signal wire, or closed-throttle calibration is wrong |
 | P0123 | 291 | TPS1 primary above `tpsErrorDetectionTooHigh` | Short to 5V, or wide-open calibration is wrong |
 | P0176 | 374 | Flex sensor signal lost | Sensor unplugged, broken wire, or missing pull-up resistor on the signal line |
-| P0178 | 376 | Flex frequency too low (<45 Hz) | Marginal signal, noise, or a failing sensor |
+| P0178 | 376 | Flex frequency too low (\<45 Hz) | Marginal signal, noise, or a failing sensor |
 | P0179 | 377 | Flex frequency too high (>155 Hz) | Failing sensor, or methanol contamination in the fuel |
 | P0196 | 406 | Oil temperature signal timeout | Oil temp input not configured or not sampling |
 | P0197 | 407 | Oil temp input below 0.05V | Sensor or harness shorted to ground |
