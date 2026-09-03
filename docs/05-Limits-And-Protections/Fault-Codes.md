@@ -11,7 +11,7 @@ There are three places a fault shows up, and they don't all show the same thing.
 The `Last error` and `Error#1`–`Error#8` gauges show the eight most recent faults. **They are shown as a plain decimal number, not as a `P` code.** To convert, read the decimal number as hexadecimal — those digits are the P-code:
 
 | TunerStudio shows | Read as hex | Fault code |
-|---|---|---|
+| :--- | :--- | :--- |
 | 263 | 0x107 | P0107 |
 | 279 | 0x117 | P0117 |
 | 822 | 0x336 | P0336 |
