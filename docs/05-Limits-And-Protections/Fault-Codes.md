@@ -52,7 +52,7 @@ These come from the sensor checker, which runs once the ECU has been powered for
 arrived at all.
 
 | Code | Dec | Meaning | What to check |
-|---|---:|---|---|
+| :--- | :--- | :--- | :--- |
 | P0101 | 257 | MAF signal timeout | MAF unplugged, wrong pin assigned, no signal on the wire |
 | P0102 | 258 | MAF input below `mafMinVoltage` | Short to ground, open signal wire, or `mafMinVoltage` set too high for your sensor |
 | P0103 | 259 | MAF input above `mafMaxVoltage` | Short to 5V, open ground on the MAF, or `mafMaxVoltage` set too low |
@@ -99,7 +99,7 @@ arrived at all.
 Redundant sensor pairs (TPS and pedal) are cross-checked against each other. If the two channels disagree by more than 5% (10% on Hellen 121 Nissan), the combined sensor is invalidated:
 
 | Code | Dec | Meaning |
-|---|---:|---|
+| :--- | :---:| :--- |
 | P2135 | 8501 | TPS1 primary and secondary disagree |
 | P2136 | 8502 | TPS2 primary and secondary disagree |
 | P2137 | 8503 | Pedal primary and secondary disagree |
@@ -113,7 +113,7 @@ On an electronic throttle car, a correlation fault will cut the throttle. Fix it
 ## Trigger and cam codes
 
 | Code | Dec | Meaning | What to check |
-|---|---:|---|---|
+| :--- | :---:| :--- | :--- |
 | P0336 | 822 | 50+ crank trigger decode errors in one run | Noise on the crank signal, wrong trigger wheel selected, bad sensor gap, or a damaged reluctor |
 | P0340 | 832 | Bank 1 intake cam: no signal | Cam sensor unplugged, wrong input pin, or no signal reaching the ECU while the crank signal is fine |
 | P0341 | 833 | Bank 1 intake cam: 50+ decode errors | Noisy or intermittent cam signal, or the wrong VVT mode selected |
@@ -129,7 +129,7 @@ Cam codes are only checked once the crank trigger has synced 20 times, and only 
 ## Knock sensor codes
 
 | Code | Dec | Meaning |
-|---|---:|---|
+| :--- | :---:| :--- |
 | P0327 | 807 | Knock sensor 1 signal too low |
 | P0332 | 818 | Knock sensor 2 signal too low |
 
@@ -138,7 +138,7 @@ Set when a knock sensor that was previously working reads below `knockNoiseThres
 ## Injector and ignition circuit codes
 
 | Code | Dec | Meaning |
-|---|---:|---|
+| :--- | :---:| :--- |
 | P0201–P0212 | 513–530 | Injector circuit 1–12 fault |
 | P0351–P0362 | 849–866 | Ignition circuit 1–12 fault |
 
@@ -147,7 +147,7 @@ These require a board with smart driver chips capable of reporting output diagno
 ## Power supply and system codes
 
 | Code | Dec | Meaning | What to check |
-|---|---:|---|---|
+| :--- | :---:| :--- | :--- |
 | P0612 | 1554 | Main relay fault | The main relay voltage sense input reads more than 3V below battery voltage, 0.5s after the relay was commanded on. Check the relay, its fuse, and the wiring to the ECU's main relay feed |
 | P0642 | 1602 | 5V sensor supply below 4.75V | A sensor is overloading or shorting the 5V rail. Unplug sensors one at a time to find it. Note that sensor checking is suspended while this is set |
 | P0643 | 1603 | 5V sensor supply above 5.25V | ECU internal regulator problem, or something back-feeding the 5V rail |
@@ -163,7 +163,7 @@ P2900–P2902 are FOME-specific codes, not standard OBD codes — a generic scan
 These are *fatal* — the ECU refuses to run the engine and TunerStudio shows a critical error banner with a message explaining the problem. They mean the tune is wrong, not that hardware failed. Fix the setting named in the message and reboot.
 
 | Code | Dec | Meaning |
-|---|---:|---|
+| :--- | :---:| :--- |
 | P0090 | 144 | Injector compensation is set to use a fuel pressure sensor, but no sensor is configured |
 | P0111 | 273 | Thermistor calibration points are not in ascending temperature order |
 | P0121 | 289 | Throttle/pedal configuration problem — open and closed calibration voltages too close together, a redundant pair that isn't actually redundant, both channels of a "redundant" pair wired to one sensor, or a failed ETB autotune |
