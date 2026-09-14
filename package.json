@@ -39,7 +39,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.11",
     "@docusaurus/module-type-aliases": "^3.10.1",
-    "@docusaurus/tsconfig": "^3.10.1",
+    "@docusaurus/tsconfig": "^3.10.2",
     "@docusaurus/types": "^3.10.2",
     "@tsconfig/docusaurus": "^2.0.9",
     "@types/node": "^26.4.1",
