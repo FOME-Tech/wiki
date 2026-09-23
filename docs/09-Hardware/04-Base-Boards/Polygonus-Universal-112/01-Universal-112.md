@@ -1,6 +1,6 @@
 # Universal 112
 
-![alt](./../../04-Base-Boards/universal112.webp)
+![alt](./../universal112.webp)
 
 This is our Wire-In open-source ECU base board compatible with Polygonus and Atlas ECU brain modules. It uses the Molex 112-pin connector. Inteded for custom wiring harnesses or OEM harnesses where you will cut and replace the original connector.
 
