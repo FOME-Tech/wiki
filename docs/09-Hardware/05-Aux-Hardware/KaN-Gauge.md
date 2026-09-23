@@ -1,4 +1,4 @@
-# BeerMoneyMotorsports CAN gauge
+# BeerMoneyMotorsports KaN gauge
 
 A page to outline the hardware and wiring of the BMM KaN Multi Fit CAN gauge.
 
