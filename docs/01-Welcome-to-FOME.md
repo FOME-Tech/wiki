@@ -202,9 +202,9 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Injector Deadtime settings](Fuel/Fuel-Settings/Injection-Deadtime)
 - [Small Pulse width correction](Fuel/Fuel-Settings/Small-Pulse)
 
-### Hardware
+### Software
 
-- [Flashing Software Notes](Hardware/Flashing-Software-Notes)
+- [Flashing Software Notes](Software/Flashing-Software-Notes)
 
 #### Hardware Circuits
 
@@ -218,12 +218,9 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 #### Hardware Details
 
-- [Base boards](Hardware/Hardware-Details/Base-Board)
-- [Brain boards](Hardware/Hardware-Details/Brain-Board)
-- [CAN Gauge](Hardware/Hardware-Details/CAN-Gauge)
-- [Low-Z Driver board](Hardware/Hardware-Details/Low-Z-Injector-Driver)
-- [Power Steering Controller](Hardware/Hardware-Details/PSC)
-- [Wideband Lambda module](Hardware/Hardware-Details/Wideband-Module)
+- [Base boards](category/base-boards/)
+- [Brain boards](category/brain-boards/)
+- [Gauges, Controllers and Auxiliar Hardware](Hardware/Aux-Hardware)
 
 ---
 

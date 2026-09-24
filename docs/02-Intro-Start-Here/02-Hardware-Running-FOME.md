@@ -9,7 +9,7 @@ Most recent offerings consist of a two-part system. A brain board that gets atta
 ## Brain Boards
 
 This is where the real action happens. Designed to be consistent across different base board applications to simplify design, ensure repeatability, and reduce cost.
-    - [Atlas](../../Hardware/Brain-Boards/Atlas/FOME-Atlas) Formerly Polygonus
+    - [Atlas](/Hardware/Brain-Boards/Atlas/FOME-Atlas) Formerly Polygonus
 
 ## Base Boards 
 
@@ -22,7 +22,7 @@ This is where brain boards get attached to.
 This is Ideal for Custom Wiring Harnesses, complex engine swaps,  or peope willing to cut and modify their OEM harnesses to use another connector. 
 
 - FOME Official:
-  - [Universal 112](../../Hardware/Base-Boards/Polygonus-Universal-112/Universal-112)
+  - [Universal 112](/Hardware/Base-Boards/Polygonus-Universal-112/Universal-112)
 
 ### Plug-And-Play
 
@@ -43,8 +43,8 @@ _Offered and Supported by Third Parties._  Often Fully assembled solutions unles
 - Toyota: 
   - IS200 
     - [🇬🇧 DIY-EFI Core8 IS200](https://diy-efi.co.uk/product/core8-is200-pnp-ecu) Polygonus/Atlas Based.
-    - [🇵🇱 NXRD Racing Devices IS200 1G-FE PNP](https://nxrd-shop.com/en/electronics/37-plug-play-ecu-for-lexus-is200-1g-fe-mt.html) Proteus based. All-in-One Board
-
+    - <a href="https://nxrd-shop.com/en/electronics/37-plug-play-ecu-for-lexus-is200-1g-fe-mt.html">🇵🇱 NXRD Racing Devices IS200 1G-FE PNP</a> Proteus based. All-in-One Board
+  
 ## RusEFI 
 
 Some older pre-fork RusEFI ECUs are compatible with FOME Firmware: _See [GitHub Releases](https://github.com/FOME-Tech/fome-fw/releases)_

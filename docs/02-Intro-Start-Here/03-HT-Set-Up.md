@@ -39,9 +39,9 @@ In tunerstudio you will be presented with a screen with several tabs on top, and
     - Primary Trigger Wheel type and Location (Crank or Cam), Trigger Angle, Cam  trigger Selection and type, VVT Offset,.
   - Outputs
     - Here's where you set up Fuel Pump, Fan, Tachometer, Speedo Output, Starter Disable, Check Engine Light...
-- [Fuel](../../category/Fuel/)
+- [Fuel](../../category/fuel)
   - Injector Outputs, Injector Pairing or Sequential, Injector Size, Fuel Pressure compensation, Stoich AFR setup, Dead Times, VE Table. CLT/IAT Corrections, DFCO, Accel Enrichment...
-- [Ignition](../../category/Ignition)
+- [Ignition](../../category/ignition)
   - Spark Outputs, Dwell, Ignition Tables, Knock Retard Settings, IAT/CLT Corrections...
 - [Cranking](../../category/cranking-control)
 - [Idle](../../category/idle-control)
@@ -50,3 +50,5 @@ In tunerstudio you will be presented with a screen with several tabs on top, and
 - [Sensors](../../category/sensors-and-gauges/)
 - Controller
   - Here you will find modes for Injector, Coils and Bench Test. Settings for CANBus, WiFi, Additional communication, SD Card Logging, Anti Lag, Rotary and Experimental stuff. Be careful, some options here assume you know what you're doing.
+
+<!-- REPLACED -->

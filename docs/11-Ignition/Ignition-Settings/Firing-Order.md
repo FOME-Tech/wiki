@@ -1,4 +1,6 @@
-# How to correctly configure the firing order and ignition pins  
+# Firing Order
+
+## How to correctly configure the firing order and ignition pins
 
 The firing order, cylinder number, and ignition pins are directly correlated. The ignition pin number needs to be wired to the corresponding cylinder in the firing order. For example if the engine firing order is 1-3-4-2, ignition pin 1 needs to be wired to cylinder number one, ignition pin 2 to cylinder 2, and ditto for pin 3 to cylinder 3 and so on.
 

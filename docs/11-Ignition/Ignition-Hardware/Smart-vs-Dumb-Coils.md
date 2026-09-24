@@ -14,8 +14,8 @@ Older vehicles will more commonly have a separate ignition module, another name 
 
 Here are some examples of each:
 
-Dumb | Smart
---- | ---
-[B58](https://www.google.com/search?q=b58+ignition+coi) | [R8](https://www.google.com/search?q=r8+ignition+coil)
-[GM LS coils](https://www.google.com/search?q=GM+LS+ignition+coil) | [R35 GTR](https://www.google.com/search?q=nissan+gtr+ignition+coils)
-[996/997](https://www.google.com/search?q=Porsche+996%2F997+ignition+coils) | [K20/K24](https://www.google.com/search?q=Honda+K24+ignition+coils)
+| Dumb                                                                        | Smart                                                                |
+|-----------------------------------------------------------------------------|----------------------------------------------------------------------|
+| [B58](https://www.google.com/search?q=b58+ignition+coi)                     | [R8](https://www.google.com/search?q=r8+ignition+coil)               |
+| [GM LS coils](https://www.google.com/search?q=GM+LS+ignition+coil)          | [R35 GTR](https://www.google.com/search?q=nissan+gtr+ignition+coils) |
+| [996/997](https://www.google.com/search?q=Porsche+996%2F997+ignition+coils) | [K20/K24](https://www.google.com/search?q=Honda+K24+ignition+coils)  |
