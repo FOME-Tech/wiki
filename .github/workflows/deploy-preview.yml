@@ -63,5 +63,5 @@ jobs:
           comment-id: ${{ steps.find_comment.outputs.comment-id }}
           issue-number: ${{ steps.find_pr_number.outputs.pr_number }}
           body: |
-            Preview URL: ${{ steps.deploy.outputs.alias }} :rocket:
+            Preview URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }} :rocket:
           edit-mode: replace
