@@ -11,15 +11,15 @@ Most recent offerings consist of a two-part system. A brain board that gets atta
 This is where the real action happens. Designed to be consistent across different base board applications to simplify design, ensure repeatability, and reduce cost.
     - [Atlas](/Hardware/Brain-Boards/Atlas/FOME-Atlas) Formerly Polygonus
 
-## Base Boards 
+## Base Boards
 
 This is where brain boards get attached to.
 
-### Wire-In 
+### Wire-In
 
 <img src={universal112} alt="fomepnp" style={{width:'100%', height:'auto', aspectRatio: '18/9', objectFit:'cover', objectPosition:'0 45%'}} />
 
-This is Ideal for Custom Wiring Harnesses, complex engine swaps,  or peope willing to cut and modify their OEM harnesses to use another connector. 
+This is Ideal for Custom Wiring Harnesses, complex engine swaps,  or peope willing to cut and modify their OEM harnesses to use another connector.
 
 - FOME Official:
   - [Universal 112](/Hardware/Base-Boards/Polygonus-Universal-112/Universal-112)
@@ -34,18 +34,18 @@ _Offered and Supported by Third Parties._  Often Fully assembled solutions unles
 - Mazda:
   - NA/NB Miata:
     - [🇺🇲 BeerMoneyMotorsports](https://www.beermoneymotorsports.com/collections/miata-mx5-ecus)
-- BMW: 
+- BMW:
   - M20, M30, M42, M60, M54, MS42/MS43,24V OBD1-OBD2
     - [🇺🇲 ClassicDaily](https://www.classicdaily.net/collections/custom-parts?uff_qwa11i_collections=414472798416)
-- Honda: 
-  - OBD1 PnP 
+- Honda:
+  - OBD1 PnP
     - [🇺🇲 VatoTuned](https://vatotuned.com/products/vato-tuned-honda-obd1-pnp-standalone-ecu) _All-in-One Board_
-- Toyota: 
-  - IS200 
+- Toyota:
+  - IS200
     - [🇬🇧 DIY-EFI Core8 IS200](https://diy-efi.co.uk/product/core8-is200-pnp-ecu) Polygonus/Atlas Based.
-    - <a href="https://nxrd-shop.com/en/electronics/37-plug-play-ecu-for-lexus-is200-1g-fe-mt.html">🇵🇱 NXRD Racing Devices IS200 1G-FE PNP</a> Proteus based. All-in-One Board
-  
-## RusEFI 
+    - [🇵🇱 NXRD Racing Devices IS200 1G-FE PNP](https://nxrd-shop.com/en/electronics/37-plug-play-ecu-for-lexus-is200-1g-fe-mt.html) Proteus based. All-in-One Board
+
+## RusEFI
 
 Some older pre-fork RusEFI ECUs are compatible with FOME Firmware: _See [GitHub Releases](https://github.com/FOME-Tech/fome-fw/releases)_
 
