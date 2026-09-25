@@ -43,7 +43,7 @@ _Offered and Supported by Third Parties._  Often Fully assembled solutions unles
 - Toyota:
   - IS200
     - [🇬🇧 DIY-EFI Core8 IS200](https://diy-efi.co.uk/product/core8-is200-pnp-ecu) Polygonus/Atlas Based.
-    - <a href="https://nxrd-shop.com/en/electronics/37-plug-play-ecu-for-lexus-is200-1g-fe-mt.html">🇵🇱 NXRD Racing Devices IS200 1G-FE PNP</a> Proteus based. All-in-One Board
+    - [🇵🇱 NXRD Racing Devices IS200 1G-FE PNP](https://nxrd-shop.com/en/electronics/37-plug-play-ecu-for-lexus-is200-1g-fe-mt.html) Proteus based. All-in-One Board
 
 ## RusEFI
 
