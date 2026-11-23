@@ -194,7 +194,7 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [AFR settings](Fuel/Fuel-Settings/AFR-setting)
 - [Coolant Multiplier](Fuel/Fuel-Settings/CLT-Multiplier)
 - [Per-Cylinder Fuel trim](Fuel/Fuel-Settings/Cylinder-Fuel-Trim)
-- [Deceleration Fuel Cut Off](Fuel/Fuel-Settings/DCFO)
+- [Deceleration Fuel Cut Off](Fuel/Fuel-Settings/DFCO)
 - [Flex Fuel](Fuel/Fuel-Settings/Flex-Fuel)
 - [Fuel Injection Mode](Fuel/Fuel-Settings/Fuel-Injection-Mode)
 - [TPS Multiplier](Fuel/Fuel-Settings/Fuel-TPS-multi)
