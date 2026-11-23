@@ -125,10 +125,6 @@ const config: Config = {
             to: '/Advanced-Features/Lua-Scripting/',
           },
           {
-            from: '/r/vr',
-            to: '/Sensors-And-Gauges/General-Sensors/VR-Threshold/',
-          },
-          {
             from: '/r/clt',
             to: '/Sensors-And-Gauges/Temperature-Sensors/CLT/',
           },
