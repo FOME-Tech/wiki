@@ -20,7 +20,7 @@ Each cam input is decoded according to its **Cam trigger type**. For each cam ev
 | Cam trigger type (intake) | - | Pattern of the intake cam wheel. Applies to both banks |
 | Cam trigger type (exhaust) | - | Pattern of the exhaust cam wheel. Applies to both banks |
 | Cam sensor bank 1 intake, bank 1 exhaust, bank 2 intake, bank 2 exhaust | - | Input pin for each cam sensor |
-| Invert cam inputs | - | Use the opposite edge of the signal, for all cam inputs |
+| Invert cam inputs | - | Use the opposite edge of the signal, for all cam inputs. Off for VR sensors on a MAX9924 or MAX9926 (see below) |
 | VVT offset bank 1 intake, bank 1 exhaust, bank 2 intake, bank 2 exhaust | deg | Offset that makes each cam's reading 0 at its rest position (see below) |
 | Cam for engine sync resolution | - | Which cam FOME uses to find engine phase. The others only measure position |
 | DTC P0340/P0345/P0365/P0385 severity | - | What to do when a cam signal is missing (see [Fault Codes](/Limits-And-Protections/Fault-Codes)) |
@@ -62,7 +62,7 @@ The reading is measured against TDC, so it also moves if you change **Trigger An
 
 ### Invert cam inputs
 
-This applies to all cam inputs. Simple patterns such as **Single Tooth** use one edge of each tooth, and inverting switches to the other edge, so the reading shifts by the width of the tooth. Recheck the VVT offsets after changing it.
+Leave this off for VR cam sensors on an ECU with a MAX9924 or MAX9926 conditioner, and check hall sensors in the Trigger Logger, as described on [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors). It applies to all cam inputs. Simple patterns such as **Single Tooth** use one edge of each tooth, and inverting switches to the other edge, so the reading shifts by the width of the tooth. Recheck the VVT offsets after changing it.
 
 ### Requiring cam sync
 
@@ -85,13 +85,15 @@ Some engines, typically V-twins, have no cam sensor. With **Cam trigger type (in
 ## Setup
 
 1. Set up the primary trigger and confirm **Trigger Angle Advance** first. See [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup).
-2. Set **Cam trigger type (intake)** and/or **Cam trigger type (exhaust)** to match your cam wheels.
-3. Set the cam sensor pins. Most boards preset the first cam input.
-4. Set **Cam for engine sync resolution** to the cam you want to use for phase.
-5. Start the engine and check that **Trg: Fully synchronized** comes on. If you use sequential fuel or individual coils, check that the engine runs properly once it has full sync. If it doesn't, the phase may be 360° out. See the note on [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup).
-6. For each VVT cam, make sure VVT control is off, so the cam sits at its rest position. Let the engine idle.
-7. Read the cam's **VVT** gauge, e.g. **VVT: bank 1 intake**. Subtract the reading from the cam's **VVT offset** and burn. For example, if the offset is 0 and the gauge reads 42, set the offset to -42.
-8. Check that the gauge now reads close to 0, then set up VVT control on the [VVT pages](/Advanced-Features/Variable-Cam-Timing/VVT-PID).
+2. Find out whether each cam sensor is hall or VR. See [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors).
+3. Set **Cam trigger type (intake)** and/or **Cam trigger type (exhaust)** to match your cam wheels.
+4. Set the cam sensor pins. Most boards preset the first cam input.
+5. Set **Invert cam inputs** for your sensors (it appears once a cam pin is set): off for VR sensors on a MAX9924 or MAX9926, and as the Trigger Logger shows for hall sensors.
+6. Set **Cam for engine sync resolution** to the cam you want to use for phase.
+7. Start the engine and check that **Trg: Fully synchronized** comes on. If you use sequential fuel or individual coils, check that the engine runs properly once it has full sync. If it doesn't, the phase may be 360° out. See the note on [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup).
+8. For each VVT cam, make sure VVT control is off, so the cam sits at its rest position. Let the engine idle.
+9. Read the cam's **VVT** gauge, e.g. **VVT: bank 1 intake**. Subtract the reading from the cam's **VVT offset** and burn. For example, if the offset is 0 and the gauge reads 42, set the offset to -42.
+10. Check that the gauge now reads close to 0, then set up VVT control on the [VVT pages](/Advanced-Features/Variable-Cam-Timing/VVT-PID).
 
 :::tip
 A gauge reading of exactly 0 can also mean there is no valid reading. Before zeroing an offset, check that **Trg: Fully synchronized** is on and the reading moves slightly as the engine runs.
@@ -130,6 +132,7 @@ For reading the cam signal in the Trigger Logger, see [Trigger Troubleshooting](
 ## Related
 
 - [How Trigger Sync Works](/Base-Engine/Trigger/How-Trigger-Sync-Works)
+- [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors)
 - [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup)
 - [Trigger Troubleshooting](/Base-Engine/Trigger/Trigger-Troubleshooting)
 - [VVT PID Control](/Advanced-Features/Variable-Cam-Timing/VVT-PID)

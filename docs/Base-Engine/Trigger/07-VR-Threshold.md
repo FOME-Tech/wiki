@@ -1,6 +1,14 @@
+---
+sidebar_label: VR Threshold (advanced)
+---
+
 # VR Sensor Threshold
 
 A variable reluctor (VR) sensor is a coil and magnet that generates its own AC voltage as trigger teeth pass it. The signal is tiny at cranking speed and grows with RPM, from a few hundred millivolts to tens of volts. Some FOME boards have a VR conditioner circuit whose switching threshold the ECU adjusts with RPM. This keeps a clean signal at cranking and a quiet one at high RPM.
+
+:::note
+Most ECUs use a MAX9924 or MAX9926 VR conditioner, which has its own built-in adaptive threshold. If yours does, this page doesn't apply: leave **Pin** in this dialog unassigned. See [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors) for setting up a VR sensor on those ECUs. The few boards with the adjustable circuit assign **Pin** for you.
+:::
 
 Settings are under **Sensors > VR Sensor Threshold**.
 
@@ -10,7 +18,7 @@ The conditioner turns the sensor's AC waveform into a square wave by comparing i
 
 The ECU solves this by driving the threshold from a PWM output. Each RPM, it reads the threshold voltage from the curve you enter, interpolating between points, and updates the PWM duty. The board's filter turns that into a steady voltage at the conditioner's threshold input. There is one curve per VR input, **VR 1 Threshold** and **VR 2 Threshold**, one for each VR input the board has.
 
-Boards that use a conditioner with its own adaptive threshold, or a discrete circuit without this input, have nothing to adjust. They leave **Pin** unassigned, and the curve has no effect.
+Boards that use a conditioner with its own adaptive threshold, such as the MAX9924 or MAX9926, or a discrete circuit without this input, have nothing to adjust. Leave **Pin** unassigned on these, and the curve has no effect.
 
 ## Settings
 
@@ -42,7 +50,7 @@ The second curve is hidden on boards that only have one adjustable threshold.
 
 | Symptom | Likely cause |
 | --- | --- |
-| Engine cranks but never syncs, no RPM shown | Threshold too high at cranking RPM, or sensor wiring or polarity fault |
+| Engine cranks but never syncs, no RPM shown | Threshold too high at cranking RPM, or a sensor wiring or polarity fault (see [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors)) |
 | Trigger errors during cranking only | Threshold too high or too low for the weak cranking signal |
 | Trigger errors, or wild RPM readings as RPM climbs | Threshold too low at high RPM, so noise passes through |
 | Fine at idle, loses sync when revving | Curve rising too slowly, or too little at the top end |
@@ -50,4 +58,6 @@ The second curve is hidden on boards that only have one adjustable threshold.
 
 ## Related
 
+- [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors)
+- [Trigger Troubleshooting](/Base-Engine/Trigger/Trigger-Troubleshooting)
 - [Fault Codes](/Limits-And-Protections/Fault-Codes)

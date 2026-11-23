@@ -13,9 +13,9 @@ The Trigger Logger records every edge the ECU sees on the crank and cam inputs a
 What to look for with a missing-tooth wheel such as 36-1 or 60-2:
 
 - **Good:** evenly spaced teeth, with a single wider gap per crank revolution. The gap is about twice the tooth spacing for 36-1 and three times for 60-2. The pattern repeats identically every revolution. **Sync** goes high within a revolution or two and stays high.
-- **Noisy:** extra short pulses between teeth, teeth that come and go, or a pattern that changes between revolutions. See [VR Sensor Threshold](/Base-Engine/Trigger/VR-Threshold) for VR sensors. For any sensor, check wiring, shielding and grounds.
+- **Noisy:** extra short pulses between teeth, teeth that come and go, or a pattern that changes between revolutions. Check wiring, shielding and grounds, and see [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors). On the few boards with an adjustable VR threshold, see also [VR Threshold](/Base-Engine/Trigger/VR-Threshold).
 - **Wrong gap:** the teeth are clean, but the gap is the wrong width, or there are two gaps, or none. The wheel doesn't match the selected trigger type, or the signal is dropping a tooth. Count the teeth between gaps and compare with the trigger you selected in [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup).
-- **Clean but never syncs:** the pattern looks right and **Sync** stays low. Suspect the wrong trigger type or an inverted edge setting.
+- **Clean but never syncs:** the pattern looks right and **Sync** stays low. Suspect the wrong trigger type or an inverted edge setting. [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors) shows how to check the polarity in the logger.
 
 Take logs while cranking and again at several higher RPM, since problems often show up in only one part of the range.
 
@@ -129,7 +129,10 @@ With internal simulation on, the ECU decodes the ideal wheel for the selected tr
 | --- | --- |
 | No RPM while cranking | Crank input pin not set, or on the wrong input. No power to a hall or optical sensor, or a missing pull-up. VR sensor wires reversed or too weak a signal. Wrong sensor type for the input. Check the Trigger Logger for any edges at all |
 | RPM shows but never syncs | Wrong trigger type or wheel tooth counts. Wrong edge selection or an inverted signal. Check the gap in the logger and against the verbose output. See [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup) |
-| Sync errors only while cranking, or only at high RPM | VR threshold, see [VR Sensor Threshold](/Base-Engine/Trigger/VR-Threshold). Otherwise noise and shielding, or a sensor too far from the wheel |
+| VR sensor won't sync or keeps losing it, and the rising edges either side of the missing tooth look distorted in the Trigger Logger | VR polarity reversed. Swap the two sensor wires rather than using invert. See [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors) |
+| VR sensor on a MAX9924 or MAX9926, **Invert Primary** or **Invert cam inputs** on | Turn it off. With invert on, FOME uses the conditioner's other edge, which isn't a precise tooth position |
+| Hall sensor, the missing-tooth gap shows as a long high stretch on **PriLevel** | Signal inverted. Turn **Invert Primary** on. The engine may sync either way, with timing out by a tooth width. See [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors) |
+| Sync errors only while cranking, or only at high RPM | Noise and shielding, a sensor too far from the wheel, or reversed VR wires. On the few boards with an adjustable VR threshold, see [VR Threshold](/Base-Engine/Trigger/VR-Threshold) |
 | Sync errors at all speeds, error count climbs steadily | Noise on the signal, a damaged or dirty wheel, a loose sensor, or the wrong trigger type |
 | Timing doesn't match the timing light | **Trigger Angle Advance** is wrong, see [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup) |
 | Runs, but never gets full sync, or only runs wasted spark | The cam signal is missing, or cam sync is set up wrongly. See [Cam Sync](/Base-Engine/Trigger/Cam-Sync) |
@@ -140,8 +143,9 @@ With internal simulation on, the ECU decodes the ideal wheel for the selected tr
 ## Related
 
 - [How Trigger Sync Works](/Base-Engine/Trigger/How-Trigger-Sync-Works)
+- [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors)
 - [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup)
 - [Cam Sync](/Base-Engine/Trigger/Cam-Sync)
 - [Trigger Types](/Base-Engine/Trigger/Trigger-Types)
-- [VR Sensor Threshold](/Base-Engine/Trigger/VR-Threshold)
+- [VR Threshold](/Base-Engine/Trigger/VR-Threshold)
 - [Fault Codes](/Limits-And-Protections/Fault-Codes)

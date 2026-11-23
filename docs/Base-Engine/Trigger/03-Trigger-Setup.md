@@ -22,7 +22,7 @@ If sync is lost, FOME logs a trigger error and stops scheduling fuel and spark u
 | Trigger Angle Advance | deg btdc | Angle from the sync point to TDC of cylinder 1 (see below) |
 | DTC P0336 severity | - | What to do when the crank signal has too many sync errors (see [Fault Codes](/Limits-And-Protections/Fault-Codes)) |
 | Crank Sensor (Primary channel) | - | Input pin for the primary trigger. Labelled **Cam Sensor (Primary channel)** when the selected trigger is on the cam |
-| Invert Primary | - | Use the opposite edge of the primary signal |
+| Invert Primary | - | Use the opposite edge of the primary signal. Off for a VR sensor on a MAX9924 or MAX9926 (see below) |
 | Secondary channel | - | Input pin for the second wheel. Only shown for trigger types that use two wheels |
 | Invert Secondary | - | Use the opposite edge of the secondary signal |
 
@@ -42,7 +42,7 @@ Generic patterns can be mounted on the crank or on the cam, and FOME can't tell 
 
 If **Secondary channel** shows **!!! PLEASE UNSELECT !!!**, a secondary pin is set but the selected trigger type doesn't use it. Set it back to none. Setting **Secondary channel** without a primary pin is a configuration error: FOME raises a critical error and won't run the engine until you fix it and restart the ECU.
 
-**Invert Primary** and **Invert Secondary** swap which edge of the signal FOME treats as the rising edge of a tooth. Use them when the sensor or the input circuit inverts the signal, so that FOME sees the edges in the polarity the trigger type expects. A wrong setting can stop the engine syncing. Sometimes it still syncs, but on the wrong edge of each tooth, which shifts all timing. Settle the polarity before you set **Trigger Angle Advance**, because changing it afterwards can move the timing. The [Trigger Troubleshooting](/Base-Engine/Trigger/Trigger-Troubleshooting) page shows how to read the signal in the Trigger Logger.
+**Invert Primary** and **Invert Secondary** swap which edge of the signal FOME treats as the start of a tooth. For a VR sensor on an ECU with a MAX9924 or MAX9926 conditioner, leave them off. A hall sensor may or may not need them, depending on the sensor and the board's input circuit. Settle this before you set **Trigger Angle Advance**, because changing it can move the timing by a tooth width. [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors) explains how to choose, and how to check it in the Trigger Logger.
 
 ### Trigger Angle Advance
 
@@ -69,16 +69,18 @@ In **fixed** mode, the ignition table and the temperature and idle timing correc
 
 ## Setup
 
-1. In **Base Engine > Trigger**, set **Engine type**.
-2. Set **Trigger type**. For a generic or custom wheel, also set the tooth counts and **Primary trigger location**.
-3. Check that **Crank Sensor (Primary channel)** (or **Cam Sensor (Primary channel)**) is the input your sensor is wired to. Set **Secondary channel** only if the trigger type uses a second wheel.
-4. Enter a starting **Trigger Angle Advance**: the documented value for your engine, or an estimate as described above.
-5. Burn, then crank the engine with the fuel pump or injectors disabled. **RPM - engine speed** should show a steady cranking speed, and the **Trigger ERR** indicator should stay off. If not, see [Trigger Troubleshooting](/Base-Engine/Trigger/Trigger-Troubleshooting) before going further.
-6. In **Ignition > Ignition settings**, set **Timing Mode** to **fixed** and **Fixed Timing** to a value that is easy to read on your timing marks, such as 10.
-7. Re-enable fuel and start the engine. Point a timing light at the crank pulley marks, triggered from cylinder 1's spark lead.
-8. Compare the timing light with **Fixed Timing**. If the light shows more advance than **Fixed Timing**, increase **Trigger Angle Advance** by the difference. If it shows less, decrease it by the difference.
-9. Repeat until the light reads the same as **Fixed Timing**. Check at idle and at a higher RPM.
-10. Set **Timing Mode** back to **dynamic** and burn.
+1. Find out whether each trigger sensor is a hall or a VR sensor, and check it is wired to the matching kind of input. See [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors).
+2. In **Base Engine > Trigger**, set **Engine type**.
+3. Set **Trigger type**. For a generic or custom wheel, also set the tooth counts and **Primary trigger location**.
+4. Check that **Crank Sensor (Primary channel)** (or **Cam Sensor (Primary channel)**) is the input your sensor is wired to. Set **Secondary channel** only if the trigger type uses a second wheel.
+5. Set **Invert Primary** (and **Invert Secondary**) for your sensor type: off for a VR sensor on a MAX9924 or MAX9926. For a hall sensor, check it in the Trigger Logger when you crank in step 7.
+6. Enter a starting **Trigger Angle Advance**: the documented value for your engine, or an estimate as described above.
+7. Burn, then crank the engine with the fuel pump or injectors disabled. **RPM - engine speed** should show a steady cranking speed, and the **Trigger ERR** indicator should stay off. If not, see [Trigger Troubleshooting](/Base-Engine/Trigger/Trigger-Troubleshooting) before going further.
+8. In **Ignition > Ignition settings**, set **Timing Mode** to **fixed** and **Fixed Timing** to a value that is easy to read on your timing marks, such as 10.
+9. Re-enable fuel and start the engine. Point a timing light at the crank pulley marks, triggered from cylinder 1's spark lead.
+10. Compare the timing light with **Fixed Timing**. If the light shows more advance than **Fixed Timing**, increase **Trigger Angle Advance** by the difference. If it shows less, decrease it by the difference.
+11. Repeat until the light reads the same as **Fixed Timing**. Check at idle and at a higher RPM. On a VR sensor, timing that moves with RPM can mean reversed sensor wires or invert turned on (see [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors)).
+12. Set **Timing Mode** back to **dynamic** and burn.
 
 :::warning
 Until **Trigger Angle Advance** is confirmed, the spark may fire far from where you think it does. A badly wrong value can cause kickback while cranking or detonation under load. Don't drive or load the engine until the timing light agrees with the ECU.
@@ -95,7 +97,7 @@ Until **Trigger Angle Advance** is confirmed, the spark may fire far from where 
 | Symptom | Likely cause |
 | --- | --- |
 | No RPM while cranking | Wrong input pin, sensor not powered or not connected |
-| RPM shows, but **Trigger ERR** lights and the engine won't start | Wrong trigger type or tooth counts, wrong **Primary trigger location**, or the wrong edge (try **Invert Primary**) |
+| RPM shows, but **Trigger ERR** lights and the engine won't start | Wrong trigger type or tooth counts, wrong **Primary trigger location**, or the wrong edge. See [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors) before trying **Invert Primary** |
 | Timing light disagrees with **Fixed Timing** | **Trigger Angle Advance** is wrong. Adjust it as in the setup steps |
 | Timing light reads correctly, but the engine runs badly or not at all once fully synced | Phase is 360° out. Add or subtract 360 from **Trigger Angle Advance** |
 | **Secondary channel** shows **!!! PLEASE UNSELECT !!!** | A secondary pin is set for a trigger type that doesn't use it |
@@ -105,9 +107,10 @@ For noise, sync errors and reading the Trigger Logger, see [Trigger Troubleshoot
 ## Related
 
 - [How Trigger Sync Works](/Base-Engine/Trigger/How-Trigger-Sync-Works)
+- [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors)
 - [Cam Sync](/Base-Engine/Trigger/Cam-Sync)
 - [Trigger Types](/Base-Engine/Trigger/Trigger-Types)
-- [VR Sensor Threshold](/Base-Engine/Trigger/VR-Threshold)
+- [VR Threshold](/Base-Engine/Trigger/VR-Threshold)
 - [Trigger Troubleshooting](/Base-Engine/Trigger/Trigger-Troubleshooting)
 - [Miata 36T Trigger](/Vehicle-Specific/Mazda-MX5-Miata/Miata-36T-Trigger)
 - [Fault Codes](/Limits-And-Protections/Fault-Codes)
