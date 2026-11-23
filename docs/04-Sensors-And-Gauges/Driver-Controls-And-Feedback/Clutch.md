@@ -71,12 +71,6 @@ The two thresholds must have the applied value below the released value. Between
 
 Watch the **Clutch down** and **Clutch Up** indicators on the dashboard while pressing the pedal. For the sensor, log **Clutch position** and **Raw Clutch Position**.
 
-## If it fails
-
-- **Clutch up switch:** with **Disable fuel cut on clutch** ticked, DFCO only runs while the clutch up state is active. A switch that is wired wrong, or is inverted wrongly, will stop DFCO from ever engaging. If no **Clutch Up** pin is set, the option has no effect.
-- **Clutch down switch:** clutch-input launch control treats a missing pin as the clutch not being down, so launch never arms.
-- **Position sensor:** if the sensor is not set up or its reading is invalid, gear detection treats the clutch state as unknown. The **Clutch position** channel has no value.
-
 The switch states can be read from a Lua script, and the clutch up state can be set from a script when no pin is configured. See [Lua Scripting](/Advanced-Features/Lua-Scripting). Launch control is still experimental.
 
 ## Troubleshooting

@@ -35,7 +35,6 @@ The **Fuel pump on** indicator is lit whenever the pump is commanded on. Switch 
 
 ## If it fails
 
-- With **Output** unassigned, the ECU doesn't switch the pump. Wire the pump to the ignition or a separate relay.
 - Stalling or losing the crank signal stops the pump within the delay above. It then restarts as soon as trigger edges return, for example on the next crank.
 - The prime only happens when the ignition goes from off to on. It doesn't repeat on its own.
 - The **Fuel pump off** button only cancels a forced on. It does not hold the pump off while the engine is running.

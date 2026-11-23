@@ -26,10 +26,6 @@ If no pin is set, the brake state comes from the first of these that is availabl
 1. Set the pin, then **Mode** and **inverted** to suit the wiring. A switch that connects the pin to ground needs **PULLUP** and **inverted** ticked.
 2. Press the brake and check that the **Brake down** indicator comes on.
 
-## If it fails
-
-With no pin, no CAN brake message and no Lua script, the brake state stays off. Nothing built into FOME changes behaviour, since nothing else reads it. A Lua script that calls the brake state will see it as off.
-
 ## Related
 
 - [Clutch](/Sensors-And-Gauges/Driver-Controls-And-Feedback/Clutch)

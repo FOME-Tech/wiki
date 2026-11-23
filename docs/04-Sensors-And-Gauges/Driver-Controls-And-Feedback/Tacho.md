@@ -43,12 +43,6 @@ When the ignition comes on and **Startup sweep time** is not 0, the output sweep
 
 The tach reading should track the **RPM** gauge at all speeds. If it reads a fixed multiple, correct **Pulse per Rev**.
 
-## If it fails
-
-- With **Output** unassigned, the tach output is not started and nothing is generated.
-- A **Pulse per Rev** of 0 or above 10 raises a fatal firmware error.
-- With no RPM the frequency is below 1 Hz, so the output goes idle.
-
 ## Troubleshooting
 
 | Symptom | Likely cause |

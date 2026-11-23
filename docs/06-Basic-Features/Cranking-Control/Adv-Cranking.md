@@ -8,7 +8,7 @@ Settings are under **Cranking > Cranking settings > Ignition**, plus **Cranking 
 
 The cranking advance can come from one of two sources, chosen with **Timing Advance mode**.
 
-- **Fixed (auto taper):** you enter a single **Fixed cranking advance**. As engine speed rises, FOME blends from that angle towards the running advance at the **Cranking RPM limit**, so the timing hands over smoothly to the running table. The blend starts from the lowest cranking speed seen.
+- **Fixed (auto taper):** you enter a single **Fixed cranking advance**. FOME holds that angle up to half the **Cranking RPM limit**, then blends towards the running advance, reaching it at the **Cranking RPM limit**. The timing therefore hands over smoothly to the running table.
 - **Table:** the advance is read from the **Cranking ignition advance** curve against RPM and used as is, with no blending towards the running table. Use this if you need a specific timing at each cranking speed, for example retarded for a high-compression engine on a weak battery.
 
 Dwell while cranking is a single fixed time, **Fixed Cranking Dwell**, instead of the voltage-corrected table used when running. 
@@ -41,10 +41,6 @@ Too much cranking advance can cause the engine to kick back against the starter.
 ## Checking it works
 
 Watch the ignition timing channel (**Ign: Timing Base**) in the logs while cranking. In fixed mode it should start at your value and rise gradually as the engine speeds up. In table mode it should follow the curve. A timing light confirms it matches.
-
-## If it fails
-
-There is no sensor behind this feature. If the **Cranking RPM limit** is set too low the engine drops into running timing as soon as it fires, and if it is set too high the engine stays on cranking timing and dwell after it has started.
 
 ## Troubleshooting
 

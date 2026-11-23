@@ -34,7 +34,6 @@ On microRusEFI the relay is hard wired, so this dialog shows a message instead o
 
 ## If it fails
 
-- If no main relay pin is set, no output is switched. The ECU still tracks the relay state internally from the ignition voltage, so everything else behaves as usual.
 - The ignition is detected from the battery voltage input. If that input is not working or is misconfigured, the ECU reads 0 V and never turns the relay on.
 - A stepper idle valve cannot move when the main relay is off, because it needs the switched supply. The ECU does not wait for the stepper to park before releasing the relay, so it only gets the 1 second hold.
 - With a main relay voltage sense input fitted, a relay that fails to close sets P0612.
