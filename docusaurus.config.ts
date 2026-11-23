@@ -98,6 +98,34 @@ const config: Config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          {
+            from: '/r/base-engine',
+            to: '/Base-Engine/Base-Engine-Settings/',
+          },
+          {
+            from: '/r/firing-order',
+            to: '/Base-Engine/Firing-Order/',
+          },
+          {
+            from: '/r/trigger-sync',
+            to: '/Base-Engine/Trigger/How-Trigger-Sync-Works/',
+          },
+          {
+            from: '/r/trigger-sensors',
+            to: '/Base-Engine/Trigger/Crank-And-Cam-Sensors/',
+          },
+          {
+            from: '/r/cam-sync',
+            to: '/Base-Engine/Trigger/Cam-Sync/',
+          },
+          {
+            from: '/r/trigger-types',
+            to: '/Base-Engine/Trigger/Trigger-Types/',
+          },
+          {
+            from: '/r/trigger-troubleshooting',
+            to: '/Base-Engine/Trigger/Trigger-Troubleshooting/',
+          },
           // Client side redirect addresses specified in INI files (HT & TS)
           // eg. https://wiki.fome.tech/r/fuel -> https://wiki.fome.tech/category/fuel/
           {
@@ -110,7 +138,7 @@ const config: Config = {
           },
           {
             from: '/r/trigger',
-            to: '/category/general-sensors/',
+            to: '/Base-Engine/Trigger/Trigger-Setup/',
           },
           {
             from: '/r/etb',
@@ -123,6 +151,10 @@ const config: Config = {
           {
             from: '/r/lua',
             to: '/Advanced-Features/Lua-Scripting/',
+          },
+          {
+            from: '/r/vr',
+            to: '/Base-Engine/Trigger/VR-Threshold/',
           },
           {
             from: '/r/clt',
@@ -218,7 +250,7 @@ const config: Config = {
           },
           {
             from: '/r/cyl-offset',
-            to: '/Advanced-Features/Cylinder-Angle-Offset/',
+            to: '/Base-Engine/Cylinder-Angle-Offset/',
           },
           {
             from: '/r/adv-cranking',
