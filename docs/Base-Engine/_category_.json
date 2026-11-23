@@ -1,0 +1,8 @@
+{
+  "label": "Base engine & trigger",
+  "position": 3.5,
+  "link": {
+    "type": "generated-index",
+    "description": "Engine basics and crank/cam trigger setup: the first things to configure on a new install"
+  }
+}

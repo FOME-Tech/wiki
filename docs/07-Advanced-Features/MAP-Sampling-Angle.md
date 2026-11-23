@@ -6,7 +6,7 @@ Settings are under **Sensors > MAP sampling**, with a few more under **Sensors >
 
 ## How it works
 
-For each cylinder, FOME opens a window at the **MAP Sampling Start Angle** for that cylinder, collects every valid reading while the window is open, and averages them when it closes. The start angle is measured in crank degrees after each cylinder's top dead centre on its compression stroke, the same zero that ignition timing uses. Each cylinder's window is therefore offset by its position in the firing order, including any odd-fire [cylinder angle offset](/Advanced-Features/Cylinder-Angle-Offset), so the windows follow the firing order. Each average is then passed to the "fast MAP":
+For each cylinder, FOME opens a window at the **MAP Sampling Start Angle** for that cylinder, collects every valid reading while the window is open, and averages them when it closes. The start angle is measured in crank degrees after each cylinder's top dead centre on its compression stroke, the same zero that ignition timing uses. Each cylinder's window is therefore offset by its position in the firing order, including any odd-fire [cylinder angle offset](/Base-Engine/Cylinder-Angle-Offset), so the windows follow the firing order. Each average is then passed to the "fast MAP":
 
 - The fast MAP is the lowest of the last few window averages. How many is set by **Cylinder count to sample MAP**.
 - Readings outside the sensor's valid range (the MAP low and high thresholds) are left out of the average. If a window ends with no valid readings, it produces no result.

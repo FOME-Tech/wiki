@@ -60,8 +60,8 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 - [Analogue input settings](Sensors-And-Gauges/General-Sensors/Analogue-Input-Settings)
 - [Aux sensors](Sensors-And-Gauges/General-Sensors/Aux-Sensors)
-- [Cam sensor](Sensors-And-Gauges/General-Sensors/CAM)
-- [Crank sensor](Sensors-And-Gauges/General-Sensors/CPS)
+- [Cam sync](Base-Engine/Trigger/Cam-Sync)
+- [Trigger setup](Base-Engine/Trigger/Trigger-Setup)
 - [ETB TPS](Sensors-And-Gauges/General-Sensors/ETB-TPS)
 - [Mass Air Flow Sensor](Sensors-And-Gauges/General-Sensors/MAF)
 - [TPS](Sensors-And-Gauges/General-Sensors/TPS)
@@ -130,7 +130,7 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 ### Advanced Features
 
 - [CAN settings](Advanced-Features/CAN)
-- [Cylinder Angle Offset](Advanced-Features/Cylinder-Angle-Offset)
+- [Cylinder Angle Offset](Base-Engine/Cylinder-Angle-Offset)
 - [Knock control](Advanced-Features/Knock-Control)
 - [Launch Control](Advanced-Features/Launch-Control)
 - [Lua Scripting](Advanced-Features/Lua-Scripting)
@@ -234,7 +234,7 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 #### Ignition Settings
 
 - [Dwell](Ignition/Ignition-Settings/Dwell)
-- [Firing Order](Ignition/Ignition-Settings/Firing-Order)
+- [Firing Order](Base-Engine/Firing-Order)
 - [IAT ignition adder](Ignition/Ignition-Settings/IAT-Ignition-Adder)
 - [Ignition Mode](Ignition/Ignition-Settings/Ignition_Mode)
 - [Ignition Advance Table](Ignition/Ignition-Settings/Ignition-Advance-Table)
