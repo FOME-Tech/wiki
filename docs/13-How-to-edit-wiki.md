@@ -96,3 +96,8 @@ It will ask you for a summary of your changes, more thorough description, and to
 When you create a pull request, your browser should open automatically, and you'll again see a **"Title"** and **"Description"** box. These are the boxes where you quickly and more thoroughly describe your changes you've made to the wiki that the maintainers will be able to see. 
 
 [And again, formatting assistance can be found here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+## Section guidelines
+
+- **Fundamentals of tuning:** explain why things are needed, for example why an engine needs certain AFRs, why timing is reduced, what knock is, and why fuel is added on acceleration. Leave how FOME implements each feature to that feature's own page, and link between the two. Keep these pages as short introductions, which also head off many common user questions.
+- **Hardware circuits:** describe the generic driver layouts, what each one is and the basics of how it works.

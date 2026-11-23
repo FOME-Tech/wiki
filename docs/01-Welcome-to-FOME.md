@@ -6,7 +6,7 @@ slug: /
 
 # Welcome to FOME
 
-Fome is a new project intending to deliver a user focused high feature ECU with open source hardware options and open firmware that give control back to the user, owner and driver.
+FOME is a new project intending to deliver a user focused high feature ECU with open source hardware options and open firmware that give control back to the user, owner and driver.
 
 As there are many complicated topics to cover we recommend that you start with the topics in the "intro" section to the left.
 The first page to view should probably be [the FOME Overview page](Intro-Start-Here/Overview).
@@ -16,16 +16,14 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 ### Intro - Start here
 
 - [FOME Overview](Intro-Start-Here/Overview)
-- [Which FOME hardware to choose](Intro-Start-Here/Which-Hardware-For-Me)
-- [Where to get firmware](Intro-Start-Here/Where-To-Get-Firmware)
+- [Hardware Running FOME](Intro-Start-Here/Hardware-Running-FOME)
+- [How to setup a board for first use](Intro-Start-Here/HT-Set-Up)
 - [Updating the firmware](Intro-Start-Here/HT-Updating-The-Firmware)
 - [Performing a safe first start](Intro-Start-Here/HT-First-Start-Safely)
-- [How to setup a board for first use](Intro-Start-Here/HT-Set-Up)
 - [How to test inputs and outputs](Intro-Start-Here/HT-Test-IO)
 - [Tips and Tricks](Intro-Start-Here/Tips-and-Tricks)
 - [How to pick the right fueling method](Intro-Start-Here/Which-Fuel-Method-For-Me)
 - [Guide to ETB and VVT PIDs](Intro-Start-Here/HT-PID-ETB-And-VVT)
-- [Miata MX5 Quick Start Guide](Intro-Start-Here/Miata-MX5-Quick-Start)
 
 ---
 
@@ -137,7 +135,6 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Launch Control](Advanced-Features/Launch-Control)
 - [Lua Scripting](Advanced-Features/Lua-Scripting)
 - [MAP sampling angle](Advanced-Features/MAP-Sampling-Angle)
-- [Multi-Dimensional Mapping](Advanced-Features/Multi-Dimensional-Mapping)
 - [Override Table Axis](Advanced-Features/Override-Table-Axis)
 - [Smart Alternator](Advanced-Features/Smart-Alternator)
 
@@ -155,8 +152,8 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Barometric pressure compensation](Advanced-Features/Fuel-Related/Barometric-Pressure-Compensation)
 - [Charge Temperature estimation](Advanced-Features/Fuel-Related/Charge-Temp-Estimation)
 - [Closed loop fueling](Advanced-Features/Fuel-Related/Closed-Loop-Fuel)
-- [Injection Phase settings](Advanced-Features/Fuel-Related/Injecton-Phase)
-- [Injector tester](Advanced-Features/Fuel-Related/Injector-Tester)
+- [Injection Phase settings](/Fuel/Injectors/Injector-configuration#injection-phase)
+- [Injector tester](/Fuel/Injectors/Injector-configuration#injector-test)
 
 #### GDI
 
@@ -196,17 +193,17 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [AFR settings](Fuel/Fuel-Settings/AFR-setting)
 - [Coolant Multiplier](Fuel/Fuel-Settings/CLT-Multiplier)
 - [Per-Cylinder Fuel trim](Fuel/Fuel-Settings/Cylinder-Fuel-Trim)
-- [Deceleration Fuel Cut Off](Fuel/Fuel-Settings/DCFO)
+- [Deceleration Fuel Cut Off](Fuel/Fuel-Settings/DFCO)
 - [Flex Fuel](Fuel/Fuel-Settings/Flex-Fuel)
-- [Fuel Injection Mode](Fuel/Fuel-Settings/Fuel-Injection-Mode)
+- [Fuel Injection Mode](/Fuel/Injectors/Injector-configuration#injection)
 - [TPS Multiplier](Fuel/Fuel-Settings/Fuel-TPS-multi)
 - [Intake Air Temperature Multiplier](Fuel/Fuel-Settings/IAT_Multiplier)
-- [Injector Deadtime settings](Fuel/Fuel-Settings/Injection-Deadtime)
-- [Small Pulse width correction](Fuel/Fuel-Settings/Small-Pulse)
+- [Injector Deadtime settings](/Fuel/Injectors/Injector-configuration#injector-dead-time)
+- [Small Pulse width correction](/Fuel/Injectors/Injector-configuration#injector-small-pulse-correction)
 
-### Hardware
+### Software
 
-- [Flashing Software Notes](Hardware/Flashing-Software-Notes)
+- [Flashing Software Notes](Software/Flashing-Software-Notes)
 
 #### Hardware Circuits
 
@@ -220,12 +217,9 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 #### Hardware Details
 
-- [Base boards](Hardware/Hardware-Details/Base-Board)
-- [Brain boards](Hardware/Hardware-Details/Brain-Board)
-- [CAN Gauge](Hardware/Hardware-Details/CAN-Gauge)
-- [Low-Z Driver board](Hardware/Hardware-Details/Low-Z-Injector-Driver)
-- [Power Steering Controller](Hardware/Hardware-Details/PSC)
-- [Wideband Lambda module](Hardware/Hardware-Details/Wideband-Module)
+- [Base boards](category/base-boards/)
+- [Brain boards](category/brain-boards/)
+- [Gauges, Controllers and Auxiliar Hardware](Hardware/Aux-Hardware)
 
 ---
 

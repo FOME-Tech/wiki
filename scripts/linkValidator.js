@@ -14,7 +14,6 @@ const red = (text) => `\x1b[31m${text}\x1b[0m`;
 
 /** @type {Array<{ errType: string, fileName: string, lineContent: string, lineNo: number }>} */
 const errors = [];
-const wikiUrl = 'wiki.fome.tech';
 
 /**
  * Check whether links are adhering to custom rules
@@ -31,13 +30,12 @@ const validateDocRules = (files) => {
   console.log(`Validating rules for URL links in: ${fileMatchIndicator}`);
 
   // * Check whether links are not staring with "https://wiki.fome.tech"
-  // Note: dynamic javascript string interpolation is used here (see https://www.crstin.com/js-regex-interpolation/)
-  const regexPatternDynAbsLink = new RegExp(`\\]\\((https|http):\\/\\/${wikiUrl}`, 'i');
+  const regexPatternDynAbsLink = /\]\(https?:\/\/fome.wiki.tech\//i;
   // hint: test static regex via https://regex101.com
   // * Check whether links are not using a "numbered prefix" like "(/01-blah)"
-  const regexPatternStatNumPrefix = new RegExp(/\(.*\/\d\d-.*\)/, 'i');
+  const regexPatternStatNumPrefix = /\((?![a-z][a-z0-9+.-]*:\/\/)[^)]*\/\d+-[^)]*\)/i;
   // * Check whether links are not markdown links, meaning ending with .md or .mdx like "(/01-blah.md)"
-  const regexPatternStatMdLink = new RegExp(/\(.*\.(md|mdx)\)/, 'i');
+  const regexPatternStatMdLink = /\(.*\.(md|mdx)\)/i;
 
   files.forEach((fileName) => {
     const lines = fs.readFileSync(fileName, 'utf8').split('\n');

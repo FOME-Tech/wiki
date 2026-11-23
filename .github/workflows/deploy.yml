@@ -59,12 +59,9 @@ jobs:
 #        run: ls -lah build/pdf/wiki.fome.pdf
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: wiki
-          directory: build
+          command: pages deploy build/ --project-name=wiki --branch master
           gitHubToken: ${{ secrets.GITHUB_TOKEN }} # GitHub Deployments
-          branch: master
-          wranglerVersion: "3"
