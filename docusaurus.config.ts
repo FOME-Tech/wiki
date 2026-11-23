@@ -126,7 +126,115 @@ const config: Config = {
           },
           {
             from: '/r/vr',
-            to: '/Hardware/Hardware-Circuits/Discrete-VR/',
+            to: '/Sensors-And-Gauges/General-Sensors/VR-Threshold/',
+          },
+          {
+            from: '/r/clt',
+            to: '/Sensors-And-Gauges/Temperature-Sensors/CLT/',
+          },
+          {
+            from: '/r/iat',
+            to: '/Sensors-And-Gauges/Temperature-Sensors/IAT/',
+          },
+          {
+            from: '/r/aux-temp',
+            to: '/Sensors-And-Gauges/Temperature-Sensors/Aux-Temp/',
+          },
+          {
+            from: '/r/map',
+            to: '/Sensors-And-Gauges/Pressure-Sensors/MAP/',
+          },
+          {
+            from: '/r/baro',
+            to: '/Sensors-And-Gauges/Pressure-Sensors/Barometric/',
+          },
+          {
+            from: '/r/oil-pressure',
+            to: '/Sensors-And-Gauges/Pressure-Sensors/Oil-pressure/',
+          },
+          {
+            from: '/r/fuel-pressure',
+            to: '/Sensors-And-Gauges/Fuel-Sensors/Fuel-Pressure/',
+          },
+          {
+            from: '/r/fuel-level',
+            to: '/Sensors-And-Gauges/Fuel-Sensors/Fuel-Level/',
+          },
+          {
+            from: '/r/main-relay',
+            to: '/Basic-Features/Main-Relay/',
+          },
+          {
+            from: '/r/fuel-pump-relay',
+            to: '/Basic-Features/Fuel-Pump-Relay/',
+          },
+          {
+            from: '/r/tacho',
+            to: '/Sensors-And-Gauges/Driver-Controls-And-Feedback/Tacho/',
+          },
+          {
+            from: '/r/clt-multiplier',
+            to: '/Fuel/Fuel-Settings/CLT-Multiplier/',
+          },
+          {
+            from: '/r/iat-multiplier',
+            to: '/Fuel/Fuel-Settings/IAT_Multiplier/',
+          },
+          {
+            from: '/r/dfco',
+            to: '/Fuel/Fuel-Settings/DFCO/',
+          },
+          {
+            from: '/r/baro-comp',
+            to: '/Advanced-Features/Fuel-Related/Barometric-Pressure-Compensation/',
+          },
+          {
+            from: '/r/closed-loop',
+            to: '/Advanced-Features/Fuel-Related/Closed-Loop-Fuel/',
+          },
+          {
+            from: '/r/multispark',
+            to: '/Advanced-Features/Spark-Related/Multispark/',
+          },
+          {
+            from: '/r/clutch',
+            to: '/Sensors-And-Gauges/Driver-Controls-And-Feedback/Clutch/',
+          },
+          {
+            from: '/r/brake',
+            to: '/Sensors-And-Gauges/Driver-Controls-And-Feedback/Brake/',
+          },
+          {
+            from: '/r/battery',
+            to: '/Sensors-And-Gauges/Driver-Controls-And-Feedback/Battery-Settings/',
+          },
+          {
+            from: '/r/app',
+            to: '/Sensors-And-Gauges/Driver-Controls-And-Feedback/APP/',
+          },
+          {
+            from: '/r/pedal-target',
+            to: '/Advanced-Features/ETB/ETB-Pedal-Target/',
+          },
+          {
+            from: '/r/aux-sensors',
+            to: '/Sensors-And-Gauges/General-Sensors/Aux-Sensors/',
+          },
+          {
+            from: '/r/cyl-offset',
+            to: '/Advanced-Features/Cylinder-Angle-Offset/',
+          },
+          {
+            from: '/r/adv-cranking',
+            to: '/Basic-Features/Cranking-Control/Adv-Cranking/',
+          },
+          {
+            from: '/r/map-sampling',
+            to: '/Advanced-Features/MAP-Sampling-Angle/',
+          },
+          {
+            from: '/r/turbo-speed',
+            to: '/Sensors-And-Gauges/General-Sensors/Turbo-Speed/',
           },
         ],
       },
