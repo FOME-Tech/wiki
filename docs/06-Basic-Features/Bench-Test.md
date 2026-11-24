@@ -14,7 +14,7 @@ Below is a list of the bench test engine outputs and what to look out for when t
 - Cooling fans: this will enable the cooling fans.
 - A/C relay: this will enable the A/C relay, listen for a click.
 - Check engine light: this will enable the check engine light on the dash.
-- Idle air valve & second air valve: this will pulse the idle air valve, listen for a series of clicks as it is pulsed.
+- Idle air valve: this will pulse the idle air valve. Listen for a series of clicks as it is pulsed.
 - High-Pressure Fuel Pump (HPFP) valve: this is only for direct injection vehicles such as a diesel. Listen for a click.
 - Starter relay: listen for a click indicating the starter motor has engaged with the flywheel.
 

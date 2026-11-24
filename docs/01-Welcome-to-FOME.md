@@ -169,9 +169,7 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 #### Variable cam timing
 
-- [On/Off VVT](Advanced-Features/Variable-Cam-Timing/On-Off-VVT)
-- [VVT PID](Advanced-Features/Variable-Cam-Timing/VVT-PID)
-- [VVT target tables](Advanced-Features/Variable-Cam-Timing/VVT-Target-Tables)
+- [Variable cam timing (VVT)](Advanced-Features/VVT)
 
 ---
 

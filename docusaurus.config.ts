@@ -115,6 +115,18 @@ const config: Config = {
             to: '/Base-Engine/Trigger/Crank-And-Cam-Sensors/',
           },
           {
+            from: '/r/idle',
+            to: '/Basic-Features/Idle-Control/Idle-Settings/',
+          },
+          {
+            from: '/r/idle-hardware',
+            to: '/Basic-Features/Idle-Control/Idle-Hardware/',
+          },
+          {
+            from: '/r/idle-tuning',
+            to: '/Basic-Features/Idle-Control/Idle-Tuning/',
+          },
+          {
             from: '/r/cam-sync',
             to: '/Base-Engine/Trigger/Cam-Sync/',
           },
@@ -134,7 +146,7 @@ const config: Config = {
           },
           {
             from: '/r/vvt',
-            to: '/category/vvt/',
+            to: '/Advanced-Features/VVT/',
           },
           {
             from: '/r/trigger',

@@ -1,6 +1,6 @@
 # Cam Sync
 
-A cam sensor does two jobs. It tells FOME which half of the 720° cycle the engine is in, which a crank wheel alone can't (see [How Trigger Sync Works](/Base-Engine/Trigger/How-Trigger-Sync-Works)). On engines with variable cam timing (VVT), it also measures where each cam actually is. This page covers setting up the cam inputs and calibrating that measurement. Controlling the cams is covered in the [VVT pages](/Advanced-Features/Variable-Cam-Timing/VVT-PID).
+A cam sensor does two jobs. It tells FOME which half of the 720° cycle the engine is in, which a crank wheel alone can't (see [How Trigger Sync Works](/Base-Engine/Trigger/How-Trigger-Sync-Works)). On engines with variable cam timing (VVT), it also measures where each cam actually is. This page covers setting up the cam inputs and calibrating that measurement. Controlling the cams is covered in the [VVT pages](/Advanced-Features/VVT).
 
 Settings are under **Base Engine > Trigger**, in the **Cam Inputs** panel, and under **Base Engine > Advanced Trigger**.
 
@@ -93,7 +93,7 @@ Some engines, typically V-twins, have no cam sensor. With **Cam trigger type (in
 7. Start the engine and check that **Trg: Fully synchronized** comes on. If you use sequential fuel or individual coils, check that the engine runs properly once it has full sync. If it doesn't, the phase may be 360° out. See the note on [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup).
 8. For each VVT cam, make sure VVT control is off, so the cam sits at its rest position. Let the engine idle.
 9. Read the cam's **VVT** gauge, e.g. **VVT: bank 1 intake**. Subtract the reading from the cam's **VVT offset** and burn. For example, if the offset is 0 and the gauge reads 42, set the offset to -42.
-10. Check that the gauge now reads close to 0, then set up VVT control on the [VVT pages](/Advanced-Features/Variable-Cam-Timing/VVT-PID).
+10. Check that the gauge now reads close to 0, then set up VVT control on the [VVT pages](/Advanced-Features/VVT).
 
 :::tip
 A gauge reading of exactly 0 can also mean there is no valid reading. Before zeroing an offset, check that **Trg: Fully synchronized** is on and the reading moves slightly as the engine runs.
@@ -135,7 +135,6 @@ For reading the cam signal in the Trigger Logger, see [Trigger Troubleshooting](
 - [Crank and Cam Sensors](/Base-Engine/Trigger/Crank-And-Cam-Sensors)
 - [Trigger Setup](/Base-Engine/Trigger/Trigger-Setup)
 - [Trigger Troubleshooting](/Base-Engine/Trigger/Trigger-Troubleshooting)
-- [VVT PID Control](/Advanced-Features/Variable-Cam-Timing/VVT-PID)
-- [VVT Target Tables](/Advanced-Features/Variable-Cam-Timing/VVT-Target-Tables)
+- [Variable Cam Timing (VVT)](/Advanced-Features/VVT)
 - [Miata VVT](/Vehicle-Specific/Mazda-MX5-Miata/Miata-VVT)
 - [Fault Codes](/Limits-And-Protections/Fault-Codes)
