@@ -1,0 +1,8 @@
+{
+  "label": "Trigger",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "How FOME reads crank and cam position, and how to set it up"
+  }
+}

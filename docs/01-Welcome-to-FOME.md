@@ -60,8 +60,8 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 - [Analogue input settings](Sensors-And-Gauges/General-Sensors/Analogue-Input-Settings)
 - [Aux sensors](Sensors-And-Gauges/General-Sensors/Aux-Sensors)
-- [Cam sensor](Sensors-And-Gauges/General-Sensors/CAM)
-- [Crank sensor](Sensors-And-Gauges/General-Sensors/CPS)
+- [Cam sync](Base-Engine/Trigger/Cam-Sync)
+- [Trigger setup](Base-Engine/Trigger/Trigger-Setup)
 - [ETB TPS](Sensors-And-Gauges/General-Sensors/ETB-TPS)
 - [Mass Air Flow Sensor](Sensors-And-Gauges/General-Sensors/MAF)
 - [TPS](Sensors-And-Gauges/General-Sensors/TPS)
@@ -130,12 +130,11 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 ### Advanced Features
 
 - [CAN settings](Advanced-Features/CAN)
-- [Cylinder Angle Offset](Advanced-Features/Cylinder-Angle-Offset)
+- [Cylinder Angle Offset](Base-Engine/Cylinder-Angle-Offset)
 - [Knock control](Advanced-Features/Knock-Control)
 - [Launch Control](Advanced-Features/Launch-Control)
 - [Lua Scripting](Advanced-Features/Lua-Scripting)
 - [MAP sampling angle](Advanced-Features/MAP-Sampling-Angle)
-- [Multi-Dimensional Mapping](Advanced-Features/Multi-Dimensional-Mapping)
 - [Override Table Axis](Advanced-Features/Override-Table-Axis)
 - [Smart Alternator](Advanced-Features/Smart-Alternator)
 
@@ -153,8 +152,8 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Barometric pressure compensation](Advanced-Features/Fuel-Related/Barometric-Pressure-Compensation)
 - [Charge Temperature estimation](Advanced-Features/Fuel-Related/Charge-Temp-Estimation)
 - [Closed loop fueling](Advanced-Features/Fuel-Related/Closed-Loop-Fuel)
-- [Injection Phase settings](Advanced-Features/Fuel-Related/Injecton-Phase)
-- [Injector tester](Advanced-Features/Fuel-Related/Injector-Tester)
+- [Injection Phase settings](/Fuel/Injectors/Injector-configuration#injection-phase)
+- [Injector tester](/Fuel/Injectors/Injector-configuration#injector-test)
 
 #### GDI
 
@@ -194,13 +193,13 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [AFR settings](Fuel/Fuel-Settings/AFR-setting)
 - [Coolant Multiplier](Fuel/Fuel-Settings/CLT-Multiplier)
 - [Per-Cylinder Fuel trim](Fuel/Fuel-Settings/Cylinder-Fuel-Trim)
-- [Deceleration Fuel Cut Off](Fuel/Fuel-Settings/DCFO)
+- [Deceleration Fuel Cut Off](Fuel/Fuel-Settings/DFCO)
 - [Flex Fuel](Fuel/Fuel-Settings/Flex-Fuel)
-- [Fuel Injection Mode](Fuel/Fuel-Settings/Fuel-Injection-Mode)
+- [Fuel Injection Mode](/Fuel/Injectors/Injector-configuration#injection)
 - [TPS Multiplier](Fuel/Fuel-Settings/Fuel-TPS-multi)
 - [Intake Air Temperature Multiplier](Fuel/Fuel-Settings/IAT_Multiplier)
-- [Injector Deadtime settings](Fuel/Fuel-Settings/Injection-Deadtime)
-- [Small Pulse width correction](Fuel/Fuel-Settings/Small-Pulse)
+- [Injector Deadtime settings](/Fuel/Injectors/Injector-configuration#injector-dead-time)
+- [Small Pulse width correction](/Fuel/Injectors/Injector-configuration#injector-small-pulse-correction)
 
 ### Software
 
@@ -235,7 +234,7 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 #### Ignition Settings
 
 - [Dwell](Ignition/Ignition-Settings/Dwell)
-- [Firing Order](Ignition/Ignition-Settings/Firing-Order)
+- [Firing Order](Base-Engine/Firing-Order)
 - [IAT ignition adder](Ignition/Ignition-Settings/IAT-Ignition-Adder)
 - [Ignition Mode](Ignition/Ignition-Settings/Ignition_Mode)
 - [Ignition Advance Table](Ignition/Ignition-Settings/Ignition-Advance-Table)
