@@ -70,7 +70,7 @@ _Ramp on return to idle_ then smoothly ramps the idle target, and any dashpot or
 
 ### Closed Loop Idle Air
 
-  Closed loop idle air control is a powerful tool, but one that requires extreme caution as it can dramatically impact the engine RPM. Even small changes in airflow can have a significant impact, and this is compounded because the speed which an electronic throttle body or idle valves operate is much slower than spark control. Closed loop air is only added on top of the open loop position while the ECU considers the engine to be idling, and it is switched on by setting _Idle control mode_ to automatic.
+  Closed loop idle air control is a powerful tool, but one that requires extreme caution as it can dramatically impact the engine RPM. Even small changes in airflow can have a significant impact, and this is compounded because the speed which an electronic throttle body or idle valves operate is much slower than spark control. Closed loop air is only added on top of the open loop position while the ECU considers the engine to be idling, and it is switched on by setting **Idle control mode** to **Open Loop + Closed Loop**.
 
   In the _Closed Loop Idle_ box in the idle settings, the controller should be set up with a very small proportional gain (_P-factor_) and a sufficiently larger integral gain (_I-factor_). This ensures that the idle air controller reacts slowly and only to relatively large disturbances which the closed loop timing cannot compensate for itself. You may need a very small derivative gain (_D-factor_) however the controller should react slowly enough that it might not be necessary.
 

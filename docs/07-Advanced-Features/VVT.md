@@ -20,6 +20,8 @@ The hold duty is the duty at which the solenoid's spool valve is centred, so the
 
 The control direction setting tells FOME which way the cam moves when duty increases. With **advance**, more duty makes the reading rise. With **retard**, more duty makes it fall, and the targets for that cam must be negative.
 
+As a rule, **intake cams advance and exhaust cams retard**. A phaser moves its cam away from the rest position, which is fully retarded for an intake cam and fully advanced for an exhaust cam. So set the intake direction to **advance** with positive targets, and the exhaust direction to **retard** with negative targets. A few engines are the other way round. If a cam runs to one end and stays there, the direction is probably set wrong (see [Troubleshooting](#troubleshooting)).
+
 ### Rest position
 
 When the target is close to the rest position, FOME doesn't control the cam at all. It switches the solenoid off and lets the phaser sit at its stop. This stops the integral term winding up while it pushes the cam against the stop, and avoids trouble with the lock pin that many phasers have at rest.
@@ -58,8 +60,8 @@ VVT control is for continuously variable phasers. FOME has no on/off VVT mode fo
 | Do not control below CLT | C | VVT control stays off at or below this coolant temperature |
 | VVT solenoid bank 1 intake, bank 1 exhaust, bank 2 intake, bank 2 exhaust | - | Output pin for each cam's solenoid. Power-cycle the ECU after changing |
 | PWM frequency | Hz | PWM frequency for all VVT solenoids. Power-cycle the ECU after changing |
-| VVT solenoid intake cams control direction | - | **advance** or **retard**: which way the intake cams move as duty increases |
-| VVT solenoid exhaust cams control direction | - | The same for the exhaust cams |
+| VVT solenoid intake cams control direction | - | **advance** or **retard**: which way the intake cams move as duty increases. Usually **advance** |
+| VVT solenoid exhaust cams control direction | - | The same for the exhaust cams. Usually **retard**, with negative targets |
 | Intake target Y axis override (set Zero for no override) | - | Load axis for the intake target table. **Zero** uses fuel load |
 | Exhaust target Y axis override (set Zero for no override) | - | The same for the exhaust target table |
 | Target bump amount | deg | Degrees added to the target for 2 seconds by the bump buttons (see below) |
@@ -98,7 +100,7 @@ The curve uses the oil temperature sensor if you have one, otherwise coolant tem
 
 ### Target bump
 
-The **VVT Testing** panel in the configuration dialog has a **VVT target bump** button for each cam. Pressing one adds **Target bump amount** to that cam's target for 2 seconds, which gives a clean step to tune the PID against. It only has an effect while VVT control is active. Use a positive amount, because the setting can't store a negative one.
+The **VVT Testing** panel in the configuration dialog has a **VVT target bump** button for each cam. Pressing one adds **Target bump amount** to that cam's target for 2 seconds, which gives a clean step to tune the PID against. It only has an effect while VVT control is active. The amount can be negative, which moves the target the other way. This is useful for exhaust cams that retard.
 
 ## Setup
 
