@@ -135,6 +135,10 @@ const config: Config = {
             to: '/CAN/',
           },
           {
+            from: '/r/fan',
+            to: '/Outputs/Fan-Control/',
+          },
+          {
             from: '/r/gear-detection',
             to: '/Sensors-And-Gauges/General-Sensors/Gear-Detection/',
           },
