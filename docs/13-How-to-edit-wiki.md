@@ -101,3 +101,42 @@ When you create a pull request, your browser should open automatically, and you'
 
 - **Fundamentals of tuning:** explain why things are needed, for example why an engine needs certain AFRs, why timing is reduced, what knock is, and why fuel is added on acceleration. Leave how FOME implements each feature to that feature's own page, and link between the two. Keep these pages as short introductions, which also head off many common user questions.
 - **Hardware circuits:** describe the generic driver layouts, what each one is and the basics of how it works.
+
+## Feature page conventions
+
+Pages that document a firmware feature or sensor (the "how" pages) follow a common layout, so readers know where to find things. The Fundamentals of tuning pages are the "why" layer and don't follow it. Feature pages link to them instead of repeating the theory. [Coolant Temperature](/Sensors-And-Gauges/Temperature-Sensors/CLT) is a good example to copy.
+
+### Layout
+
+Use these sections in this order. Leave out any that don't apply, but don't reorder them.
+
+1. **Title and introduction.** Match the TunerStudio dialog or menu name. In two to four sentences, say what the feature does and when you need it, then where the settings are, e.g. "Settings are under **Sensors > CLT sensor**."
+2. **How it works.** The behaviour at the level a tuner needs: the inputs, what's computed and what it affects.
+3. **Settings.** A table of every field in the dialog (Setting, Units, Description), then a short sub-section only for settings that need more than one line.
+4. **Setup.** A numbered procedure, with starting values where they mean something.
+5. **Checking it works.** Which gauges and log channels to watch, and what good looks like.
+6. **If it fails.** Only where the ECU does something defensive worth knowing, such as substituting a value, inhibiting a feature or setting a fault code with a specific effect. This mostly applies to sensors. Leave it out if all it would say is that a misconfigured feature doesn't work. Put setting limits in the settings table instead.
+7. **Troubleshooting.** A symptom and likely-cause table.
+8. **Related.** Links to related pages.
+
+### Style
+
+- **Exact UI names.** Write TunerStudio labels in bold, spelled exactly as TunerStudio shows them. Write menu paths as **Menu > Item**.
+- **Check against the firmware.** Check every claim about what the ECU does against the firmware source when you write it.
+- **No firmware internals.** Don't name files, functions or variables. The exception is output channel and gauge names, which users see in their logs.
+- **Values.** Give generic starting points where they help, but don't quote firmware defaults, because they vary by board and engine type and go out of date.
+- **Tooltips vs the wiki.** A tooltip says in a sentence or two what a field is. The wiki page adds the why, the interactions, the setup procedure and the pitfalls, and doesn't repeat the tooltip.
+- **Units.** In the settings table, use the unit TunerStudio displays (C, kPa, ms, %, V, Ohm). In prose, write units properly with a space: 95 °C, 2.49 kΩ, 0.5 V.
+- **Screenshots.** Use them sparingly, only where a picture explains something text can't, such as wiring, a log trace or a curve shape. They go out of date with every UI change.
+- **Admonitions.** Use `:::warning` for anything that can damage the engine or hardware, `:::tip` for shortcuts and `:::note` for caveats.
+- **Length.** As short as it can be while staying complete.
+
+### Links and short links
+
+- **Internal links** are absolute site paths with no number prefixes and no `.md`, for example `[Fault Codes](/Limits-And-Protections/Fault-Codes)`. `scripts/linkValidator.js` checks this.
+- **TunerStudio links** to the wiki only use `/r/<slug>` short links, defined in `docusaurus.config.ts`. If you move or rename a page, repoint its short link and fix links to it from other pages. Old page URLs don't get redirects.
+- **Page order** comes from number prefixes on file names. These don't appear in URLs, so renumbering is safe.
+
+### Before you submit
+
+From the wiki folder, run `npx markdownlint <file>` and `node scripts/linkValidator.js '<file>'` on each page you changed (run `npm ci` once first). If you moved pages or changed short links, also run `npm run build`, which checks for broken links. Table separator rows need spaces, like `| --- | --- |`.
