@@ -10,4 +10,4 @@ An over-simplified way to quickly choose is this
 
 - [MAF Air Charge](/Fuel/Fuel-Algorithms/MAF). The underdog in the tuning scene. But by far one of the most precise ways of calculating fueling for an engine. Requires a MAF sensor installed on the Intake tubing (or Turbo Inlet on turbo cars) and known calibration curve (MAF Transfer Function) for said sensor.
 
-- [LUA](/Fuel/Fuel-Algorithms/Lua) - If you feel brave enough to control the fueling through the FOME console using LUA, this is the option to do so.
+- [LUA](/Lua/Lua-Fuel-Algorithm) - If you feel brave enough to control the fueling through the FOME console using LUA, this is the option to do so.

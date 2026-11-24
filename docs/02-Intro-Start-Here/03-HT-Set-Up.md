@@ -8,7 +8,7 @@ import TunerStudio1 from './Set-up-images/TunerStudio.png'
 
 ## Download and install the latest stable firmware release
 
-This ensures you get the most recent features and bug fixes. The FOME console comes bundled with each firmware release. In the following links you detailed instructions on [how to upate the firmware](../HT-Updating-The-Firmware). And In-depth information about the [FOME Console](../../Software/FOME-Console)
+This ensures you get the most recent features and bug fixes. The FOME console comes bundled with each firmware release. In the following links you detailed instructions on [how to upate the firmware](../HT-Updating-The-Firmware). And In-depth information about the [FOME Console](/Tools/FOME-Console)
 
 :::tip Note 
 
@@ -35,9 +35,9 @@ In tunerstudio you will be presented with a screen with several tabs on top, and
     - Additionally it will ask you to choose a fuel algorithm. Here's a [small guide on how to pick one.](../Which-Fuel-Method-For-Me)
   - [Limits and Protections](../../category/limits-and-protections/)
     - Rev Limiter, Boost Cut, Oil Pressure Protection, Lambda Protections, Injector DC Cut
-  - Trigger
+  - [Trigger](/Base-Engine/Trigger/Trigger-Setup)
     - Primary Trigger Wheel type and Location (Crank or Cam), Trigger Angle, Cam  trigger Selection and type, VVT Offset,.
-  - Outputs
+  - [Outputs](/category/outputs)
     - Here's where you set up Fuel Pump, Fan, Tachometer, Speedo Output, Starter Disable, Check Engine Light...
 - [Fuel](../../category/fuel)
   - Injector Outputs, Injector Pairing or Sequential, Injector Size, Fuel Pressure compensation, Stoich AFR setup, Dead Times, VE Table. CLT/IAT Corrections, DFCO, Accel Enrichment...
@@ -45,10 +45,11 @@ In tunerstudio you will be presented with a screen with several tabs on top, and
   - Spark Outputs, Dwell, Ignition Tables, Knock Retard Settings, IAT/CLT Corrections...
 - [Cranking](../../category/cranking-control)
 - [Idle](../../category/idle-control)
-- [Advanced](../../category/advanced-features/) 
-  - Launch Control, Boost, GPPWM, Drive By Wire, VVT, Lua Scripting...
+- Advanced
+  - [Air path & torque](/category/air-path): Drive By Wire, Boost, VVT, Launch Control...
+  - [GPPWM](/Outputs/GPPWM) and [Lua Scripting](/Lua/Lua-Scripting)
 - [Sensors](../../category/sensors-and-gauges/)
-- Controller
+- Controller (see [Diagnostics, logging & tools](/category/tools) and [CAN](/CAN))
   - Here you will find modes for Injector, Coils and Bench Test. Settings for CANBus, WiFi, Additional communication, SD Card Logging, Anti Lag, Rotary and Experimental stuff. Be careful, some options here assume you know what you're doing.
 
 <!-- REPLACED -->

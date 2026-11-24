@@ -116,23 +116,23 @@ const config: Config = {
           },
           {
             from: '/r/idle',
-            to: '/Basic-Features/Idle-Control/Idle-Settings/',
+            to: '/Idle-Control/Idle-Settings/',
           },
           {
             from: '/r/etb-tps',
-            to: '/Advanced-Features/ETB/ETB-TPS/',
+            to: '/Air-Path/ETB/ETB-TPS/',
           },
           {
             from: '/r/redundant-sensors',
-            to: '/Advanced-Features/ETB/Redundant-Sensors/',
+            to: '/Air-Path/ETB/Redundant-Sensors/',
           },
           {
             from: '/r/ac',
-            to: '/Basic-Features/Air-Conditioning-Settings/',
+            to: '/Outputs/Air-Conditioning-Settings/',
           },
           {
             from: '/r/can',
-            to: '/Advanced-Features/CAN/',
+            to: '/CAN/',
           },
           {
             from: '/r/gear-detection',
@@ -140,11 +140,11 @@ const config: Config = {
           },
           {
             from: '/r/idle-hardware',
-            to: '/Basic-Features/Idle-Control/Idle-Hardware/',
+            to: '/Idle-Control/Idle-Hardware/',
           },
           {
             from: '/r/idle-tuning',
-            to: '/Basic-Features/Idle-Control/Idle-Tuning/',
+            to: '/Idle-Control/Idle-Tuning/',
           },
           {
             from: '/r/cam-sync',
@@ -166,7 +166,7 @@ const config: Config = {
           },
           {
             from: '/r/vvt',
-            to: '/Advanced-Features/VVT/',
+            to: '/Air-Path/VVT/',
           },
           {
             from: '/r/trigger',
@@ -174,7 +174,7 @@ const config: Config = {
           },
           {
             from: '/r/etb',
-            to: '/Advanced-Features/ETB/ETB-Setup/',
+            to: '/Air-Path/ETB/ETB-Setup/',
           },
           {
             from: '/r/tpstps',
@@ -182,7 +182,7 @@ const config: Config = {
           },
           {
             from: '/r/lua',
-            to: '/Advanced-Features/Lua-Scripting/',
+            to: '/Lua/Lua-Scripting/',
           },
           {
             from: '/r/vr',
@@ -222,15 +222,15 @@ const config: Config = {
           },
           {
             from: '/r/main-relay',
-            to: '/Basic-Features/Main-Relay/',
+            to: '/Outputs/Main-Relay/',
           },
           {
             from: '/r/fuel-pump-relay',
-            to: '/Basic-Features/Fuel-Pump-Relay/',
+            to: '/Outputs/Fuel-Pump-Relay/',
           },
           {
             from: '/r/tacho',
-            to: '/Sensors-And-Gauges/Driver-Controls-And-Feedback/Tacho/',
+            to: '/Outputs/Tacho/',
           },
           {
             from: '/r/clt-multiplier',
@@ -246,15 +246,15 @@ const config: Config = {
           },
           {
             from: '/r/baro-comp',
-            to: '/Advanced-Features/Fuel-Related/Barometric-Pressure-Compensation/',
+            to: '/Fuel/Fuel-Settings/Barometric-Pressure-Compensation/',
           },
           {
             from: '/r/closed-loop',
-            to: '/Advanced-Features/Fuel-Related/Closed-Loop-Fuel/',
+            to: '/Fuel/Fuel-Settings/Closed-Loop-Fuel/',
           },
           {
             from: '/r/multispark',
-            to: '/Advanced-Features/Spark-Related/Multispark/',
+            to: '/Ignition/Ignition-Settings/Multispark/',
           },
           {
             from: '/r/clutch',
@@ -274,7 +274,7 @@ const config: Config = {
           },
           {
             from: '/r/pedal-target',
-            to: '/Advanced-Features/ETB/ETB-Pedal-Target/',
+            to: '/Air-Path/ETB/ETB-Pedal-Target/',
           },
           {
             from: '/r/aux-sensors',
@@ -286,11 +286,11 @@ const config: Config = {
           },
           {
             from: '/r/adv-cranking',
-            to: '/Basic-Features/Cranking-Control/Adv-Cranking/',
+            to: '/Cranking-Control/Adv-Cranking/',
           },
           {
             from: '/r/map-sampling',
-            to: '/Advanced-Features/MAP-Sampling-Angle/',
+            to: '/Sensors-And-Gauges/Pressure-Sensors/MAP-Sampling-Angle/',
           },
           {
             from: '/r/turbo-speed',

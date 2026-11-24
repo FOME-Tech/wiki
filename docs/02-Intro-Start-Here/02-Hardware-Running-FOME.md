@@ -1,7 +1,7 @@
 # Hardware Running FOME
 
 import fomePNP from './Hardware-Running-FOME-imgs/Miata-FOME.png';
-import universal112 from '../09-Hardware/04-Base-Boards/universal112.webp'
+import universal112 from '../16-Hardware/04-Base-Boards/universal112.webp'
 
 Currently there is a good amount of hardware options to choose depending on your specific needs. From simple plug and play solutions, to full wire-in universal ECU's. All under the same ecosystem and pretty similar architecture.
 Most recent offerings consist of a two-part system. A brain board that gets attached to a daughter board, or base-board as we call it, it contains the wiring harness connector and any additional circuitery for added functionality.

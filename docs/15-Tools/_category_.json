@@ -1,0 +1,8 @@
+{
+  "label": "Diagnostics, logging & tools",
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/tools",
+    "description": "Bench test, data logging, FOME console, flashing and the simulator"
+  }
+}

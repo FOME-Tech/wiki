@@ -45,9 +45,9 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Accelerator pedal](Sensors-And-Gauges/Driver-Controls-And-Feedback/APP)
 - [Battery Settings](Sensors-And-Gauges/Driver-Controls-And-Feedback/Battery-Settings)
 - [Brake pedal position and pressure sensor](Sensors-And-Gauges/Driver-Controls-And-Feedback/Brake)
-- [CAN gauge](Sensors-And-Gauges/Driver-Controls-And-Feedback/CAN-Gauge)
+- [CAN gauge](Vehicle-Specific/CAN-Gauge)
 - [Clutch Pedal position and pressure sensing](Sensors-And-Gauges/Driver-Controls-And-Feedback/Clutch)
-- [Rev Counter](Sensors-And-Gauges/Driver-Controls-And-Feedback/Tacho)
+- [Rev Counter](Outputs/Tacho)
 
 #### Fuel Sensors
 
@@ -93,84 +93,84 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 ### Basic Features
 
-- [Bench test commands](Basic-Features/Bench-Test)
-- [Boost control](Basic-Features/Boost-Control)
-- [Cylinder Bank Selection](Basic-Features/Cylinder-Bank-Selection)
-- [Data Logging Settings](Basic-Features/Data-Logging)
-- [Fan Control](Basic-Features/Fan-Control)
-- [Fuel pump relay control](Basic-Features/Fuel-Pump-Relay)
-- [GPPWM General purpose PWM](Basic-Features/GPPWM)
-- [Main Relay control](Basic-Features/Main-Relay)
+- [Bench test commands](Tools/Bench-Test)
+- [Boost control](Air-Path/Boost-Control)
+- [Cylinder Bank Selection](Fuel/Injectors/Cylinder-Bank-Selection)
+- [Data Logging Settings](Tools/Data-Logging)
+- [Fan Control](Outputs/Fan-Control)
+- [Fuel pump relay control](Outputs/Fuel-Pump-Relay)
+- [GPPWM General purpose PWM](Outputs/GPPWM)
+- [Main Relay control](Outputs/Main-Relay)
 
 #### Cranking Control
 
-- [Advanced cranking features](Basic-Features/Cranking-Control/Adv-Cranking)
-- [Cranking idle air control](Basic-Features/Cranking-Control/Cranking-IAC)
-- [Cranking RPM limit](Basic-Features/Cranking-Control/Cranking-RPM-Limit)
+- [Advanced cranking features](Cranking-Control/Adv-Cranking)
+- [Cranking idle air control](Cranking-Control/Cranking-IAC)
+- [Cranking RPM limit](Cranking-Control/Cranking-RPM-Limit)
 
 #### Cranking fuel
 
-- [Cranking Duration](Basic-Features/Cranking-Control/Cranking-Fuel/Cranking-Duration)
-- [Cranking Fuel coolant multiplier](Basic-Features/Cranking-Control/Cranking-Fuel/Cranking-Fuel-CLT)
-- [Priming Pulse](Basic-Features/Cranking-Control/Cranking-Fuel/Priming-Pulse)
+- [Cranking Duration](Cranking-Control/Cranking-Fuel/Cranking-Duration)
+- [Cranking Fuel coolant multiplier](Cranking-Control/Cranking-Fuel/Cranking-Fuel-CLT)
+- [Priming Pulse](Cranking-Control/Cranking-Fuel/Priming-Pulse)
 
 #### Idle control
 
-- [Advanced Idle control](Basic-Features/Idle-Control/Advanced-Idle)
-- [Closed loop idle control](Basic-Features/Idle-Control/Advanced-Idle)
-- [Idle hardware](Basic-Features/Idle-Control/Idle-Hardware)
-- [Idle ignition table](Basic-Features/Idle-Control/Idle-Ignition-Table)
-- [Idle settings](Basic-Features/Idle-Control/Idle-Settings)
-- [Idle VE Table](Basic-Features/Idle-Control/Idle-VE-Table)
-- [Idle tuning](Basic-Features/Idle-Control/Idle-Tuning)
+- [Advanced Idle control](Idle-Control/Advanced-Idle)
+- [Closed loop idle control](Idle-Control/Advanced-Idle)
+- [Idle hardware](Idle-Control/Idle-Hardware)
+- [Idle ignition table](Idle-Control/Idle-Ignition-Table)
+- [Idle settings](Idle-Control/Idle-Settings)
+- [Idle VE Table](Idle-Control/Idle-VE-Table)
+- [Idle tuning](Idle-Control/Idle-Tuning)
 
 ---
 
 ### Advanced Features
 
-- [CAN settings](Advanced-Features/CAN)
+- [CAN settings](CAN)
 - [Cylinder Angle Offset](Base-Engine/Cylinder-Angle-Offset)
-- [Knock control](Advanced-Features/Knock-Control)
-- [Launch Control](Advanced-Features/Launch-Control)
-- [Lua Scripting](Advanced-Features/Lua-Scripting)
-- [MAP sampling angle](Advanced-Features/MAP-Sampling-Angle)
-- [Override Table Axis](Advanced-Features/Override-Table-Axis)
-- [Smart Alternator](Advanced-Features/Smart-Alternator)
+- [Knock control](Ignition/Knock-Control)
+- [Launch Control](Air-Path/Launch-Control)
+- [Lua Scripting](Lua/Lua-Scripting)
+- [MAP sampling angle](Sensors-And-Gauges/Pressure-Sensors/MAP-Sampling-Angle)
+- [Override Table Axis](Fuel/Fuel-Settings/Override-Table-Axis)
+- [Smart Alternator](Air-Path/Smart-Alternator)
 
 #### ETB
 
-- [Electronic throttle body setup](Advanced-Features/ETB/ETB-Setup)
-- [ETB throttle position sensors](Advanced-Features/ETB/ETB-TPS)
-- [Redundant sensors](Advanced-Features/ETB/Redundant-Sensors)
-- [ETB bias curve](Advanced-Features/ETB/ETB-Bias-Table)
-- [ETB PID and auto tune](Advanced-Features/ETB/ETB-PID)
-- [ETB pedal target](Advanced-Features/ETB/ETB-Pedal-Target)
-- [ETB idle control](Advanced-Features/ETB/ETB-Idle)
-- [ETB #2 trim](Advanced-Features/ETB/ETB-2-Trim)
+- [Electronic throttle body setup](Air-Path/ETB/ETB-Setup)
+- [ETB throttle position sensors](Air-Path/ETB/ETB-TPS)
+- [Redundant sensors](Air-Path/ETB/Redundant-Sensors)
+- [ETB bias curve](Air-Path/ETB/ETB-Bias-Table)
+- [ETB PID and auto tune](Air-Path/ETB/ETB-PID)
+- [ETB pedal target](Air-Path/ETB/ETB-Pedal-Target)
+- [ETB idle control](Air-Path/ETB/ETB-Idle)
+- [ETB #2 trim](Air-Path/ETB/ETB-2-Trim)
 
 #### Fuel related
 
-- [Barometric pressure compensation](Advanced-Features/Fuel-Related/Barometric-Pressure-Compensation)
-- [Charge Temperature estimation](Advanced-Features/Fuel-Related/Charge-Temp-Estimation)
-- [Closed loop fueling](Advanced-Features/Fuel-Related/Closed-Loop-Fuel)
+- [Barometric pressure compensation](Fuel/Fuel-Settings/Barometric-Pressure-Compensation)
+- [Charge Temperature estimation](Fuel/Fuel-Settings/Charge-Temp-Estimation)
+- [Closed loop fueling](Fuel/Fuel-Settings/Closed-Loop-Fuel)
 - [Injection Phase settings](/Fuel/Injectors/Injector-configuration#injection-phase)
 - [Injector tester](/Fuel/Injectors/Injector-configuration#injector-test)
 
 #### GDI
 
-- [High pressure fuel pump settings](Advanced-Features/GDI/High-Pressure-Pump)
+- [High pressure fuel pump settings](Fuel/GDI/High-Pressure-Pump)
 
 #### Rotary
 
-- [Rotary engine specific settings](Advanced-Features/Rotary/Rotary-Settings)
+- [Rotary engine specific settings](Base-Engine/Rotary/Rotary-Settings)
 
 #### Spark related
 
-- [Multispark](Advanced-Features/Spark-Related/Multispark)
+- [Multispark](Ignition/Ignition-Settings/Multispark)
 
 #### Variable cam timing
 
-- [Variable cam timing (VVT)](Advanced-Features/VVT)
+- [Variable cam timing (VVT)](Air-Path/VVT)
 
 ---
 
@@ -202,7 +202,7 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 ### Software
 
-- [Flashing Software Notes](Software/Flashing-Software-Notes)
+- [Flashing Software Notes](Tools/Flashing-Software-Notes)
 
 #### Hardware Circuits
 

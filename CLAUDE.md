@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 This is the source for the FOME wiki (wiki.fome.tech), built with Docusaurus. See `README.md` for setup, and
-`docs/13-How-to-edit-wiki.md` for the contributor guide, including the "Feature page conventions" that feature
+`docs/98-How-to-edit-wiki.md` for the contributor guide, including the "Feature page conventions" that feature
 and sensor pages follow.
 
 ## Pages describe the firmware, so check them against it
