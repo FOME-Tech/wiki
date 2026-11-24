@@ -62,7 +62,6 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 - [Aux sensors](Sensors-And-Gauges/General-Sensors/Aux-Sensors)
 - [Cam sync](Base-Engine/Trigger/Cam-Sync)
 - [Trigger setup](Base-Engine/Trigger/Trigger-Setup)
-- [ETB TPS](Sensors-And-Gauges/General-Sensors/ETB-TPS)
 - [Mass Air Flow Sensor](Sensors-And-Gauges/General-Sensors/MAF)
 - [TPS](Sensors-And-Gauges/General-Sensors/TPS)
 - [Turbo Speed Sensor](Sensors-And-Gauges/General-Sensors/Turbo-Speed)
@@ -140,12 +139,14 @@ The first page to view should probably be [the FOME Overview page](Intro-Start-H
 
 #### ETB
 
-- [ETB bias table](Advanced-Features/ETB/ETB-Bias-Table)
-- [ETB idle control](Advanced-Features/ETB/ETB-Idle)
-- [ETB pedal target](Advanced-Features/ETB/ETB-Pedal-Target)
-- [ETB PID and auto tune](Advanced-Features/ETB/ETB-PID)
-- [ETB Settings](Advanced-Features/ETB/ETB-settings)
+- [Electronic throttle body setup](Advanced-Features/ETB/ETB-Setup)
+- [ETB throttle position sensors](Advanced-Features/ETB/ETB-TPS)
 - [Redundant sensors](Advanced-Features/ETB/Redundant-Sensors)
+- [ETB bias curve](Advanced-Features/ETB/ETB-Bias-Table)
+- [ETB PID and auto tune](Advanced-Features/ETB/ETB-PID)
+- [ETB pedal target](Advanced-Features/ETB/ETB-Pedal-Target)
+- [ETB idle control](Advanced-Features/ETB/ETB-Idle)
+- [ETB #2 trim](Advanced-Features/ETB/ETB-2-Trim)
 
 #### Fuel related
 

@@ -85,7 +85,7 @@ What the engine does depends on the dependent features:
 
 The ECU does not fall back to the throttle position sensor as a substitute for a failed pedal.
 
-If an electronic throttle is configured without both pedal channels, or without both throttle position sensors, the ECU raises a fatal configuration error at startup instead. The same happens if a pedal is configured but no electronic throttle is.
+If an electronic throttle is configured without both pedal channels, or its throttle position sensor has a primary channel but no secondary, the ECU raises a fatal configuration error at startup instead. A throttle with no position sensor configured at all is simply not started. The same happens if a pedal is configured but no electronic throttle is.
 
 ## Troubleshooting
 

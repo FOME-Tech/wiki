@@ -2,7 +2,7 @@
 
 The pedal target table converts the accelerator pedal position into the throttle position the ETB should aim for. It is what makes a drive-by-wire throttle feel the way you want: a straight 1:1 table makes the throttle follow the pedal, and reshaping it gives a more progressive pedal, a softer response at low RPM, or a restricted maximum opening.
 
-Settings are under **Advanced > ETB pedal target**. The menu item only appears on boards with electronic throttle support. See [Accelerator Pedal](/Sensors-And-Gauges/Driver-Controls-And-Feedback/APP) for the pedal sensor itself.
+Settings are under **Advanced > ETB pedal target**. See [Accelerator Pedal](/Sensors-And-Gauges/Driver-Controls-And-Feedback/APP) for the pedal sensor itself.
 
 ## How it works
 
@@ -11,16 +11,12 @@ The table is looked up with the current engine speed and the pedal position, and
 The table output is then adjusted before it reaches the throttle:
 
 1. **Idle control.** The idle position is added by squeezing the table's range upward: a table value of 0 % becomes the idle throttle opening, and 100 % stays at 100 %. This is why a 0 % row in the table doesn't mean a fully closed throttle while idle control is active. See [ETB Idle](/Advanced-Features/ETB/ETB-Idle).
-2. **Lua adjustment.** A Lua script can add an offset. The offset is ignored if the script hasn't refreshed it within the last 0.2 seconds.
-3. **ETB #2 trim.** The second throttle gets its own trim from the **ETB #2 Trim** table, limited to plus or minus 10 %.
-4. **ETB rev limiter.** If the soft limiter ('Electronic Throttle Limiting') is set, the target tapers to closed between its start RPM and the end of its range.
+2. **Lua adjustment.** A Lua script can add an offset. The offset is ignored if the script hasn't refreshed it within the last 0.2 seconds. While anti-lag is active, its ETB adder is added here too.
+3. **ETB #2 trim.** The throttle on H-bridge #2 gets its own trim from the [ETB #2 Trim](/Advanced-Features/ETB/ETB-2-Trim) table, limited to plus or minus 10 %.
+4. **ETB rev limiter.** If the soft limiter (**Electronic Throttle Limiting**, see [RPM Limit](/Limits-And-Protections/RPM-Limit)) is set, the target tapers to closed between its start RPM and the end of its range.
 5. **Position limits.** The result is held between **Minimum ETB position** and **Maximum ETB position**.
 
 The result is the setpoint for the [ETB PID](/Advanced-Features/ETB/ETB-PID).
-
-### With the torque model
-
-When the torque model is enabled, the throttle target comes from the torque model instead, and the pedal target table becomes the maximum throttle allowed. The throttle target is the smaller of the two. Keep the table generous in that case so it only acts as a safety limit.
 
 ## Settings
 
@@ -58,5 +54,6 @@ If the pedal fails, the pedal position is taken as 0 % and the table is looked u
 - [Accelerator Pedal](/Sensors-And-Gauges/Driver-Controls-And-Feedback/APP)
 - [ETB PID](/Advanced-Features/ETB/ETB-PID)
 - [ETB Idle](/Advanced-Features/ETB/ETB-Idle)
-- [ETB Bias Table](/Advanced-Features/ETB/ETB-Bias-Table)
-- [Redundant Sensors](/Advanced-Features/ETB/Redundant-Sensors)
+- [ETB Bias Curve](/Advanced-Features/ETB/ETB-Bias-Table)
+- [ETB #2 Trim](/Advanced-Features/ETB/ETB-2-Trim)
+- [Electronic Throttle Body](/Advanced-Features/ETB/ETB-Setup)

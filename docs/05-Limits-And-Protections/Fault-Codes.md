@@ -96,7 +96,7 @@ arrived at all.
 
 ### Redundancy correlation codes
 
-Redundant sensor pairs (TPS and pedal) are cross-checked against each other. If the two channels disagree by more than 5% (10% on Hellen 121 Nissan), the combined sensor is invalidated:
+Redundant sensor pairs (TPS and pedal) are cross-checked against each other. If the two channels disagree by more than 5%, the combined sensor is invalidated:
 
 | Code | Dec | Meaning |
 | :--- | :--- | :--- |
@@ -166,9 +166,8 @@ These are *fatal* — the ECU refuses to run the engine and TunerStudio shows a 
 | :--- | :--- | :--- |
 | P0090 | 144 | Injector compensation is set to use a fuel pressure sensor, but no sensor is configured |
 | P0111 | 273 | Thermistor calibration points are not in ascending temperature order |
-| P0121 | 289 | Throttle/pedal configuration problem — open and closed calibration voltages too close together, a redundant pair that isn't actually redundant, both channels of a "redundant" pair wired to one sensor, or a failed ETB autotune |
+| P0121 | 289 | Throttle/pedal configuration problem — open and closed calibration voltages too close together, a redundant pair that isn't actually redundant, both channels of a "redundant" pair wired to one sensor, or a failed ETB auto-calibrate (the throttle didn't move during calibration) |
 | P0606 | 1542 | General ECU fault. Used for internal assertion failures and for prompting a power cycle after applying a preset. The console message says what happened |
-| P0638 | 1592 | ETB startup position was more than 5% away from the configured neutral position. Check for a stuck throttle plate, a wrong `etbNeutralPosition`, or bad TPS calibration |
 | P2158 | 8536 | An invalid CAN DBC was selected for CAN vehicle speed input |
 
 ## Internal codes (6000 and above)

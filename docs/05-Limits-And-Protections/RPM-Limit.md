@@ -40,4 +40,4 @@ Both fuel cut and spark cut can be used together. This reduces the risk of unbur
 
 Engines equipped with an Electronic Throttle Body (ETB) can utilize Electronic Throttle Limiting. This will smoothly close the throttle starting at the __Soft limiter start__ engine speed and fully close it once the engine speed has increased by the number of RPM defined in __Soft limiter range__.
 
-For example, if __Soft limiter start__ is 6000 RPM and __Soft limiter range__ is 200 RPM, the maximum ETB position possible at 6100 RPM is 50%, and at 6200 RPM the electronic throttle will be fully closed even if the accelerator pedal is commanding a larger opening.
+For example, if __Soft limiter start__ is 6000 RPM and __Soft limiter range__ is 200 RPM, at 6100 RPM the throttle opens only half as far as the pedal asks, and at 6200 RPM the electronic throttle will be fully closed even if the accelerator pedal is commanding a larger opening.

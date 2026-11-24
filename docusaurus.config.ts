@@ -119,6 +119,22 @@ const config: Config = {
             to: '/Basic-Features/Idle-Control/Idle-Settings/',
           },
           {
+            from: '/r/etb-tps',
+            to: '/Advanced-Features/ETB/ETB-TPS/',
+          },
+          {
+            from: '/r/redundant-sensors',
+            to: '/Advanced-Features/ETB/Redundant-Sensors/',
+          },
+          {
+            from: '/r/ac',
+            to: '/Basic-Features/Air-Conditioning-Settings/',
+          },
+          {
+            from: '/r/can',
+            to: '/Advanced-Features/CAN/',
+          },
+          {
             from: '/r/gear-detection',
             to: '/Sensors-And-Gauges/General-Sensors/Gear-Detection/',
           },
@@ -158,7 +174,7 @@ const config: Config = {
           },
           {
             from: '/r/etb',
-            to: '/category/etb/',
+            to: '/Advanced-Features/ETB/ETB-Setup/',
           },
           {
             from: '/r/tpstps',

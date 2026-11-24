@@ -144,5 +144,5 @@ Set it so that a warm engine idles well below 100 % idle position, leaving room 
 - [Idle Settings](/Basic-Features/Idle-Control/Idle-Settings)
 - [Cranking IAC](/Basic-Features/Cranking-Control/Cranking-IAC)
 - [ETB Idle](/Advanced-Features/ETB/ETB-Idle)
-- [Electronic Throttle Settings](/Advanced-Features/ETB/ETB-settings)
+- [Electronic Throttle Body](/Advanced-Features/ETB/ETB-Setup)
 - [Bench Test](/Basic-Features/Bench-Test)
