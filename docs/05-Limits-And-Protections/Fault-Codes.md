@@ -110,6 +110,13 @@ A correlation fault almost always means one of the two channels has drifted, is 
 On an electronic throttle car, a correlation fault will cut the throttle. Fix it before driving.
 :::
 
+## Actuator codes
+
+| Code | Dec | Meaning | What to check |
+| :--- | :--- | :--- | :--- |
+| P0244 | 580 | Electric wastegate jammed: its position stayed further from target than **Jam detection error max** for **Jam detection timeout period**. The wastegate motor is switched off until reboot | Wastegate linkage binding or seized, wastegate position sensor calibration, motor wiring, or wastegate PID gains far too low |
+| P2119 | 8473 | Electronic throttle jammed: its position stayed further from target than **Jam detection error max** for **Jam detection timeout period**. Both throttle motors are switched off and fuel is cut above 1500 RPM until reboot | Something blocking the throttle plate, TPS calibration, motor wiring, or a target the throttle can't reach. See [Electronic Throttle](/Advanced-Features/ETB/ETB-Setup) |
+
 ## Trigger and cam codes
 
 | Code | Dec | Meaning | What to check |

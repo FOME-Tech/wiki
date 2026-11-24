@@ -42,7 +42,7 @@ A throttle function only starts if an accelerator pedal is configured, and both 
 | Maximum ETB position | % | Highest target the throttle is ever sent to |
 | Jam detection error max | % | Position error that starts the jam timer. 0 turns jam detection off |
 | Jam detection timeout period | sec | How long the error has to last before the throttle counts as jammed. 0 turns jam detection off |
-| Temporarily disable jam detection | - | Button. Keeps the throttle working after a jam until the next power cycle |
+| Temporarily disable jam detection | - | Button. Turns jam detection off until the next power cycle. If a jam has already tripped, it also lets the motors run again |
 | Two-wire mode | - | H-bridge control scheme (see below). Restart the ECU after changing |
 | No1 / No2 Direction #1, Direction #2, Control, Disable | - | ECU pins for each H-bridge |
 
@@ -100,7 +100,7 @@ Watch the **ETB: position target**, **Throttle position**, **ETB: position error
 - With the pedal held steady, the throttle position should sit within a percent or so of the target.
 - After a quick pedal movement, the error should go back to near zero quickly, without the throttle oscillating.
 - The duty shouldn't be pinned at its limit while the throttle is holding position.
-- The **ETB 1 OK** indicator shows why a throttle isn't being driven, for example **engine stopped** when **Disable ETB if engine is stopped** is in effect.
+- The **ETB 1 OK** indicator shows why a throttle isn't being driven, for example **engine stopped** when **Disable ETB if engine is stopped** is in effect, or **jammed** after a jam.
 
 ## If it fails
 
@@ -110,7 +110,8 @@ In most faults the ECU stops driving the motor, and the throttle's return spring
 | --- | --- |
 | Throttle position sensor failed: a track out of range, or the two tracks disagree | The motor is switched off. Control resumes as soon as the sensor reads correctly again. The **TPS error** (or **TPS 2 error**) indicator comes on and a code is set (see [Fault Codes](/Limits-And-Protections/Fault-Codes)). Only the affected throttle stops |
 | Pedal failed | The throttle keeps running with the pedal read as 0 %, so it goes to the idle position. See [Accelerator Pedal](/Sensors-And-Gauges/Driver-Controls-And-Feedback/APP) |
-| Throttle jammed: the position error stays above **Jam detection error max** for **Jam detection timeout period**, with the ignition on | Both throttle motors are switched off, and fuel is cut above 1500 RPM. Both last until the ECU is restarted |
+| Throttle jammed: the position error stays above **Jam detection error max** for **Jam detection timeout period**, with the ignition on | Both throttle motors are switched off, and fuel is cut above 1500 RPM. Both last until the ECU is restarted. The indicator shows **jammed** and P2119 is set. See [Jam detection](#jam-detection) |
+| Electric wastegate jammed (same test and thresholds) | Only the wastegate motor is switched off, until the ECU is restarted. The throttle keeps working and there's no RPM limit. That H-bridge's indicator shows **jammed** and P0244 is set |
 | **Disable ETB if engine is stopped** on, and the engine isn't turning | The motor is switched off. The indicator shows **engine stopped** |
 | A Lua script disables the throttle | The motor is switched off. The indicator shows **Lua** |
 | Throttle configured without a second TPS track, or without a second pedal track | Fatal configuration error at startup. The throttle isn't driven |
@@ -123,11 +124,18 @@ The ECU also counts how often each sensor drops out (**ETB 1: TPS error counter*
 
 ### Jam detection
 
-A jam is hard to spot after the event. The throttle simply stops responding, the **ETB 1 OK** indicator doesn't change, and **ETB 1: Jam detected** is only set for an instant. Above 1500 RPM, the fuel cut reason shows **fault RPM limit**. **ETB 1: Jam timer** shows how long the current error has lasted.
+**ETB 1: Jam timer** shows how long the current position error has been above **Jam detection error max**. When it reaches **Jam detection timeout period**, the throttle counts as jammed. Both throttle motors are switched off and fuel is cut above 1500 RPM, until the ECU is restarted. Until then, the ECU keeps showing what happened:
 
-An electric wastegate on one of the H-bridges is watched by the same jam detection, with the same thresholds, and a wastegate jam has the same effect on the throttle and the RPM limit.
+- The indicator for the throttle that jammed changes from **ETB 1 OK** to **ETB 1: jammed**. With two throttles, the other one shows **ETB 2: limp mode**, because it has been switched off too.
+- **ETB 1: Jam detected** stays on, and **ETB 1: Jam timer** holds the time it tripped at.
+- Fault code P2119 (8473 in TunerStudio) is set, and the console prints `WARNING: ETB jammed, throttle disabled and fault RPM limit set`. See [Fault Codes](/Limits-And-Protections/Fault-Codes).
+- Above 1500 RPM, the fuel cut reason shows **fault RPM limit**.
 
-Anything that stops the throttle reaching its target with the ignition on counts as a jam, including holding the throttle plate by hand, a target the throttle can't physically reach, or very poor PID tuning. While testing, the **Temporarily disable jam detection** button keeps the throttle working even after a jam, until the next power cycle. Jams are still detected while it's on, and the 1500 RPM fuel limit still applies.
+The **ETB 1** and **ETB 2** channels and indicators belong to the first and second H-bridge, whatever function it's set to.
+
+An electric wastegate on one of the H-bridges is watched by the same jam detection, with the same thresholds. A wastegate jam only switches the wastegate motor off, until the ECU is restarted. The throttle keeps working and there's no RPM limit. The indicator for that H-bridge shows **jammed** (for example **ETB 2: jammed**), its **Jam detected** stays on, and fault code P0244 (580) is set. With the motor off, the actuator's spring decides where the wastegate sits. If that's closed, boost rises to whatever the turbo makes, so set up [Boost Cut](/Limits-And-Protections/Boost-Cut) on any engine with an electric wastegate.
+
+Anything that stops the throttle reaching its target with the ignition on counts as a jam, including holding the throttle plate by hand, a target the throttle can't physically reach, or very poor PID tuning. While testing, press **Temporarily disable jam detection**. Until the next power cycle, jams aren't detected at all, so nothing is switched off, no RPM limit is set and no code is stored. If you press it after a jam has already tripped, the motors run again, but the 1500 RPM fuel limit stays until the ECU is restarted.
 
 ## Troubleshooting
 
@@ -137,7 +145,7 @@ Anything that stops the throttle reaching its target with the ignition on counts
 | Fatal error at startup about the throttle or pedal needing to be redundant | Second TPS or pedal track not configured |
 | Fatal error about a pedal configured without electronic throttles | Neither H-bridge is set to a throttle function |
 | Throttle drives the wrong way, or slams open | Motor wired backwards, or the TPS calibration reversed. See [ETB Throttle Position Sensors](/Advanced-Features/ETB/ETB-TPS) |
-| Throttle stops working while driving, and the engine won't rev past 1500 RPM | Jam detected. Fix the cause and restart the ECU |
+| Throttle stops working while driving, and the engine won't rev past 1500 RPM | Jam detected: the indicator shows **ETB 1: jammed** and P2119 is set. Fix the cause and restart the ECU |
 | Throttle stops working while driving and **TPS error** is on | TPS fault or tracks disagreeing |
 | Throttle buzzes or oscillates | PID gains too high, or bias curve wrong near the rest position |
 | Throttle whines with the key on | Normal PWM noise. **Disable ETB if engine is stopped** turns it off |
