@@ -12,7 +12,7 @@ DFCO is on and the injectors are cut when all of these are true:
 - Throttle (or pedal position, with an electronic throttle) is below **Cut fuel below TPS**.
 - Coolant temperature is above **No cut below CLT**.
 - If a MAP sensor is configured, MAP is below the threshold (see below).
-- If **Disable fuel cut on clutch** is on and a clutch switch is configured, the clutch is not pressed.
+- If **Disable fuel cut on clutch** is on, the clutch is not known to be pressed.
 - Engine speed is above **RPM cut fuel above**.
 - Vehicle speed is above **Vehicle speed cut above**, unless the vehicle speed check is turned off (see below).
 
@@ -29,7 +29,7 @@ While DFCO is active, ignition timing is retarded by **Ignition retard during cu
 | Setting | Units | Description |
 | --- | --- | --- |
 | Enable Coasting Fuel Cutoff | - | Master enable |
-| Disable fuel cut on clutch | - | Don't cut fuel while the clutch is pressed. Only shown when a clutch switch input is configured |
+| Disable fuel cut on clutch | - | Don't cut fuel while the clutch is pressed. Only shown when a clutch switch or the clutch position sensor is configured |
 | No cut below CLT | C | No DFCO while coolant is at or below this temperature |
 | RPM cut fuel above | rpm | Engine speed that must be exceeded to start cutting |
 | RPM restore fuel below | rpm | Fuel returns when engine speed falls below this |
@@ -57,7 +57,7 @@ Vehicle speed limits help in low gears, where cutting fuel at low road speed mak
 
 ### Clutch
 
-When **Disable fuel cut on clutch** is on, DFCO is blocked while the clutch is pressed, which helps avoid knock during shifts. It has an effect only if a [clutch](/Sensors-And-Gauges/Driver-Controls-And-Feedback/Clutch) input is configured.
+When **Disable fuel cut on clutch** is on, DFCO is blocked whenever the clutch is known not to be fully engaged, which helps avoid knock during shifts. It works with the clutch position sensor, either clutch switch, or a clutch up state set from Lua. With only a clutch down switch, DFCO is blocked only with the pedal on the floor. With no clutch input it has no effect. See [Clutch](/Sensors-And-Gauges/Driver-Controls-And-Feedback/Clutch#what-uses-it).
 
 ## Setup
 

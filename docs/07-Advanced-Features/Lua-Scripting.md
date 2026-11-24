@@ -345,7 +345,7 @@ Channels are indexed as follows (from [`lua_hooks.cpp`](https://github.com/FOME-
 |index|description|
 |-:|:-|
 |`0`|Clutch Down Switch|
-|`1`|Clutch Up Switch|
+|`1`|Clutch Up Switch (or the state set by `setClutchUpState`, if no pin is configured)|
 |`2`|Brake Pedal Switch|
 |`3`|A/C Switch|
 |`4`|A/C Pressure Switch|
@@ -512,11 +512,32 @@ Returns the (floating point) value of a "channel" from FOME, given its name.  Va
 
 #### `setClutchUpState(isUp)`
 
-Use `setClutchUpState` to tell FOME about a CAN-based clutch pedal.
+Use `setClutchUpState` to tell FOME about a CAN-based clutch pedal. It acts as a clutch up switch, so it feeds the
+[clutch state](/Sensors-And-Gauges/Driver-Controls-And-Feedback/Clutch#clutch-state) used by gear detection, DFCO and
+launch control. It takes effect from the first call, and only when no physical **Clutch Up** pin is configured. A
+clutch position sensor, if fitted, takes priority over it.
 
 |parameter|type|description|
 |-:|--|:-|
 |`isUp`|boolean|Whether the clutch is up or not.|
+
+#### `getClutchState()`
+
+Returns the clutch state FOME decided from all the configured clutch inputs: the position sensor, the up and down
+switches, and `setClutchUpState`. See [Clutch](/Sensors-And-Gauges/Driver-Controls-And-Feedback/Clutch#clutch-state)
+for how the inputs are combined.
+
+|value|description|
+|-:|:-|
+|`0`|Unknown: no usable clutch input, a failed sensor, or both switches on|
+|`1`|Engaged (pedal up)|
+|`2`|Slipping (pedal partway)|
+|`3`|Released (pedal on the floor)|
+|`4`|Engaged or slipping: only a down switch is fitted, and it isn't pressed|
+|`5`|Slipping or released: only an up switch is fitted, and the pedal isn't up|
+
+|*no parameters*|
+|--|
 
 #### `setBrakePedalState(isUp)`
 
