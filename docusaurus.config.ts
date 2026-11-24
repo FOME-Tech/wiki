@@ -119,6 +119,10 @@ const config: Config = {
             to: '/Basic-Features/Idle-Control/Idle-Settings/',
           },
           {
+            from: '/r/gear-detection',
+            to: '/Sensors-And-Gauges/General-Sensors/Gear-Detection/',
+          },
+          {
             from: '/r/idle-hardware',
             to: '/Basic-Features/Idle-Control/Idle-Hardware/',
           },
